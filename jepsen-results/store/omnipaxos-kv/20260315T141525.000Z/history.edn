@@ -1,0 +1,1678 @@
+{:index 0, :time 102156044, :type :invoke, :process 0, :f :read, :value nil, :key "k0"}
+{:index 1, :time 151737375, :type :invoke, :process 2, :f :write, :value 69, :key "k0"}
+{:index 2, :time 280946938, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 3, :time 954193508, :type :ok, :process 2, :f :write, :value 69, :key "k0"}
+{:index 4, :time 954286142, :type :ok, :process 1, :f :read, :value nil, :key "k0"}
+{:index 5, :time 954328433, :type :ok, :process 0, :f :read, :value nil, :key "k0"}
+{:index 6, :time 954346874, :type :invoke, :process 0, :f :read, :value nil, :key "k0"}
+{:index 7, :time 956491408, :type :ok, :process 0, :f :read, :value 69, :key "k0"}
+{:index 8, :time 984983257, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 9, :time 986760368, :type :ok, :process 1, :f :read, :value 69, :key "k0"}
+{:index 10, :time 1084448347, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 11, :time 1086624423, :type :ok, :process 2, :f :read, :value 69, :key "k0"}
+{:index 12, :time 1268673269, :type :invoke, :process 0, :f :read, :value nil, :key "k0"}
+{:index 13, :time 1270729021, :type :ok, :process 0, :f :read, :value 69, :key "k0"}
+{:index 14, :time 1464881688, :type :invoke, :process 0, :f :write, :value 26, :key "k0"}
+{:index 15, :time 1466473983, :type :ok, :process 0, :f :write, :value 26, :key "k0"}
+{:index 16, :time 1466944689, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 17, :time 1468541305, :type :ok, :process 1, :f :read, :value 26, :key "k0"}
+{:index 18, :time 1504396689, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 19, :time 1506291434, :type :ok, :process 2, :f :read, :value 26, :key "k0"}
+{:index 20, :time 1620871370, :type :invoke, :process 0, :f :write, :value 49, :key "k0"}
+{:index 21, :time 1623137409, :type :ok, :process 0, :f :write, :value 49, :key "k0"}
+{:index 22, :time 1645218095, :type :invoke, :process 0, :f :write, :value 5, :key "k0"}
+{:index 23, :time 1646751018, :type :ok, :process 0, :f :write, :value 5, :key "k0"}
+{:index 24, :time 1773374921, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 25, :time 1775157713, :type :ok, :process 1, :f :read, :value 5, :key "k0"}
+{:index 26, :time 1893605813, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 27, :time 1895289381, :type :ok, :process 2, :f :read, :value 5, :key "k0"}
+{:index 28, :time 2034449590, :type :invoke, :process 0, :f :write, :value 3, :key "k0"}
+{:index 29, :time 2036168820, :type :ok, :process 0, :f :write, :value 3, :key "k0"}
+{:index 30, :time 2058394711, :type :invoke, :process 0, :f :write, :value 52, :key "k0"}
+{:index 31, :time 2060098180, :type :ok, :process 0, :f :write, :value 52, :key "k0"}
+{:index 32, :time 2169308390, :type :invoke, :process 1, :f :write, :value 28, :key "k0"}
+{:index 33, :time 2170881264, :type :ok, :process 1, :f :write, :value 28, :key "k0"}
+{:index 34, :time 2345438120, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 35, :time 2347070447, :type :ok, :process 2, :f :read, :value 28, :key "k0"}
+{:index 36, :time 2357464308, :type :invoke, :process 0, :f :write, :value 27, :key "k0"}
+{:index 37, :time 2359000291, :type :ok, :process 0, :f :write, :value 27, :key "k0"}
+{:index 38, :time 2532867972, :type :invoke, :process 0, :f :read, :value nil, :key "k0"}
+{:index 39, :time 2538582950, :type :ok, :process 0, :f :read, :value 27, :key "k0"}
+{:index 40, :time 2542127063, :type :invoke, :process 1, :f :write, :value 10, :key "k0"}
+{:index 41, :time 2543550703, :type :ok, :process 1, :f :write, :value 10, :key "k0"}
+{:index 42, :time 2735013445, :type :invoke, :process 2, :f :write, :value 81, :key "k0"}
+{:index 43, :time 2737218372, :type :ok, :process 2, :f :write, :value 81, :key "k0"}
+{:index 44, :time 2744341089, :type :invoke, :process 0, :f :write, :value 50, :key "k0"}
+{:index 45, :time 2745891293, :type :ok, :process 0, :f :write, :value 50, :key "k0"}
+{:index 46, :time 2773686387, :type :invoke, :process 0, :f :read, :value nil, :key "k0"}
+{:index 47, :time 2775430598, :type :ok, :process 0, :f :read, :value 50, :key "k0"}
+{:index 48, :time 2935918256, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 49, :time 2937441319, :type :ok, :process 1, :f :read, :value 50, :key "k0"}
+{:index 50, :time 3096667883, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 51, :time 3098337661, :type :ok, :process 2, :f :read, :value 50, :key "k0"}
+{:index 52, :time 3195484071, :type :invoke, :process 0, :f :write, :value 72, :key "k0"}
+{:index 53, :time 3197221411, :type :ok, :process 0, :f :write, :value 72, :key "k0"}
+{:index 54, :time 3226370103, :type :invoke, :process 0, :f :write, :value 64, :key "k0"}
+{:index 55, :time 3227934998, :type :ok, :process 0, :f :write, :value 64, :key "k0"}
+{:index 56, :time 3307837560, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 57, :time 3309272430, :type :ok, :process 1, :f :read, :value 64, :key "k0"}
+{:index 58, :time 3417338479, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 59, :time 3418716387, :type :ok, :process 2, :f :read, :value 64, :key "k0"}
+{:index 60, :time 3504383178, :type :invoke, :process 0, :f :write, :value 34, :key "k0"}
+{:index 61, :time 3505824088, :type :ok, :process 0, :f :write, :value 34, :key "k0"}
+{:index 62, :time 3518358164, :type :invoke, :process 0, :f :write, :value 62, :key "k0"}
+{:index 63, :time 3519568166, :type :ok, :process 0, :f :write, :value 62, :key "k0"}
+{:index 64, :time 3534354759, :type :invoke, :process 1, :f :write, :value 71, :key "k0"}
+{:index 65, :time 3535630743, :type :ok, :process 1, :f :write, :value 71, :key "k0"}
+{:index 66, :time 3616995785, :type :invoke, :process 2, :f :write, :value 0, :key "k0"}
+{:index 67, :time 3619330846, :type :ok, :process 2, :f :write, :value 0, :key "k0"}
+{:index 68, :time 3778023271, :type :invoke, :process 0, :f :write, :value 12, :key "k0"}
+{:index 69, :time 3779967789, :type :ok, :process 0, :f :write, :value 12, :key "k0"}
+{:index 70, :time 3967065051, :type :invoke, :process 0, :f :read, :value nil, :key "k0"}
+{:index 71, :time 3968514331, :type :ok, :process 0, :f :read, :value 12, :key "k0"}
+{:index 72, :time 4120929057, :type :invoke, :process 1, :f :write, :value 78, :key "k0"}
+{:index 73, :time 4122838423, :type :ok, :process 1, :f :write, :value 78, :key "k0"}
+{:index 74, :time 4237707398, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 75, :time 4239174469, :type :ok, :process 2, :f :read, :value 78, :key "k0"}
+{:index 76, :time 4415399284, :type :invoke, :process 0, :f :write, :value 81, :key "k0"}
+{:index 77, :time 4416688809, :type :ok, :process 0, :f :write, :value 81, :key "k0"}
+{:index 78, :time 4555906699, :type :invoke, :process 0, :f :read, :value nil, :key "k0"}
+{:index 79, :time 4557328468, :type :ok, :process 0, :f :read, :value 81, :key "k0"}
+{:index 80, :time 4634007658, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 81, :time 4636230635, :type :ok, :process 1, :f :read, :value 81, :key "k0"}
+{:index 82, :time 4794126592, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 83, :time 4796089860, :type :ok, :process 2, :f :read, :value 81, :key "k0"}
+{:index 84, :time 4819609586, :type :invoke, :process 0, :f :write, :value 41, :key "k0"}
+{:index 85, :time 4821006965, :type :ok, :process 0, :f :write, :value 41, :key "k0"}
+{:index 86, :time 4830724222, :type :invoke, :process 0, :f :write, :value 8, :key "k0"}
+{:index 87, :time 4831954285, :type :ok, :process 0, :f :write, :value 8, :key "k0"}
+{:index 88, :time 4891224021, :type :invoke, :process 1, :f :write, :value 3, :key "k0"}
+{:index 89, :time 4892482415, :type :ok, :process 1, :f :write, :value 3, :key "k0"}
+{:index 90, :time 4958555496, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 91, :time 4959816260, :type :ok, :process 2, :f :read, :value 3, :key "k0"}
+{:index 92, :time 5075532684, :type :invoke, :process 0, :f :read, :value nil, :key "k0"}
+{:index 93, :time 5076831199, :type :ok, :process 0, :f :read, :value 3, :key "k0"}
+{:index 94, :time 5233514865, :type :invoke, :process 0, :f :write, :value 83, :key "k0"}
+{:index 95, :time 5234916894, :type :ok, :process 0, :f :write, :value 83, :key "k0"}
+{:index 96, :time 5236244760, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 97, :time 5237605317, :type :ok, :process 1, :f :read, :value 83, :key "k0"}
+{:index 98, :time 5334306520, :type :invoke, :process 2, :f :write, :value 84, :key "k0"}
+{:index 99, :time 5335677648, :type :ok, :process 2, :f :write, :value 84, :key "k0"}
+{:index 100, :time 5395064219, :type :invoke, :process 0, :f :read, :value nil, :key "k0"}
+{:index 101, :time 5396327323, :type :ok, :process 0, :f :read, :value 84, :key "k0"}
+{:index 102, :time 5429634788, :type :invoke, :process 0, :f :read, :value nil, :key "k0"}
+{:index 103, :time 5430872821, :type :ok, :process 0, :f :read, :value 84, :key "k0"}
+{:index 104, :time 5513810367, :type :invoke, :process 1, :f :write, :value 67, :key "k0"}
+{:index 105, :time 5515067001, :type :ok, :process 1, :f :write, :value 67, :key "k0"}
+{:index 106, :time 5624258619, :type :invoke, :process 2, :f :write, :value 60, :key "k0"}
+{:index 107, :time 5625860255, :type :ok, :process 2, :f :write, :value 60, :key "k0"}
+{:index 108, :time 5732677681, :type :invoke, :process 0, :f :read, :value nil, :key "k0"}
+{:index 109, :time 5734747152, :type :ok, :process 0, :f :read, :value 60, :key "k0"}
+{:index 110, :time 5813722932, :type :invoke, :process 0, :f :read, :value nil, :key "k0"}
+{:index 111, :time 5815174332, :type :ok, :process 0, :f :read, :value 60, :key "k0"}
+{:index 112, :time 5963834059, :type :invoke, :process 1, :f :write, :value 49, :key "k0"}
+{:index 113, :time 5965281299, :type :ok, :process 1, :f :write, :value 49, :key "k0"}
+{:index 114, :time 5982160225, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 115, :time 5983490241, :type :ok, :process 2, :f :read, :value 49, :key "k0"}
+{:index 116, :time 6052872076, :type :invoke, :process 0, :f :write, :value 36, :key "k0"}
+{:index 117, :time 6054084848, :type :ok, :process 0, :f :write, :value 36, :key "k0"}
+{:index 118, :time 6248449830, :type :invoke, :process 0, :f :write, :value 21, :key "k0"}
+{:index 119, :time 6250188990, :type :ok, :process 0, :f :write, :value 21, :key "k0"}
+{:index 120, :time 6250764990, :type :invoke, :process 1, :f :write, :value 77, :key "k0"}
+{:index 121, :time 6252376766, :type :ok, :process 1, :f :write, :value 77, :key "k0"}
+{:index 122, :time 6323021747, :type :invoke, :process 2, :f :write, :value 65, :key "k0"}
+{:index 123, :time 6324389464, :type :ok, :process 2, :f :write, :value 65, :key "k0"}
+{:index 124, :time 6446664796, :type :invoke, :process 0, :f :read, :value nil, :key "k0"}
+{:index 125, :time 6448059125, :type :ok, :process 0, :f :read, :value 65, :key "k0"}
+{:index 126, :time 6483923099, :type :invoke, :process 0, :f :write, :value 29, :key "k0"}
+{:index 127, :time 6485144221, :type :ok, :process 0, :f :write, :value 29, :key "k0"}
+{:index 128, :time 6509399123, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 129, :time 6510706338, :type :ok, :process 1, :f :read, :value 29, :key "k0"}
+{:index 130, :time 6564245524, :type :invoke, :process 2, :f :write, :value 90, :key "k0"}
+{:index 131, :time 6565380554, :type :ok, :process 2, :f :write, :value 90, :key "k0"}
+{:index 132, :time 6662753281, :type :invoke, :process 0, :f :read, :value nil, :key "k0"}
+{:index 133, :time 6664102638, :type :ok, :process 0, :f :read, :value 90, :key "k0"}
+{:index 134, :time 6672539751, :type :invoke, :process 0, :f :write, :value 24, :key "k0"}
+{:index 135, :time 6673667470, :type :ok, :process 0, :f :write, :value 24, :key "k0"}
+{:index 136, :time 6713512963, :type :invoke, :process 1, :f :write, :value 89, :key "k0"}
+{:index 137, :time 6715373308, :type :ok, :process 1, :f :write, :value 89, :key "k0"}
+{:index 138, :time 6828810192, :type :invoke, :process 2, :f :write, :value 51, :key "k0"}
+{:index 139, :time 6830179569, :type :ok, :process 2, :f :write, :value 51, :key "k0"}
+{:index 140, :time 6904349582, :type :invoke, :process 0, :f :read, :value nil, :key "k0"}
+{:index 141, :time 6905623986, :type :ok, :process 0, :f :read, :value 51, :key "k0"}
+{:index 142, :time 6956617286, :type :invoke, :process 0, :f :write, :value 27, :key "k0"}
+{:index 143, :time 6957893860, :type :ok, :process 0, :f :write, :value 27, :key "k0"}
+{:index 144, :time 7141416196, :type :invoke, :process 1, :f :write, :value 45, :key "k0"}
+{:index 145, :time 7142857156, :type :ok, :process 1, :f :write, :value 45, :key "k0"}
+{:index 146, :time 7172429532, :type :invoke, :process 2, :f :write, :value 81, :key "k0"}
+{:index 147, :time 7173611403, :type :ok, :process 2, :f :write, :value 81, :key "k0"}
+{:index 148, :time 7320329102, :type :invoke, :process 0, :f :read, :value nil, :key "k0"}
+{:index 149, :time 7321594746, :type :ok, :process 0, :f :read, :value 81, :key "k0"}
+{:index 150, :time 7355369077, :type :invoke, :process 0, :f :write, :value 15, :key "k0"}
+{:index 151, :time 7356536207, :type :ok, :process 0, :f :write, :value 15, :key "k0"}
+{:index 152, :time 7422236637, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 153, :time 7423530012, :type :ok, :process 1, :f :read, :value 15, :key "k0"}
+{:index 154, :time 7618103730, :type :invoke, :process 2, :f :write, :value 49, :key "k0"}
+{:index 155, :time 7623590881, :type :ok, :process 2, :f :write, :value 49, :key "k0"}
+{:index 156, :time 7711362306, :type :invoke, :process 0, :f :read, :value nil, :key "k0"}
+{:index 157, :time 7714054759, :type :ok, :process 0, :f :read, :value 49, :key "k0"}
+{:index 158, :time 7871892853, :type :invoke, :process 0, :f :read, :value nil, :key "k0"}
+{:index 159, :time 7873894492, :type :ok, :process 0, :f :read, :value 49, :key "k0"}
+{:index 160, :time 8065909902, :type :invoke, :process 1, :f :write, :value 56, :key "k0"}
+{:index 161, :time 8067368603, :type :ok, :process 1, :f :write, :value 56, :key "k0"}
+{:index 162, :time 8218279157, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 163, :time 8219854282, :type :ok, :process 2, :f :read, :value 56, :key "k0"}
+{:index 164, :time 8286580536, :type :invoke, :process 0, :f :read, :value nil, :key "k0"}
+{:index 165, :time 8288335826, :type :ok, :process 0, :f :read, :value 56, :key "k0"}
+{:index 166, :time 8372205785, :type :invoke, :process 0, :f :read, :value nil, :key "k0"}
+{:index 167, :time 8373601413, :type :ok, :process 0, :f :read, :value 56, :key "k0"}
+{:index 168, :time 8478135950, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 169, :time 8479407624, :type :ok, :process 1, :f :read, :value 56, :key "k0"}
+{:index 170, :time 8536973850, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 171, :time 8538123600, :type :ok, :process 2, :f :read, :value 56, :key "k0"}
+{:index 172, :time 8559252124, :type :invoke, :process 0, :f :write, :value 96, :key "k0"}
+{:index 173, :time 8560474666, :type :ok, :process 0, :f :write, :value 96, :key "k0"}
+{:index 174, :time 8687919206, :type :invoke, :process 0, :f :write, :value 74, :key "k0"}
+{:index 175, :time 8689119177, :type :ok, :process 0, :f :write, :value 74, :key "k0"}
+{:index 176, :time 8771467454, :type :invoke, :process 1, :f :write, :value 72, :key "k0"}
+{:index 177, :time 8773388801, :type :ok, :process 1, :f :write, :value 72, :key "k0"}
+{:index 178, :time 8915922804, :type :invoke, :process 2, :f :write, :value 14, :key "k0"}
+{:index 179, :time 8917280401, :type :ok, :process 2, :f :write, :value 14, :key "k0"}
+{:index 180, :time 9075449996, :type :invoke, :process 0, :f :read, :value nil, :key "k0"}
+{:index 181, :time 9076853455, :type :ok, :process 0, :f :read, :value 14, :key "k0"}
+{:index 182, :time 9232538155, :type :invoke, :process 0, :f :read, :value nil, :key "k0"}
+{:index 183, :time 9233826530, :type :ok, :process 0, :f :read, :value 14, :key "k0"}
+{:index 184, :time 9431592099, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 185, :time 9432874563, :type :ok, :process 1, :f :read, :value 14, :key "k0"}
+{:index 186, :time 9579487888, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 187, :time 9580670539, :type :ok, :process 2, :f :read, :value 14, :key "k0"}
+{:index 188, :time 9732763564, :type :invoke, :process 0, :f :write, :value 53, :key "k0"}
+{:index 189, :time 9734088280, :type :ok, :process 0, :f :write, :value 53, :key "k0"}
+{:index 190, :time 9918603229, :type :invoke, :process 0, :f :read, :value nil, :key "k0"}
+{:index 191, :time 9920529016, :type :ok, :process 0, :f :read, :value 53, :key "k0"}
+{:index 192, :time 10033523434, :type :invoke, :process 1, :f :write, :value 18, :key "k0"}
+{:index 193, :time 10034972894, :type :ok, :process 1, :f :write, :value 18, :key "k0"}
+{:index 194, :time 10080893438, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 195, :time 10082285156, :type :ok, :process 2, :f :read, :value 18, :key "k0"}
+{:index 196, :time 10105118258, :type :info, :process :nemesis, :f :start-partition, :value nil}
+{:index 197, :time 10114235574, :type :info, :process :nemesis, :f :start-partition, :value [:isolated {"n1" #{"n2" "n3"}, "n2" #{"n1"}, "n3" #{"n1"}}]}
+{:index 198, :time 10188614914, :type :invoke, :process 1, :f :write, :value 48, :key "k0"}
+{:index 199, :time 10190322273, :type :ok, :process 1, :f :write, :value 48, :key "k0"}
+{:index 200, :time 10207853351, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 201, :time 10209204288, :type :ok, :process 2, :f :read, :value 48, :key "k0"}
+{:index 202, :time 10294242727, :type :invoke, :process 0, :f :write, :value 93, :key "k0"}
+{:index 203, :time 10310683857, :type :invoke, :process 1, :f :write, :value 94, :key "k0"}
+{:index 204, :time 10311915649, :type :ok, :process 1, :f :write, :value 94, :key "k0"}
+{:index 205, :time 10321059407, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 206, :time 10322179266, :type :ok, :process 1, :f :read, :value 94, :key "k0"}
+{:index 207, :time 10490821705, :type :invoke, :process 2, :f :write, :value 5, :key "k0"}
+{:index 208, :time 10491935313, :type :ok, :process 2, :f :write, :value 5, :key "k0"}
+{:index 209, :time 10497758875, :type :invoke, :process 1, :f :write, :value 53, :key "k0"}
+{:index 210, :time 10498824982, :type :ok, :process 1, :f :write, :value 53, :key "k0"}
+{:index 211, :time 10648266435, :type :invoke, :process 1, :f :write, :value 65, :key "k0"}
+{:index 212, :time 10649437696, :type :ok, :process 1, :f :write, :value 65, :key "k0"}
+{:index 213, :time 10703897953, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 214, :time 10705068494, :type :ok, :process 1, :f :read, :value 65, :key "k0"}
+{:index 215, :time 10750856321, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 216, :time 10751954619, :type :ok, :process 2, :f :read, :value 65, :key "k0"}
+{:index 217, :time 10839551278, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 218, :time 10841419583, :type :ok, :process 1, :f :read, :value 65, :key "k0"}
+{:index 219, :time 11039291525, :type :invoke, :process 1, :f :write, :value 35, :key "k0"}
+{:index 220, :time 11040651283, :type :ok, :process 1, :f :write, :value 35, :key "k0"}
+{:index 221, :time 11230843209, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 222, :time 11232376372, :type :ok, :process 1, :f :read, :value 35, :key "k0"}
+{:index 223, :time 11294372201, :type :invoke, :process 2, :f :write, :value 48, :key "k0"}
+{:index 224, :time 11295604414, :type :ok, :process 2, :f :write, :value 48, :key "k0"}
+{:index 225, :time 11364564605, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 226, :time 11365871620, :type :ok, :process 1, :f :read, :value 48, :key "k0"}
+{:index 227, :time 11525604519, :type :invoke, :process 1, :f :write, :value 52, :key "k0"}
+{:index 228, :time 11527163793, :type :ok, :process 1, :f :write, :value 52, :key "k0"}
+{:index 229, :time 11579249600, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 230, :time 11580580246, :type :ok, :process 1, :f :read, :value 52, :key "k0"}
+{:index 231, :time 11622498751, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 232, :time 11623859798, :type :ok, :process 2, :f :read, :value 52, :key "k0"}
+{:index 233, :time 11804290425, :type :invoke, :process 1, :f :write, :value 4, :key "k0"}
+{:index 234, :time 11806361287, :type :ok, :process 1, :f :write, :value 4, :key "k0"}
+{:index 235, :time 11929932462, :type :invoke, :process 1, :f :write, :value 34, :key "k0"}
+{:index 236, :time 11931707473, :type :ok, :process 1, :f :write, :value 34, :key "k0"}
+{:index 237, :time 11992673106, :type :invoke, :process 1, :f :write, :value 92, :key "k0"}
+{:index 238, :time 11993854948, :type :ok, :process 1, :f :write, :value 92, :key "k0"}
+{:index 239, :time 12162375942, :type :invoke, :process 2, :f :write, :value 47, :key "k0"}
+{:index 240, :time 12163918906, :type :ok, :process 2, :f :write, :value 47, :key "k0"}
+{:index 241, :time 12218848501, :type :invoke, :process 1, :f :write, :value 79, :key "k0"}
+{:index 242, :time 12220308881, :type :ok, :process 1, :f :write, :value 79, :key "k0"}
+{:index 243, :time 12325360112, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 244, :time 12326715369, :type :ok, :process 1, :f :read, :value 79, :key "k0"}
+{:index 245, :time 12401644538, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 246, :time 12402810669, :type :ok, :process 1, :f :read, :value 79, :key "k0"}
+{:index 247, :time 12439242943, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 248, :time 12440385962, :type :ok, :process 2, :f :read, :value 79, :key "k0"}
+{:index 249, :time 12501169240, :type :invoke, :process 1, :f :write, :value 10, :key "k0"}
+{:index 250, :time 12501402698, :type :invoke, :process 2, :f :write, :value 58, :key "k0"}
+{:index 251, :time 12503087907, :type :ok, :process 2, :f :write, :value 58, :key "k0"}
+{:index 252, :time 12503245422, :type :ok, :process 1, :f :write, :value 10, :key "k0"}
+{:index 253, :time 12571846731, :type :invoke, :process 1, :f :write, :value 27, :key "k0"}
+{:index 254, :time 12573344283, :type :ok, :process 1, :f :write, :value 27, :key "k0"}
+{:index 255, :time 12659682436, :type :invoke, :process 2, :f :write, :value 0, :key "k0"}
+{:index 256, :time 12665065483, :type :ok, :process 2, :f :write, :value 0, :key "k0"}
+{:index 257, :time 12681440761, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 258, :time 12682526619, :type :ok, :process 1, :f :read, :value 0, :key "k0"}
+{:index 259, :time 12753646476, :type :invoke, :process 1, :f :write, :value 85, :key "k0"}
+{:index 260, :time 12754731583, :type :ok, :process 1, :f :write, :value 85, :key "k0"}
+{:index 261, :time 12806870451, :type :invoke, :process 1, :f :write, :value 58, :key "k0"}
+{:index 262, :time 12807934768, :type :ok, :process 1, :f :write, :value 58, :key "k0"}
+{:index 263, :time 12847273682, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 264, :time 12849067535, :type :ok, :process 2, :f :read, :value 58, :key "k0"}
+{:index 265, :time 12914285066, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 266, :time 12915538150, :type :ok, :process 1, :f :read, :value 58, :key "k0"}
+{:index 267, :time 13112891123, :type :invoke, :process 1, :f :write, :value 83, :key "k0"}
+{:index 268, :time 13114014842, :type :ok, :process 1, :f :write, :value 83, :key "k0"}
+{:index 269, :time 13221091625, :type :invoke, :process 1, :f :write, :value 65, :key "k0"}
+{:index 270, :time 13222125981, :type :ok, :process 1, :f :write, :value 65, :key "k0"}
+{:index 271, :time 13314061879, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 272, :time 13315022552, :type :ok, :process 2, :f :read, :value 65, :key "k0"}
+{:index 273, :time 13376054958, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 274, :time 13377102835, :type :ok, :process 1, :f :read, :value 65, :key "k0"}
+{:index 275, :time 13414723379, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 276, :time 13415700373, :type :ok, :process 1, :f :read, :value 65, :key "k0"}
+{:index 277, :time 13570539592, :type :invoke, :process 1, :f :write, :value 13, :key "k0"}
+{:index 278, :time 13571606749, :type :ok, :process 1, :f :write, :value 13, :key "k0"}
+{:index 279, :time 13688052687, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 280, :time 13689211077, :type :ok, :process 2, :f :read, :value 13, :key "k0"}
+{:index 281, :time 13800684003, :type :invoke, :process 1, :f :write, :value 42, :key "k0"}
+{:index 282, :time 13801898125, :type :ok, :process 1, :f :write, :value 42, :key "k0"}
+{:index 283, :time 13808299997, :type :invoke, :process 1, :f :write, :value 32, :key "k0"}
+{:index 284, :time 13809209998, :type :ok, :process 1, :f :write, :value 32, :key "k0"}
+{:index 285, :time 13975226405, :type :invoke, :process 1, :f :write, :value 26, :key "k0"}
+{:index 286, :time 13976836421, :type :ok, :process 1, :f :write, :value 26, :key "k0"}
+{:index 287, :time 14067804425, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 288, :time 14068997036, :type :ok, :process 2, :f :read, :value 26, :key "k0"}
+{:index 289, :time 14239836940, :type :invoke, :process 1, :f :write, :value 69, :key "k0"}
+{:index 290, :time 14241411944, :type :ok, :process 1, :f :write, :value 69, :key "k0"}
+{:index 291, :time 14355208469, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 292, :time 14356341578, :type :ok, :process 1, :f :read, :value 69, :key "k0"}
+{:index 293, :time 14391598152, :type :invoke, :process 1, :f :write, :value 74, :key "k0"}
+{:index 294, :time 14392573096, :type :ok, :process 1, :f :write, :value 74, :key "k0"}
+{:index 295, :time 14528236680, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 296, :time 14530107435, :type :ok, :process 2, :f :read, :value 74, :key "k0"}
+{:index 297, :time 14648727938, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 298, :time 14650446587, :type :ok, :process 1, :f :read, :value 74, :key "k0"}
+{:index 299, :time 14671417084, :type :invoke, :process 1, :f :write, :value 18, :key "k0"}
+{:index 300, :time 14673141634, :type :ok, :process 1, :f :write, :value 18, :key "k0"}
+{:index 301, :time 14732478052, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 302, :time 14734076527, :type :ok, :process 1, :f :read, :value 18, :key "k0"}
+{:index 303, :time 14916048497, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 304, :time 14917674163, :type :ok, :process 2, :f :read, :value 18, :key "k0"}
+{:index 305, :time 15100600886, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 306, :time 15101868360, :type :ok, :process 1, :f :read, :value 18, :key "k0"}
+{:index 307, :time 15160988640, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 308, :time 15162000975, :type :ok, :process 1, :f :read, :value 18, :key "k0"}
+{:index 309, :time 15245827551, :type :invoke, :process 1, :f :write, :value 62, :key "k0"}
+{:index 310, :time 15246850397, :type :ok, :process 1, :f :write, :value 62, :key "k0"}
+{:index 311, :time 15300317021, :type :info, :process 0, :f :write, :value 93, :key "k0", :error :timeout}
+{:index 312, :time 15393780411, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 313, :time 15394796896, :type :ok, :process 2, :f :read, :value 62, :key "k0"}
+{:index 314, :time 15480215308, :type :invoke, :process 3, :f :read, :value nil, :key "k0"}
+{:index 315, :time 15562222201, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 316, :time 15563617219, :type :ok, :process 1, :f :read, :value 62, :key "k0"}
+{:index 317, :time 15684659046, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 318, :time 15685817796, :type :ok, :process 1, :f :read, :value 62, :key "k0"}
+{:index 319, :time 15880614650, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 320, :time 15882505985, :type :ok, :process 2, :f :read, :value 62, :key "k0"}
+{:index 321, :time 16063767280, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 322, :time 16065442148, :type :ok, :process 1, :f :read, :value 62, :key "k0"}
+{:index 323, :time 16083535535, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 324, :time 16084583431, :type :ok, :process 1, :f :read, :value 62, :key "k0"}
+{:index 325, :time 16252416051, :type :invoke, :process 1, :f :write, :value 22, :key "k0"}
+{:index 326, :time 16254044567, :type :ok, :process 1, :f :write, :value 22, :key "k0"}
+{:index 327, :time 16260824102, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 328, :time 16261937711, :type :ok, :process 2, :f :read, :value 22, :key "k0"}
+{:index 329, :time 16460772254, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 330, :time 16462432052, :type :ok, :process 1, :f :read, :value 22, :key "k0"}
+{:index 331, :time 16557548739, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 332, :time 16558896746, :type :ok, :process 1, :f :read, :value 22, :key "k0"}
+{:index 333, :time 16634748206, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 334, :time 16636066411, :type :ok, :process 1, :f :read, :value 22, :key "k0"}
+{:index 335, :time 16774402067, :type :invoke, :process 2, :f :write, :value 8, :key "k0"}
+{:index 336, :time 16775813656, :type :ok, :process 2, :f :write, :value 8, :key "k0"}
+{:index 337, :time 16805480945, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 338, :time 16806657676, :type :ok, :process 1, :f :read, :value 8, :key "k0"}
+{:index 339, :time 16899769415, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 340, :time 16900840892, :type :ok, :process 1, :f :read, :value 8, :key "k0"}
+{:index 341, :time 17059661218, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 342, :time 17061305335, :type :ok, :process 1, :f :read, :value 8, :key "k0"}
+{:index 343, :time 17230967507, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 344, :time 17232088646, :type :ok, :process 2, :f :read, :value 8, :key "k0"}
+{:index 345, :time 17250177303, :type :invoke, :process 1, :f :write, :value 88, :key "k0"}
+{:index 346, :time 17251235980, :type :ok, :process 1, :f :write, :value 88, :key "k0"}
+{:index 347, :time 17333558654, :type :invoke, :process 1, :f :write, :value 57, :key "k0"}
+{:index 348, :time 17334607210, :type :ok, :process 1, :f :write, :value 57, :key "k0"}
+{:index 349, :time 17342538056, :type :invoke, :process 1, :f :write, :value 46, :key "k0"}
+{:index 350, :time 17343505019, :type :ok, :process 1, :f :write, :value 46, :key "k0"}
+{:index 351, :time 17492477554, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 352, :time 17493493979, :type :ok, :process 2, :f :read, :value 46, :key "k0"}
+{:index 353, :time 17610804345, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 354, :time 17611985116, :type :ok, :process 1, :f :read, :value 46, :key "k0"}
+{:index 355, :time 17678968959, :type :invoke, :process 1, :f :write, :value 39, :key "k0"}
+{:index 356, :time 17684249132, :type :ok, :process 1, :f :write, :value 39, :key "k0"}
+{:index 357, :time 17755670338, :type :invoke, :process 1, :f :write, :value 71, :key "k0"}
+{:index 358, :time 17756656182, :type :ok, :process 1, :f :write, :value 71, :key "k0"}
+{:index 359, :time 17924160349, :type :invoke, :process 2, :f :write, :value 97, :key "k0"}
+{:index 360, :time 17925194334, :type :ok, :process 2, :f :write, :value 97, :key "k0"}
+{:index 361, :time 18046096066, :type :invoke, :process 1, :f :write, :value 43, :key "k0"}
+{:index 362, :time 18047675501, :type :ok, :process 1, :f :write, :value 43, :key "k0"}
+{:index 363, :time 18223682014, :type :invoke, :process 1, :f :write, :value 22, :key "k0"}
+{:index 364, :time 18225164955, :type :ok, :process 1, :f :write, :value 22, :key "k0"}
+{:index 365, :time 18265601806, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 366, :time 18266763236, :type :ok, :process 1, :f :read, :value 22, :key "k0"}
+{:index 367, :time 18316901994, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 368, :time 18317869778, :type :ok, :process 2, :f :read, :value 22, :key "k0"}
+{:index 369, :time 18494033905, :type :invoke, :process 1, :f :write, :value 14, :key "k0"}
+{:index 370, :time 18495056341, :type :ok, :process 1, :f :write, :value 14, :key "k0"}
+{:index 371, :time 18634591638, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 372, :time 18635769719, :type :ok, :process 1, :f :read, :value 14, :key "k0"}
+{:index 373, :time 18790196303, :type :invoke, :process 1, :f :write, :value 85, :key "k0"}
+{:index 374, :time 18791200877, :type :ok, :process 1, :f :write, :value 85, :key "k0"}
+{:index 375, :time 18940910126, :type :invoke, :process 2, :f :write, :value 88, :key "k0"}
+{:index 376, :time 18941863610, :type :ok, :process 2, :f :write, :value 88, :key "k0"}
+{:index 377, :time 19074688905, :type :invoke, :process 1, :f :write, :value 91, :key "k0"}
+{:index 378, :time 19076433205, :type :ok, :process 1, :f :write, :value 91, :key "k0"}
+{:index 379, :time 19082035489, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 380, :time 19083213080, :type :ok, :process 1, :f :read, :value 91, :key "k0"}
+{:index 381, :time 19167951697, :type :invoke, :process 1, :f :write, :value 19, :key "k0"}
+{:index 382, :time 19169017353, :type :ok, :process 1, :f :write, :value 19, :key "k0"}
+{:index 383, :time 19304323574, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 384, :time 19305385841, :type :ok, :process 2, :f :read, :value 19, :key "k0"}
+{:index 385, :time 19327395255, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 386, :time 19328316127, :type :ok, :process 1, :f :read, :value 19, :key "k0"}
+{:index 387, :time 19421123774, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 388, :time 19422081457, :type :ok, :process 1, :f :read, :value 19, :key "k0"}
+{:index 389, :time 19582084993, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 390, :time 19583098049, :type :ok, :process 1, :f :read, :value 19, :key "k0"}
+{:index 391, :time 19719187725, :type :invoke, :process 2, :f :write, :value 62, :key "k0"}
+{:index 392, :time 19720374127, :type :ok, :process 2, :f :write, :value 62, :key "k0"}
+{:index 393, :time 19819681189, :type :invoke, :process 1, :f :write, :value 79, :key "k0"}
+{:index 394, :time 19820727915, :type :ok, :process 1, :f :write, :value 79, :key "k0"}
+{:index 395, :time 19942273331, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 396, :time 19943297676, :type :ok, :process 1, :f :read, :value 79, :key "k0"}
+{:index 397, :time 20119015366, :type :invoke, :process 1, :f :write, :value 27, :key "k0"}
+{:index 398, :time 20120658143, :type :ok, :process 1, :f :write, :value 27, :key "k0"}
+{:index 399, :time 20241311127, :type :invoke, :process 2, :f :write, :value 31, :key "k0"}
+{:index 400, :time 20242709365, :type :ok, :process 2, :f :write, :value 31, :key "k0"}
+{:index 401, :time 20245764701, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 402, :time 20246781526, :type :ok, :process 1, :f :read, :value 31, :key "k0"}
+{:index 403, :time 20392659012, :type :invoke, :process 1, :f :write, :value 55, :key "k0"}
+{:index 404, :time 20393601385, :type :ok, :process 1, :f :write, :value 55, :key "k0"}
+{:index 405, :time 20486631110, :type :info, :process 3, :f :read, :value nil, :key "k0", :error :timeout}
+{:index 406, :time 20540289800, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 407, :time 20541372208, :type :ok, :process 1, :f :read, :value 55, :key "k0"}
+{:index 408, :time 20567802894, :type :invoke, :process 2, :f :write, :value 54, :key "k0"}
+{:index 409, :time 20569347057, :type :ok, :process 2, :f :write, :value 54, :key "k0"}
+{:index 410, :time 20631568224, :type :invoke, :process 6, :f :write, :value 50, :key "k0"}
+{:index 411, :time 20817322943, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 412, :time 20819060773, :type :ok, :process 1, :f :read, :value 54, :key "k0"}
+{:index 413, :time 20856812571, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 414, :time 20857965371, :type :ok, :process 1, :f :read, :value 54, :key "k0"}
+{:index 415, :time 21041179003, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 416, :time 21042787468, :type :ok, :process 2, :f :read, :value 54, :key "k0"}
+{:index 417, :time 21184114287, :type :invoke, :process 1, :f :write, :value 15, :key "k0"}
+{:index 418, :time 21185770925, :type :ok, :process 1, :f :write, :value 15, :key "k0"}
+{:index 419, :time 21207442456, :type :invoke, :process 1, :f :write, :value 84, :key "k0"}
+{:index 420, :time 21208448371, :type :ok, :process 1, :f :write, :value 84, :key "k0"}
+{:index 421, :time 21390265673, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 422, :time 21391886149, :type :ok, :process 1, :f :read, :value 84, :key "k0"}
+{:index 423, :time 21535618531, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 424, :time 21537198566, :type :ok, :process 2, :f :read, :value 84, :key "k0"}
+{:index 425, :time 21659983642, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 426, :time 21661359220, :type :ok, :process 1, :f :read, :value 84, :key "k0"}
+{:index 427, :time 21697885625, :type :invoke, :process 1, :f :write, :value 59, :key "k0"}
+{:index 428, :time 21699456310, :type :ok, :process 1, :f :write, :value 59, :key "k0"}
+{:index 429, :time 21887126915, :type :invoke, :process 1, :f :write, :value 5, :key "k0"}
+{:index 430, :time 21888383179, :type :ok, :process 1, :f :write, :value 5, :key "k0"}
+{:index 431, :time 21997692356, :type :invoke, :process 2, :f :write, :value 90, :key "k0"}
+{:index 432, :time 21999212869, :type :ok, :process 2, :f :write, :value 90, :key "k0"}
+{:index 433, :time 22027267822, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 434, :time 22028947420, :type :ok, :process 1, :f :read, :value 90, :key "k0"}
+{:index 435, :time 22032504693, :type :invoke, :process 1, :f :write, :value 84, :key "k0"}
+{:index 436, :time 22033912682, :type :ok, :process 1, :f :write, :value 84, :key "k0"}
+{:index 437, :time 22120185112, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 438, :time 22121833760, :type :ok, :process 1, :f :read, :value 84, :key "k0"}
+{:index 439, :time 22281469352, :type :invoke, :process 2, :f :write, :value 65, :key "k0"}
+{:index 440, :time 22283218013, :type :ok, :process 2, :f :write, :value 65, :key "k0"}
+{:index 441, :time 22480335745, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 442, :time 22482005563, :type :ok, :process 1, :f :read, :value 65, :key "k0"}
+{:index 443, :time 22569169184, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 444, :time 22570800810, :type :ok, :process 1, :f :read, :value 65, :key "k0"}
+{:index 445, :time 22755777310, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 446, :time 22757391166, :type :ok, :process 1, :f :read, :value 65, :key "k0"}
+{:index 447, :time 22858860893, :type :invoke, :process 2, :f :write, :value 58, :key "k0"}
+{:index 448, :time 22860350105, :type :ok, :process 2, :f :write, :value 58, :key "k0"}
+{:index 449, :time 22860860162, :type :invoke, :process 1, :f :write, :value 69, :key "k0"}
+{:index 450, :time 22861782804, :type :ok, :process 1, :f :write, :value 69, :key "k0"}
+{:index 451, :time 22956053133, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 452, :time 22957034137, :type :ok, :process 1, :f :read, :value 69, :key "k0"}
+{:index 453, :time 23049372277, :type :invoke, :process 1, :f :write, :value 92, :key "k0"}
+{:index 454, :time 23052162184, :type :ok, :process 1, :f :write, :value 92, :key "k0"}
+{:index 455, :time 23214956276, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 456, :time 23216474748, :type :ok, :process 2, :f :read, :value 92, :key "k0"}
+{:index 457, :time 23287337684, :type :invoke, :process 1, :f :write, :value 91, :key "k0"}
+{:index 458, :time 23288466283, :type :ok, :process 1, :f :write, :value 91, :key "k0"}
+{:index 459, :time 23464425562, :type :invoke, :process 1, :f :write, :value 14, :key "k0"}
+{:index 460, :time 23466111911, :type :ok, :process 1, :f :write, :value 14, :key "k0"}
+{:index 461, :time 23557164546, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 462, :time 23558898376, :type :ok, :process 1, :f :read, :value 14, :key "k0"}
+{:index 463, :time 23620158190, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 464, :time 23625530016, :type :ok, :process 2, :f :read, :value 14, :key "k0"}
+{:index 465, :time 23735263349, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 466, :time 23736940467, :type :ok, :process 1, :f :read, :value 14, :key "k0"}
+{:index 467, :time 23899290003, :type :invoke, :process 1, :f :write, :value 69, :key "k0"}
+{:index 468, :time 23901060355, :type :ok, :process 1, :f :write, :value 69, :key "k0"}
+{:index 469, :time 23993616003, :type :invoke, :process 1, :f :write, :value 7, :key "k0"}
+{:index 470, :time 23995242289, :type :ok, :process 1, :f :write, :value 7, :key "k0"}
+{:index 471, :time 24114833484, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 472, :time 24116464200, :type :ok, :process 2, :f :read, :value 7, :key "k0"}
+{:index 473, :time 24213906767, :type :invoke, :process 1, :f :write, :value 86, :key "k0"}
+{:index 474, :time 24215515433, :type :ok, :process 1, :f :write, :value 86, :key "k0"}
+{:index 475, :time 24349614200, :type :invoke, :process 1, :f :write, :value 11, :key "k0"}
+{:index 476, :time 24350914505, :type :ok, :process 1, :f :write, :value 11, :key "k0"}
+{:index 477, :time 24435958833, :type :invoke, :process 1, :f :write, :value 73, :key "k0"}
+{:index 478, :time 24437799377, :type :ok, :process 1, :f :write, :value 73, :key "k0"}
+{:index 479, :time 24556937915, :type :invoke, :process 2, :f :write, :value 51, :key "k0"}
+{:index 480, :time 24558511970, :type :ok, :process 2, :f :write, :value 51, :key "k0"}
+{:index 481, :time 24592019651, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 482, :time 24593834014, :type :ok, :process 1, :f :read, :value 51, :key "k0"}
+{:index 483, :time 24598889659, :type :invoke, :process 1, :f :write, :value 6, :key "k0"}
+{:index 484, :time 24599967787, :type :ok, :process 1, :f :write, :value 6, :key "k0"}
+{:index 485, :time 24691943774, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 486, :time 24693496328, :type :ok, :process 1, :f :read, :value 6, :key "k0"}
+{:index 487, :time 24837748467, :type :invoke, :process 2, :f :write, :value 73, :key "k0"}
+{:index 488, :time 24839375034, :type :ok, :process 2, :f :write, :value 73, :key "k0"}
+{:index 489, :time 24962390228, :type :invoke, :process 1, :f :write, :value 63, :key "k0"}
+{:index 490, :time 24964051045, :type :ok, :process 1, :f :write, :value 63, :key "k0"}
+{:index 491, :time 24991476905, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 492, :time 24992624065, :type :ok, :process 1, :f :read, :value 63, :key "k0"}
+{:index 493, :time 25047004149, :type :invoke, :process 1, :f :write, :value 15, :key "k0"}
+{:index 494, :time 25048597304, :type :ok, :process 1, :f :write, :value 15, :key "k0"}
+{:index 495, :time 25108176409, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 496, :time 25109744074, :type :ok, :process 2, :f :read, :value 15, :key "k0"}
+{:index 497, :time 25116327282, :type :info, :process :nemesis, :f :stop-partition, :value nil}
+{:index 498, :time 25197885398, :type :info, :process :nemesis, :f :stop-partition, :value :network-healed}
+{:index 499, :time 25225232956, :type :invoke, :process 1, :f :write, :value 91, :key "k0"}
+{:index 500, :time 25226665905, :type :ok, :process 1, :f :write, :value 91, :key "k0"}
+{:index 501, :time 25239564253, :type :invoke, :process 2, :f :write, :value 67, :key "k0"}
+{:index 502, :time 25240632779, :type :ok, :process 2, :f :write, :value 67, :key "k0"}
+{:index 503, :time 25363187847, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 504, :time 25364931627, :type :ok, :process 1, :f :read, :value 67, :key "k0"}
+{:index 505, :time 25418274114, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 506, :time 25420001734, :type :ok, :process 1, :f :read, :value 67, :key "k0"}
+{:index 507, :time 25579867666, :type :invoke, :process 1, :f :write, :value 24, :key "k0"}
+{:index 508, :time 25581808773, :type :ok, :process 1, :f :write, :value 24, :key "k0"}
+{:index 509, :time 25600862973, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 510, :time 25602456008, :type :ok, :process 2, :f :read, :value 24, :key "k0"}
+{:index 511, :time 25637286155, :type :info, :process 6, :f :write, :value 50, :key "k0", :error :timeout}
+{:index 512, :time 25772831982, :type :invoke, :process 9, :f :write, :value 25, :key "k0"}
+{:index 513, :time 25788950651, :type :invoke, :process 1, :f :write, :value 88, :key "k0"}
+{:index 514, :time 25790165403, :type :ok, :process 1, :f :write, :value 88, :key "k0"}
+{:index 515, :time 25810690524, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 516, :time 25811906746, :type :ok, :process 1, :f :read, :value 88, :key "k0"}
+{:index 517, :time 25927578085, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 518, :time 25929252933, :type :ok, :process 2, :f :read, :value 88, :key "k0"}
+{:index 519, :time 25976001814, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 520, :time 25977193175, :type :ok, :process 1, :f :read, :value 88, :key "k0"}
+{:index 521, :time 25995038173, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 522, :time 25995935234, :type :ok, :process 1, :f :read, :value 88, :key "k0"}
+{:index 523, :time 25999355703, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 524, :time 26000203162, :type :ok, :process 1, :f :read, :value 88, :key "k0"}
+{:index 525, :time 26044964723, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 526, :time 26046522897, :type :ok, :process 2, :f :read, :value 88, :key "k0"}
+{:index 527, :time 26170832465, :type :invoke, :process 1, :f :write, :value 65, :key "k0"}
+{:index 528, :time 26172490373, :type :ok, :process 1, :f :write, :value 65, :key "k0"}
+{:index 529, :time 26334224087, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 530, :time 26335817252, :type :ok, :process 1, :f :read, :value 65, :key "k0"}
+{:index 531, :time 26391128809, :type :invoke, :process 1, :f :write, :value 91, :key "k0"}
+{:index 532, :time 26392698443, :type :ok, :process 1, :f :write, :value 91, :key "k0"}
+{:index 533, :time 26466037235, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 534, :time 26467321659, :type :ok, :process 2, :f :read, :value 91, :key "k0"}
+{:index 535, :time 26620934732, :type :invoke, :process 1, :f :write, :value 47, :key "k0"}
+{:index 536, :time 26622148374, :type :ok, :process 1, :f :write, :value 47, :key "k0"}
+{:index 537, :time 26681617464, :type :invoke, :process 1, :f :write, :value 68, :key "k0"}
+{:index 538, :time 26682599648, :type :ok, :process 1, :f :write, :value 68, :key "k0"}
+{:index 539, :time 26799224681, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 540, :time 26800218555, :type :ok, :process 1, :f :read, :value 68, :key "k0"}
+{:index 541, :time 26991420711, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 542, :time 26992936124, :type :ok, :process 2, :f :read, :value 68, :key "k0"}
+{:index 543, :time 27041198896, :type :invoke, :process 1, :f :write, :value 76, :key "k0"}
+{:index 544, :time 27042311965, :type :ok, :process 1, :f :write, :value 76, :key "k0"}
+{:index 545, :time 27105898768, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 546, :time 27107272706, :type :ok, :process 1, :f :read, :value 76, :key "k0"}
+{:index 547, :time 27109833844, :type :invoke, :process 1, :f :write, :value 62, :key "k0"}
+{:index 548, :time 27110882831, :type :ok, :process 1, :f :write, :value 62, :key "k0"}
+{:index 549, :time 27265476638, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 550, :time 27267136455, :type :ok, :process 2, :f :read, :value 62, :key "k0"}
+{:index 551, :time 27383094263, :type :invoke, :process 1, :f :write, :value 25, :key "k0"}
+{:index 552, :time 27384630917, :type :ok, :process 1, :f :write, :value 25, :key "k0"}
+{:index 553, :time 27576594698, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 554, :time 27578206404, :type :ok, :process 1, :f :read, :value 25, :key "k0"}
+{:index 555, :time 27664242435, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 556, :time 27665572091, :type :ok, :process 1, :f :read, :value 25, :key "k0"}
+{:index 557, :time 27771924976, :type :invoke, :process 2, :f :write, :value 4, :key "k0"}
+{:index 558, :time 27773112507, :type :ok, :process 2, :f :write, :value 4, :key "k0"}
+{:index 559, :time 27846727469, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 560, :time 27848021523, :type :ok, :process 1, :f :read, :value 4, :key "k0"}
+{:index 561, :time 27934082176, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 562, :time 27935604308, :type :ok, :process 1, :f :read, :value 4, :key "k0"}
+{:index 563, :time 28111156560, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 564, :time 28112536758, :type :ok, :process 1, :f :read, :value 4, :key "k0"}
+{:index 565, :time 28174530518, :type :invoke, :process 2, :f :write, :value 95, :key "k0"}
+{:index 566, :time 28176053571, :type :ok, :process 2, :f :write, :value 95, :key "k0"}
+{:index 567, :time 28278518431, :type :invoke, :process 1, :f :write, :value 16, :key "k0"}
+{:index 568, :time 28280168688, :type :ok, :process 1, :f :write, :value 16, :key "k0"}
+{:index 569, :time 28424671325, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 570, :time 28425983290, :type :ok, :process 1, :f :read, :value 16, :key "k0"}
+{:index 571, :time 28513048788, :type :invoke, :process 1, :f :write, :value 3, :key "k0"}
+{:index 572, :time 28514335082, :type :ok, :process 1, :f :write, :value 3, :key "k0"}
+{:index 573, :time 28692480074, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 574, :time 28693792990, :type :ok, :process 2, :f :read, :value 3, :key "k0"}
+{:index 575, :time 28880482968, :type :invoke, :process 1, :f :write, :value 89, :key "k0"}
+{:index 576, :time 28881817844, :type :ok, :process 1, :f :write, :value 89, :key "k0"}
+{:index 577, :time 28939366429, :type :invoke, :process 1, :f :write, :value 85, :key "k0"}
+{:index 578, :time 28940494248, :type :ok, :process 1, :f :write, :value 85, :key "k0"}
+{:index 579, :time 29048454199, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 580, :time 29049650950, :type :ok, :process 1, :f :read, :value 85, :key "k0"}
+{:index 581, :time 29169816834, :type :invoke, :process 2, :f :write, :value 66, :key "k0"}
+{:index 582, :time 29171358137, :type :ok, :process 2, :f :write, :value 66, :key "k0"}
+{:index 583, :time 29251259206, :type :invoke, :process 1, :f :write, :value 57, :key "k0"}
+{:index 584, :time 29252816750, :type :ok, :process 1, :f :write, :value 57, :key "k0"}
+{:index 585, :time 29431775010, :type :invoke, :process 1, :f :write, :value 93, :key "k0"}
+{:index 586, :time 29432934610, :type :ok, :process 1, :f :write, :value 93, :key "k0"}
+{:index 587, :time 29624998405, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 588, :time 29626483126, :type :ok, :process 1, :f :read, :value 93, :key "k0"}
+{:index 589, :time 29737600297, :type :invoke, :process 2, :f :write, :value 18, :key "k0"}
+{:index 590, :time 29738747907, :type :ok, :process 2, :f :write, :value 18, :key "k0"}
+{:index 591, :time 29886233117, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 592, :time 29887341615, :type :ok, :process 1, :f :read, :value 18, :key "k0"}
+{:index 593, :time 30065137435, :type :invoke, :process 1, :f :write, :value 10, :key "k0"}
+{:index 594, :time 30066166001, :type :ok, :process 1, :f :write, :value 10, :key "k0"}
+{:index 595, :time 30198109153, :type :info, :process :nemesis, :f :crash-node, :value nil}
+{:index 596, :time 30204315998, :type :info, :process 9, :f :write, :value 25, :key "k0", :error "n1:7000 failed to respond"}
+{:index 597, :time 30255081037, :type :invoke, :process 2, :f :write, :value 66, :key "k0"}
+{:index 598, :time 30256505326, :type :ok, :process 2, :f :write, :value 66, :key "k0"}
+{:index 599, :time 30306954964, :type :invoke, :process 12, :f :write, :value 37, :key "k0"}
+{:index 600, :time 30307896566, :type :fail, :process 12, :f :write, :value 37, :key "k0", :error :connection-refused}
+{:index 601, :time 30344669001, :type :invoke, :process 12, :f :write, :value 9, :key "k0"}
+{:index 602, :time 30345217320, :type :fail, :process 12, :f :write, :value 9, :key "k0", :error :connection-refused}
+{:index 603, :time 30454263367, :type :invoke, :process 1, :f :write, :value 41, :key "k0"}
+{:index 604, :time 30455305463, :type :ok, :process 1, :f :write, :value 41, :key "k0"}
+{:index 605, :time 30624203586, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 606, :time 30625205801, :type :ok, :process 2, :f :read, :value 41, :key "k0"}
+{:index 607, :time 30673049588, :type :invoke, :process 12, :f :write, :value 9, :key "k0"}
+{:index 608, :time 30673581467, :type :fail, :process 12, :f :write, :value 9, :key "k0", :error :connection-refused}
+{:index 609, :time 30791779292, :type :invoke, :process 12, :f :read, :value nil, :key "k0"}
+{:index 610, :time 30792401153, :type :fail, :process 12, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 611, :time 30977374502, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 612, :time 30978458609, :type :ok, :process 1, :f :read, :value 41, :key "k0"}
+{:index 613, :time 30996557867, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 614, :time 30997450808, :type :ok, :process 2, :f :read, :value 41, :key "k0"}
+{:index 615, :time 31174904486, :type :invoke, :process 12, :f :read, :value nil, :key "k0"}
+{:index 616, :time 31175486746, :type :fail, :process 12, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 617, :time 31260206491, :type :invoke, :process 12, :f :write, :value 62, :key "k0"}
+{:index 618, :time 31261220286, :type :fail, :process 12, :f :write, :value 62, :key "k0", :error :connection-refused}
+{:index 619, :time 31359693868, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 620, :time 31360919871, :type :ok, :process 1, :f :read, :value 41, :key "k0"}
+{:index 621, :time 31448003708, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 622, :time 31449254171, :type :ok, :process 2, :f :read, :value 41, :key "k0"}
+{:index 623, :time 31595719644, :type :invoke, :process 12, :f :write, :value 92, :key "k0"}
+{:index 624, :time 31596611865, :type :fail, :process 12, :f :write, :value 92, :key "k0", :error :connection-refused}
+{:index 625, :time 31652346777, :type :invoke, :process 12, :f :read, :value nil, :key "k0"}
+{:index 626, :time 31652908396, :type :fail, :process 12, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 627, :time 31761328512, :type :invoke, :process 1, :f :write, :value 87, :key "k0"}
+{:index 628, :time 31762489213, :type :ok, :process 1, :f :write, :value 87, :key "k0"}
+{:index 629, :time 31889015146, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 630, :time 31890013761, :type :ok, :process 2, :f :read, :value 87, :key "k0"}
+{:index 631, :time 31949736280, :type :invoke, :process 12, :f :read, :value nil, :key "k0"}
+{:index 632, :time 31950440675, :type :fail, :process 12, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 633, :time 32131465906, :type :invoke, :process 12, :f :read, :value nil, :key "k0"}
+{:index 634, :time 32132191271, :type :fail, :process 12, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 635, :time 32152107571, :type :invoke, :process 1, :f :write, :value 81, :key "k0"}
+{:index 636, :time 32153162928, :type :ok, :process 1, :f :write, :value 81, :key "k0"}
+{:index 637, :time 32320119102, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 638, :time 32321478129, :type :ok, :process 2, :f :read, :value 81, :key "k0"}
+{:index 639, :time 32359474915, :type :invoke, :process 12, :f :write, :value 87, :key "k0"}
+{:index 640, :time 32360102507, :type :fail, :process 12, :f :write, :value 87, :key "k0", :error :connection-refused}
+{:index 641, :time 32504669555, :type :invoke, :process 12, :f :write, :value 10, :key "k0"}
+{:index 642, :time 32505427482, :type :fail, :process 12, :f :write, :value 10, :key "k0", :error :connection-refused}
+{:index 643, :time 32537317416, :type :invoke, :process 1, :f :write, :value 56, :key "k0"}
+{:index 644, :time 32538370003, :type :ok, :process 1, :f :write, :value 56, :key "k0"}
+{:index 645, :time 32599932115, :type :invoke, :process 2, :f :write, :value 60, :key "k0"}
+{:index 646, :time 32600896079, :type :ok, :process 2, :f :write, :value 60, :key "k0"}
+{:index 647, :time 32725288978, :type :invoke, :process 12, :f :read, :value nil, :key "k0"}
+{:index 648, :time 32726330964, :type :fail, :process 12, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 649, :time 32887234148, :type :invoke, :process 12, :f :write, :value 79, :key "k0"}
+{:index 650, :time 32888008805, :type :fail, :process 12, :f :write, :value 79, :key "k0", :error :connection-refused}
+{:index 651, :time 32938773394, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 652, :time 32939987036, :type :ok, :process 1, :f :read, :value 60, :key "k0"}
+{:index 653, :time 32998140570, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 654, :time 32999140565, :type :ok, :process 2, :f :read, :value 60, :key "k0"}
+{:index 655, :time 33104204064, :type :invoke, :process 12, :f :write, :value 92, :key "k0"}
+{:index 656, :time 33104873197, :type :fail, :process 12, :f :write, :value 92, :key "k0", :error :connection-refused}
+{:index 657, :time 33126433665, :type :invoke, :process 12, :f :read, :value nil, :key "k0"}
+{:index 658, :time 33127003814, :type :fail, :process 12, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 659, :time 33287271137, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 660, :time 33288822020, :type :ok, :process 1, :f :read, :value 60, :key "k0"}
+{:index 661, :time 33447497927, :type :invoke, :process 2, :f :write, :value 55, :key "k0"}
+{:index 662, :time 33448600626, :type :ok, :process 2, :f :write, :value 55, :key "k0"}
+{:index 663, :time 33454287842, :type :invoke, :process 12, :f :write, :value 37, :key "k0"}
+{:index 664, :time 33454866293, :type :fail, :process 12, :f :write, :value 37, :key "k0", :error :connection-refused}
+{:index 665, :time 33468010838, :type :invoke, :process 12, :f :read, :value nil, :key "k0"}
+{:index 666, :time 33468544876, :type :fail, :process 12, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 667, :time 33647337370, :type :invoke, :process 1, :f :write, :value 89, :key "k0"}
+{:index 668, :time 33648364796, :type :ok, :process 1, :f :write, :value 89, :key "k0"}
+{:index 669, :time 33765165521, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 670, :time 33766281649, :type :ok, :process 2, :f :read, :value 89, :key "k0"}
+{:index 671, :time 33862538695, :type :invoke, :process 12, :f :write, :value 28, :key "k0"}
+{:index 672, :time 33863453537, :type :fail, :process 12, :f :write, :value 28, :key "k0", :error :connection-refused}
+{:index 673, :time 34034759571, :type :invoke, :process 12, :f :read, :value nil, :key "k0"}
+{:index 674, :time 34035440144, :type :fail, :process 12, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 675, :time 34064337375, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 676, :time 34065392082, :type :ok, :process 1, :f :read, :value 89, :key "k0"}
+{:index 677, :time 34162938181, :type :invoke, :process 2, :f :write, :value 8, :key "k0"}
+{:index 678, :time 34163886004, :type :ok, :process 2, :f :write, :value 8, :key "k0"}
+{:index 679, :time 34287359461, :type :invoke, :process 12, :f :write, :value 99, :key "k0"}
+{:index 680, :time 34288537311, :type :fail, :process 12, :f :write, :value 99, :key "k0", :error :connection-refused}
+{:index 681, :time 34306129981, :type :invoke, :process 12, :f :write, :value 0, :key "k0"}
+{:index 682, :time 34307009951, :type :fail, :process 12, :f :write, :value 0, :key "k0", :error :connection-refused}
+{:index 683, :time 34333614643, :type :info, :process :nemesis, :f :crash-node, :value "n1"}
+{:index 684, :time 34482048304, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 685, :time 34483334409, :type :ok, :process 2, :f :read, :value 8, :key "k0"}
+{:index 686, :time 34679904117, :type :invoke, :process 12, :f :write, :value 83, :key "k0"}
+{:index 687, :time 34680927363, :type :fail, :process 12, :f :write, :value 83, :key "k0", :error :connection-refused}
+{:index 688, :time 34704474229, :type :invoke, :process 12, :f :read, :value nil, :key "k0"}
+{:index 689, :time 34705192384, :type :fail, :process 12, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 690, :time 34754226762, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 691, :time 34755432804, :type :ok, :process 1, :f :read, :value 8, :key "k0"}
+{:index 692, :time 34797819562, :type :invoke, :process 2, :f :write, :value 18, :key "k0"}
+{:index 693, :time 34798761325, :type :ok, :process 2, :f :write, :value 18, :key "k0"}
+{:index 694, :time 34911318844, :type :invoke, :process 12, :f :read, :value nil, :key "k0"}
+{:index 695, :time 34911966376, :type :fail, :process 12, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 696, :time 35020536987, :type :invoke, :process 12, :f :write, :value 90, :key "k0"}
+{:index 697, :time 35021180359, :type :fail, :process 12, :f :write, :value 90, :key "k0", :error :connection-refused}
+{:index 698, :time 35024742323, :type :invoke, :process 1, :f :write, :value 16, :key "k0"}
+{:index 699, :time 35025677165, :type :ok, :process 1, :f :write, :value 16, :key "k0"}
+{:index 700, :time 35178482298, :type :invoke, :process 2, :f :write, :value 41, :key "k0"}
+{:index 701, :time 35179867966, :type :ok, :process 2, :f :write, :value 41, :key "k0"}
+{:index 702, :time 35216339430, :type :invoke, :process 12, :f :write, :value 51, :key "k0"}
+{:index 703, :time 35217098216, :type :fail, :process 12, :f :write, :value 51, :key "k0", :error :connection-refused}
+{:index 704, :time 35363730585, :type :invoke, :process 12, :f :write, :value 47, :key "k0"}
+{:index 705, :time 35364839034, :type :fail, :process 12, :f :write, :value 47, :key "k0", :error :connection-refused}
+{:index 706, :time 35450902434, :type :invoke, :process 1, :f :write, :value 55, :key "k0"}
+{:index 707, :time 35452255251, :type :ok, :process 1, :f :write, :value 55, :key "k0"}
+{:index 708, :time 35628374892, :type :invoke, :process 2, :f :write, :value 33, :key "k0"}
+{:index 709, :time 35629586934, :type :ok, :process 2, :f :write, :value 33, :key "k0"}
+{:index 710, :time 35666162491, :type :invoke, :process 12, :f :write, :value 6, :key "k0"}
+{:index 711, :time 35666987050, :type :fail, :process 12, :f :write, :value 6, :key "k0", :error :connection-refused}
+{:index 712, :time 35677513585, :type :invoke, :process 12, :f :read, :value nil, :key "k0"}
+{:index 713, :time 35678076674, :type :fail, :process 12, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 714, :time 35716932279, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 715, :time 35718220564, :type :ok, :process 1, :f :read, :value 33, :key "k0"}
+{:index 716, :time 35900922982, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 717, :time 35901998670, :type :ok, :process 2, :f :read, :value 33, :key "k0"}
+{:index 718, :time 35990886819, :type :invoke, :process 12, :f :read, :value nil, :key "k0"}
+{:index 719, :time 35991472479, :type :fail, :process 12, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 720, :time 36189196988, :type :invoke, :process 12, :f :read, :value nil, :key "k0"}
+{:index 721, :time 36189676004, :type :fail, :process 12, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 722, :time 36367328997, :type :invoke, :process 1, :f :write, :value 18, :key "k0"}
+{:index 723, :time 36368909532, :type :ok, :process 1, :f :write, :value 18, :key "k0"}
+{:index 724, :time 36468385999, :type :invoke, :process 2, :f :write, :value 32, :key "k0"}
+{:index 725, :time 36469480986, :type :ok, :process 2, :f :write, :value 32, :key "k0"}
+{:index 726, :time 36574315167, :type :invoke, :process 12, :f :read, :value nil, :key "k0"}
+{:index 727, :time 36574964410, :type :fail, :process 12, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 728, :time 36767914083, :type :invoke, :process 12, :f :read, :value nil, :key "k0"}
+{:index 729, :time 36768693060, :type :fail, :process 12, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 730, :time 36866052933, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 731, :time 36867574715, :type :ok, :process 1, :f :read, :value 32, :key "k0"}
+{:index 732, :time 36965204386, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 733, :time 36966262783, :type :ok, :process 2, :f :read, :value 32, :key "k0"}
+{:index 734, :time 37085233503, :type :invoke, :process 12, :f :read, :value nil, :key "k0"}
+{:index 735, :time 37085960018, :type :fail, :process 12, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 736, :time 37257261861, :type :invoke, :process 12, :f :write, :value 18, :key "k0"}
+{:index 737, :time 37257982176, :type :fail, :process 12, :f :write, :value 18, :key "k0", :error :connection-refused}
+{:index 738, :time 37308392101, :type :invoke, :process 1, :f :write, :value 7, :key "k0"}
+{:index 739, :time 37309485699, :type :ok, :process 1, :f :write, :value 7, :key "k0"}
+{:index 740, :time 37408496699, :type :invoke, :process 2, :f :write, :value 22, :key "k0"}
+{:index 741, :time 37409976900, :type :ok, :process 2, :f :write, :value 22, :key "k0"}
+{:index 742, :time 37435144412, :type :invoke, :process 12, :f :write, :value 96, :key "k0"}
+{:index 743, :time 37435940199, :type :fail, :process 12, :f :write, :value 96, :key "k0", :error :connection-refused}
+{:index 744, :time 37521194562, :type :invoke, :process 12, :f :write, :value 33, :key "k0"}
+{:index 745, :time 37521728801, :type :fail, :process 12, :f :write, :value 33, :key "k0", :error :connection-refused}
+{:index 746, :time 37717425379, :type :invoke, :process 1, :f :write, :value 49, :key "k0"}
+{:index 747, :time 37718601079, :type :ok, :process 1, :f :write, :value 49, :key "k0"}
+{:index 748, :time 37727536579, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 749, :time 37728581115, :type :ok, :process 2, :f :read, :value 49, :key "k0"}
+{:index 750, :time 37729345491, :type :invoke, :process 12, :f :write, :value 89, :key "k0"}
+{:index 751, :time 37729913811, :type :fail, :process 12, :f :write, :value 89, :key "k0", :error :connection-refused}
+{:index 752, :time 37893357352, :type :invoke, :process 12, :f :read, :value nil, :key "k0"}
+{:index 753, :time 37893947122, :type :fail, :process 12, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 754, :time 37917170497, :type :invoke, :process 1, :f :write, :value 92, :key "k0"}
+{:index 755, :time 37918176341, :type :ok, :process 1, :f :write, :value 92, :key "k0"}
+{:index 756, :time 38058036995, :type :invoke, :process 2, :f :write, :value 57, :key "k0"}
+{:index 757, :time 38059002179, :type :ok, :process 2, :f :write, :value 57, :key "k0"}
+{:index 758, :time 38206388853, :type :invoke, :process 12, :f :read, :value nil, :key "k0"}
+{:index 759, :time 38207065616, :type :fail, :process 12, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 760, :time 38324383369, :type :invoke, :process 12, :f :read, :value nil, :key "k0"}
+{:index 761, :time 38325332712, :type :fail, :process 12, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 762, :time 38493199185, :type :invoke, :process 1, :f :write, :value 28, :key "k0"}
+{:index 763, :time 38494879913, :type :ok, :process 1, :f :write, :value 28, :key "k0"}
+{:index 764, :time 38527849776, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 765, :time 38528947194, :type :ok, :process 2, :f :read, :value 28, :key "k0"}
+{:index 766, :time 38691775704, :type :invoke, :process 12, :f :read, :value nil, :key "k0"}
+{:index 767, :time 38692777808, :type :fail, :process 12, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 768, :time 38852759478, :type :invoke, :process 12, :f :read, :value nil, :key "k0"}
+{:index 769, :time 38853830796, :type :fail, :process 12, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 770, :time 39026062001, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 771, :time 39027412888, :type :ok, :process 1, :f :read, :value 28, :key "k0"}
+{:index 772, :time 39081449389, :type :invoke, :process 2, :f :write, :value 38, :key "k0"}
+{:index 773, :time 39082477215, :type :ok, :process 2, :f :write, :value 38, :key "k0"}
+{:index 774, :time 39096488670, :type :invoke, :process 12, :f :write, :value 10, :key "k0"}
+{:index 775, :time 39097111362, :type :fail, :process 12, :f :write, :value 10, :key "k0", :error :connection-refused}
+{:index 776, :time 39256182440, :type :invoke, :process 12, :f :read, :value nil, :key "k0"}
+{:index 777, :time 39257194966, :type :fail, :process 12, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 778, :time 39391452375, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 779, :time 39393225197, :type :ok, :process 1, :f :read, :value 38, :key "k0"}
+{:index 780, :time 39470830724, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 781, :time 39472284194, :type :ok, :process 2, :f :read, :value 38, :key "k0"}
+{:index 782, :time 39547062434, :type :invoke, :process 12, :f :write, :value 32, :key "k0"}
+{:index 783, :time 39547878282, :type :fail, :process 12, :f :write, :value 32, :key "k0", :error :connection-refused}
+{:index 784, :time 39595606706, :type :invoke, :process 12, :f :read, :value nil, :key "k0"}
+{:index 785, :time 39596691503, :type :fail, :process 12, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 786, :time 39606531964, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 787, :time 39607765357, :type :ok, :process 1, :f :read, :value 38, :key "k0"}
+{:index 788, :time 39680462065, :type :invoke, :process 2, :f :write, :value 39, :key "k0"}
+{:index 789, :time 39681624475, :type :ok, :process 2, :f :write, :value 39, :key "k0"}
+{:index 790, :time 39813383018, :type :invoke, :process 12, :f :read, :value nil, :key "k0"}
+{:index 791, :time 39814386353, :type :fail, :process 12, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 792, :time 39815919436, :type :invoke, :process 12, :f :read, :value nil, :key "k0"}
+{:index 793, :time 39816597999, :type :fail, :process 12, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 794, :time 39852141860, :type :invoke, :process 1, :f :write, :value 88, :key "k0"}
+{:index 795, :time 39853188756, :type :ok, :process 1, :f :write, :value 88, :key "k0"}
+{:index 796, :time 40013049542, :type :invoke, :process 2, :f :write, :value 2, :key "k0"}
+{:index 797, :time 40013906082, :type :ok, :process 2, :f :write, :value 2, :key "k0"}
+{:index 798, :time 40111412038, :type :invoke, :process 12, :f :read, :value nil, :key "k0"}
+{:index 799, :time 40112184215, :type :fail, :process 12, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 800, :time 40205939312, :type :invoke, :process 12, :f :write, :value 76, :key "k0"}
+{:index 801, :time 40206664437, :type :fail, :process 12, :f :write, :value 76, :key "k0", :error :connection-refused}
+{:index 802, :time 40390037128, :type :invoke, :process 1, :f :write, :value 77, :key "k0"}
+{:index 803, :time 40391651974, :type :ok, :process 1, :f :write, :value 77, :key "k0"}
+{:index 804, :time 40551817210, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 805, :time 40553292931, :type :ok, :process 2, :f :read, :value 77, :key "k0"}
+{:index 806, :time 40556455661, :type :invoke, :process 12, :f :read, :value nil, :key "k0"}
+{:index 807, :time 40557097173, :type :fail, :process 12, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 808, :time 40726575852, :type :invoke, :process 12, :f :read, :value nil, :key "k0"}
+{:index 809, :time 40727225364, :type :fail, :process 12, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 810, :time 40863054498, :type :invoke, :process 1, :f :write, :value 40, :key "k0"}
+{:index 811, :time 40864146606, :type :ok, :process 1, :f :write, :value 40, :key "k0"}
+{:index 812, :time 40925648216, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 813, :time 40926598719, :type :ok, :process 2, :f :read, :value 40, :key "k0"}
+{:index 814, :time 41081778103, :type :invoke, :process 12, :f :read, :value nil, :key "k0"}
+{:index 815, :time 41082355693, :type :fail, :process 12, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 816, :time 41165919476, :type :invoke, :process 12, :f :write, :value 44, :key "k0"}
+{:index 817, :time 41166410893, :type :fail, :process 12, :f :write, :value 44, :key "k0", :error :connection-refused}
+{:index 818, :time 41297624187, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 819, :time 41298695494, :type :ok, :process 1, :f :read, :value 40, :key "k0"}
+{:index 820, :time 41432048042, :type :invoke, :process 2, :f :write, :value 82, :key "k0"}
+{:index 821, :time 41433641998, :type :ok, :process 2, :f :write, :value 82, :key "k0"}
+{:index 822, :time 41443828750, :type :invoke, :process 12, :f :read, :value nil, :key "k0"}
+{:index 823, :time 41444635648, :type :fail, :process 12, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 824, :time 41524152101, :type :invoke, :process 12, :f :read, :value nil, :key "k0"}
+{:index 825, :time 41524666739, :type :fail, :process 12, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 826, :time 41529004250, :type :invoke, :process 1, :f :write, :value 14, :key "k0"}
+{:index 827, :time 41529987654, :type :ok, :process 1, :f :write, :value 14, :key "k0"}
+{:index 828, :time 41622205037, :type :invoke, :process 2, :f :write, :value 14, :key "k0"}
+{:index 829, :time 41623117909, :type :ok, :process 2, :f :write, :value 14, :key "k0"}
+{:index 830, :time 41637065092, :type :invoke, :process 12, :f :read, :value nil, :key "k0"}
+{:index 831, :time 41637591930, :type :fail, :process 12, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 832, :time 41745796778, :type :invoke, :process 12, :f :write, :value 94, :key "k0"}
+{:index 833, :time 41746385878, :type :fail, :process 12, :f :write, :value 94, :key "k0", :error :connection-refused}
+{:index 834, :time 41869002594, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 835, :time 41870135823, :type :ok, :process 1, :f :read, :value 14, :key "k0"}
+{:index 836, :time 41918053192, :type :invoke, :process 2, :f :write, :value 12, :key "k0"}
+{:index 837, :time 41918861700, :type :ok, :process 2, :f :write, :value 12, :key "k0"}
+{:index 838, :time 42012890195, :type :invoke, :process 12, :f :write, :value 92, :key "k0"}
+{:index 839, :time 42013400113, :type :fail, :process 12, :f :write, :value 92, :key "k0", :error :connection-refused}
+{:index 840, :time 42058630859, :type :invoke, :process 12, :f :read, :value nil, :key "k0"}
+{:index 841, :time 42059074534, :type :fail, :process 12, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 842, :time 42194062440, :type :invoke, :process 1, :f :write, :value 96, :key "k0"}
+{:index 843, :time 42195616154, :type :ok, :process 1, :f :write, :value 96, :key "k0"}
+{:index 844, :time 42341363670, :type :invoke, :process 2, :f :write, :value 1, :key "k0"}
+{:index 845, :time 42342679936, :type :ok, :process 2, :f :write, :value 1, :key "k0"}
+{:index 846, :time 42357133917, :type :invoke, :process 12, :f :read, :value nil, :key "k0"}
+{:index 847, :time 42357762398, :type :fail, :process 12, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 848, :time 42375395859, :type :invoke, :process 12, :f :read, :value nil, :key "k0"}
+{:index 849, :time 42375905847, :type :fail, :process 12, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 850, :time 42479002076, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 851, :time 42480717396, :type :ok, :process 1, :f :read, :value 1, :key "k0"}
+{:index 852, :time 42644041571, :type :invoke, :process 2, :f :write, :value 85, :key "k0"}
+{:index 853, :time 42645302954, :type :ok, :process 2, :f :write, :value 85, :key "k0"}
+{:index 854, :time 42685983743, :type :invoke, :process 12, :f :write, :value 18, :key "k0"}
+{:index 855, :time 42686617875, :type :fail, :process 12, :f :write, :value 18, :key "k0", :error :connection-refused}
+{:index 856, :time 42777601396, :type :invoke, :process 12, :f :read, :value nil, :key "k0"}
+{:index 857, :time 42778350122, :type :fail, :process 12, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 858, :time 42823100951, :type :invoke, :process 1, :f :write, :value 13, :key "k0"}
+{:index 859, :time 42824208169, :type :ok, :process 1, :f :write, :value 13, :key "k0"}
+{:index 860, :time 42952612855, :type :invoke, :process 2, :f :write, :value 91, :key "k0"}
+{:index 861, :time 42953532297, :type :ok, :process 2, :f :write, :value 91, :key "k0"}
+{:index 862, :time 43072663774, :type :invoke, :process 12, :f :write, :value 84, :key "k0"}
+{:index 863, :time 43073216223, :type :fail, :process 12, :f :write, :value 84, :key "k0", :error :connection-refused}
+{:index 864, :time 43107318302, :type :invoke, :process 12, :f :write, :value 83, :key "k0"}
+{:index 865, :time 43107779728, :type :fail, :process 12, :f :write, :value 83, :key "k0", :error :connection-refused}
+{:index 866, :time 43237163039, :type :invoke, :process 1, :f :write, :value 44, :key "k0"}
+{:index 867, :time 43238139513, :type :ok, :process 1, :f :write, :value 44, :key "k0"}
+{:index 868, :time 43307624517, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 869, :time 43308486907, :type :ok, :process 2, :f :read, :value 44, :key "k0"}
+{:index 870, :time 43329366501, :type :invoke, :process 12, :f :read, :value nil, :key "k0"}
+{:index 871, :time 43329867409, :type :fail, :process 12, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 872, :time 43500960642, :type :invoke, :process 12, :f :read, :value nil, :key "k0"}
+{:index 873, :time 43501901145, :type :fail, :process 12, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 874, :time 43626703555, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 875, :time 43632187205, :type :ok, :process 1, :f :read, :value 44, :key "k0"}
+{:index 876, :time 43766756684, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 877, :time 43767789280, :type :ok, :process 2, :f :read, :value 44, :key "k0"}
+{:index 878, :time 43936527423, :type :invoke, :process 12, :f :write, :value 94, :key "k0"}
+{:index 879, :time 43937118794, :type :fail, :process 12, :f :write, :value 94, :key "k0", :error :connection-refused}
+{:index 880, :time 44036175023, :type :invoke, :process 12, :f :write, :value 43, :key "k0"}
+{:index 881, :time 44036691151, :type :fail, :process 12, :f :write, :value 43, :key "k0", :error :connection-refused}
+{:index 882, :time 44232206781, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 883, :time 44233243837, :type :ok, :process 1, :f :read, :value 44, :key "k0"}
+{:index 884, :time 44250316708, :type :invoke, :process 2, :f :write, :value 25, :key "k0"}
+{:index 885, :time 44251142787, :type :ok, :process 2, :f :write, :value 25, :key "k0"}
+{:index 886, :time 44333844650, :type :info, :process :nemesis, :f :recover-node, :value nil}
+{:index 887, :time 44351421579, :type :invoke, :process 12, :f :read, :value nil, :key "k0"}
+{:index 888, :time 44352182745, :type :fail, :process 12, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 889, :time 44525259478, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 890, :time 44526756980, :type :ok, :process 1, :f :read, :value 25, :key "k0"}
+{:index 891, :time 44680161811, :type :invoke, :process 2, :f :write, :value 50, :key "k0"}
+{:index 892, :time 44681412804, :type :ok, :process 2, :f :write, :value 50, :key "k0"}
+{:index 893, :time 44688332224, :type :invoke, :process 12, :f :write, :value 88, :key "k0"}
+{:index 894, :time 44688908124, :type :fail, :process 12, :f :write, :value 88, :key "k0", :error :connection-refused}
+{:index 895, :time 44886732003, :type :invoke, :process 12, :f :read, :value nil, :key "k0"}
+{:index 896, :time 44887331224, :type :fail, :process 12, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 897, :time 44924447468, :type :invoke, :process 1, :f :write, :value 43, :key "k0"}
+{:index 898, :time 44925449323, :type :ok, :process 1, :f :write, :value 43, :key "k0"}
+{:index 899, :time 44976880283, :type :invoke, :process 2, :f :write, :value 29, :key "k0"}
+{:index 900, :time 44977727233, :type :ok, :process 2, :f :write, :value 29, :key "k0"}
+{:index 901, :time 45152284236, :type :invoke, :process 12, :f :read, :value nil, :key "k0"}
+{:index 902, :time 45152789003, :type :fail, :process 12, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 903, :time 45254300969, :type :invoke, :process 12, :f :write, :value 57, :key "k0"}
+{:index 904, :time 45254915820, :type :fail, :process 12, :f :write, :value 57, :key "k0", :error :connection-refused}
+{:index 905, :time 45363655165, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 906, :time 45364684141, :type :ok, :process 1, :f :read, :value 29, :key "k0"}
+{:index 907, :time 45503677633, :type :invoke, :process 2, :f :write, :value 4, :key "k0"}
+{:index 908, :time 45504555813, :type :ok, :process 2, :f :write, :value 4, :key "k0"}
+{:index 909, :time 45531028870, :type :invoke, :process 12, :f :read, :value nil, :key "k0"}
+{:index 910, :time 45532154279, :type :fail, :process 12, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 911, :time 45685640822, :type :invoke, :process 12, :f :write, :value 55, :key "k0"}
+{:index 912, :time 45686422309, :type :fail, :process 12, :f :write, :value 55, :key "k0", :error :connection-refused}
+{:index 913, :time 45863414208, :type :invoke, :process 1, :f :write, :value 38, :key "k0"}
+{:index 914, :time 45864614669, :type :ok, :process 1, :f :write, :value 38, :key "k0"}
+{:index 915, :time 45957589478, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 916, :time 45958543021, :type :ok, :process 2, :f :read, :value 38, :key "k0"}
+{:index 917, :time 46060165608, :type :invoke, :process 12, :f :write, :value 15, :key "k0"}
+{:index 918, :time 46060698397, :type :fail, :process 12, :f :write, :value 15, :key "k0", :error :connection-refused}
+{:index 919, :time 46080855306, :type :invoke, :process 12, :f :write, :value 26, :key "k0"}
+{:index 920, :time 46081317802, :type :fail, :process 12, :f :write, :value 26, :key "k0", :error :connection-refused}
+{:index 921, :time 46183397006, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 922, :time 46184304027, :type :ok, :process 1, :f :read, :value 38, :key "k0"}
+{:index 923, :time 46341039103, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 924, :time 46342453482, :type :ok, :process 2, :f :read, :value 38, :key "k0"}
+{:index 925, :time 46406055295, :type :invoke, :process 12, :f :write, :value 52, :key "k0"}
+{:index 926, :time 46406678646, :type :fail, :process 12, :f :write, :value 52, :key "k0", :error :connection-refused}
+{:index 927, :time 46522203655, :type :invoke, :process 12, :f :write, :value 95, :key "k0"}
+{:index 928, :time 46522761624, :type :fail, :process 12, :f :write, :value 95, :key "k0", :error :connection-refused}
+{:index 929, :time 46689945142, :type :invoke, :process 1, :f :write, :value 42, :key "k0"}
+{:index 930, :time 46691476435, :type :ok, :process 1, :f :write, :value 42, :key "k0"}
+{:index 931, :time 46764406839, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 932, :time 46765504077, :type :ok, :process 2, :f :read, :value 42, :key "k0"}
+{:index 933, :time 46951555179, :type :invoke, :process 12, :f :write, :value 79, :key "k0"}
+{:index 934, :time 46952208812, :type :fail, :process 12, :f :write, :value 79, :key "k0", :error :connection-refused}
+{:index 935, :time 46963655778, :type :invoke, :process 12, :f :read, :value nil, :key "k0"}
+{:index 936, :time 46964183947, :type :fail, :process 12, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 937, :time 47155575991, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 938, :time 47156734762, :type :ok, :process 1, :f :read, :value 42, :key "k0"}
+{:index 939, :time 47271207415, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 940, :time 47272460488, :type :ok, :process 2, :f :read, :value 42, :key "k0"}
+{:index 941, :time 47408866900, :type :invoke, :process 12, :f :read, :value nil, :key "k0"}
+{:index 942, :time 47409544184, :type :fail, :process 12, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 943, :time 47474363128, :type :info, :process :nemesis, :f :recover-node, :value "n1"}
+{:index 944, :time 47548172253, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 945, :time 47549466898, :type :ok, :process 1, :f :read, :value 42, :key "k0"}
+{:index 946, :time 47610330225, :type :invoke, :process 2, :f :write, :value 20, :key "k0"}
+{:index 947, :time 47611771785, :type :ok, :process 2, :f :write, :value 20, :key "k0"}
+{:index 948, :time 47737753746, :type :invoke, :process 12, :f :read, :value nil, :key "k0"}
+{:index 949, :time 47914719612, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 950, :time 47915862361, :type :ok, :process 1, :f :read, :value 20, :key "k0"}
+{:index 951, :time 47989193680, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 952, :time 47990452013, :type :ok, :process 1, :f :read, :value 20, :key "k0"}
+{:index 953, :time 47993983486, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 954, :time 47994899447, :type :ok, :process 2, :f :read, :value 20, :key "k0"}
+{:index 955, :time 48085647088, :type :invoke, :process 1, :f :write, :value 91, :key "k0"}
+{:index 956, :time 48086705665, :type :ok, :process 1, :f :write, :value 91, :key "k0"}
+{:index 957, :time 48229827339, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 958, :time 48230953638, :type :ok, :process 1, :f :read, :value 91, :key "k0"}
+{:index 959, :time 48414617645, :type :invoke, :process 1, :f :write, :value 82, :key "k0"}
+{:index 960, :time 48418808960, :type :ok, :process 1, :f :write, :value 82, :key "k0"}
+{:index 961, :time 48514465112, :type :invoke, :process 2, :f :write, :value 53, :key "k0"}
+{:index 962, :time 48515552030, :type :ok, :process 2, :f :write, :value 53, :key "k0"}
+{:index 963, :time 48523347670, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 964, :time 48524255331, :type :ok, :process 1, :f :read, :value 53, :key "k0"}
+{:index 965, :time 48645722256, :type :invoke, :process 1, :f :write, :value 27, :key "k0"}
+{:index 966, :time 48651338151, :type :ok, :process 1, :f :write, :value 27, :key "k0"}
+{:index 967, :time 48659245124, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 968, :time 48660200208, :type :ok, :process 1, :f :read, :value 27, :key "k0"}
+{:index 969, :time 48665198330, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 970, :time 48666090031, :type :ok, :process 2, :f :read, :value 27, :key "k0"}
+{:index 971, :time 48727540088, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 972, :time 48728564324, :type :ok, :process 1, :f :read, :value 27, :key "k0"}
+{:index 973, :time 48909926751, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 974, :time 48911103212, :type :ok, :process 1, :f :read, :value 27, :key "k0"}
+{:index 975, :time 48989626359, :type :invoke, :process 1, :f :write, :value 38, :key "k0"}
+{:index 976, :time 48990533561, :type :ok, :process 1, :f :write, :value 38, :key "k0"}
+{:index 977, :time 49091304470, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 978, :time 49092443960, :type :ok, :process 2, :f :read, :value 38, :key "k0"}
+{:index 979, :time 49210604540, :type :invoke, :process 1, :f :write, :value 46, :key "k0"}
+{:index 980, :time 49211575724, :type :ok, :process 1, :f :write, :value 46, :key "k0"}
+{:index 981, :time 49392654601, :type :invoke, :process 1, :f :write, :value 30, :key "k0"}
+{:index 982, :time 49393819922, :type :ok, :process 1, :f :write, :value 30, :key "k0"}
+{:index 983, :time 49473119167, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 984, :time 49474250586, :type :ok, :process 1, :f :read, :value 30, :key "k0"}
+{:index 985, :time 49626898879, :type :invoke, :process 2, :f :write, :value 47, :key "k0"}
+{:index 986, :time 49628276057, :type :ok, :process 2, :f :write, :value 47, :key "k0"}
+{:index 987, :time 49678972052, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 988, :time 49680134892, :type :ok, :process 1, :f :read, :value 47, :key "k0"}
+{:index 989, :time 49870445379, :type :invoke, :process 1, :f :write, :value 32, :key "k0"}
+{:index 990, :time 49871656471, :type :ok, :process 1, :f :write, :value 32, :key "k0"}
+{:index 991, :time 49901892599, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 992, :time 49902904394, :type :ok, :process 1, :f :read, :value 32, :key "k0"}
+{:index 993, :time 50069914835, :type :invoke, :process 2, :f :write, :value 54, :key "k0"}
+{:index 994, :time 50070929879, :type :ok, :process 2, :f :write, :value 54, :key "k0"}
+{:index 995, :time 50188237500, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 996, :time 50189219714, :type :ok, :process 1, :f :read, :value 54, :key "k0"}
+{:index 997, :time 50253287071, :type :invoke, :process 1, :f :write, :value 7, :key "k0"}
+{:index 998, :time 50254270466, :type :ok, :process 1, :f :write, :value 7, :key "k0"}
+{:index 999, :time 50307481917, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1000, :time 50308424690, :type :ok, :process 1, :f :read, :value 7, :key "k0"}
+{:index 1001, :time 50336083857, :type :invoke, :process 2, :f :write, :value 97, :key "k0"}
+{:index 1002, :time 50336930697, :type :ok, :process 2, :f :write, :value 97, :key "k0"}
+{:index 1003, :time 50400769836, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1004, :time 50402240347, :type :ok, :process 1, :f :read, :value 97, :key "k0"}
+{:index 1005, :time 50542566594, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1006, :time 50543647551, :type :ok, :process 1, :f :read, :value 97, :key "k0"}
+{:index 1007, :time 50683143820, :type :invoke, :process 1, :f :write, :value 6, :key "k0"}
+{:index 1008, :time 50684583650, :type :ok, :process 1, :f :write, :value 6, :key "k0"}
+{:index 1009, :time 50808162238, :type :invoke, :process 2, :f :write, :value 96, :key "k0"}
+{:index 1010, :time 50809279727, :type :ok, :process 2, :f :write, :value 96, :key "k0"}
+{:index 1011, :time 50820037059, :type :invoke, :process 1, :f :write, :value 61, :key "k0"}
+{:index 1012, :time 50820995232, :type :ok, :process 1, :f :write, :value 61, :key "k0"}
+{:index 1013, :time 51013642339, :type :invoke, :process 1, :f :write, :value 76, :key "k0"}
+{:index 1014, :time 51014568011, :type :ok, :process 1, :f :write, :value 76, :key "k0"}
+{:index 1015, :time 51162079987, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1016, :time 51162936657, :type :ok, :process 1, :f :read, :value 76, :key "k0"}
+{:index 1017, :time 51163457905, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 1018, :time 51164241532, :type :ok, :process 2, :f :read, :value 76, :key "k0"}
+{:index 1019, :time 51342400868, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1020, :time 51343606200, :type :ok, :process 1, :f :read, :value 76, :key "k0"}
+{:index 1021, :time 51491186248, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1022, :time 51492180783, :type :ok, :process 1, :f :read, :value 76, :key "k0"}
+{:index 1023, :time 51646789695, :type :invoke, :process 1, :f :write, :value 50, :key "k0"}
+{:index 1024, :time 51649830920, :type :ok, :process 1, :f :write, :value 50, :key "k0"}
+{:index 1025, :time 51832727931, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 1026, :time 51835048821, :type :ok, :process 2, :f :read, :value 50, :key "k0"}
+{:index 1027, :time 51870547780, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1028, :time 51871800213, :type :ok, :process 1, :f :read, :value 50, :key "k0"}
+{:index 1029, :time 51943363190, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1030, :time 51944324653, :type :ok, :process 1, :f :read, :value 50, :key "k0"}
+{:index 1031, :time 51968313193, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1032, :time 51969137842, :type :ok, :process 1, :f :read, :value 50, :key "k0"}
+{:index 1033, :time 52008730312, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 1034, :time 52009520069, :type :ok, :process 2, :f :read, :value 50, :key "k0"}
+{:index 1035, :time 52025189062, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1036, :time 52025958129, :type :ok, :process 1, :f :read, :value 50, :key "k0"}
+{:index 1037, :time 52041496987, :type :invoke, :process 1, :f :write, :value 45, :key "k0"}
+{:index 1038, :time 52042321135, :type :ok, :process 1, :f :write, :value 45, :key "k0"}
+{:index 1039, :time 52066030696, :type :invoke, :process 1, :f :write, :value 76, :key "k0"}
+{:index 1040, :time 52066772882, :type :ok, :process 1, :f :write, :value 76, :key "k0"}
+{:index 1041, :time 52086503924, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 1042, :time 52087218929, :type :ok, :process 2, :f :read, :value 76, :key "k0"}
+{:index 1043, :time 52241673145, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1044, :time 52242830425, :type :ok, :process 1, :f :read, :value 76, :key "k0"}
+{:index 1045, :time 52261141418, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1046, :time 52262016609, :type :ok, :process 1, :f :read, :value 76, :key "k0"}
+{:index 1047, :time 52308610581, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1048, :time 52309580215, :type :ok, :process 1, :f :read, :value 76, :key "k0"}
+{:index 1049, :time 52413661827, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 1050, :time 52414948212, :type :ok, :process 2, :f :read, :value 76, :key "k0"}
+{:index 1051, :time 52540838849, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1052, :time 52542042381, :type :ok, :process 1, :f :read, :value 76, :key "k0"}
+{:index 1053, :time 52694383414, :type :invoke, :process 1, :f :write, :value 33, :key "k0"}
+{:index 1054, :time 52695752601, :type :ok, :process 1, :f :write, :value 33, :key "k0"}
+{:index 1055, :time 52743626038, :type :info, :process 12, :f :read, :value nil, :key "k0", :error :timeout}
+{:index 1056, :time 52882237055, :type :invoke, :process 2, :f :write, :value 98, :key "k0"}
+{:index 1057, :time 52883435306, :type :ok, :process 2, :f :write, :value 98, :key "k0"}
+{:index 1058, :time 53040892146, :type :invoke, :process 15, :f :write, :value 69, :key "k0"}
+{:index 1059, :time 53143322581, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1060, :time 53144670358, :type :ok, :process 1, :f :read, :value 98, :key "k0"}
+{:index 1061, :time 53279856187, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1062, :time 53281151641, :type :ok, :process 1, :f :read, :value 98, :key "k0"}
+{:index 1063, :time 53336697444, :type :invoke, :process 2, :f :write, :value 30, :key "k0"}
+{:index 1064, :time 53337875714, :type :ok, :process 2, :f :write, :value 30, :key "k0"}
+{:index 1065, :time 53432665155, :type :invoke, :process 1, :f :write, :value 69, :key "k0"}
+{:index 1066, :time 53433650879, :type :ok, :process 1, :f :write, :value 69, :key "k0"}
+{:index 1067, :time 53575816889, :type :invoke, :process 1, :f :write, :value 60, :key "k0"}
+{:index 1068, :time 53576604346, :type :ok, :process 1, :f :write, :value 60, :key "k0"}
+{:index 1069, :time 53614956374, :type :invoke, :process 1, :f :write, :value 30, :key "k0"}
+{:index 1070, :time 53615820804, :type :ok, :process 1, :f :write, :value 30, :key "k0"}
+{:index 1071, :time 53705546600, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 1072, :time 53706947168, :type :ok, :process 2, :f :read, :value 30, :key "k0"}
+{:index 1073, :time 53799670237, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1074, :time 53800945661, :type :ok, :process 1, :f :read, :value 30, :key "k0"}
+{:index 1075, :time 53819809714, :type :invoke, :process 1, :f :write, :value 55, :key "k0"}
+{:index 1076, :time 53820657274, :type :ok, :process 1, :f :write, :value 55, :key "k0"}
+{:index 1077, :time 53864795571, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1078, :time 53865582618, :type :ok, :process 1, :f :read, :value 55, :key "k0"}
+{:index 1079, :time 53877547543, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 1080, :time 53878342390, :type :ok, :process 2, :f :read, :value 55, :key "k0"}
+{:index 1081, :time 53962769182, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1082, :time 53963638692, :type :ok, :process 1, :f :read, :value 55, :key "k0"}
+{:index 1083, :time 54049467712, :type :invoke, :process 1, :f :write, :value 13, :key "k0"}
+{:index 1084, :time 54050377424, :type :ok, :process 1, :f :write, :value 13, :key "k0"}
+{:index 1085, :time 54069191125, :type :invoke, :process 1, :f :write, :value 65, :key "k0"}
+{:index 1086, :time 54069975052, :type :ok, :process 1, :f :write, :value 65, :key "k0"}
+{:index 1087, :time 54135653886, :type :invoke, :process 2, :f :write, :value 90, :key "k0"}
+{:index 1088, :time 54136434603, :type :ok, :process 2, :f :write, :value 90, :key "k0"}
+{:index 1089, :time 54272579133, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1090, :time 54273589188, :type :ok, :process 1, :f :read, :value 90, :key "k0"}
+{:index 1091, :time 54305162750, :type :invoke, :process 1, :f :write, :value 6, :key "k0"}
+{:index 1092, :time 54305939447, :type :ok, :process 1, :f :write, :value 6, :key "k0"}
+{:index 1093, :time 54307502642, :type :invoke, :process 1, :f :write, :value 88, :key "k0"}
+{:index 1094, :time 54308221146, :type :ok, :process 1, :f :write, :value 88, :key "k0"}
+{:index 1095, :time 54338976651, :type :invoke, :process 2, :f :write, :value 11, :key "k0"}
+{:index 1096, :time 54339716996, :type :ok, :process 2, :f :write, :value 11, :key "k0"}
+{:index 1097, :time 54423642171, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1098, :time 54424942826, :type :ok, :process 1, :f :read, :value 11, :key "k0"}
+{:index 1099, :time 54427130732, :type :invoke, :process 1, :f :write, :value 35, :key "k0"}
+{:index 1100, :time 54427912349, :type :ok, :process 1, :f :write, :value 35, :key "k0"}
+{:index 1101, :time 54599595040, :type :invoke, :process 1, :f :write, :value 27, :key "k0"}
+{:index 1102, :time 54600814672, :type :ok, :process 1, :f :write, :value 27, :key "k0"}
+{:index 1103, :time 54738443625, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 1104, :time 54739859014, :type :ok, :process 2, :f :read, :value 27, :key "k0"}
+{:index 1105, :time 54834537051, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1106, :time 54835708511, :type :ok, :process 1, :f :read, :value 27, :key "k0"}
+{:index 1107, :time 55029567931, :type :invoke, :process 1, :f :write, :value 97, :key "k0"}
+{:index 1108, :time 55030585896, :type :ok, :process 1, :f :write, :value 97, :key "k0"}
+{:index 1109, :time 55134683578, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1110, :time 55135673202, :type :ok, :process 1, :f :read, :value 97, :key "k0"}
+{:index 1111, :time 55288901885, :type :invoke, :process 2, :f :write, :value 16, :key "k0"}
+{:index 1112, :time 55289923090, :type :ok, :process 2, :f :write, :value 16, :key "k0"}
+{:index 1113, :time 55327995288, :type :invoke, :process 1, :f :write, :value 17, :key "k0"}
+{:index 1114, :time 55329014923, :type :ok, :process 1, :f :write, :value 17, :key "k0"}
+{:index 1115, :time 55394484118, :type :invoke, :process 1, :f :write, :value 59, :key "k0"}
+{:index 1116, :time 55395386569, :type :ok, :process 1, :f :write, :value 59, :key "k0"}
+{:index 1117, :time 55588962548, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1118, :time 55590116428, :type :ok, :process 1, :f :read, :value 59, :key "k0"}
+{:index 1119, :time 55767935602, :type :invoke, :process 2, :f :write, :value 3, :key "k0"}
+{:index 1120, :time 55769346981, :type :ok, :process 2, :f :write, :value 3, :key "k0"}
+{:index 1121, :time 55817168616, :type :invoke, :process 1, :f :write, :value 65, :key "k0"}
+{:index 1122, :time 55818203271, :type :ok, :process 1, :f :write, :value 65, :key "k0"}
+{:index 1123, :time 55884842668, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1124, :time 55885831552, :type :ok, :process 1, :f :read, :value 65, :key "k0"}
+{:index 1125, :time 55981422830, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1126, :time 55982355722, :type :ok, :process 1, :f :read, :value 65, :key "k0"}
+{:index 1127, :time 56136944802, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 1128, :time 56137882074, :type :ok, :process 2, :f :read, :value 65, :key "k0"}
+{:index 1129, :time 56321626102, :type :invoke, :process 1, :f :write, :value 10, :key "k0"}
+{:index 1130, :time 56323042661, :type :ok, :process 1, :f :write, :value 10, :key "k0"}
+{:index 1131, :time 56361539253, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1132, :time 56362555628, :type :ok, :process 1, :f :read, :value 10, :key "k0"}
+{:index 1133, :time 56438876109, :type :invoke, :process 1, :f :write, :value 56, :key "k0"}
+{:index 1134, :time 56440214685, :type :ok, :process 1, :f :write, :value 56, :key "k0"}
+{:index 1135, :time 56497611682, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 1136, :time 56498582545, :type :ok, :process 2, :f :read, :value 56, :key "k0"}
+{:index 1137, :time 56634076983, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1138, :time 56635605586, :type :ok, :process 1, :f :read, :value 56, :key "k0"}
+{:index 1139, :time 56657593768, :type :invoke, :process 1, :f :write, :value 94, :key "k0"}
+{:index 1140, :time 56658492379, :type :ok, :process 1, :f :write, :value 94, :key "k0"}
+{:index 1141, :time 56786102385, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1142, :time 56787503553, :type :ok, :process 1, :f :read, :value 94, :key "k0"}
+{:index 1143, :time 56964862710, :type :invoke, :process 2, :f :write, :value 73, :key "k0"}
+{:index 1144, :time 56966253548, :type :ok, :process 2, :f :write, :value 73, :key "k0"}
+{:index 1145, :time 57038495608, :type :invoke, :process 1, :f :write, :value 14, :key "k0"}
+{:index 1146, :time 57039959709, :type :ok, :process 1, :f :write, :value 14, :key "k0"}
+{:index 1147, :time 57077618442, :type :invoke, :process 1, :f :write, :value 46, :key "k0"}
+{:index 1148, :time 57078921697, :type :ok, :process 1, :f :write, :value 46, :key "k0"}
+{:index 1149, :time 57174593698, :type :invoke, :process 1, :f :write, :value 63, :key "k0"}
+{:index 1150, :time 57175892502, :type :ok, :process 1, :f :write, :value 63, :key "k0"}
+{:index 1151, :time 57354091389, :type :invoke, :process 2, :f :write, :value 74, :key "k0"}
+{:index 1152, :time 57355422635, :type :ok, :process 2, :f :write, :value 74, :key "k0"}
+{:index 1153, :time 57434068716, :type :invoke, :process 1, :f :write, :value 60, :key "k0"}
+{:index 1154, :time 57435408622, :type :ok, :process 1, :f :write, :value 60, :key "k0"}
+{:index 1155, :time 57586711038, :type :invoke, :process 1, :f :write, :value 53, :key "k0"}
+{:index 1156, :time 57588069495, :type :ok, :process 1, :f :write, :value 53, :key "k0"}
+{:index 1157, :time 57678366399, :type :invoke, :process 1, :f :write, :value 44, :key "k0"}
+{:index 1158, :time 57679757837, :type :ok, :process 1, :f :write, :value 44, :key "k0"}
+{:index 1159, :time 57782687019, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 1160, :time 57784310585, :type :ok, :process 2, :f :read, :value 44, :key "k0"}
+{:index 1161, :time 57815048998, :type :invoke, :process 1, :f :write, :value 63, :key "k0"}
+{:index 1162, :time 57816452697, :type :ok, :process 1, :f :write, :value 63, :key "k0"}
+{:index 1163, :time 57902619808, :type :invoke, :process 1, :f :write, :value 64, :key "k0"}
+{:index 1164, :time 57903674415, :type :ok, :process 1, :f :write, :value 64, :key "k0"}
+{:index 1165, :time 57991522585, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1166, :time 57992629573, :type :ok, :process 1, :f :read, :value 64, :key "k0"}
+{:index 1167, :time 58046814587, :type :info, :process 15, :f :write, :value 69, :key "k0", :error :timeout}
+{:index 1168, :time 58050777415, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 1169, :time 58051921344, :type :ok, :process 2, :f :read, :value 64, :key "k0"}
+{:index 1170, :time 58085345141, :type :invoke, :process 18, :f :write, :value 52, :key "k0"}
+{:index 1171, :time 58255042453, :type :invoke, :process 1, :f :write, :value 87, :key "k0"}
+{:index 1172, :time 58256089879, :type :ok, :process 1, :f :write, :value 87, :key "k0"}
+{:index 1173, :time 58263033929, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1174, :time 58263880439, :type :ok, :process 1, :f :read, :value 87, :key "k0"}
+{:index 1175, :time 58457424645, :type :invoke, :process 2, :f :write, :value 71, :key "k0"}
+{:index 1176, :time 58458662618, :type :ok, :process 2, :f :write, :value 71, :key "k0"}
+{:index 1177, :time 58565802905, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1178, :time 58567207974, :type :ok, :process 1, :f :read, :value 71, :key "k0"}
+{:index 1179, :time 58664127238, :type :invoke, :process 1, :f :write, :value 31, :key "k0"}
+{:index 1180, :time 58665342170, :type :ok, :process 1, :f :write, :value 31, :key "k0"}
+{:index 1181, :time 58749148549, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1182, :time 58750259978, :type :ok, :process 1, :f :read, :value 31, :key "k0"}
+{:index 1183, :time 58814959377, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 1184, :time 58816302663, :type :ok, :process 2, :f :read, :value 31, :key "k0"}
+{:index 1185, :time 58882201873, :type :invoke, :process 1, :f :write, :value 80, :key "k0"}
+{:index 1186, :time 58883654073, :type :ok, :process 1, :f :write, :value 80, :key "k0"}
+{:index 1187, :time 59002614660, :type :invoke, :process 1, :f :write, :value 37, :key "k0"}
+{:index 1188, :time 59003723098, :type :ok, :process 1, :f :write, :value 37, :key "k0"}
+{:index 1189, :time 59082118241, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1190, :time 59083269741, :type :ok, :process 1, :f :read, :value 37, :key "k0"}
+{:index 1191, :time 59221756552, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 1192, :time 59222791628, :type :ok, :process 2, :f :read, :value 37, :key "k0"}
+{:index 1193, :time 59240701037, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1194, :time 59241719153, :type :ok, :process 1, :f :read, :value 37, :key "k0"}
+{:index 1195, :time 59340309373, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1196, :time 59341276777, :type :ok, :process 1, :f :read, :value 37, :key "k0"}
+{:index 1197, :time 59433834099, :type :invoke, :process 1, :f :write, :value 36, :key "k0"}
+{:index 1198, :time 59434886926, :type :ok, :process 1, :f :write, :value 36, :key "k0"}
+{:index 1199, :time 59559577120, :type :invoke, :process 2, :f :write, :value 84, :key "k0"}
+{:index 1200, :time 59560688648, :type :ok, :process 2, :f :write, :value 84, :key "k0"}
+{:index 1201, :time 59712622485, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1202, :time 59713931041, :type :ok, :process 1, :f :read, :value 84, :key "k0"}
+{:index 1203, :time 59844019391, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1204, :time 59845620017, :type :ok, :process 1, :f :read, :value 84, :key "k0"}
+{:index 1205, :time 60037510405, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1206, :time 60038970066, :type :ok, :process 1, :f :read, :value 84, :key "k0"}
+{:index 1207, :time 60204626987, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 1208, :time 60205996435, :type :ok, :process 2, :f :read, :value 84, :key "k0"}
+{:index 1209, :time 60251914293, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1210, :time 60253164017, :type :ok, :process 1, :f :read, :value 84, :key "k0"}
+{:index 1211, :time 60368940152, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1212, :time 60370686693, :type :ok, :process 1, :f :read, :value 84, :key "k0"}
+{:index 1213, :time 60401686395, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1214, :time 60403245079, :type :ok, :process 1, :f :read, :value 84, :key "k0"}
+{:index 1215, :time 60577660533, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 1216, :time 60579136824, :type :ok, :process 2, :f :read, :value 84, :key "k0"}
+{:index 1217, :time 60742684103, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1218, :time 60743916216, :type :ok, :process 1, :f :read, :value 84, :key "k0"}
+{:index 1219, :time 60915316235, :type :invoke, :process 1, :f :write, :value 5, :key "k0"}
+{:index 1220, :time 60916758145, :type :ok, :process 1, :f :write, :value 5, :key "k0"}
+{:index 1221, :time 61003406592, :type :invoke, :process 1, :f :write, :value 53, :key "k0"}
+{:index 1222, :time 61004622944, :type :ok, :process 1, :f :write, :value 53, :key "k0"}
+{:index 1223, :time 61116568567, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 1224, :time 61117631524, :type :ok, :process 2, :f :read, :value 53, :key "k0"}
+{:index 1225, :time 61200765831, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1226, :time 61202192240, :type :ok, :process 1, :f :read, :value 53, :key "k0"}
+{:index 1227, :time 61361519341, :type :invoke, :process 1, :f :write, :value 8, :key "k0"}
+{:index 1228, :time 61362565687, :type :ok, :process 1, :f :write, :value 8, :key "k0"}
+{:index 1229, :time 61557655437, :type :invoke, :process 1, :f :write, :value 91, :key "k0"}
+{:index 1230, :time 61558673972, :type :ok, :process 1, :f :write, :value 91, :key "k0"}
+{:index 1231, :time 61741166645, :type :invoke, :process 2, :f :read, :value nil, :key "k0"}
+{:index 1232, :time 61742339566, :type :ok, :process 2, :f :read, :value 91, :key "k0"}
+{:index 1233, :time 61934718241, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1234, :time 61936059177, :type :ok, :process 1, :f :read, :value 91, :key "k0"}
+{:index 1235, :time 62053664796, :type :invoke, :process 1, :f :write, :value 33, :key "k0"}
+{:index 1236, :time 62054898979, :type :ok, :process 1, :f :write, :value 33, :key "k0"}
+{:index 1237, :time 62060405359, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1238, :time 62060445131, :type :invoke, :process 2, :f :write, :value 61, :key "k0"}
+{:index 1239, :time 62061226728, :type :ok, :process 2, :f :write, :value 61, :key "k0"}
+{:index 1240, :time 62061319651, :type :ok, :process 1, :f :read, :value 33, :key "k0"}
+{:index 1241, :time 62208734031, :type :invoke, :process 1, :f :write, :value 41, :key "k0"}
+{:index 1242, :time 62210156830, :type :ok, :process 1, :f :write, :value 41, :key "k0"}
+{:index 1243, :time 62234911016, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1244, :time 62235777506, :type :ok, :process 1, :f :read, :value 41, :key "k0"}
+{:index 1245, :time 62429999805, :type :invoke, :process 1, :f :read, :value nil, :key "k0"}
+{:index 1246, :time 62431568700, :type :ok, :process 1, :f :read, :value 41, :key "k0"}
+{:index 1247, :time 62474700162, :type :info, :process :nemesis, :f :start-partition, :value nil}
+{:index 1248, :time 62482416569, :type :info, :process :nemesis, :f :start-partition, :value [:isolated {"n2" #{"n1" "n3"}, "n1" #{"n2"}, "n3" #{"n2"}}]}
+{:index 1249, :time 62582931006, :type :invoke, :process 1, :f :write, :value 52, :key "k0"}
+{:index 1250, :time 62664082464, :type :invoke, :process 2, :f :write, :value 74, :key "k0"}
+{:index 1251, :time 63091379916, :type :info, :process 18, :f :write, :value 52, :key "k0", :error :timeout}
+{:index 1252, :time 63091436608, :type :invoke, :process 21, :f :write, :value 19, :key "k0"}
+{:index 1253, :time 67585943033, :type :info, :process 1, :f :write, :value 52, :key "k0", :error :timeout}
+{:index 1254, :time 67586006565, :type :invoke, :process 4, :f :write, :value 85, :key "k0"}
+{:index 1255, :time 67669833004, :type :info, :process 2, :f :write, :value 74, :key "k0", :error :timeout}
+{:index 1256, :time 67683291639, :type :invoke, :process 5, :f :read, :value nil, :key "k0"}
+{:index 1257, :time 68097411604, :type :info, :process 21, :f :write, :value 19, :key "k0", :error :timeout}
+{:index 1258, :time 68097465226, :type :invoke, :process 24, :f :write, :value 71, :key "k0"}
+{:index 1259, :time 72592111263, :type :info, :process 4, :f :write, :value 85, :key "k0", :error :timeout}
+{:index 1260, :time 72592157814, :type :invoke, :process 7, :f :write, :value 19, :key "k0"}
+{:index 1261, :time 72689188510, :type :info, :process 5, :f :read, :value nil, :key "k0", :error :timeout}
+{:index 1262, :time 72694935378, :type :invoke, :process 8, :f :write, :value 67, :key "k0"}
+{:index 1263, :time 73103458645, :type :info, :process 24, :f :write, :value 71, :key "k0", :error :timeout}
+{:index 1264, :time 73103508737, :type :invoke, :process 27, :f :write, :value 98, :key "k0"}
+{:index 1265, :time 77482627214, :type :info, :process :nemesis, :f :stop-partition, :value nil}
+{:index 1266, :time 77560831407, :type :info, :process :nemesis, :f :stop-partition, :value :network-healed}
+{:index 1267, :time 77598059234, :type :info, :process 7, :f :write, :value 19, :key "k0", :error :timeout}
+{:index 1268, :time 77598094005, :type :invoke, :process 10, :f :read, :value nil, :key "k0"}
+{:index 1269, :time 77700815927, :type :info, :process 8, :f :write, :value 67, :key "k0", :error :timeout}
+{:index 1270, :time 77700846258, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1271, :time 78109620549, :type :info, :process 27, :f :write, :value 98, :key "k0", :error :timeout}
+{:index 1272, :time 78109667021, :type :invoke, :process 30, :f :write, :value 31, :key "k0"}
+{:index 1273, :time 82560994960, :type :info, :process :nemesis, :f :crash-node, :value nil}
+{:index 1274, :time 82564886255, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1275, :time 82564904806, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1276, :time 82565594889, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1277, :time 82602125292, :type :info, :process 10, :f :read, :value nil, :key "k0", :error :timeout}
+{:index 1278, :time 82704067376, :type :invoke, :process 13, :f :write, :value 28, :key "k0"}
+{:index 1279, :time 82885901500, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1280, :time 82886921306, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1281, :time 82995921752, :type :invoke, :process 11, :f :write, :value 70, :key "k0"}
+{:index 1282, :time 82997079353, :type :fail, :process 11, :f :write, :value 70, :key "k0", :error :connection-refused}
+{:index 1283, :time 83042888306, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1284, :time 83044226882, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1285, :time 83095280637, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1286, :time 83096618633, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1287, :time 83113412364, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1288, :time 83114065886, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1289, :time 83115540207, :type :info, :process 30, :f :write, :value 31, :key "k0", :error :timeout}
+{:index 1290, :time 83201270461, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1291, :time 83201780899, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1292, :time 83226309875, :type :invoke, :process 33, :f :write, :value 77, :key "k0"}
+{:index 1293, :time 83271565610, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1294, :time 83272081608, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1295, :time 83449711887, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1296, :time 83450759793, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1297, :time 83521749727, :type :invoke, :process 11, :f :write, :value 24, :key "k0"}
+{:index 1298, :time 83522349278, :type :fail, :process 11, :f :write, :value 24, :key "k0", :error :connection-refused}
+{:index 1299, :time 83593739255, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1300, :time 83594654526, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1301, :time 83726792854, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1302, :time 83727539579, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1303, :time 83768694532, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1304, :time 83769527371, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1305, :time 83865906553, :type :invoke, :process 11, :f :write, :value 32, :key "k0"}
+{:index 1306, :time 83866521994, :type :fail, :process 11, :f :write, :value 32, :key "k0", :error :connection-refused}
+{:index 1307, :time 84032809929, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1308, :time 84033320347, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1309, :time 84203177998, :type :invoke, :process 11, :f :write, :value 34, :key "k0"}
+{:index 1310, :time 84203591533, :type :fail, :process 11, :f :write, :value 34, :key "k0", :error :connection-refused}
+{:index 1311, :time 84245400517, :type :invoke, :process 11, :f :write, :value 60, :key "k0"}
+{:index 1312, :time 84245802921, :type :fail, :process 11, :f :write, :value 60, :key "k0", :error :connection-refused}
+{:index 1313, :time 84356174116, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1314, :time 84356962063, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1315, :time 84483190916, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1316, :time 84484002054, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1317, :time 84499188099, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1318, :time 84499619073, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1319, :time 84628035202, :type :invoke, :process 11, :f :write, :value 44, :key "k0"}
+{:index 1320, :time 84628897001, :type :fail, :process 11, :f :write, :value 44, :key "k0", :error :connection-refused}
+{:index 1321, :time 84783642349, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1322, :time 84784563531, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1323, :time 84851913039, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1324, :time 84852529731, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1325, :time 84886345759, :type :invoke, :process 11, :f :write, :value 3, :key "k0"}
+{:index 1326, :time 84886872548, :type :fail, :process 11, :f :write, :value 3, :key "k0", :error :connection-refused}
+{:index 1327, :time 84979452597, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1328, :time 84980372959, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1329, :time 85084978674, :type :invoke, :process 11, :f :write, :value 98, :key "k0"}
+{:index 1330, :time 85085978629, :type :fail, :process 11, :f :write, :value 98, :key "k0", :error :connection-refused}
+{:index 1331, :time 85129933118, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1332, :time 85130701455, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1333, :time 85223291184, :type :invoke, :process 11, :f :write, :value 41, :key "k0"}
+{:index 1334, :time 85223854694, :type :fail, :process 11, :f :write, :value 41, :key "k0", :error :connection-refused}
+{:index 1335, :time 85375102791, :type :invoke, :process 11, :f :write, :value 82, :key "k0"}
+{:index 1336, :time 85375640669, :type :fail, :process 11, :f :write, :value 82, :key "k0", :error :connection-refused}
+{:index 1337, :time 85571278980, :type :invoke, :process 11, :f :write, :value 60, :key "k0"}
+{:index 1338, :time 85572212972, :type :fail, :process 11, :f :write, :value 60, :key "k0", :error :connection-refused}
+{:index 1339, :time 85605088029, :type :invoke, :process 11, :f :write, :value 20, :key "k0"}
+{:index 1340, :time 85605662759, :type :fail, :process 11, :f :write, :value 20, :key "k0", :error :connection-refused}
+{:index 1341, :time 85610738004, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1342, :time 85611129497, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1343, :time 85611521571, :type :invoke, :process 11, :f :write, :value 79, :key "k0"}
+{:index 1344, :time 85611870263, :type :fail, :process 11, :f :write, :value 79, :key "k0", :error :connection-refused}
+{:index 1345, :time 85805281998, :type :invoke, :process 11, :f :write, :value 87, :key "k0"}
+{:index 1346, :time 85806242791, :type :fail, :process 11, :f :write, :value 87, :key "k0", :error :connection-refused}
+{:index 1347, :time 85875608049, :type :invoke, :process 11, :f :write, :value 33, :key "k0"}
+{:index 1348, :time 85876553921, :type :fail, :process 11, :f :write, :value 33, :key "k0", :error :connection-refused}
+{:index 1349, :time 85960287705, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1350, :time 85960824073, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1351, :time 86099423833, :type :invoke, :process 11, :f :write, :value 33, :key "k0"}
+{:index 1352, :time 86100395687, :type :fail, :process 11, :f :write, :value 33, :key "k0", :error :connection-refused}
+{:index 1353, :time 86106165776, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1354, :time 86106611152, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1355, :time 86299873270, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1356, :time 86300802383, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1357, :time 86335623996, :type :invoke, :process 11, :f :write, :value 12, :key "k0"}
+{:index 1358, :time 86336183086, :type :fail, :process 11, :f :write, :value 12, :key "k0", :error :connection-refused}
+{:index 1359, :time 86520320288, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1360, :time 86521247280, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1361, :time 86627230913, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1362, :time 86628151545, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1363, :time 86695509092, :type :info, :process :nemesis, :f :crash-node, :value "n3"}
+{:index 1364, :time 86802589873, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1365, :time 86803523315, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1366, :time 86818661248, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1367, :time 86819161385, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1368, :time 86837842411, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1369, :time 86838223574, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1370, :time 86887044531, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1371, :time 86887944082, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1372, :time 87034084382, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1373, :time 87035005824, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1374, :time 87118738657, :type :invoke, :process 11, :f :write, :value 31, :key "k0"}
+{:index 1375, :time 87119434581, :type :fail, :process 11, :f :write, :value 31, :key "k0", :error :connection-refused}
+{:index 1376, :time 87152501604, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1377, :time 87152982810, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1378, :time 87288493193, :type :invoke, :process 11, :f :write, :value 80, :key "k0"}
+{:index 1379, :time 87289453896, :type :fail, :process 11, :f :write, :value 80, :key "k0", :error :connection-refused}
+{:index 1380, :time 87302190646, :type :invoke, :process 11, :f :write, :value 43, :key "k0"}
+{:index 1381, :time 87302700284, :type :fail, :process 11, :f :write, :value 43, :key "k0", :error :connection-refused}
+{:index 1382, :time 87462312439, :type :invoke, :process 11, :f :write, :value 41, :key "k0"}
+{:index 1383, :time 87463332145, :type :fail, :process 11, :f :write, :value 41, :key "k0", :error :connection-refused}
+{:index 1384, :time 87482976493, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1385, :time 87483665977, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1386, :time 87631672342, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1387, :time 87632512971, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1388, :time 87709965268, :type :info, :process 13, :f :write, :value 28, :key "k0", :error :timeout}
+{:index 1389, :time 87752715515, :type :invoke, :process 16, :f :write, :value 29, :key "k0"}
+{:index 1390, :time 87932529039, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1391, :time 87933182892, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1392, :time 87942624508, :type :invoke, :process 11, :f :write, :value 7, :key "k0"}
+{:index 1393, :time 87943117665, :type :fail, :process 11, :f :write, :value 7, :key "k0", :error :connection-refused}
+{:index 1394, :time 88068275959, :type :invoke, :process 11, :f :write, :value 95, :key "k0"}
+{:index 1395, :time 88069153370, :type :fail, :process 11, :f :write, :value 95, :key "k0", :error :connection-refused}
+{:index 1396, :time 88232164084, :type :info, :process 33, :f :write, :value 77, :key "k0", :error :timeout}
+{:index 1397, :time 88238392349, :type :invoke, :process 36, :f :write, :value 69, :key "k0"}
+{:index 1398, :time 88362444275, :type :invoke, :process 11, :f :write, :value 70, :key "k0"}
+{:index 1399, :time 88363118738, :type :fail, :process 11, :f :write, :value 70, :key "k0", :error :connection-refused}
+{:index 1400, :time 88538552190, :type :invoke, :process 11, :f :write, :value 79, :key "k0"}
+{:index 1401, :time 88539384249, :type :fail, :process 11, :f :write, :value 79, :key "k0", :error :connection-refused}
+{:index 1402, :time 88597347692, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1403, :time 88598197922, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1404, :time 88652758227, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1405, :time 88653345467, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1406, :time 88673170592, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1407, :time 88673554725, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1408, :time 88815448788, :type :invoke, :process 11, :f :write, :value 77, :key "k0"}
+{:index 1409, :time 88816303838, :type :fail, :process 11, :f :write, :value 77, :key "k0", :error :connection-refused}
+{:index 1410, :time 88836353800, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1411, :time 88836803456, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1412, :time 88912899975, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1413, :time 88913363491, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1414, :time 89085238130, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1415, :time 89086070539, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1416, :time 89098817669, :type :invoke, :process 11, :f :write, :value 40, :key "k0"}
+{:index 1417, :time 89099624637, :type :fail, :process 11, :f :write, :value 40, :key "k0", :error :connection-refused}
+{:index 1418, :time 89133116524, :type :invoke, :process 11, :f :write, :value 44, :key "k0"}
+{:index 1419, :time 89133692724, :type :fail, :process 11, :f :write, :value 44, :key "k0", :error :connection-refused}
+{:index 1420, :time 89263543742, :type :invoke, :process 11, :f :write, :value 41, :key "k0"}
+{:index 1421, :time 89264092930, :type :fail, :process 11, :f :write, :value 41, :key "k0", :error :connection-refused}
+{:index 1422, :time 89370076592, :type :invoke, :process 11, :f :write, :value 81, :key "k0"}
+{:index 1423, :time 89370517447, :type :fail, :process 11, :f :write, :value 81, :key "k0", :error :connection-refused}
+{:index 1424, :time 89437185121, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1425, :time 89437976759, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1426, :time 89534095050, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1427, :time 89534894367, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1428, :time 89639313956, :type :invoke, :process 11, :f :write, :value 57, :key "k0"}
+{:index 1429, :time 89640166036, :type :fail, :process 11, :f :write, :value 57, :key "k0", :error :connection-refused}
+{:index 1430, :time 89728539870, :type :invoke, :process 11, :f :write, :value 65, :key "k0"}
+{:index 1431, :time 89728993335, :type :fail, :process 11, :f :write, :value 65, :key "k0", :error :connection-refused}
+{:index 1432, :time 89762711570, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1433, :time 89763337421, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1434, :time 89849740807, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1435, :time 89850505533, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1436, :time 89965899891, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1437, :time 89966396808, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1438, :time 89973739602, :type :invoke, :process 11, :f :write, :value 99, :key "k0"}
+{:index 1439, :time 89974134925, :type :fail, :process 11, :f :write, :value 99, :key "k0", :error :connection-refused}
+{:index 1440, :time 90026744823, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1441, :time 90027537080, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1442, :time 90179113528, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1443, :time 90179917076, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1444, :time 90305795116, :type :invoke, :process 11, :f :write, :value 24, :key "k0"}
+{:index 1445, :time 90306634145, :type :fail, :process 11, :f :write, :value 24, :key "k0", :error :connection-refused}
+{:index 1446, :time 90359337306, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1447, :time 90359756700, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1448, :time 90549911430, :type :invoke, :process 11, :f :write, :value 10, :key "k0"}
+{:index 1449, :time 90550728798, :type :fail, :process 11, :f :write, :value 10, :key "k0", :error :connection-refused}
+{:index 1450, :time 90737905376, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1451, :time 90738667142, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1452, :time 90830262237, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1453, :time 90830714023, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1454, :time 90854682451, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1455, :time 90855050613, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1456, :time 90999831275, :type :invoke, :process 11, :f :write, :value 61, :key "k0"}
+{:index 1457, :time 91000230309, :type :fail, :process 11, :f :write, :value 61, :key "k0", :error :connection-refused}
+{:index 1458, :time 91091706250, :type :invoke, :process 11, :f :write, :value 75, :key "k0"}
+{:index 1459, :time 91092580720, :type :fail, :process 11, :f :write, :value 75, :key "k0", :error :connection-refused}
+{:index 1460, :time 91242422707, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1461, :time 91242911874, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1462, :time 91354702377, :type :invoke, :process 11, :f :write, :value 66, :key "k0"}
+{:index 1463, :time 91355126511, :type :fail, :process 11, :f :write, :value 66, :key "k0", :error :connection-refused}
+{:index 1464, :time 91369418665, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1465, :time 91369779478, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1466, :time 91395442834, :type :invoke, :process 11, :f :write, :value 54, :key "k0"}
+{:index 1467, :time 91395808907, :type :fail, :process 11, :f :write, :value 54, :key "k0", :error :connection-refused}
+{:index 1468, :time 91514470617, :type :invoke, :process 11, :f :write, :value 12, :key "k0"}
+{:index 1469, :time 91514865200, :type :fail, :process 11, :f :write, :value 12, :key "k0", :error :connection-refused}
+{:index 1470, :time 91528849933, :type :invoke, :process 11, :f :write, :value 51, :key "k0"}
+{:index 1471, :time 91529250247, :type :fail, :process 11, :f :write, :value 51, :key "k0", :error :connection-refused}
+{:index 1472, :time 91647246414, :type :invoke, :process 11, :f :write, :value 20, :key "k0"}
+{:index 1473, :time 91648092463, :type :fail, :process 11, :f :write, :value 20, :key "k0", :error :connection-refused}
+{:index 1474, :time 91779681700, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1475, :time 91780501138, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1476, :time 91828361082, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1477, :time 91828827848, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1478, :time 92025266185, :type :invoke, :process 11, :f :write, :value 67, :key "k0"}
+{:index 1479, :time 92026112174, :type :fail, :process 11, :f :write, :value 67, :key "k0", :error :connection-refused}
+{:index 1480, :time 92077349785, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1481, :time 92077789170, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1482, :time 92237366573, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1483, :time 92238183001, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1484, :time 92279326642, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1485, :time 92280121700, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1486, :time 92478061879, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1487, :time 92478862777, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1488, :time 92580959094, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1489, :time 92581753771, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1490, :time 92702587746, :type :invoke, :process 11, :f :write, :value 95, :key "k0"}
+{:index 1491, :time 92703434685, :type :fail, :process 11, :f :write, :value 95, :key "k0", :error :connection-refused}
+{:index 1492, :time 92759101419, :type :info, :process 16, :f :write, :value 29, :key "k0", :error :timeout}
+{:index 1493, :time 92853103286, :type :invoke, :process 19, :f :read, :value nil, :key "k0"}
+{:index 1494, :time 93005667737, :type :invoke, :process 11, :f :write, :value 96, :key "k0"}
+{:index 1495, :time 93006518606, :type :fail, :process 11, :f :write, :value 96, :key "k0", :error :connection-refused}
+{:index 1496, :time 93109573006, :type :invoke, :process 11, :f :write, :value 32, :key "k0"}
+{:index 1497, :time 93110407235, :type :fail, :process 11, :f :write, :value 32, :key "k0", :error :connection-refused}
+{:index 1498, :time 93244509998, :type :info, :process 36, :f :write, :value 69, :key "k0", :error :timeout}
+{:index 1499, :time 93278760801, :type :invoke, :process 39, :f :write, :value 5, :key "k0"}
+{:index 1500, :time 93356057182, :type :invoke, :process 11, :f :write, :value 31, :key "k0"}
+{:index 1501, :time 93356877190, :type :fail, :process 11, :f :write, :value 31, :key "k0", :error :connection-refused}
+{:index 1502, :time 93359086416, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1503, :time 93359491000, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1504, :time 93555030095, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1505, :time 93555839923, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1506, :time 93733087456, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1507, :time 93733937626, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1508, :time 93922365275, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1509, :time 93923248866, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1510, :time 94024453742, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1511, :time 94025436096, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1512, :time 94064481005, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1513, :time 94065127938, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1514, :time 94193560054, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1515, :time 94194098643, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1516, :time 94254216470, :type :invoke, :process 11, :f :write, :value 8, :key "k0"}
+{:index 1517, :time 94255051108, :type :fail, :process 11, :f :write, :value 8, :key "k0", :error :connection-refused}
+{:index 1518, :time 94419346125, :type :invoke, :process 11, :f :write, :value 82, :key "k0"}
+{:index 1519, :time 94420174203, :type :fail, :process 11, :f :write, :value 82, :key "k0", :error :connection-refused}
+{:index 1520, :time 94587531985, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1521, :time 94588353933, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1522, :time 94749247121, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1523, :time 94750056359, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1524, :time 94795471408, :type :invoke, :process 11, :f :write, :value 9, :key "k0"}
+{:index 1525, :time 94796006406, :type :fail, :process 11, :f :write, :value 9, :key "k0", :error :connection-refused}
+{:index 1526, :time 94809812174, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1527, :time 94810281670, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1528, :time 94815317104, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1529, :time 94815711237, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1530, :time 94852969695, :type :invoke, :process 11, :f :write, :value 21, :key "k0"}
+{:index 1531, :time 94853384639, :type :fail, :process 11, :f :write, :value 21, :key "k0", :error :connection-refused}
+{:index 1532, :time 94864589726, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1533, :time 94864963169, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1534, :time 94963356399, :type :invoke, :process 11, :f :write, :value 97, :key "k0"}
+{:index 1535, :time 94963746082, :type :fail, :process 11, :f :write, :value 97, :key "k0", :error :connection-refused}
+{:index 1536, :time 95027032897, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1537, :time 95027810634, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1538, :time 95182535809, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1539, :time 95183050507, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1540, :time 95236574056, :type :invoke, :process 11, :f :write, :value 10, :key "k0"}
+{:index 1541, :time 95237437446, :type :fail, :process 11, :f :write, :value 10, :key "k0", :error :connection-refused}
+{:index 1542, :time 95248405455, :type :invoke, :process 11, :f :write, :value 98, :key "k0"}
+{:index 1543, :time 95249174001, :type :fail, :process 11, :f :write, :value 98, :key "k0", :error :connection-refused}
+{:index 1544, :time 95306843123, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1545, :time 95307378062, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1546, :time 95319057425, :type :invoke, :process 11, :f :write, :value 59, :key "k0"}
+{:index 1547, :time 95319407247, :type :fail, :process 11, :f :write, :value 59, :key "k0", :error :connection-refused}
+{:index 1548, :time 95488064494, :type :invoke, :process 11, :f :write, :value 5, :key "k0"}
+{:index 1549, :time 95488426336, :type :fail, :process 11, :f :write, :value 5, :key "k0", :error :connection-refused}
+{:index 1550, :time 95630097430, :type :invoke, :process 11, :f :write, :value 1, :key "k0"}
+{:index 1551, :time 95630848086, :type :fail, :process 11, :f :write, :value 1, :key "k0", :error :connection-refused}
+{:index 1552, :time 95640182768, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1553, :time 95640976895, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1554, :time 95650246906, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1555, :time 95650785514, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1556, :time 95771890108, :type :invoke, :process 11, :f :write, :value 87, :key "k0"}
+{:index 1557, :time 95772655014, :type :fail, :process 11, :f :write, :value 87, :key "k0", :error :connection-refused}
+{:index 1558, :time 95956414632, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1559, :time 95956880208, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1560, :time 96044885718, :type :invoke, :process 11, :f :write, :value 15, :key "k0"}
+{:index 1561, :time 96045275931, :type :fail, :process 11, :f :write, :value 15, :key "k0", :error :connection-refused}
+{:index 1562, :time 96172820197, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1563, :time 96173157189, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1564, :time 96265759908, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1565, :time 96266101480, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1566, :time 96377263559, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1567, :time 96377700284, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1568, :time 96429994211, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1569, :time 96430342333, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1570, :time 96555883199, :type :invoke, :process 11, :f :write, :value 62, :key "k0"}
+{:index 1571, :time 96556235261, :type :fail, :process 11, :f :write, :value 62, :key "k0", :error :connection-refused}
+{:index 1572, :time 96598532462, :type :invoke, :process 11, :f :write, :value 47, :key "k0"}
+{:index 1573, :time 96598883665, :type :fail, :process 11, :f :write, :value 47, :key "k0", :error :connection-refused}
+{:index 1574, :time 96684530803, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1575, :time 96685293580, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1576, :time 96695646797, :type :info, :process :nemesis, :f :recover-node, :value nil}
+{:index 1577, :time 96819268098, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1578, :time 96819851168, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1579, :time 96972823112, :type :invoke, :process 11, :f :write, :value 71, :key "k0"}
+{:index 1580, :time 96973360821, :type :fail, :process 11, :f :write, :value 71, :key "k0", :error :connection-refused}
+{:index 1581, :time 97075243389, :type :invoke, :process 11, :f :write, :value 79, :key "k0"}
+{:index 1582, :time 97075682645, :type :fail, :process 11, :f :write, :value 79, :key "k0", :error :connection-refused}
+{:index 1583, :time 97249238880, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1584, :time 97249593522, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1585, :time 97372251748, :type :invoke, :process 11, :f :write, :value 46, :key "k0"}
+{:index 1586, :time 97372858139, :type :fail, :process 11, :f :write, :value 46, :key "k0", :error :connection-refused}
+{:index 1587, :time 97383271049, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1588, :time 97383636852, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1589, :time 97423757608, :type :invoke, :process 11, :f :write, :value 89, :key "k0"}
+{:index 1590, :time 97424119210, :type :fail, :process 11, :f :write, :value 89, :key "k0", :error :connection-refused}
+{:index 1591, :time 97424132761, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1592, :time 97424447231, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1593, :time 97456252370, :type :invoke, :process 11, :f :write, :value 13, :key "k0"}
+{:index 1594, :time 97456659464, :type :fail, :process 11, :f :write, :value 13, :key "k0", :error :connection-refused}
+{:index 1595, :time 97548859749, :type :invoke, :process 11, :f :write, :value 23, :key "k0"}
+{:index 1596, :time 97549212381, :type :fail, :process 11, :f :write, :value 23, :key "k0", :error :connection-refused}
+{:index 1597, :time 97680998993, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1598, :time 97681889724, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1599, :time 97759093811, :type :invoke, :process 11, :f :write, :value 98, :key "k0"}
+{:index 1600, :time 97759607748, :type :fail, :process 11, :f :write, :value 98, :key "k0", :error :connection-refused}
+{:index 1601, :time 97812651020, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1602, :time 97813006782, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1603, :time 97858900148, :type :info, :process 19, :f :read, :value nil, :key "k0", :error :timeout}
+{:index 1604, :time 97994847334, :type :invoke, :process 22, :f :write, :value 74, :key "k0"}
+{:index 1605, :time 98146675168, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1606, :time 98147032271, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1607, :time 98271939014, :type :invoke, :process 11, :f :write, :value 46, :key "k0"}
+{:index 1608, :time 98272293476, :type :fail, :process 11, :f :write, :value 46, :key "k0", :error :connection-refused}
+{:index 1609, :time 98282425976, :type :info, :process 39, :f :write, :value 5, :key "k0", :error :timeout}
+{:index 1610, :time 98328431065, :type :invoke, :process 42, :f :read, :value nil, :key "k0"}
+{:index 1611, :time 98340708069, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1612, :time 98341077012, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1613, :time 98385657042, :type :invoke, :process 11, :f :write, :value 68, :key "k0"}
+{:index 1614, :time 98385994643, :type :fail, :process 11, :f :write, :value 68, :key "k0", :error :connection-refused}
+{:index 1615, :time 98387267387, :type :invoke, :process 11, :f :write, :value 1, :key "k0"}
+{:index 1616, :time 98387603839, :type :fail, :process 11, :f :write, :value 1, :key "k0", :error :connection-refused}
+{:index 1617, :time 98529299992, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1618, :time 98529678625, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1619, :time 98641821520, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1620, :time 98642227124, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1621, :time 98747283802, :type :invoke, :process 11, :f :write, :value 23, :key "k0"}
+{:index 1622, :time 98747992776, :type :fail, :process 11, :f :write, :value 23, :key "k0", :error :connection-refused}
+{:index 1623, :time 98855310282, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1624, :time 98855733547, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1625, :time 98899080954, :type :invoke, :process 11, :f :write, :value 85, :key "k0"}
+{:index 1626, :time 98899478188, :type :fail, :process 11, :f :write, :value 85, :key "k0", :error :connection-refused}
+{:index 1627, :time 98944175601, :type :invoke, :process 11, :f :write, :value 73, :key "k0"}
+{:index 1628, :time 98944529014, :type :fail, :process 11, :f :write, :value 73, :key "k0", :error :connection-refused}
+{:index 1629, :time 99044133554, :type :invoke, :process 11, :f :write, :value 64, :key "k0"}
+{:index 1630, :time 99044929532, :type :fail, :process 11, :f :write, :value 64, :key "k0", :error :connection-refused}
+{:index 1631, :time 99085921557, :type :invoke, :process 11, :f :write, :value 81, :key "k0"}
+{:index 1632, :time 99086736586, :type :fail, :process 11, :f :write, :value 81, :key "k0", :error :connection-refused}
+{:index 1633, :time 99218098613, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1634, :time 99218873109, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1635, :time 99380240502, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1636, :time 99381015659, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1637, :time 99519991039, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1638, :time 99520741745, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1639, :time 99559308537, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1640, :time 99559792603, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1641, :time 99699515970, :type :invoke, :process 11, :f :write, :value 39, :key "k0"}
+{:index 1642, :time 99700287866, :type :fail, :process 11, :f :write, :value 39, :key "k0", :error :connection-refused}
+{:index 1643, :time 99759287934, :type :invoke, :process 11, :f :read, :value nil, :key "k0"}
+{:index 1644, :time 99759919896, :type :fail, :process 11, :f :read, :value nil, :key "k0", :error :connection-refused}
+{:index 1645, :time 99835733854, :type :info, :process :nemesis, :f :recover-node, :value "n3"}
+{:index 1646, :time 99861083950, :type :invoke, :process 11, :f :write, :value 26, :key "k0"}
+{:index 1647, :time 103000493964, :type :info, :process 22, :f :write, :value 74, :key "k0", :error :timeout}
+{:index 1648, :time 103000545606, :type :invoke, :process 25, :f :write, :value 31, :key "k0"}
+{:index 1649, :time 103334128846, :type :info, :process 42, :f :read, :value nil, :key "k0", :error :timeout}
+{:index 1650, :time 103334180117, :type :invoke, :process 45, :f :read, :value nil, :key "k0"}
+{:index 1651, :time 104866172791, :type :info, :process 11, :f :write, :value 26, :key "k0", :error :timeout}
+{:index 1652, :time 104866207902, :type :invoke, :process 14, :f :read, :value nil, :key "k0"}
+{:index 1653, :time 108006366899, :type :info, :process 25, :f :write, :value 31, :key "k0", :error :timeout}
+{:index 1654, :time 108006412181, :type :invoke, :process 28, :f :write, :value 56, :key "k0"}
+{:index 1655, :time 108339918226, :type :info, :process 45, :f :read, :value nil, :key "k0", :error :timeout}
+{:index 1656, :time 108339948517, :type :invoke, :process 48, :f :read, :value nil, :key "k0"}
+{:index 1657, :time 109871996481, :type :info, :process 14, :f :read, :value nil, :key "k0", :error :timeout}
+{:index 1658, :time 109872054033, :type :invoke, :process 17, :f :write, :value 94, :key "k0"}
+{:index 1659, :time 113012222185, :type :info, :process 28, :f :write, :value 56, :key "k0", :error :timeout}
+{:index 1660, :time 113012268596, :type :invoke, :process 31, :f :read, :value nil, :key "k0"}
+{:index 1661, :time 113345559460, :type :info, :process 48, :f :read, :value nil, :key "k0", :error :timeout}
+{:index 1662, :time 113345599622, :type :invoke, :process 51, :f :read, :value nil, :key "k0"}
+{:index 1663, :time 114836022257, :type :info, :process :nemesis, :f :start-partition, :value nil}
+{:index 1664, :time 114843766474, :type :info, :process :nemesis, :f :start-partition, :value [:isolated {"n1" #{"n2" "n3"}, "n2" #{"n1"}, "n3" #{"n1"}}]}
+{:index 1665, :time 114877840870, :type :info, :process 17, :f :write, :value 94, :key "k0", :error :timeout}
+{:index 1666, :time 114877878001, :type :invoke, :process 20, :f :read, :value nil, :key "k0"}
+{:index 1667, :time 118015169432, :type :info, :process 31, :f :read, :value nil, :key "k0", :error :timeout}
+{:index 1668, :time 118015222314, :type :invoke, :process 34, :f :read, :value nil, :key "k0"}
+{:index 1669, :time 118351229610, :type :info, :process 51, :f :read, :value nil, :key "k0", :error :timeout}
+{:index 1670, :time 118351281682, :type :invoke, :process 54, :f :read, :value nil, :key "k0"}
+{:index 1671, :time 119883932082, :type :info, :process 20, :f :read, :value nil, :key "k0", :error :timeout}
+{:index 1672, :time 119883984724, :type :invoke, :process 23, :f :read, :value nil, :key "k0"}
+{:index 1673, :time 123021174087, :type :info, :process 34, :f :read, :value nil, :key "k0", :error :timeout}
+{:index 1674, :time 123357317276, :type :info, :process 54, :f :read, :value nil, :key "k0", :error :timeout}
+{:index 1675, :time 124889164179, :type :info, :process 23, :f :read, :value nil, :key "k0", :error :timeout}
+{:index 1676, :time 129843957883, :type :info, :process :nemesis, :f :stop-partition, :value nil}
+{:index 1677, :time 129910821430, :type :info, :process :nemesis, :f :stop-partition, :value :network-healed}

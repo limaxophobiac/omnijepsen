@@ -12,6 +12,7 @@
             [jepsen.checker.timeline :as timeline]
             [jepsen.omnipaxos.client :refer [omnipaxos-client]]
             [jepsen.omnipaxos.db :refer [omnipaxos-db]]
+            [jepsen.omnipaxos.nemesis :refer [omnipaxos-nemesis nemesis-generator]]
             [knossos.model :as model]))
 
 ; Use a small fixed key space so reads and writes contend on the same keys,
@@ -31,6 +32,7 @@
           :nodes     (:nodes opts)
           :db        (omnipaxos-db (:server-bin opts) (:shim-bin opts))
           :client    (omnipaxos-client)
+          :nemesis   (omnipaxos-nemesis)
           :checker   (checker/compose
                        {:linearizable (checker/linearizable
                                         {:model (model/register)})
@@ -39,7 +41,10 @@
                        (->> (gen/mix [r w])
                             (gen/stagger 1/10)
                             (gen/clients)
+                            (gen/nemesis (nemesis-generator))
                             (gen/time-limit (:time-limit opts 60)))
+                       ; Stop any lingering faults before final check
+                       (gen/nemesis {:type :info :f :stop-partition})
                        (gen/log "Test complete, waiting before final check")
                        (gen/sleep 5))}))
 

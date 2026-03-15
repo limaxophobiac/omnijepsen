@@ -1,0 +1,8 @@
+2026-03-15 14:15:32 Jepsen starting  /usr/bin/env CONFIG_FILE=/opt/omnipaxos/shim.toml API_LISTEN_ADDR=0.0.0.0:7000 RUST_LOG=debug /opt/omnipaxos/api-shim
+[2026-03-15T14:15:33Z INFO  api_shim::network] Establishing server connections
+api-shim listening on http://0.0.0.0:7000
+[2026-03-15T14:15:33Z INFO  api_shim::network] Connected to server 1
+2026-03-15 14:16:20 Jepsen starting  /usr/bin/env CONFIG_FILE=/opt/omnipaxos/shim.toml API_LISTEN_ADDR=0.0.0.0:7000 RUST_LOG=debug /opt/omnipaxos/api-shim
+[2026-03-15T14:16:20Z INFO  api_shim::network] Establishing server connections
+api-shim listening on http://0.0.0.0:7000
+[2026-03-15T14:16:20Z INFO  api_shim::network] Connected to server 1

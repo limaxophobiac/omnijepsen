@@ -1,0 +1,1678 @@
+0	:invoke	:read	nil
+2	:invoke	:write	69
+1	:invoke	:read	nil
+2	:ok	:write	69
+1	:ok	:read	nil
+0	:ok	:read	nil
+0	:invoke	:read	nil
+0	:ok	:read	69
+1	:invoke	:read	nil
+1	:ok	:read	69
+2	:invoke	:read	nil
+2	:ok	:read	69
+0	:invoke	:read	nil
+0	:ok	:read	69
+0	:invoke	:write	26
+0	:ok	:write	26
+1	:invoke	:read	nil
+1	:ok	:read	26
+2	:invoke	:read	nil
+2	:ok	:read	26
+0	:invoke	:write	49
+0	:ok	:write	49
+0	:invoke	:write	5
+0	:ok	:write	5
+1	:invoke	:read	nil
+1	:ok	:read	5
+2	:invoke	:read	nil
+2	:ok	:read	5
+0	:invoke	:write	3
+0	:ok	:write	3
+0	:invoke	:write	52
+0	:ok	:write	52
+1	:invoke	:write	28
+1	:ok	:write	28
+2	:invoke	:read	nil
+2	:ok	:read	28
+0	:invoke	:write	27
+0	:ok	:write	27
+0	:invoke	:read	nil
+0	:ok	:read	27
+1	:invoke	:write	10
+1	:ok	:write	10
+2	:invoke	:write	81
+2	:ok	:write	81
+0	:invoke	:write	50
+0	:ok	:write	50
+0	:invoke	:read	nil
+0	:ok	:read	50
+1	:invoke	:read	nil
+1	:ok	:read	50
+2	:invoke	:read	nil
+2	:ok	:read	50
+0	:invoke	:write	72
+0	:ok	:write	72
+0	:invoke	:write	64
+0	:ok	:write	64
+1	:invoke	:read	nil
+1	:ok	:read	64
+2	:invoke	:read	nil
+2	:ok	:read	64
+0	:invoke	:write	34
+0	:ok	:write	34
+0	:invoke	:write	62
+0	:ok	:write	62
+1	:invoke	:write	71
+1	:ok	:write	71
+2	:invoke	:write	0
+2	:ok	:write	0
+0	:invoke	:write	12
+0	:ok	:write	12
+0	:invoke	:read	nil
+0	:ok	:read	12
+1	:invoke	:write	78
+1	:ok	:write	78
+2	:invoke	:read	nil
+2	:ok	:read	78
+0	:invoke	:write	81
+0	:ok	:write	81
+0	:invoke	:read	nil
+0	:ok	:read	81
+1	:invoke	:read	nil
+1	:ok	:read	81
+2	:invoke	:read	nil
+2	:ok	:read	81
+0	:invoke	:write	41
+0	:ok	:write	41
+0	:invoke	:write	8
+0	:ok	:write	8
+1	:invoke	:write	3
+1	:ok	:write	3
+2	:invoke	:read	nil
+2	:ok	:read	3
+0	:invoke	:read	nil
+0	:ok	:read	3
+0	:invoke	:write	83
+0	:ok	:write	83
+1	:invoke	:read	nil
+1	:ok	:read	83
+2	:invoke	:write	84
+2	:ok	:write	84
+0	:invoke	:read	nil
+0	:ok	:read	84
+0	:invoke	:read	nil
+0	:ok	:read	84
+1	:invoke	:write	67
+1	:ok	:write	67
+2	:invoke	:write	60
+2	:ok	:write	60
+0	:invoke	:read	nil
+0	:ok	:read	60
+0	:invoke	:read	nil
+0	:ok	:read	60
+1	:invoke	:write	49
+1	:ok	:write	49
+2	:invoke	:read	nil
+2	:ok	:read	49
+0	:invoke	:write	36
+0	:ok	:write	36
+0	:invoke	:write	21
+0	:ok	:write	21
+1	:invoke	:write	77
+1	:ok	:write	77
+2	:invoke	:write	65
+2	:ok	:write	65
+0	:invoke	:read	nil
+0	:ok	:read	65
+0	:invoke	:write	29
+0	:ok	:write	29
+1	:invoke	:read	nil
+1	:ok	:read	29
+2	:invoke	:write	90
+2	:ok	:write	90
+0	:invoke	:read	nil
+0	:ok	:read	90
+0	:invoke	:write	24
+0	:ok	:write	24
+1	:invoke	:write	89
+1	:ok	:write	89
+2	:invoke	:write	51
+2	:ok	:write	51
+0	:invoke	:read	nil
+0	:ok	:read	51
+0	:invoke	:write	27
+0	:ok	:write	27
+1	:invoke	:write	45
+1	:ok	:write	45
+2	:invoke	:write	81
+2	:ok	:write	81
+0	:invoke	:read	nil
+0	:ok	:read	81
+0	:invoke	:write	15
+0	:ok	:write	15
+1	:invoke	:read	nil
+1	:ok	:read	15
+2	:invoke	:write	49
+2	:ok	:write	49
+0	:invoke	:read	nil
+0	:ok	:read	49
+0	:invoke	:read	nil
+0	:ok	:read	49
+1	:invoke	:write	56
+1	:ok	:write	56
+2	:invoke	:read	nil
+2	:ok	:read	56
+0	:invoke	:read	nil
+0	:ok	:read	56
+0	:invoke	:read	nil
+0	:ok	:read	56
+1	:invoke	:read	nil
+1	:ok	:read	56
+2	:invoke	:read	nil
+2	:ok	:read	56
+0	:invoke	:write	96
+0	:ok	:write	96
+0	:invoke	:write	74
+0	:ok	:write	74
+1	:invoke	:write	72
+1	:ok	:write	72
+2	:invoke	:write	14
+2	:ok	:write	14
+0	:invoke	:read	nil
+0	:ok	:read	14
+0	:invoke	:read	nil
+0	:ok	:read	14
+1	:invoke	:read	nil
+1	:ok	:read	14
+2	:invoke	:read	nil
+2	:ok	:read	14
+0	:invoke	:write	53
+0	:ok	:write	53
+0	:invoke	:read	nil
+0	:ok	:read	53
+1	:invoke	:write	18
+1	:ok	:write	18
+2	:invoke	:read	nil
+2	:ok	:read	18
+:nemesis	:info	:start-partition	nil
+:nemesis	:info	:start-partition	[:isolated {"n1" #{"n2" "n3"}, "n2" #{"n1"}, "n3" #{"n1"}}]
+1	:invoke	:write	48
+1	:ok	:write	48
+2	:invoke	:read	nil
+2	:ok	:read	48
+0	:invoke	:write	93
+1	:invoke	:write	94
+1	:ok	:write	94
+1	:invoke	:read	nil
+1	:ok	:read	94
+2	:invoke	:write	5
+2	:ok	:write	5
+1	:invoke	:write	53
+1	:ok	:write	53
+1	:invoke	:write	65
+1	:ok	:write	65
+1	:invoke	:read	nil
+1	:ok	:read	65
+2	:invoke	:read	nil
+2	:ok	:read	65
+1	:invoke	:read	nil
+1	:ok	:read	65
+1	:invoke	:write	35
+1	:ok	:write	35
+1	:invoke	:read	nil
+1	:ok	:read	35
+2	:invoke	:write	48
+2	:ok	:write	48
+1	:invoke	:read	nil
+1	:ok	:read	48
+1	:invoke	:write	52
+1	:ok	:write	52
+1	:invoke	:read	nil
+1	:ok	:read	52
+2	:invoke	:read	nil
+2	:ok	:read	52
+1	:invoke	:write	4
+1	:ok	:write	4
+1	:invoke	:write	34
+1	:ok	:write	34
+1	:invoke	:write	92
+1	:ok	:write	92
+2	:invoke	:write	47
+2	:ok	:write	47
+1	:invoke	:write	79
+1	:ok	:write	79
+1	:invoke	:read	nil
+1	:ok	:read	79
+1	:invoke	:read	nil
+1	:ok	:read	79
+2	:invoke	:read	nil
+2	:ok	:read	79
+1	:invoke	:write	10
+2	:invoke	:write	58
+2	:ok	:write	58
+1	:ok	:write	10
+1	:invoke	:write	27
+1	:ok	:write	27
+2	:invoke	:write	0
+2	:ok	:write	0
+1	:invoke	:read	nil
+1	:ok	:read	0
+1	:invoke	:write	85
+1	:ok	:write	85
+1	:invoke	:write	58
+1	:ok	:write	58
+2	:invoke	:read	nil
+2	:ok	:read	58
+1	:invoke	:read	nil
+1	:ok	:read	58
+1	:invoke	:write	83
+1	:ok	:write	83
+1	:invoke	:write	65
+1	:ok	:write	65
+2	:invoke	:read	nil
+2	:ok	:read	65
+1	:invoke	:read	nil
+1	:ok	:read	65
+1	:invoke	:read	nil
+1	:ok	:read	65
+1	:invoke	:write	13
+1	:ok	:write	13
+2	:invoke	:read	nil
+2	:ok	:read	13
+1	:invoke	:write	42
+1	:ok	:write	42
+1	:invoke	:write	32
+1	:ok	:write	32
+1	:invoke	:write	26
+1	:ok	:write	26
+2	:invoke	:read	nil
+2	:ok	:read	26
+1	:invoke	:write	69
+1	:ok	:write	69
+1	:invoke	:read	nil
+1	:ok	:read	69
+1	:invoke	:write	74
+1	:ok	:write	74
+2	:invoke	:read	nil
+2	:ok	:read	74
+1	:invoke	:read	nil
+1	:ok	:read	74
+1	:invoke	:write	18
+1	:ok	:write	18
+1	:invoke	:read	nil
+1	:ok	:read	18
+2	:invoke	:read	nil
+2	:ok	:read	18
+1	:invoke	:read	nil
+1	:ok	:read	18
+1	:invoke	:read	nil
+1	:ok	:read	18
+1	:invoke	:write	62
+1	:ok	:write	62
+0	:info	:write	93	:timeout
+2	:invoke	:read	nil
+2	:ok	:read	62
+3	:invoke	:read	nil
+1	:invoke	:read	nil
+1	:ok	:read	62
+1	:invoke	:read	nil
+1	:ok	:read	62
+2	:invoke	:read	nil
+2	:ok	:read	62
+1	:invoke	:read	nil
+1	:ok	:read	62
+1	:invoke	:read	nil
+1	:ok	:read	62
+1	:invoke	:write	22
+1	:ok	:write	22
+2	:invoke	:read	nil
+2	:ok	:read	22
+1	:invoke	:read	nil
+1	:ok	:read	22
+1	:invoke	:read	nil
+1	:ok	:read	22
+1	:invoke	:read	nil
+1	:ok	:read	22
+2	:invoke	:write	8
+2	:ok	:write	8
+1	:invoke	:read	nil
+1	:ok	:read	8
+1	:invoke	:read	nil
+1	:ok	:read	8
+1	:invoke	:read	nil
+1	:ok	:read	8
+2	:invoke	:read	nil
+2	:ok	:read	8
+1	:invoke	:write	88
+1	:ok	:write	88
+1	:invoke	:write	57
+1	:ok	:write	57
+1	:invoke	:write	46
+1	:ok	:write	46
+2	:invoke	:read	nil
+2	:ok	:read	46
+1	:invoke	:read	nil
+1	:ok	:read	46
+1	:invoke	:write	39
+1	:ok	:write	39
+1	:invoke	:write	71
+1	:ok	:write	71
+2	:invoke	:write	97
+2	:ok	:write	97
+1	:invoke	:write	43
+1	:ok	:write	43
+1	:invoke	:write	22
+1	:ok	:write	22
+1	:invoke	:read	nil
+1	:ok	:read	22
+2	:invoke	:read	nil
+2	:ok	:read	22
+1	:invoke	:write	14
+1	:ok	:write	14
+1	:invoke	:read	nil
+1	:ok	:read	14
+1	:invoke	:write	85
+1	:ok	:write	85
+2	:invoke	:write	88
+2	:ok	:write	88
+1	:invoke	:write	91
+1	:ok	:write	91
+1	:invoke	:read	nil
+1	:ok	:read	91
+1	:invoke	:write	19
+1	:ok	:write	19
+2	:invoke	:read	nil
+2	:ok	:read	19
+1	:invoke	:read	nil
+1	:ok	:read	19
+1	:invoke	:read	nil
+1	:ok	:read	19
+1	:invoke	:read	nil
+1	:ok	:read	19
+2	:invoke	:write	62
+2	:ok	:write	62
+1	:invoke	:write	79
+1	:ok	:write	79
+1	:invoke	:read	nil
+1	:ok	:read	79
+1	:invoke	:write	27
+1	:ok	:write	27
+2	:invoke	:write	31
+2	:ok	:write	31
+1	:invoke	:read	nil
+1	:ok	:read	31
+1	:invoke	:write	55
+1	:ok	:write	55
+3	:info	:read	nil	:timeout
+1	:invoke	:read	nil
+1	:ok	:read	55
+2	:invoke	:write	54
+2	:ok	:write	54
+6	:invoke	:write	50
+1	:invoke	:read	nil
+1	:ok	:read	54
+1	:invoke	:read	nil
+1	:ok	:read	54
+2	:invoke	:read	nil
+2	:ok	:read	54
+1	:invoke	:write	15
+1	:ok	:write	15
+1	:invoke	:write	84
+1	:ok	:write	84
+1	:invoke	:read	nil
+1	:ok	:read	84
+2	:invoke	:read	nil
+2	:ok	:read	84
+1	:invoke	:read	nil
+1	:ok	:read	84
+1	:invoke	:write	59
+1	:ok	:write	59
+1	:invoke	:write	5
+1	:ok	:write	5
+2	:invoke	:write	90
+2	:ok	:write	90
+1	:invoke	:read	nil
+1	:ok	:read	90
+1	:invoke	:write	84
+1	:ok	:write	84
+1	:invoke	:read	nil
+1	:ok	:read	84
+2	:invoke	:write	65
+2	:ok	:write	65
+1	:invoke	:read	nil
+1	:ok	:read	65
+1	:invoke	:read	nil
+1	:ok	:read	65
+1	:invoke	:read	nil
+1	:ok	:read	65
+2	:invoke	:write	58
+2	:ok	:write	58
+1	:invoke	:write	69
+1	:ok	:write	69
+1	:invoke	:read	nil
+1	:ok	:read	69
+1	:invoke	:write	92
+1	:ok	:write	92
+2	:invoke	:read	nil
+2	:ok	:read	92
+1	:invoke	:write	91
+1	:ok	:write	91
+1	:invoke	:write	14
+1	:ok	:write	14
+1	:invoke	:read	nil
+1	:ok	:read	14
+2	:invoke	:read	nil
+2	:ok	:read	14
+1	:invoke	:read	nil
+1	:ok	:read	14
+1	:invoke	:write	69
+1	:ok	:write	69
+1	:invoke	:write	7
+1	:ok	:write	7
+2	:invoke	:read	nil
+2	:ok	:read	7
+1	:invoke	:write	86
+1	:ok	:write	86
+1	:invoke	:write	11
+1	:ok	:write	11
+1	:invoke	:write	73
+1	:ok	:write	73
+2	:invoke	:write	51
+2	:ok	:write	51
+1	:invoke	:read	nil
+1	:ok	:read	51
+1	:invoke	:write	6
+1	:ok	:write	6
+1	:invoke	:read	nil
+1	:ok	:read	6
+2	:invoke	:write	73
+2	:ok	:write	73
+1	:invoke	:write	63
+1	:ok	:write	63
+1	:invoke	:read	nil
+1	:ok	:read	63
+1	:invoke	:write	15
+1	:ok	:write	15
+2	:invoke	:read	nil
+2	:ok	:read	15
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+1	:invoke	:write	91
+1	:ok	:write	91
+2	:invoke	:write	67
+2	:ok	:write	67
+1	:invoke	:read	nil
+1	:ok	:read	67
+1	:invoke	:read	nil
+1	:ok	:read	67
+1	:invoke	:write	24
+1	:ok	:write	24
+2	:invoke	:read	nil
+2	:ok	:read	24
+6	:info	:write	50	:timeout
+9	:invoke	:write	25
+1	:invoke	:write	88
+1	:ok	:write	88
+1	:invoke	:read	nil
+1	:ok	:read	88
+2	:invoke	:read	nil
+2	:ok	:read	88
+1	:invoke	:read	nil
+1	:ok	:read	88
+1	:invoke	:read	nil
+1	:ok	:read	88
+1	:invoke	:read	nil
+1	:ok	:read	88
+2	:invoke	:read	nil
+2	:ok	:read	88
+1	:invoke	:write	65
+1	:ok	:write	65
+1	:invoke	:read	nil
+1	:ok	:read	65
+1	:invoke	:write	91
+1	:ok	:write	91
+2	:invoke	:read	nil
+2	:ok	:read	91
+1	:invoke	:write	47
+1	:ok	:write	47
+1	:invoke	:write	68
+1	:ok	:write	68
+1	:invoke	:read	nil
+1	:ok	:read	68
+2	:invoke	:read	nil
+2	:ok	:read	68
+1	:invoke	:write	76
+1	:ok	:write	76
+1	:invoke	:read	nil
+1	:ok	:read	76
+1	:invoke	:write	62
+1	:ok	:write	62
+2	:invoke	:read	nil
+2	:ok	:read	62
+1	:invoke	:write	25
+1	:ok	:write	25
+1	:invoke	:read	nil
+1	:ok	:read	25
+1	:invoke	:read	nil
+1	:ok	:read	25
+2	:invoke	:write	4
+2	:ok	:write	4
+1	:invoke	:read	nil
+1	:ok	:read	4
+1	:invoke	:read	nil
+1	:ok	:read	4
+1	:invoke	:read	nil
+1	:ok	:read	4
+2	:invoke	:write	95
+2	:ok	:write	95
+1	:invoke	:write	16
+1	:ok	:write	16
+1	:invoke	:read	nil
+1	:ok	:read	16
+1	:invoke	:write	3
+1	:ok	:write	3
+2	:invoke	:read	nil
+2	:ok	:read	3
+1	:invoke	:write	89
+1	:ok	:write	89
+1	:invoke	:write	85
+1	:ok	:write	85
+1	:invoke	:read	nil
+1	:ok	:read	85
+2	:invoke	:write	66
+2	:ok	:write	66
+1	:invoke	:write	57
+1	:ok	:write	57
+1	:invoke	:write	93
+1	:ok	:write	93
+1	:invoke	:read	nil
+1	:ok	:read	93
+2	:invoke	:write	18
+2	:ok	:write	18
+1	:invoke	:read	nil
+1	:ok	:read	18
+1	:invoke	:write	10
+1	:ok	:write	10
+:nemesis	:info	:crash-node	nil
+9	:info	:write	25	n1:7000 failed to respond
+2	:invoke	:write	66
+2	:ok	:write	66
+12	:invoke	:write	37
+12	:fail	:write	37	:connection-refused
+12	:invoke	:write	9
+12	:fail	:write	9	:connection-refused
+1	:invoke	:write	41
+1	:ok	:write	41
+2	:invoke	:read	nil
+2	:ok	:read	41
+12	:invoke	:write	9
+12	:fail	:write	9	:connection-refused
+12	:invoke	:read	nil
+12	:fail	:read	nil	:connection-refused
+1	:invoke	:read	nil
+1	:ok	:read	41
+2	:invoke	:read	nil
+2	:ok	:read	41
+12	:invoke	:read	nil
+12	:fail	:read	nil	:connection-refused
+12	:invoke	:write	62
+12	:fail	:write	62	:connection-refused
+1	:invoke	:read	nil
+1	:ok	:read	41
+2	:invoke	:read	nil
+2	:ok	:read	41
+12	:invoke	:write	92
+12	:fail	:write	92	:connection-refused
+12	:invoke	:read	nil
+12	:fail	:read	nil	:connection-refused
+1	:invoke	:write	87
+1	:ok	:write	87
+2	:invoke	:read	nil
+2	:ok	:read	87
+12	:invoke	:read	nil
+12	:fail	:read	nil	:connection-refused
+12	:invoke	:read	nil
+12	:fail	:read	nil	:connection-refused
+1	:invoke	:write	81
+1	:ok	:write	81
+2	:invoke	:read	nil
+2	:ok	:read	81
+12	:invoke	:write	87
+12	:fail	:write	87	:connection-refused
+12	:invoke	:write	10
+12	:fail	:write	10	:connection-refused
+1	:invoke	:write	56
+1	:ok	:write	56
+2	:invoke	:write	60
+2	:ok	:write	60
+12	:invoke	:read	nil
+12	:fail	:read	nil	:connection-refused
+12	:invoke	:write	79
+12	:fail	:write	79	:connection-refused
+1	:invoke	:read	nil
+1	:ok	:read	60
+2	:invoke	:read	nil
+2	:ok	:read	60
+12	:invoke	:write	92
+12	:fail	:write	92	:connection-refused
+12	:invoke	:read	nil
+12	:fail	:read	nil	:connection-refused
+1	:invoke	:read	nil
+1	:ok	:read	60
+2	:invoke	:write	55
+2	:ok	:write	55
+12	:invoke	:write	37
+12	:fail	:write	37	:connection-refused
+12	:invoke	:read	nil
+12	:fail	:read	nil	:connection-refused
+1	:invoke	:write	89
+1	:ok	:write	89
+2	:invoke	:read	nil
+2	:ok	:read	89
+12	:invoke	:write	28
+12	:fail	:write	28	:connection-refused
+12	:invoke	:read	nil
+12	:fail	:read	nil	:connection-refused
+1	:invoke	:read	nil
+1	:ok	:read	89
+2	:invoke	:write	8
+2	:ok	:write	8
+12	:invoke	:write	99
+12	:fail	:write	99	:connection-refused
+12	:invoke	:write	0
+12	:fail	:write	0	:connection-refused
+:nemesis	:info	:crash-node	"n1"
+2	:invoke	:read	nil
+2	:ok	:read	8
+12	:invoke	:write	83
+12	:fail	:write	83	:connection-refused
+12	:invoke	:read	nil
+12	:fail	:read	nil	:connection-refused
+1	:invoke	:read	nil
+1	:ok	:read	8
+2	:invoke	:write	18
+2	:ok	:write	18
+12	:invoke	:read	nil
+12	:fail	:read	nil	:connection-refused
+12	:invoke	:write	90
+12	:fail	:write	90	:connection-refused
+1	:invoke	:write	16
+1	:ok	:write	16
+2	:invoke	:write	41
+2	:ok	:write	41
+12	:invoke	:write	51
+12	:fail	:write	51	:connection-refused
+12	:invoke	:write	47
+12	:fail	:write	47	:connection-refused
+1	:invoke	:write	55
+1	:ok	:write	55
+2	:invoke	:write	33
+2	:ok	:write	33
+12	:invoke	:write	6
+12	:fail	:write	6	:connection-refused
+12	:invoke	:read	nil
+12	:fail	:read	nil	:connection-refused
+1	:invoke	:read	nil
+1	:ok	:read	33
+2	:invoke	:read	nil
+2	:ok	:read	33
+12	:invoke	:read	nil
+12	:fail	:read	nil	:connection-refused
+12	:invoke	:read	nil
+12	:fail	:read	nil	:connection-refused
+1	:invoke	:write	18
+1	:ok	:write	18
+2	:invoke	:write	32
+2	:ok	:write	32
+12	:invoke	:read	nil
+12	:fail	:read	nil	:connection-refused
+12	:invoke	:read	nil
+12	:fail	:read	nil	:connection-refused
+1	:invoke	:read	nil
+1	:ok	:read	32
+2	:invoke	:read	nil
+2	:ok	:read	32
+12	:invoke	:read	nil
+12	:fail	:read	nil	:connection-refused
+12	:invoke	:write	18
+12	:fail	:write	18	:connection-refused
+1	:invoke	:write	7
+1	:ok	:write	7
+2	:invoke	:write	22
+2	:ok	:write	22
+12	:invoke	:write	96
+12	:fail	:write	96	:connection-refused
+12	:invoke	:write	33
+12	:fail	:write	33	:connection-refused
+1	:invoke	:write	49
+1	:ok	:write	49
+2	:invoke	:read	nil
+2	:ok	:read	49
+12	:invoke	:write	89
+12	:fail	:write	89	:connection-refused
+12	:invoke	:read	nil
+12	:fail	:read	nil	:connection-refused
+1	:invoke	:write	92
+1	:ok	:write	92
+2	:invoke	:write	57
+2	:ok	:write	57
+12	:invoke	:read	nil
+12	:fail	:read	nil	:connection-refused
+12	:invoke	:read	nil
+12	:fail	:read	nil	:connection-refused
+1	:invoke	:write	28
+1	:ok	:write	28
+2	:invoke	:read	nil
+2	:ok	:read	28
+12	:invoke	:read	nil
+12	:fail	:read	nil	:connection-refused
+12	:invoke	:read	nil
+12	:fail	:read	nil	:connection-refused
+1	:invoke	:read	nil
+1	:ok	:read	28
+2	:invoke	:write	38
+2	:ok	:write	38
+12	:invoke	:write	10
+12	:fail	:write	10	:connection-refused
+12	:invoke	:read	nil
+12	:fail	:read	nil	:connection-refused
+1	:invoke	:read	nil
+1	:ok	:read	38
+2	:invoke	:read	nil
+2	:ok	:read	38
+12	:invoke	:write	32
+12	:fail	:write	32	:connection-refused
+12	:invoke	:read	nil
+12	:fail	:read	nil	:connection-refused
+1	:invoke	:read	nil
+1	:ok	:read	38
+2	:invoke	:write	39
+2	:ok	:write	39
+12	:invoke	:read	nil
+12	:fail	:read	nil	:connection-refused
+12	:invoke	:read	nil
+12	:fail	:read	nil	:connection-refused
+1	:invoke	:write	88
+1	:ok	:write	88
+2	:invoke	:write	2
+2	:ok	:write	2
+12	:invoke	:read	nil
+12	:fail	:read	nil	:connection-refused
+12	:invoke	:write	76
+12	:fail	:write	76	:connection-refused
+1	:invoke	:write	77
+1	:ok	:write	77
+2	:invoke	:read	nil
+2	:ok	:read	77
+12	:invoke	:read	nil
+12	:fail	:read	nil	:connection-refused
+12	:invoke	:read	nil
+12	:fail	:read	nil	:connection-refused
+1	:invoke	:write	40
+1	:ok	:write	40
+2	:invoke	:read	nil
+2	:ok	:read	40
+12	:invoke	:read	nil
+12	:fail	:read	nil	:connection-refused
+12	:invoke	:write	44
+12	:fail	:write	44	:connection-refused
+1	:invoke	:read	nil
+1	:ok	:read	40
+2	:invoke	:write	82
+2	:ok	:write	82
+12	:invoke	:read	nil
+12	:fail	:read	nil	:connection-refused
+12	:invoke	:read	nil
+12	:fail	:read	nil	:connection-refused
+1	:invoke	:write	14
+1	:ok	:write	14
+2	:invoke	:write	14
+2	:ok	:write	14
+12	:invoke	:read	nil
+12	:fail	:read	nil	:connection-refused
+12	:invoke	:write	94
+12	:fail	:write	94	:connection-refused
+1	:invoke	:read	nil
+1	:ok	:read	14
+2	:invoke	:write	12
+2	:ok	:write	12
+12	:invoke	:write	92
+12	:fail	:write	92	:connection-refused
+12	:invoke	:read	nil
+12	:fail	:read	nil	:connection-refused
+1	:invoke	:write	96
+1	:ok	:write	96
+2	:invoke	:write	1
+2	:ok	:write	1
+12	:invoke	:read	nil
+12	:fail	:read	nil	:connection-refused
+12	:invoke	:read	nil
+12	:fail	:read	nil	:connection-refused
+1	:invoke	:read	nil
+1	:ok	:read	1
+2	:invoke	:write	85
+2	:ok	:write	85
+12	:invoke	:write	18
+12	:fail	:write	18	:connection-refused
+12	:invoke	:read	nil
+12	:fail	:read	nil	:connection-refused
+1	:invoke	:write	13
+1	:ok	:write	13
+2	:invoke	:write	91
+2	:ok	:write	91
+12	:invoke	:write	84
+12	:fail	:write	84	:connection-refused
+12	:invoke	:write	83
+12	:fail	:write	83	:connection-refused
+1	:invoke	:write	44
+1	:ok	:write	44
+2	:invoke	:read	nil
+2	:ok	:read	44
+12	:invoke	:read	nil
+12	:fail	:read	nil	:connection-refused
+12	:invoke	:read	nil
+12	:fail	:read	nil	:connection-refused
+1	:invoke	:read	nil
+1	:ok	:read	44
+2	:invoke	:read	nil
+2	:ok	:read	44
+12	:invoke	:write	94
+12	:fail	:write	94	:connection-refused
+12	:invoke	:write	43
+12	:fail	:write	43	:connection-refused
+1	:invoke	:read	nil
+1	:ok	:read	44
+2	:invoke	:write	25
+2	:ok	:write	25
+:nemesis	:info	:recover-node	nil
+12	:invoke	:read	nil
+12	:fail	:read	nil	:connection-refused
+1	:invoke	:read	nil
+1	:ok	:read	25
+2	:invoke	:write	50
+2	:ok	:write	50
+12	:invoke	:write	88
+12	:fail	:write	88	:connection-refused
+12	:invoke	:read	nil
+12	:fail	:read	nil	:connection-refused
+1	:invoke	:write	43
+1	:ok	:write	43
+2	:invoke	:write	29
+2	:ok	:write	29
+12	:invoke	:read	nil
+12	:fail	:read	nil	:connection-refused
+12	:invoke	:write	57
+12	:fail	:write	57	:connection-refused
+1	:invoke	:read	nil
+1	:ok	:read	29
+2	:invoke	:write	4
+2	:ok	:write	4
+12	:invoke	:read	nil
+12	:fail	:read	nil	:connection-refused
+12	:invoke	:write	55
+12	:fail	:write	55	:connection-refused
+1	:invoke	:write	38
+1	:ok	:write	38
+2	:invoke	:read	nil
+2	:ok	:read	38
+12	:invoke	:write	15
+12	:fail	:write	15	:connection-refused
+12	:invoke	:write	26
+12	:fail	:write	26	:connection-refused
+1	:invoke	:read	nil
+1	:ok	:read	38
+2	:invoke	:read	nil
+2	:ok	:read	38
+12	:invoke	:write	52
+12	:fail	:write	52	:connection-refused
+12	:invoke	:write	95
+12	:fail	:write	95	:connection-refused
+1	:invoke	:write	42
+1	:ok	:write	42
+2	:invoke	:read	nil
+2	:ok	:read	42
+12	:invoke	:write	79
+12	:fail	:write	79	:connection-refused
+12	:invoke	:read	nil
+12	:fail	:read	nil	:connection-refused
+1	:invoke	:read	nil
+1	:ok	:read	42
+2	:invoke	:read	nil
+2	:ok	:read	42
+12	:invoke	:read	nil
+12	:fail	:read	nil	:connection-refused
+:nemesis	:info	:recover-node	"n1"
+1	:invoke	:read	nil
+1	:ok	:read	42
+2	:invoke	:write	20
+2	:ok	:write	20
+12	:invoke	:read	nil
+1	:invoke	:read	nil
+1	:ok	:read	20
+1	:invoke	:read	nil
+1	:ok	:read	20
+2	:invoke	:read	nil
+2	:ok	:read	20
+1	:invoke	:write	91
+1	:ok	:write	91
+1	:invoke	:read	nil
+1	:ok	:read	91
+1	:invoke	:write	82
+1	:ok	:write	82
+2	:invoke	:write	53
+2	:ok	:write	53
+1	:invoke	:read	nil
+1	:ok	:read	53
+1	:invoke	:write	27
+1	:ok	:write	27
+1	:invoke	:read	nil
+1	:ok	:read	27
+2	:invoke	:read	nil
+2	:ok	:read	27
+1	:invoke	:read	nil
+1	:ok	:read	27
+1	:invoke	:read	nil
+1	:ok	:read	27
+1	:invoke	:write	38
+1	:ok	:write	38
+2	:invoke	:read	nil
+2	:ok	:read	38
+1	:invoke	:write	46
+1	:ok	:write	46
+1	:invoke	:write	30
+1	:ok	:write	30
+1	:invoke	:read	nil
+1	:ok	:read	30
+2	:invoke	:write	47
+2	:ok	:write	47
+1	:invoke	:read	nil
+1	:ok	:read	47
+1	:invoke	:write	32
+1	:ok	:write	32
+1	:invoke	:read	nil
+1	:ok	:read	32
+2	:invoke	:write	54
+2	:ok	:write	54
+1	:invoke	:read	nil
+1	:ok	:read	54
+1	:invoke	:write	7
+1	:ok	:write	7
+1	:invoke	:read	nil
+1	:ok	:read	7
+2	:invoke	:write	97
+2	:ok	:write	97
+1	:invoke	:read	nil
+1	:ok	:read	97
+1	:invoke	:read	nil
+1	:ok	:read	97
+1	:invoke	:write	6
+1	:ok	:write	6
+2	:invoke	:write	96
+2	:ok	:write	96
+1	:invoke	:write	61
+1	:ok	:write	61
+1	:invoke	:write	76
+1	:ok	:write	76
+1	:invoke	:read	nil
+1	:ok	:read	76
+2	:invoke	:read	nil
+2	:ok	:read	76
+1	:invoke	:read	nil
+1	:ok	:read	76
+1	:invoke	:read	nil
+1	:ok	:read	76
+1	:invoke	:write	50
+1	:ok	:write	50
+2	:invoke	:read	nil
+2	:ok	:read	50
+1	:invoke	:read	nil
+1	:ok	:read	50
+1	:invoke	:read	nil
+1	:ok	:read	50
+1	:invoke	:read	nil
+1	:ok	:read	50
+2	:invoke	:read	nil
+2	:ok	:read	50
+1	:invoke	:read	nil
+1	:ok	:read	50
+1	:invoke	:write	45
+1	:ok	:write	45
+1	:invoke	:write	76
+1	:ok	:write	76
+2	:invoke	:read	nil
+2	:ok	:read	76
+1	:invoke	:read	nil
+1	:ok	:read	76
+1	:invoke	:read	nil
+1	:ok	:read	76
+1	:invoke	:read	nil
+1	:ok	:read	76
+2	:invoke	:read	nil
+2	:ok	:read	76
+1	:invoke	:read	nil
+1	:ok	:read	76
+1	:invoke	:write	33
+1	:ok	:write	33
+12	:info	:read	nil	:timeout
+2	:invoke	:write	98
+2	:ok	:write	98
+15	:invoke	:write	69
+1	:invoke	:read	nil
+1	:ok	:read	98
+1	:invoke	:read	nil
+1	:ok	:read	98
+2	:invoke	:write	30
+2	:ok	:write	30
+1	:invoke	:write	69
+1	:ok	:write	69
+1	:invoke	:write	60
+1	:ok	:write	60
+1	:invoke	:write	30
+1	:ok	:write	30
+2	:invoke	:read	nil
+2	:ok	:read	30
+1	:invoke	:read	nil
+1	:ok	:read	30
+1	:invoke	:write	55
+1	:ok	:write	55
+1	:invoke	:read	nil
+1	:ok	:read	55
+2	:invoke	:read	nil
+2	:ok	:read	55
+1	:invoke	:read	nil
+1	:ok	:read	55
+1	:invoke	:write	13
+1	:ok	:write	13
+1	:invoke	:write	65
+1	:ok	:write	65
+2	:invoke	:write	90
+2	:ok	:write	90
+1	:invoke	:read	nil
+1	:ok	:read	90
+1	:invoke	:write	6
+1	:ok	:write	6
+1	:invoke	:write	88
+1	:ok	:write	88
+2	:invoke	:write	11
+2	:ok	:write	11
+1	:invoke	:read	nil
+1	:ok	:read	11
+1	:invoke	:write	35
+1	:ok	:write	35
+1	:invoke	:write	27
+1	:ok	:write	27
+2	:invoke	:read	nil
+2	:ok	:read	27
+1	:invoke	:read	nil
+1	:ok	:read	27
+1	:invoke	:write	97
+1	:ok	:write	97
+1	:invoke	:read	nil
+1	:ok	:read	97
+2	:invoke	:write	16
+2	:ok	:write	16
+1	:invoke	:write	17
+1	:ok	:write	17
+1	:invoke	:write	59
+1	:ok	:write	59
+1	:invoke	:read	nil
+1	:ok	:read	59
+2	:invoke	:write	3
+2	:ok	:write	3
+1	:invoke	:write	65
+1	:ok	:write	65
+1	:invoke	:read	nil
+1	:ok	:read	65
+1	:invoke	:read	nil
+1	:ok	:read	65
+2	:invoke	:read	nil
+2	:ok	:read	65
+1	:invoke	:write	10
+1	:ok	:write	10
+1	:invoke	:read	nil
+1	:ok	:read	10
+1	:invoke	:write	56
+1	:ok	:write	56
+2	:invoke	:read	nil
+2	:ok	:read	56
+1	:invoke	:read	nil
+1	:ok	:read	56
+1	:invoke	:write	94
+1	:ok	:write	94
+1	:invoke	:read	nil
+1	:ok	:read	94
+2	:invoke	:write	73
+2	:ok	:write	73
+1	:invoke	:write	14
+1	:ok	:write	14
+1	:invoke	:write	46
+1	:ok	:write	46
+1	:invoke	:write	63
+1	:ok	:write	63
+2	:invoke	:write	74
+2	:ok	:write	74
+1	:invoke	:write	60
+1	:ok	:write	60
+1	:invoke	:write	53
+1	:ok	:write	53
+1	:invoke	:write	44
+1	:ok	:write	44
+2	:invoke	:read	nil
+2	:ok	:read	44
+1	:invoke	:write	63
+1	:ok	:write	63
+1	:invoke	:write	64
+1	:ok	:write	64
+1	:invoke	:read	nil
+1	:ok	:read	64
+15	:info	:write	69	:timeout
+2	:invoke	:read	nil
+2	:ok	:read	64
+18	:invoke	:write	52
+1	:invoke	:write	87
+1	:ok	:write	87
+1	:invoke	:read	nil
+1	:ok	:read	87
+2	:invoke	:write	71
+2	:ok	:write	71
+1	:invoke	:read	nil
+1	:ok	:read	71
+1	:invoke	:write	31
+1	:ok	:write	31
+1	:invoke	:read	nil
+1	:ok	:read	31
+2	:invoke	:read	nil
+2	:ok	:read	31
+1	:invoke	:write	80
+1	:ok	:write	80
+1	:invoke	:write	37
+1	:ok	:write	37
+1	:invoke	:read	nil
+1	:ok	:read	37
+2	:invoke	:read	nil
+2	:ok	:read	37
+1	:invoke	:read	nil
+1	:ok	:read	37
+1	:invoke	:read	nil
+1	:ok	:read	37
+1	:invoke	:write	36
+1	:ok	:write	36
+2	:invoke	:write	84
+2	:ok	:write	84
+1	:invoke	:read	nil
+1	:ok	:read	84
+1	:invoke	:read	nil
+1	:ok	:read	84
+1	:invoke	:read	nil
+1	:ok	:read	84
+2	:invoke	:read	nil
+2	:ok	:read	84
+1	:invoke	:read	nil
+1	:ok	:read	84
+1	:invoke	:read	nil
+1	:ok	:read	84
+1	:invoke	:read	nil
+1	:ok	:read	84
+2	:invoke	:read	nil
+2	:ok	:read	84
+1	:invoke	:read	nil
+1	:ok	:read	84
+1	:invoke	:write	5
+1	:ok	:write	5
+1	:invoke	:write	53
+1	:ok	:write	53
+2	:invoke	:read	nil
+2	:ok	:read	53
+1	:invoke	:read	nil
+1	:ok	:read	53
+1	:invoke	:write	8
+1	:ok	:write	8
+1	:invoke	:write	91
+1	:ok	:write	91
+2	:invoke	:read	nil
+2	:ok	:read	91
+1	:invoke	:read	nil
+1	:ok	:read	91
+1	:invoke	:write	33
+1	:ok	:write	33
+1	:invoke	:read	nil
+2	:invoke	:write	61
+2	:ok	:write	61
+1	:ok	:read	33
+1	:invoke	:write	41
+1	:ok	:write	41
+1	:invoke	:read	nil
+1	:ok	:read	41
+1	:invoke	:read	nil
+1	:ok	:read	41
+:nemesis	:info	:start-partition	nil
+:nemesis	:info	:start-partition	[:isolated {"n2" #{"n1" "n3"}, "n1" #{"n2"}, "n3" #{"n2"}}]
+1	:invoke	:write	52
+2	:invoke	:write	74
+18	:info	:write	52	:timeout
+21	:invoke	:write	19
+1	:info	:write	52	:timeout
+4	:invoke	:write	85
+2	:info	:write	74	:timeout
+5	:invoke	:read	nil
+21	:info	:write	19	:timeout
+24	:invoke	:write	71
+4	:info	:write	85	:timeout
+7	:invoke	:write	19
+5	:info	:read	nil	:timeout
+8	:invoke	:write	67
+24	:info	:write	71	:timeout
+27	:invoke	:write	98
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+7	:info	:write	19	:timeout
+10	:invoke	:read	nil
+8	:info	:write	67	:timeout
+11	:invoke	:read	nil
+27	:info	:write	98	:timeout
+30	:invoke	:write	31
+:nemesis	:info	:crash-node	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+10	:info	:read	nil	:timeout
+13	:invoke	:write	28
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:write	70
+11	:fail	:write	70	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+30	:info	:write	31	:timeout
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+33	:invoke	:write	77
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:write	24
+11	:fail	:write	24	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:write	32
+11	:fail	:write	32	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:write	34
+11	:fail	:write	34	:connection-refused
+11	:invoke	:write	60
+11	:fail	:write	60	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:write	44
+11	:fail	:write	44	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:write	3
+11	:fail	:write	3	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:write	98
+11	:fail	:write	98	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:write	41
+11	:fail	:write	41	:connection-refused
+11	:invoke	:write	82
+11	:fail	:write	82	:connection-refused
+11	:invoke	:write	60
+11	:fail	:write	60	:connection-refused
+11	:invoke	:write	20
+11	:fail	:write	20	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:write	79
+11	:fail	:write	79	:connection-refused
+11	:invoke	:write	87
+11	:fail	:write	87	:connection-refused
+11	:invoke	:write	33
+11	:fail	:write	33	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:write	33
+11	:fail	:write	33	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:write	12
+11	:fail	:write	12	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+:nemesis	:info	:crash-node	"n3"
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:write	31
+11	:fail	:write	31	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:write	80
+11	:fail	:write	80	:connection-refused
+11	:invoke	:write	43
+11	:fail	:write	43	:connection-refused
+11	:invoke	:write	41
+11	:fail	:write	41	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+13	:info	:write	28	:timeout
+16	:invoke	:write	29
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:write	7
+11	:fail	:write	7	:connection-refused
+11	:invoke	:write	95
+11	:fail	:write	95	:connection-refused
+33	:info	:write	77	:timeout
+36	:invoke	:write	69
+11	:invoke	:write	70
+11	:fail	:write	70	:connection-refused
+11	:invoke	:write	79
+11	:fail	:write	79	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:write	77
+11	:fail	:write	77	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:write	40
+11	:fail	:write	40	:connection-refused
+11	:invoke	:write	44
+11	:fail	:write	44	:connection-refused
+11	:invoke	:write	41
+11	:fail	:write	41	:connection-refused
+11	:invoke	:write	81
+11	:fail	:write	81	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:write	57
+11	:fail	:write	57	:connection-refused
+11	:invoke	:write	65
+11	:fail	:write	65	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:write	99
+11	:fail	:write	99	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:write	24
+11	:fail	:write	24	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:write	10
+11	:fail	:write	10	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:write	61
+11	:fail	:write	61	:connection-refused
+11	:invoke	:write	75
+11	:fail	:write	75	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:write	66
+11	:fail	:write	66	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:write	54
+11	:fail	:write	54	:connection-refused
+11	:invoke	:write	12
+11	:fail	:write	12	:connection-refused
+11	:invoke	:write	51
+11	:fail	:write	51	:connection-refused
+11	:invoke	:write	20
+11	:fail	:write	20	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:write	67
+11	:fail	:write	67	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:write	95
+11	:fail	:write	95	:connection-refused
+16	:info	:write	29	:timeout
+19	:invoke	:read	nil
+11	:invoke	:write	96
+11	:fail	:write	96	:connection-refused
+11	:invoke	:write	32
+11	:fail	:write	32	:connection-refused
+36	:info	:write	69	:timeout
+39	:invoke	:write	5
+11	:invoke	:write	31
+11	:fail	:write	31	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:write	8
+11	:fail	:write	8	:connection-refused
+11	:invoke	:write	82
+11	:fail	:write	82	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:write	9
+11	:fail	:write	9	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:write	21
+11	:fail	:write	21	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:write	97
+11	:fail	:write	97	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:write	10
+11	:fail	:write	10	:connection-refused
+11	:invoke	:write	98
+11	:fail	:write	98	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:write	59
+11	:fail	:write	59	:connection-refused
+11	:invoke	:write	5
+11	:fail	:write	5	:connection-refused
+11	:invoke	:write	1
+11	:fail	:write	1	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:write	87
+11	:fail	:write	87	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:write	15
+11	:fail	:write	15	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:write	62
+11	:fail	:write	62	:connection-refused
+11	:invoke	:write	47
+11	:fail	:write	47	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+:nemesis	:info	:recover-node	nil
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:write	71
+11	:fail	:write	71	:connection-refused
+11	:invoke	:write	79
+11	:fail	:write	79	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:write	46
+11	:fail	:write	46	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:write	89
+11	:fail	:write	89	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:write	13
+11	:fail	:write	13	:connection-refused
+11	:invoke	:write	23
+11	:fail	:write	23	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:write	98
+11	:fail	:write	98	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+19	:info	:read	nil	:timeout
+22	:invoke	:write	74
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:write	46
+11	:fail	:write	46	:connection-refused
+39	:info	:write	5	:timeout
+42	:invoke	:read	nil
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:write	68
+11	:fail	:write	68	:connection-refused
+11	:invoke	:write	1
+11	:fail	:write	1	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:write	23
+11	:fail	:write	23	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:write	85
+11	:fail	:write	85	:connection-refused
+11	:invoke	:write	73
+11	:fail	:write	73	:connection-refused
+11	:invoke	:write	64
+11	:fail	:write	64	:connection-refused
+11	:invoke	:write	81
+11	:fail	:write	81	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+11	:invoke	:write	39
+11	:fail	:write	39	:connection-refused
+11	:invoke	:read	nil
+11	:fail	:read	nil	:connection-refused
+:nemesis	:info	:recover-node	"n3"
+11	:invoke	:write	26
+22	:info	:write	74	:timeout
+25	:invoke	:write	31
+42	:info	:read	nil	:timeout
+45	:invoke	:read	nil
+11	:info	:write	26	:timeout
+14	:invoke	:read	nil
+25	:info	:write	31	:timeout
+28	:invoke	:write	56
+45	:info	:read	nil	:timeout
+48	:invoke	:read	nil
+14	:info	:read	nil	:timeout
+17	:invoke	:write	94
+28	:info	:write	56	:timeout
+31	:invoke	:read	nil
+48	:info	:read	nil	:timeout
+51	:invoke	:read	nil
+:nemesis	:info	:start-partition	nil
+:nemesis	:info	:start-partition	[:isolated {"n1" #{"n2" "n3"}, "n2" #{"n1"}, "n3" #{"n1"}}]
+17	:info	:write	94	:timeout
+20	:invoke	:read	nil
+31	:info	:read	nil	:timeout
+34	:invoke	:read	nil
+51	:info	:read	nil	:timeout
+54	:invoke	:read	nil
+20	:info	:read	nil	:timeout
+23	:invoke	:read	nil
+34	:info	:read	nil	:timeout
+54	:info	:read	nil	:timeout
+23	:info	:read	nil	:timeout
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed

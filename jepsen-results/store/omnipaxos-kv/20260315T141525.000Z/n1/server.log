@@ -1,0 +1,114 @@
+2026-03-15 14:15:27 Jepsen starting  /usr/bin/env SERVER_CONFIG_FILE=/opt/omnipaxos/server.toml CLUSTER_CONFIG_FILE=/opt/omnipaxos/cluster.toml RUST_LOG=debug /opt/omnipaxos/server
+[2026-03-15T14:15:27Z INFO  server::network] New connection from 172.18.0.5:34588
+[2026-03-15T14:15:27Z INFO  server::network] Identified connection from node 3
+[2026-03-15T14:15:28Z INFO  server::network] New connection from 172.18.0.4:37550
+[2026-03-15T14:15:28Z INFO  server::network] Identified connection from node 2
+[2026-03-15T14:15:33Z INFO  server::network] New connection from 127.0.0.1:58278
+[2026-03-15T14:15:33Z INFO  server::network] Identified connection from client 1
+[2026-03-15T14:15:33Z INFO  server::server] 1: Attempting to take leadership
+[2026-03-15T14:15:34Z INFO  server::server] 1: Leader fully initialized
+[2026-03-15T14:15:34Z DEBUG server::server] Sending start message to peer 2
+[2026-03-15T14:15:34Z DEBUG server::server] Sending start message to peer 3
+[2026-03-15T14:15:34Z DEBUG server::server] Sending start message to client 1
+[2026-03-15T14:15:34Z DEBUG server::server] Decided 1
+[2026-03-15T14:15:34Z DEBUG server::server] Decided 3
+[2026-03-15T14:15:34Z DEBUG server::server] Decided 4
+[2026-03-15T14:15:34Z DEBUG server::server] Decided 5
+[2026-03-15T14:15:34Z DEBUG server::server] Decided 6
+[2026-03-15T14:15:34Z DEBUG server::server] Decided 7
+[2026-03-15T14:15:34Z DEBUG server::server] Decided 8
+[2026-03-15T14:15:34Z DEBUG server::server] Decided 9
+[2026-03-15T14:15:34Z DEBUG server::server] Decided 10
+[2026-03-15T14:15:34Z DEBUG server::server] Decided 11
+[2026-03-15T14:15:34Z DEBUG server::server] Decided 12
+[2026-03-15T14:15:34Z DEBUG server::server] Decided 13
+[2026-03-15T14:15:34Z DEBUG server::server] Decided 14
+[2026-03-15T14:15:35Z DEBUG server::server] Decided 15
+[2026-03-15T14:15:35Z DEBUG server::server] Decided 16
+[2026-03-15T14:15:35Z DEBUG server::server] Decided 17
+[2026-03-15T14:15:35Z DEBUG server::server] Decided 18
+[2026-03-15T14:15:35Z DEBUG server::server] Decided 19
+[2026-03-15T14:15:35Z DEBUG server::server] Decided 20
+[2026-03-15T14:15:35Z DEBUG server::server] Decided 21
+[2026-03-15T14:15:35Z DEBUG server::server] Decided 22
+[2026-03-15T14:15:35Z DEBUG server::server] Decided 23
+[2026-03-15T14:15:35Z DEBUG server::server] Decided 24
+[2026-03-15T14:15:36Z DEBUG server::server] Decided 25
+[2026-03-15T14:15:36Z DEBUG server::server] Decided 26
+[2026-03-15T14:15:36Z DEBUG server::server] Decided 27
+[2026-03-15T14:15:36Z DEBUG server::server] Decided 28
+[2026-03-15T14:15:36Z DEBUG server::server] Decided 29
+[2026-03-15T14:15:36Z DEBUG server::server] Decided 30
+[2026-03-15T14:15:36Z DEBUG server::server] Decided 31
+[2026-03-15T14:15:36Z DEBUG server::server] Decided 32
+[2026-03-15T14:15:36Z DEBUG server::server] Decided 33
+[2026-03-15T14:15:36Z DEBUG server::server] Decided 34
+[2026-03-15T14:15:36Z DEBUG server::server] Decided 35
+[2026-03-15T14:15:37Z DEBUG server::server] Decided 36
+[2026-03-15T14:15:37Z DEBUG server::server] Decided 37
+[2026-03-15T14:15:37Z DEBUG server::server] Decided 38
+[2026-03-15T14:15:37Z DEBUG server::server] Decided 39
+[2026-03-15T14:15:37Z DEBUG server::server] Decided 40
+[2026-03-15T14:15:37Z DEBUG server::server] Decided 41
+[2026-03-15T14:15:37Z DEBUG server::server] Decided 42
+[2026-03-15T14:15:37Z DEBUG server::server] Decided 43
+[2026-03-15T14:15:37Z DEBUG server::server] Decided 44
+[2026-03-15T14:15:37Z DEBUG server::server] Decided 45
+[2026-03-15T14:15:38Z DEBUG server::server] Decided 46
+[2026-03-15T14:15:38Z DEBUG server::server] Decided 47
+[2026-03-15T14:15:38Z DEBUG server::server] Decided 48
+[2026-03-15T14:15:38Z DEBUG server::server] Decided 49
+[2026-03-15T14:15:38Z DEBUG server::server] Decided 50
+[2026-03-15T14:15:38Z DEBUG server::server] Decided 51
+[2026-03-15T14:15:38Z DEBUG server::server] Decided 52
+[2026-03-15T14:15:38Z DEBUG server::server] Decided 53
+[2026-03-15T14:15:38Z DEBUG server::server] Decided 54
+[2026-03-15T14:15:38Z DEBUG server::server] Decided 55
+[2026-03-15T14:15:38Z DEBUG server::server] Decided 56
+[2026-03-15T14:15:39Z DEBUG server::server] Decided 57
+[2026-03-15T14:15:39Z DEBUG server::server] Decided 58
+[2026-03-15T14:15:39Z DEBUG server::server] Decided 59
+[2026-03-15T14:15:39Z DEBUG server::server] Decided 60
+[2026-03-15T14:15:39Z DEBUG server::server] Decided 61
+[2026-03-15T14:15:39Z DEBUG server::server] Decided 62
+[2026-03-15T14:15:39Z DEBUG server::server] Decided 63
+[2026-03-15T14:15:39Z DEBUG server::server] Decided 64
+[2026-03-15T14:15:39Z DEBUG server::server] Decided 65
+[2026-03-15T14:15:39Z DEBUG server::server] Decided 66
+[2026-03-15T14:15:39Z DEBUG server::server] Decided 67
+[2026-03-15T14:15:39Z DEBUG server::server] Decided 68
+[2026-03-15T14:15:39Z DEBUG server::server] Decided 69
+[2026-03-15T14:15:39Z DEBUG server::server] Decided 70
+[2026-03-15T14:15:39Z DEBUG server::server] Decided 71
+[2026-03-15T14:15:40Z DEBUG server::server] Decided 72
+[2026-03-15T14:15:40Z DEBUG server::server] Decided 73
+[2026-03-15T14:15:40Z DEBUG server::server] Decided 74
+[2026-03-15T14:15:40Z DEBUG server::server] Decided 75
+[2026-03-15T14:15:40Z DEBUG server::server] Decided 76
+[2026-03-15T14:15:40Z DEBUG server::server] Decided 77
+[2026-03-15T14:15:40Z DEBUG server::server] Decided 78
+[2026-03-15T14:15:40Z DEBUG server::server] Decided 79
+[2026-03-15T14:15:40Z DEBUG server::server] Decided 80
+[2026-03-15T14:15:41Z DEBUG server::server] Decided 81
+[2026-03-15T14:15:41Z DEBUG server::server] Decided 82
+[2026-03-15T14:15:41Z DEBUG server::server] Decided 83
+[2026-03-15T14:15:41Z DEBUG server::server] Decided 84
+[2026-03-15T14:15:41Z DEBUG server::server] Decided 85
+[2026-03-15T14:15:41Z DEBUG server::server] Decided 86
+[2026-03-15T14:15:41Z DEBUG server::server] Decided 87
+[2026-03-15T14:15:41Z DEBUG server::server] Decided 88
+[2026-03-15T14:15:41Z DEBUG server::server] Decided 89
+[2026-03-15T14:15:42Z DEBUG server::server] Decided 90
+[2026-03-15T14:15:42Z DEBUG server::server] Decided 91
+[2026-03-15T14:15:42Z DEBUG server::server] Decided 92
+[2026-03-15T14:15:42Z DEBUG server::server] Decided 93
+[2026-03-15T14:15:42Z DEBUG server::server] Decided 94
+[2026-03-15T14:15:42Z DEBUG server::server] Decided 95
+[2026-03-15T14:15:43Z DEBUG server::server] Decided 96
+[2026-03-15T14:15:43Z DEBUG server::server] Decided 97
+[2026-03-15T14:15:43Z DEBUG server::server] Decided 98
+2026-03-15 14:16:17 Jepsen starting  /usr/bin/env SERVER_CONFIG_FILE=/opt/omnipaxos/server.toml CLUSTER_CONFIG_FILE=/opt/omnipaxos/cluster.toml RUST_LOG=debug /opt/omnipaxos/server
+[2026-03-15T14:16:20Z INFO  server::network] New connection from 127.0.0.1:40314
+[2026-03-15T14:16:20Z INFO  server::network] Identified connection from client 1
+[2026-03-15T14:17:09Z INFO  server::network] New connection from 172.18.0.5:35120
+[2026-03-15T14:17:09Z INFO  server::network] Identified connection from node 3

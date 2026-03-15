@@ -1,0 +1,15 @@
+2026-03-15 13:54:12 Jepsen starting  /usr/bin/env SERVER_CONFIG_FILE=/opt/omnipaxos/server.toml CLUSTER_CONFIG_FILE=/opt/omnipaxos/cluster.toml RUST_LOG=info /opt/omnipaxos/server
+[2026-03-15T13:54:12Z INFO  server::network] New connection from 172.18.0.4:55154
+[2026-03-15T13:54:12Z INFO  server::network] Identified connection from node 2
+[2026-03-15T13:54:12Z INFO  server::network] New connection from 172.18.0.5:39302
+[2026-03-15T13:54:12Z INFO  server::network] Identified connection from node 3
+[2026-03-15T13:54:17Z INFO  server::network] New connection from 127.0.0.1:46708
+[2026-03-15T13:54:17Z INFO  server::network] Identified connection from client 1
+[2026-03-15T13:54:17Z INFO  server::server] 1: Attempting to take leadership
+[2026-03-15T13:54:18Z INFO  server::server] 1: Leader fully initialized
+2026-03-15 13:55:01 Jepsen starting  /usr/bin/env SERVER_CONFIG_FILE=/opt/omnipaxos/server.toml CLUSTER_CONFIG_FILE=/opt/omnipaxos/cluster.toml RUST_LOG=info /opt/omnipaxos/server
+[2026-03-15T13:55:05Z INFO  server::network] New connection from 127.0.0.1:59274
+[2026-03-15T13:55:05Z INFO  server::network] Identified connection from client 1
+2026-03-15 13:55:54 Jepsen starting  /usr/bin/env SERVER_CONFIG_FILE=/opt/omnipaxos/server.toml CLUSTER_CONFIG_FILE=/opt/omnipaxos/cluster.toml RUST_LOG=info /opt/omnipaxos/server
+[2026-03-15T13:55:57Z INFO  server::network] New connection from 127.0.0.1:36968
+[2026-03-15T13:55:57Z INFO  server::network] Identified connection from client 1

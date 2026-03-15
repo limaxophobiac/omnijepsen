@@ -1,0 +1,6 @@
+2026-03-15 10:19:06 Jepsen starting  /usr/bin/env SERVER_CONFIG_FILE=/opt/omnipaxos/server.toml CLUSTER_CONFIG_FILE=/opt/omnipaxos/cluster.toml RUST_LOG=info /opt/omnipaxos/server
+[2026-03-15T10:19:06Z INFO  server::network] New connection to node 1
+[2026-03-15T10:19:06Z INFO  server::network] New connection from 172.18.0.5:55772
+[2026-03-15T10:19:06Z INFO  server::network] Identified connection from node 3
+[2026-03-15T10:19:11Z INFO  server::network] New connection from 127.0.0.1:37258
+[2026-03-15T10:19:11Z INFO  server::network] Identified connection from client 1

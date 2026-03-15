@@ -82,7 +82,7 @@
     "/usr/bin/env"
     (str "SERVER_CONFIG_FILE=" dir "/server.toml")
     (str "CLUSTER_CONFIG_FILE=" dir "/cluster.toml")
-    "RUST_LOG=info"
+    "RUST_LOG=debug"
     server-bin))
 
 (defn start-shim! []
@@ -93,7 +93,7 @@
     "/usr/bin/env"
     (str "CONFIG_FILE=" dir "/shim.toml")
     "API_LISTEN_ADDR=0.0.0.0:7000"
-    "RUST_LOG=info"
+    "RUST_LOG=debug"
     shim-bin))
 
 (defn await-shim!

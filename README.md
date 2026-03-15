@@ -1,6 +1,6 @@
 # ID2203 Project: Battle-testing OmniPaxos with Jepsen
 
-This project tests the linearizability of an OmniPaxos key-value store using Jepsen.
+This project tests the linearizability of an OmniPaxos key-value store under network partitions and node crashes using Jepsen.
 
 ## Repository Layout
 
@@ -13,13 +13,26 @@ jepsen-results/           Test output (copied from control node after runs)
 
 ## Architecture
 
+```
+Jepsen control node
+  worker 0  →  HTTP :7000  →  n1 api-shim  →  n1 OmniPaxos server  ─┐
+  worker 1  →  HTTP :7000  →  n2 api-shim  →  n2 OmniPaxos server  ─┼─ consensus
+  worker 2  →  HTTP :7000  →  n3 api-shim  →  n3 OmniPaxos server  ─┘
+```
+
 Each Jepsen node (n1, n2, n3) runs:
 - **OmniPaxos server** — consensus node on port 8000
-- **api-shim** — HTTP bridge on port 7000 that forwards requests through consensus
+- **api-shim** — HTTP bridge on port 7000 that forwards all requests (reads and writes) through the OmniPaxos consensus log
 
-The Jepsen control node runs the Clojure test, which drives reads/writes through the HTTP shim on each node and verifies linearizability using Knossos.
+The Jepsen control node generates operations, assigns them to workers, collects results, and runs Knossos to verify linearizability.
 
 When a test starts, Jepsen automatically SSHs into n1/n2/n3 and deploys the server and api-shim binaries. You do not need to manually set anything up on the DB nodes.
+
+### Linearizable Reads
+
+All reads go through `ClientMessage::Append` — the same path as writes. This assigns each read a specific position in the consensus log, ensuring it observes exactly the state at that agreed point. This makes reads linearizable.
+
+A naive implementation reading directly from a node's local state would not be linearizable — a follower's in-memory state may be stale if it hasn't yet received the latest committed entries.
 
 ---
 
@@ -46,9 +59,7 @@ cd Omnipax
 cargo build --release --bin server --bin api-shim
 ```
 
-Binaries will be at:
-- `Omnipax/target/release/server`
-- `Omnipax/target/release/api-shim`
+Binaries will be at `Omnipax/target/release/server` and `Omnipax/target/release/api-shim`.
 
 ---
 
@@ -59,8 +70,7 @@ cd jepsen-main/docker
 bin/up --nodes 3
 ```
 
-This starts one control node (`jepsen-control`) and three DB nodes (`n1`, `n2`, `n3`).
-Wait until you see:
+This starts one control node (`jepsen-control`) and three DB nodes (`n1`, `n2`, `n3`). Wait until you see:
 ```
 Please run `bin/console` in another terminal to proceed.
 ```
@@ -69,15 +79,15 @@ Please run `bin/console` in another terminal to proceed.
 
 ## Step 3 — Copy Binaries and Test Suite to the Control Node
 
-Run these from the project root on the host machine:
+Run from the project root on the host machine:
 
 ```bash
-docker cp Omnipax/target/release/server   jepsen-control:/root/server
+docker cp Omnipax/target/release/server jepsen-control:/root/server
 docker cp Omnipax/target/release/api-shim jepsen-control:/root/api-shim
-docker cp jepsen-omnipaxos                jepsen-control:/root/jepsen-omnipaxos
+docker cp jepsen-omnipaxos jepsen-control:/root/jepsen-omnipaxos
 ```
 
-When the test runs, Jepsen will automatically SSH the binaries from the control node to each DB node (n1, n2, n3) and start them.
+When the test runs, Jepsen will automatically SSH the binaries from the control node to each DB node and start them.
 
 ---
 
@@ -98,8 +108,7 @@ Inside the control node shell:
 
 ```bash
 cd /root/jepsen-omnipaxos
-lein run -- test --nodes n1,n2,n3 --time-limit 60 \
-  --server-bin /root/server --shim-bin /root/api-shim
+lein run -- test --nodes n1,n2,n3 --time-limit 120 --server-bin /root/server --shim-bin /root/api-shim
 ```
 
 If you get compilation errors after changing source files, run `lein clean` first.
@@ -129,7 +138,8 @@ docker cp jepsen-control:/root/jepsen-omnipaxos/store ./jepsen-results
 
 | File | Description |
 |------|-------------|
-| `results.edn` | Final verdict — `:valid? true/false` |
+| `results.edn` | Final verdict — `:valid? true/false` (written by Knossos) |
+| `history.txt` | Human-readable operation log |
 | `history.edn` | Full operation log |
 | `timeline.html` | Visual timeline — open in a browser |
 | `jepsen.log` | Full test log including setup and teardown |
@@ -144,19 +154,49 @@ Then run `bin/web` from `jepsen-main/docker/` on the host and open `http://local
 
 ---
 
+## Test Structure
+
+All test code lives in `jepsen-omnipaxos/src/jepsen/omnipaxos/`:
+
+| File | Purpose |
+|------|---------|
+| `core.clj` | Entry point — wires together db, client, generator, checker, and nemesis |
+| `client.clj` | Jepsen client — translates operations to HTTP calls against the api-shim |
+| `db.clj` | DB component — deploys and starts/stops server + api-shim on each node via SSH |
+| `nemesis.clj` | Fault injection — network partitions and node crashes |
+
+### Indeterminate State Handling
+
+The client correctly handles ambiguous outcomes:
+
+| Outcome | Jepsen type | Meaning |
+|---------|-------------|---------|
+| HTTP 204 / 200 | `:ok` | Operation definitely succeeded |
+| `ConnectException` | `:fail` | Request never reached server, definitely did not commit |
+| `SocketTimeoutException` / HTTP 500 | `:info` | Unknown — may or may not have committed through consensus |
+
+Only `:ok` operations are required to be visible to subsequent reads. `:fail` operations are safely ignored by Knossos. `:info` operations are considered in both possible states.
+
+### Nemesis
+
+The nemesis cycles through two fault types:
+
+1. **Network partition** — splits the cluster into two halves using iptables (`partition-random-halves`)
+2. **Node crash** — kills server + api-shim on a random node, then restarts them after a delay
+
+---
+
 ## Iterating on the Test
 
-When editing Clojure source files locally, copy only the changed file to the control node:
+When editing Clojure source files locally, copy the changed file to the control node and re-run:
 
 ```bash
-docker cp jepsen-omnipaxos/src/jepsen/omnipaxos/client.clj \
-  jepsen-control:/root/jepsen-omnipaxos/src/jepsen/omnipaxos/client.clj
+docker cp jepsen-omnipaxos/src/jepsen/omnipaxos/core.clj jepsen-control:/root/jepsen-omnipaxos/src/jepsen/omnipaxos/core.clj
 ```
 
-Then inside the control node:
+Inside the control node:
 ```bash
-lein clean && lein run -- test --nodes n1,n2,n3 --time-limit 60 \
-  --server-bin /root/server --shim-bin /root/api-shim
+lein clean && lein run -- test --nodes n1,n2,n3 --time-limit 120 --server-bin /root/server --shim-bin /root/api-shim
 ```
 
 The Rust binaries only need to be rebuilt if you change server or shim code, after which repeat Step 3.

@@ -1,0 +1,13 @@
+{:linearizable {:valid? true,
+                :configs ({:model #knossos.model.Register{:value 72},
+                           :last-op {:process 0,
+                                     :type :ok,
+                                     :f :read,
+                                     :value 72,
+                                     :index 271,
+                                     :time 14999523359,
+                                     :key "k0"},
+                           :pending []}),
+                :final-paths ()},
+ :timeline {:valid? true},
+ :valid? true}

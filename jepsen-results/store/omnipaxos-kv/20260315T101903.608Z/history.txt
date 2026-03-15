@@ -1,0 +1,1174 @@
+0	:invoke	:read	nil
+1	:invoke	:read	nil
+2	:invoke	:write	77
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 3, :time 581777475, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k0"}, :op' {:index 3, :time 581777475, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k0"}, :problems [":type should be :info"]}
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 5, :time 594278827, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :op' {:index 5, :time 594278827, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :problems [":type should be :info"]}
+:nemesis	:invoke	:write	76
+:nemesis	:info	:write	76	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 7, :time 711978589, :type :invoke, :process :nemesis, :f :write, :value 76, :key "k2"}, :op' {:index 7, :time 711978589, :type :invoke, :process :nemesis, :f :write, :value 76, :key "k2"}, :problems [":type should be :info"]}
+:nemesis	:invoke	:write	18
+:nemesis	:info	:write	18	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 9, :time 793469614, :type :invoke, :process :nemesis, :f :write, :value 18, :key "k1"}, :op' {:index 9, :time 793469614, :type :invoke, :process :nemesis, :f :write, :value 18, :key "k1"}, :problems [":type should be :info"]}
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 11, :time 897428559, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k0"}, :op' {:index 11, :time 897428559, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k0"}, :problems [":type should be :info"]}
+:nemesis	:invoke	:write	68
+:nemesis	:info	:write	68	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 13, :time 920151315, :type :invoke, :process :nemesis, :f :write, :value 68, :key "k2"}, :op' {:index 13, :time 920151315, :type :invoke, :process :nemesis, :f :write, :value 68, :key "k2"}, :problems [":type should be :info"]}
+2	:ok	:write	77
+1	:ok	:read	nil
+0	:ok	:read	nil
+1	:invoke	:read	nil
+1	:ok	:read	nil
+2	:invoke	:write	77
+2	:ok	:write	77
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 22, :time 1254577812, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :op' {:index 22, :time 1254577812, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :problems [":type should be :info"]}
+0	:invoke	:write	36
+0	:ok	:write	36
+1	:invoke	:read	nil
+1	:ok	:read	"77"
+2	:invoke	:write	20
+2	:ok	:write	20
+:nemesis	:invoke	:write	83
+:nemesis	:info	:write	83	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 30, :time 1678465123, :type :invoke, :process :nemesis, :f :write, :value 83, :key "k2"}, :op' {:index 30, :time 1678465123, :type :invoke, :process :nemesis, :f :write, :value 83, :key "k2"}, :problems [":type should be :info"]}
+0	:invoke	:write	21
+0	:ok	:write	21
+1	:invoke	:write	55
+1	:ok	:write	55
+2	:invoke	:read	nil
+2	:ok	:read	"55"
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 38, :time 2258766383, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k0"}, :op' {:index 38, :time 2258766383, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k0"}, :problems [":type should be :info"]}
+0	:invoke	:write	21
+0	:ok	:write	21
+1	:invoke	:read	nil
+1	:ok	:read	"21"
+2	:invoke	:read	nil
+2	:ok	:read	"20"
+:nemesis	:invoke	:write	66
+:nemesis	:info	:write	66	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 46, :time 2743148624, :type :invoke, :process :nemesis, :f :write, :value 66, :key "k0"}, :op' {:index 46, :time 2743148624, :type :invoke, :process :nemesis, :f :write, :value 66, :key "k0"}, :problems [":type should be :info"]}
+0	:invoke	:write	67
+0	:ok	:write	67
+1	:invoke	:read	nil
+1	:ok	:read	"67"
+2	:invoke	:write	75
+2	:ok	:write	75
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 54, :time 3088856815, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k0"}, :op' {:index 54, :time 3088856815, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k0"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"20"
+1	:invoke	:write	66
+1	:ok	:write	66
+2	:invoke	:write	68
+2	:ok	:write	68
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 62, :time 3592645885, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :op' {:index 62, :time 3592645885, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :problems [":type should be :info"]}
+0	:invoke	:write	12
+0	:ok	:write	12
+1	:invoke	:write	12
+1	:ok	:write	12
+2	:invoke	:read	nil
+2	:ok	:read	"68"
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 70, :time 4010828710, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :op' {:index 70, :time 4010828710, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"12"
+1	:invoke	:write	96
+1	:ok	:write	96
+2	:invoke	:read	nil
+2	:ok	:read	"96"
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 78, :time 4542184916, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :op' {:index 78, :time 4542184916, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :problems [":type should be :info"]}
+0	:invoke	:write	67
+0	:ok	:write	67
+1	:invoke	:read	nil
+1	:ok	:read	"12"
+2	:invoke	:write	14
+2	:ok	:write	14
+:nemesis	:invoke	:write	85
+:nemesis	:info	:write	85	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 86, :time 4926123102, :type :invoke, :process :nemesis, :f :write, :value 85, :key "k2"}, :op' {:index 86, :time 4926123102, :type :invoke, :process :nemesis, :f :write, :value 85, :key "k2"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"14"
+1	:invoke	:read	nil
+1	:ok	:read	"14"
+2	:invoke	:write	68
+2	:ok	:write	68
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 94, :time 5360430712, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k0"}, :op' {:index 94, :time 5360430712, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k0"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"68"
+1	:invoke	:write	24
+1	:ok	:write	24
+2	:invoke	:read	nil
+2	:ok	:read	"67"
+:nemesis	:invoke	:write	40
+:nemesis	:info	:write	40	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 102, :time 5765548541, :type :invoke, :process :nemesis, :f :write, :value 40, :key "k2"}, :op' {:index 102, :time 5765548541, :type :invoke, :process :nemesis, :f :write, :value 40, :key "k2"}, :problems [":type should be :info"]}
+0	:invoke	:write	57
+0	:ok	:write	57
+1	:invoke	:read	nil
+1	:ok	:read	"57"
+2	:invoke	:write	49
+2	:ok	:write	49
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 110, :time 6167724603, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :op' {:index 110, :time 6167724603, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:write	51
+0	:ok	:write	51
+1	:invoke	:write	94
+1	:ok	:write	94
+2	:invoke	:write	23
+2	:ok	:write	23
+:nemesis	:invoke	:write	34
+:nemesis	:info	:write	34	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 118, :time 6472371326, :type :invoke, :process :nemesis, :f :write, :value 34, :key "k1"}, :op' {:index 118, :time 6472371326, :type :invoke, :process :nemesis, :f :write, :value 34, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:write	69
+0	:ok	:write	69
+1	:invoke	:read	nil
+1	:ok	:read	"23"
+2	:invoke	:write	14
+2	:ok	:write	14
+:nemesis	:invoke	:write	33
+:nemesis	:info	:write	33	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 126, :time 7044623563, :type :invoke, :process :nemesis, :f :write, :value 33, :key "k0"}, :op' {:index 126, :time 7044623563, :type :invoke, :process :nemesis, :f :write, :value 33, :key "k0"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"69"
+1	:invoke	:write	9
+1	:ok	:write	9
+2	:invoke	:read	nil
+2	:ok	:read	"69"
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 134, :time 7471138587, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :op' {:index 134, :time 7471138587, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :problems [":type should be :info"]}
+0	:invoke	:write	54
+0	:ok	:write	54
+1	:invoke	:read	nil
+1	:ok	:read	"9"
+2	:invoke	:read	nil
+2	:ok	:read	"9"
+:nemesis	:invoke	:write	21
+:nemesis	:info	:write	21	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 142, :time 7803862824, :type :invoke, :process :nemesis, :f :write, :value 21, :key "k0"}, :op' {:index 142, :time 7803862824, :type :invoke, :process :nemesis, :f :write, :value 21, :key "k0"}, :problems [":type should be :info"]}
+0	:invoke	:write	19
+0	:ok	:write	19
+1	:invoke	:read	nil
+1	:ok	:read	"19"
+2	:invoke	:read	nil
+2	:ok	:read	"19"
+:nemesis	:invoke	:write	68
+:nemesis	:info	:write	68	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 150, :time 8093236246, :type :invoke, :process :nemesis, :f :write, :value 68, :key "k2"}, :op' {:index 150, :time 8093236246, :type :invoke, :process :nemesis, :f :write, :value 68, :key "k2"}, :problems [":type should be :info"]}
+0	:invoke	:write	3
+0	:ok	:write	3
+1	:invoke	:read	nil
+1	:ok	:read	"69"
+2	:invoke	:write	94
+2	:ok	:write	94
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 158, :time 8461345134, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k0"}, :op' {:index 158, :time 8461345134, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k0"}, :problems [":type should be :info"]}
+0	:invoke	:write	33
+0	:ok	:write	33
+1	:invoke	:write	62
+1	:ok	:write	62
+2	:invoke	:write	64
+2	:ok	:write	64
+:nemesis	:invoke	:write	30
+:nemesis	:info	:write	30	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 166, :time 8988038752, :type :invoke, :process :nemesis, :f :write, :value 30, :key "k1"}, :op' {:index 166, :time 8988038752, :type :invoke, :process :nemesis, :f :write, :value 30, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:write	67
+0	:ok	:write	67
+1	:invoke	:write	75
+1	:ok	:write	75
+2	:invoke	:write	80
+2	:ok	:write	80
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 174, :time 9489832111, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :op' {:index 174, :time 9489832111, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"75"
+1	:invoke	:write	0
+1	:ok	:write	0
+2	:invoke	:read	nil
+2	:ok	:read	"0"
+:nemesis	:invoke	:write	80
+:nemesis	:info	:write	80	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 182, :time 10009577540, :type :invoke, :process :nemesis, :f :write, :value 80, :key "k2"}, :op' {:index 182, :time 10009577540, :type :invoke, :process :nemesis, :f :write, :value 80, :key "k2"}, :problems [":type should be :info"]}
+0	:invoke	:write	80
+0	:ok	:write	80
+1	:invoke	:write	39
+1	:ok	:write	39
+2	:invoke	:read	nil
+2	:ok	:read	"39"
+:nemesis	:invoke	:write	47
+:nemesis	:info	:write	47	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 190, :time 10301006262, :type :invoke, :process :nemesis, :f :write, :value 47, :key "k2"}, :op' {:index 190, :time 10301006262, :type :invoke, :process :nemesis, :f :write, :value 47, :key "k2"}, :problems [":type should be :info"]}
+0	:invoke	:write	19
+0	:ok	:write	19
+1	:invoke	:read	nil
+1	:ok	:read	"75"
+2	:invoke	:write	99
+2	:ok	:write	99
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 198, :time 10644595119, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :op' {:index 198, :time 10644595119, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"39"
+1	:invoke	:read	nil
+1	:ok	:read	"19"
+2	:invoke	:write	82
+2	:ok	:write	82
+:nemesis	:invoke	:write	62
+:nemesis	:info	:write	62	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 206, :time 11099655088, :type :invoke, :process :nemesis, :f :write, :value 62, :key "k0"}, :op' {:index 206, :time 11099655088, :type :invoke, :process :nemesis, :f :write, :value 62, :key "k0"}, :problems [":type should be :info"]}
+0	:invoke	:write	1
+0	:ok	:write	1
+1	:invoke	:read	nil
+1	:ok	:read	"82"
+2	:invoke	:read	nil
+2	:ok	:read	"82"
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 214, :time 11473427648, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :op' {:index 214, :time 11473427648, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"1"
+1	:invoke	:read	nil
+1	:ok	:read	"82"
+2	:invoke	:read	nil
+2	:ok	:read	"82"
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 222, :time 11654804878, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :op' {:index 222, :time 11654804878, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"19"
+1	:invoke	:write	48
+1	:ok	:write	48
+2	:invoke	:read	nil
+2	:ok	:read	"82"
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 230, :time 12094713069, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :op' {:index 230, :time 12094713069, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"48"
+1	:invoke	:read	nil
+1	:ok	:read	"82"
+2	:invoke	:write	26
+2	:ok	:write	26
+:nemesis	:invoke	:write	91
+:nemesis	:info	:write	91	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 238, :time 12466394257, :type :invoke, :process :nemesis, :f :write, :value 91, :key "k1"}, :op' {:index 238, :time 12466394257, :type :invoke, :process :nemesis, :f :write, :value 91, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"19"
+1	:invoke	:write	11
+1	:ok	:write	11
+2	:invoke	:read	nil
+2	:ok	:read	"48"
+:nemesis	:invoke	:write	49
+:nemesis	:info	:write	49	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 246, :time 12893839288, :type :invoke, :process :nemesis, :f :write, :value 49, :key "k1"}, :op' {:index 246, :time 12893839288, :type :invoke, :process :nemesis, :f :write, :value 49, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:write	37
+0	:ok	:write	37
+1	:invoke	:read	nil
+1	:ok	:read	"19"
+2	:invoke	:read	nil
+2	:ok	:read	"19"
+:nemesis	:invoke	:write	57
+:nemesis	:info	:write	57	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 254, :time 13212253287, :type :invoke, :process :nemesis, :f :write, :value 57, :key "k1"}, :op' {:index 254, :time 13212253287, :type :invoke, :process :nemesis, :f :write, :value 57, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"48"
+1	:invoke	:write	3
+1	:ok	:write	3
+2	:invoke	:write	87
+2	:ok	:write	87
+:nemesis	:invoke	:write	11
+:nemesis	:info	:write	11	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 262, :time 13693932102, :type :invoke, :process :nemesis, :f :write, :value 11, :key "k0"}, :op' {:index 262, :time 13693932102, :type :invoke, :process :nemesis, :f :write, :value 11, :key "k0"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"48"
+1	:invoke	:read	nil
+1	:ok	:read	"48"
+2	:invoke	:read	nil
+2	:ok	:read	"87"
+:nemesis	:invoke	:write	74
+:nemesis	:info	:write	74	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 270, :time 14230319169, :type :invoke, :process :nemesis, :f :write, :value 74, :key "k1"}, :op' {:index 270, :time 14230319169, :type :invoke, :process :nemesis, :f :write, :value 74, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"48"
+1	:invoke	:write	78
+1	:ok	:write	78
+2	:invoke	:read	nil
+2	:ok	:read	"48"
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 278, :time 14434137317, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :op' {:index 278, :time 14434137317, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"19"
+1	:invoke	:read	nil
+1	:ok	:read	"19"
+2	:invoke	:write	37
+2	:ok	:write	37
+:nemesis	:invoke	:write	29
+:nemesis	:info	:write	29	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 286, :time 14781716379, :type :invoke, :process :nemesis, :f :write, :value 29, :key "k0"}, :op' {:index 286, :time 14781716379, :type :invoke, :process :nemesis, :f :write, :value 29, :key "k0"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"37"
+1	:invoke	:write	61
+1	:ok	:write	61
+2	:invoke	:read	nil
+2	:ok	:read	"78"
+:nemesis	:invoke	:write	37
+:nemesis	:info	:write	37	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 294, :time 15100767936, :type :invoke, :process :nemesis, :f :write, :value 37, :key "k1"}, :op' {:index 294, :time 15100767936, :type :invoke, :process :nemesis, :f :write, :value 37, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"61"
+1	:invoke	:read	nil
+1	:ok	:read	"37"
+2	:invoke	:read	nil
+2	:ok	:read	"37"
+:nemesis	:invoke	:write	63
+:nemesis	:info	:write	63	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 302, :time 15412058519, :type :invoke, :process :nemesis, :f :write, :value 63, :key "k2"}, :op' {:index 302, :time 15412058519, :type :invoke, :process :nemesis, :f :write, :value 63, :key "k2"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"61"
+1	:invoke	:read	nil
+1	:ok	:read	"37"
+2	:invoke	:read	nil
+2	:ok	:read	"37"
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 310, :time 16009879421, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :op' {:index 310, :time 16009879421, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :problems [":type should be :info"]}
+0	:invoke	:write	60
+0	:ok	:write	60
+1	:invoke	:read	nil
+1	:ok	:read	"78"
+2	:invoke	:read	nil
+2	:ok	:read	"60"
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 318, :time 16511039210, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :op' {:index 318, :time 16511039210, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"61"
+1	:invoke	:write	44
+1	:ok	:write	44
+2	:invoke	:read	nil
+2	:ok	:read	"44"
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 326, :time 17058342411, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :op' {:index 326, :time 17058342411, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"78"
+1	:invoke	:read	nil
+1	:ok	:read	"78"
+2	:invoke	:write	83
+2	:ok	:write	83
+:nemesis	:invoke	:write	86
+:nemesis	:info	:write	86	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 334, :time 17171217222, :type :invoke, :process :nemesis, :f :write, :value 86, :key "k0"}, :op' {:index 334, :time 17171217222, :type :invoke, :process :nemesis, :f :write, :value 86, :key "k0"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"60"
+1	:invoke	:read	nil
+1	:ok	:read	"83"
+2	:invoke	:read	nil
+2	:ok	:read	"60"
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 342, :time 17550413827, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k0"}, :op' {:index 342, :time 17550413827, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k0"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"78"
+1	:invoke	:write	31
+1	:ok	:write	31
+2	:invoke	:write	90
+2	:ok	:write	90
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 350, :time 17888518405, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :op' {:index 350, :time 17888518405, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:write	57
+0	:ok	:write	57
+1	:invoke	:write	27
+1	:ok	:write	27
+2	:invoke	:read	nil
+2	:ok	:read	"27"
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 358, :time 18276932815, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :op' {:index 358, :time 18276932815, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:write	51
+0	:ok	:write	51
+1	:invoke	:write	33
+1	:ok	:write	33
+2	:invoke	:write	45
+2	:ok	:write	45
+:nemesis	:invoke	:write	18
+:nemesis	:info	:write	18	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 366, :time 18520794030, :type :invoke, :process :nemesis, :f :write, :value 18, :key "k0"}, :op' {:index 366, :time 18520794030, :type :invoke, :process :nemesis, :f :write, :value 18, :key "k0"}, :problems [":type should be :info"]}
+0	:invoke	:write	49
+0	:ok	:write	49
+1	:invoke	:read	nil
+1	:ok	:read	"33"
+2	:invoke	:write	81
+2	:ok	:write	81
+:nemesis	:invoke	:write	20
+:nemesis	:info	:write	20	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 374, :time 18795573047, :type :invoke, :process :nemesis, :f :write, :value 20, :key "k1"}, :op' {:index 374, :time 18795573047, :type :invoke, :process :nemesis, :f :write, :value 20, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"81"
+1	:invoke	:read	nil
+1	:ok	:read	"49"
+2	:invoke	:write	4
+2	:ok	:write	4
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 382, :time 19288042683, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k0"}, :op' {:index 382, :time 19288042683, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k0"}, :problems [":type should be :info"]}
+0	:invoke	:write	68
+0	:ok	:write	68
+1	:invoke	:read	nil
+1	:ok	:read	"81"
+2	:invoke	:write	70
+2	:ok	:write	70
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 390, :time 19814507901, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k0"}, :op' {:index 390, :time 19814507901, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k0"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"68"
+1	:invoke	:read	nil
+2	:invoke	:read	nil
+1	:ok	:read	"68"
+2	:ok	:read	"70"
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 398, :time 20022098208, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :op' {:index 398, :time 20022098208, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"81"
+1	:invoke	:read	nil
+1	:ok	:read	"81"
+2	:invoke	:write	25
+2	:ok	:write	25
+:nemesis	:invoke	:write	46
+:nemesis	:info	:write	46	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 406, :time 20458227607, :type :invoke, :process :nemesis, :f :write, :value 46, :key "k1"}, :op' {:index 406, :time 20458227607, :type :invoke, :process :nemesis, :f :write, :value 46, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"25"
+1	:invoke	:read	nil
+1	:ok	:read	"25"
+2	:invoke	:read	nil
+2	:ok	:read	"81"
+:nemesis	:invoke	:write	89
+:nemesis	:info	:write	89	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 414, :time 20800425641, :type :invoke, :process :nemesis, :f :write, :value 89, :key "k2"}, :op' {:index 414, :time 20800425641, :type :invoke, :process :nemesis, :f :write, :value 89, :key "k2"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"68"
+1	:invoke	:write	10
+1	:ok	:write	10
+2	:invoke	:write	13
+2	:ok	:write	13
+:nemesis	:invoke	:write	59
+:nemesis	:info	:write	59	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 422, :time 21292367592, :type :invoke, :process :nemesis, :f :write, :value 59, :key "k0"}, :op' {:index 422, :time 21292367592, :type :invoke, :process :nemesis, :f :write, :value 59, :key "k0"}, :problems [":type should be :info"]}
+0	:invoke	:write	79
+0	:ok	:write	79
+1	:invoke	:read	nil
+1	:ok	:read	"10"
+2	:invoke	:read	nil
+2	:ok	:read	"79"
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 430, :time 21456418410, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :op' {:index 430, :time 21456418410, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :problems [":type should be :info"]}
+0	:invoke	:write	2
+0	:ok	:write	2
+1	:invoke	:write	88
+1	:ok	:write	88
+2	:invoke	:write	89
+2	:ok	:write	89
+:nemesis	:invoke	:write	16
+:nemesis	:info	:write	16	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 438, :time 21785508776, :type :invoke, :process :nemesis, :f :write, :value 16, :key "k2"}, :op' {:index 438, :time 21785508776, :type :invoke, :process :nemesis, :f :write, :value 16, :key "k2"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"88"
+1	:invoke	:write	57
+1	:ok	:write	57
+2	:invoke	:write	9
+2	:ok	:write	9
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 446, :time 22058094759, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :op' {:index 446, :time 22058094759, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"68"
+1	:invoke	:read	nil
+1	:ok	:read	"68"
+2	:invoke	:read	nil
+2	:ok	:read	"68"
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 454, :time 22415563244, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :op' {:index 454, :time 22415563244, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"89"
+1	:invoke	:read	nil
+1	:ok	:read	"9"
+2	:invoke	:write	28
+2	:ok	:write	28
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 462, :time 22824138554, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k0"}, :op' {:index 462, :time 22824138554, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k0"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"68"
+1	:invoke	:write	76
+1	:ok	:write	76
+2	:invoke	:write	31
+2	:ok	:write	31
+:nemesis	:invoke	:write	96
+:nemesis	:info	:write	96	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 470, :time 23437913904, :type :invoke, :process :nemesis, :f :write, :value 96, :key "k0"}, :op' {:index 470, :time 23437913904, :type :invoke, :process :nemesis, :f :write, :value 96, :key "k0"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"28"
+1	:invoke	:write	62
+1	:ok	:write	62
+2	:invoke	:write	80
+2	:ok	:write	80
+:nemesis	:invoke	:write	78
+:nemesis	:info	:write	78	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 478, :time 24114757552, :type :invoke, :process :nemesis, :f :write, :value 78, :key "k2"}, :op' {:index 478, :time 24114757552, :type :invoke, :process :nemesis, :f :write, :value 78, :key "k2"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"62"
+1	:invoke	:write	42
+1	:ok	:write	42
+2	:invoke	:read	nil
+2	:ok	:read	"42"
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 486, :time 24529049458, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :op' {:index 486, :time 24529049458, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :problems [":type should be :info"]}
+0	:invoke	:write	59
+0	:ok	:write	59
+1	:invoke	:write	48
+1	:ok	:write	48
+2	:invoke	:read	nil
+2	:ok	:read	"59"
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 494, :time 24885761130, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :op' {:index 494, :time 24885761130, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"48"
+1	:invoke	:write	88
+1	:ok	:write	88
+2	:invoke	:read	nil
+2	:ok	:read	"88"
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 502, :time 25261937355, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :op' {:index 502, :time 25261937355, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"59"
+1	:invoke	:write	62
+1	:ok	:write	62
+2	:invoke	:read	nil
+2	:ok	:read	"62"
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 510, :time 25663533403, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :op' {:index 510, :time 25663533403, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :problems [":type should be :info"]}
+0	:invoke	:write	99
+0	:ok	:write	99
+1	:invoke	:write	44
+1	:ok	:write	44
+2	:invoke	:read	nil
+2	:ok	:read	"62"
+:nemesis	:invoke	:write	30
+:nemesis	:info	:write	30	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 518, :time 25983956057, :type :invoke, :process :nemesis, :f :write, :value 30, :key "k0"}, :op' {:index 518, :time 25983956057, :type :invoke, :process :nemesis, :f :write, :value 30, :key "k0"}, :problems [":type should be :info"]}
+0	:invoke	:write	92
+0	:ok	:write	92
+1	:invoke	:read	nil
+1	:ok	:read	"92"
+2	:invoke	:write	76
+2	:ok	:write	76
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 526, :time 26484763441, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :op' {:index 526, :time 26484763441, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"44"
+1	:invoke	:read	nil
+1	:ok	:read	"76"
+2	:invoke	:read	nil
+2	:ok	:read	"44"
+:nemesis	:invoke	:write	46
+:nemesis	:info	:write	46	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 534, :time 27013162372, :type :invoke, :process :nemesis, :f :write, :value 46, :key "k2"}, :op' {:index 534, :time 27013162372, :type :invoke, :process :nemesis, :f :write, :value 46, :key "k2"}, :problems [":type should be :info"]}
+0	:invoke	:write	56
+0	:ok	:write	56
+1	:invoke	:write	49
+1	:ok	:write	49
+2	:invoke	:read	nil
+2	:ok	:read	"49"
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 542, :time 27413299508, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :op' {:index 542, :time 27413299508, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"62"
+1	:invoke	:read	nil
+1	:ok	:read	"56"
+2	:invoke	:read	nil
+2	:ok	:read	"62"
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 550, :time 27769557087, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :op' {:index 550, :time 27769557087, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:write	35
+0	:ok	:write	35
+1	:invoke	:read	nil
+1	:ok	:read	"56"
+2	:invoke	:write	8
+2	:ok	:write	8
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 558, :time 28020493633, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :op' {:index 558, :time 28020493633, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"8"
+1	:invoke	:read	nil
+1	:ok	:read	"35"
+2	:invoke	:write	68
+2	:ok	:write	68
+:nemesis	:invoke	:write	20
+:nemesis	:info	:write	20	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 566, :time 28596544279, :type :invoke, :process :nemesis, :f :write, :value 20, :key "k2"}, :op' {:index 566, :time 28596544279, :type :invoke, :process :nemesis, :f :write, :value 20, :key "k2"}, :problems [":type should be :info"]}
+0	:invoke	:write	5
+0	:ok	:write	5
+1	:invoke	:write	66
+1	:ok	:write	66
+2	:invoke	:write	20
+2	:ok	:write	20
+:nemesis	:invoke	:write	84
+:nemesis	:info	:write	84	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 574, :time 29070239038, :type :invoke, :process :nemesis, :f :write, :value 84, :key "k0"}, :op' {:index 574, :time 29070239038, :type :invoke, :process :nemesis, :f :write, :value 84, :key "k0"}, :problems [":type should be :info"]}
+0	:invoke	:write	17
+0	:ok	:write	17
+1	:invoke	:write	33
+1	:ok	:write	33
+2	:invoke	:write	93
+2	:ok	:write	93
+:nemesis	:invoke	:write	47
+:nemesis	:info	:write	47	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 582, :time 29259131853, :type :invoke, :process :nemesis, :f :write, :value 47, :key "k0"}, :op' {:index 582, :time 29259131853, :type :invoke, :process :nemesis, :f :write, :value 47, :key "k0"}, :problems [":type should be :info"]}
+0	:invoke	:write	49
+0	:ok	:write	49
+1	:invoke	:read	nil
+1	:ok	:read	"17"
+2	:invoke	:write	52
+2	:ok	:write	52
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 590, :time 29547682176, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k0"}, :op' {:index 590, :time 29547682176, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k0"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"52"
+1	:invoke	:read	nil
+1	:ok	:read	"52"
+2	:invoke	:write	11
+2	:ok	:write	11
+:nemesis	:invoke	:write	9
+:nemesis	:info	:write	9	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 598, :time 30060500064, :type :invoke, :process :nemesis, :f :write, :value 9, :key "k1"}, :op' {:index 598, :time 30060500064, :type :invoke, :process :nemesis, :f :write, :value 9, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:write	13
+0	:ok	:write	13
+1	:invoke	:write	83
+1	:ok	:write	83
+2	:invoke	:write	53
+2	:ok	:write	53
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 606, :time 30172867549, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :op' {:index 606, :time 30172867549, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"13"
+1	:invoke	:read	nil
+1	:ok	:read	"53"
+2	:invoke	:read	nil
+2	:ok	:read	"83"
+:nemesis	:invoke	:write	78
+:nemesis	:info	:write	78	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 614, :time 30538318602, :type :invoke, :process :nemesis, :f :write, :value 78, :key "k2"}, :op' {:index 614, :time 30538318602, :type :invoke, :process :nemesis, :f :write, :value 78, :key "k2"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"83"
+1	:invoke	:read	nil
+1	:ok	:read	"83"
+2	:invoke	:read	nil
+2	:ok	:read	"13"
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 622, :time 31078667317, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :op' {:index 622, :time 31078667317, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"13"
+1	:invoke	:read	nil
+1	:ok	:read	"83"
+2	:invoke	:write	93
+2	:ok	:write	93
+:nemesis	:invoke	:write	50
+:nemesis	:info	:write	50	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 630, :time 31752255987, :type :invoke, :process :nemesis, :f :write, :value 50, :key "k1"}, :op' {:index 630, :time 31752255987, :type :invoke, :process :nemesis, :f :write, :value 50, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:write	28
+0	:ok	:write	28
+1	:invoke	:read	nil
+1	:ok	:read	"28"
+2	:invoke	:read	nil
+2	:ok	:read	"13"
+:nemesis	:invoke	:write	66
+:nemesis	:info	:write	66	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 638, :time 32277083781, :type :invoke, :process :nemesis, :f :write, :value 66, :key "k0"}, :op' {:index 638, :time 32277083781, :type :invoke, :process :nemesis, :f :write, :value 66, :key "k0"}, :problems [":type should be :info"]}
+0	:invoke	:write	68
+0	:ok	:write	68
+1	:invoke	:write	92
+1	:ok	:write	92
+2	:invoke	:write	18
+2	:ok	:write	18
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 646, :time 32793978428, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :op' {:index 646, :time 32793978428, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"18"
+1	:invoke	:write	6
+1	:ok	:write	6
+2	:invoke	:read	nil
+2	:ok	:read	"6"
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 654, :time 33187537532, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :op' {:index 654, :time 33187537532, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"6"
+1	:invoke	:write	72
+1	:ok	:write	72
+2	:invoke	:write	66
+2	:ok	:write	66
+:nemesis	:invoke	:write	73
+:nemesis	:info	:write	73	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 662, :time 33567256686, :type :invoke, :process :nemesis, :f :write, :value 73, :key "k1"}, :op' {:index 662, :time 33567256686, :type :invoke, :process :nemesis, :f :write, :value 73, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:write	38
+0	:ok	:write	38
+1	:invoke	:write	57
+1	:ok	:write	57
+2	:invoke	:write	5
+2	:ok	:write	5
+:nemesis	:invoke	:write	81
+:nemesis	:info	:write	81	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 670, :time 34074204004, :type :invoke, :process :nemesis, :f :write, :value 81, :key "k0"}, :op' {:index 670, :time 34074204004, :type :invoke, :process :nemesis, :f :write, :value 81, :key "k0"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"5"
+1	:invoke	:write	14
+1	:ok	:write	14
+2	:invoke	:write	4
+2	:ok	:write	4
+:nemesis	:invoke	:write	47
+:nemesis	:info	:write	47	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 678, :time 34445533136, :type :invoke, :process :nemesis, :f :write, :value 47, :key "k1"}, :op' {:index 678, :time 34445533136, :type :invoke, :process :nemesis, :f :write, :value 47, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"14"
+1	:invoke	:write	41
+1	:ok	:write	41
+2	:invoke	:write	22
+2	:ok	:write	22
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 686, :time 34949156238, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :op' {:index 686, :time 34949156238, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"5"
+1	:invoke	:read	nil
+1	:ok	:read	"41"
+2	:invoke	:write	53
+2	:ok	:write	53
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 694, :time 35382704216, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k0"}, :op' {:index 694, :time 35382704216, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k0"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"41"
+1	:invoke	:read	nil
+1	:ok	:read	"53"
+2	:invoke	:read	nil
+2	:ok	:read	"5"
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 702, :time 35649595442, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :op' {:index 702, :time 35649595442, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:write	59
+0	:ok	:write	59
+1	:invoke	:read	nil
+1	:ok	:read	"41"
+2	:invoke	:read	nil
+2	:ok	:read	"59"
+:nemesis	:invoke	:write	83
+:nemesis	:info	:write	83	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 710, :time 36033667711, :type :invoke, :process :nemesis, :f :write, :value 83, :key "k0"}, :op' {:index 710, :time 36033667711, :type :invoke, :process :nemesis, :f :write, :value 83, :key "k0"}, :problems [":type should be :info"]}
+0	:invoke	:write	9
+0	:ok	:write	9
+1	:invoke	:read	nil
+1	:ok	:read	"9"
+2	:invoke	:write	86
+2	:ok	:write	86
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 718, :time 36328181885, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k0"}, :op' {:index 718, :time 36328181885, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k0"}, :problems [":type should be :info"]}
+0	:invoke	:write	13
+0	:ok	:write	13
+1	:invoke	:read	nil
+1	:ok	:read	"13"
+2	:invoke	:read	nil
+2	:ok	:read	"13"
+:nemesis	:invoke	:write	95
+0	:invoke	:read	nil
+:nemesis	:info	:write	95	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 726, :time 36857632890, :type :invoke, :process :nemesis, :f :write, :value 95, :key "k0"}, :op' {:index 726, :time 36857632890, :type :invoke, :process :nemesis, :f :write, :value 95, :key "k0"}, :problems [":type should be :info"]}
+0	:ok	:read	"13"
+1	:invoke	:read	nil
+1	:ok	:read	"86"
+2	:invoke	:read	nil
+2	:ok	:read	"9"
+:nemesis	:invoke	:write	9
+:nemesis	:info	:write	9	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 734, :time 37080415212, :type :invoke, :process :nemesis, :f :write, :value 9, :key "k0"}, :op' {:index 734, :time 37080415212, :type :invoke, :process :nemesis, :f :write, :value 9, :key "k0"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"86"
+1	:invoke	:write	94
+1	:ok	:write	94
+2	:invoke	:read	nil
+2	:ok	:read	"9"
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 742, :time 37542336489, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :op' {:index 742, :time 37542336489, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"94"
+1	:invoke	:read	nil
+1	:ok	:read	"94"
+2	:invoke	:write	18
+2	:ok	:write	18
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 750, :time 37866320283, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :op' {:index 750, :time 37866320283, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"18"
+1	:invoke	:write	20
+1	:ok	:write	20
+2	:invoke	:read	nil
+2	:ok	:read	"9"
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 758, :time 38397025784, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :op' {:index 758, :time 38397025784, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"9"
+1	:invoke	:read	nil
+1	:ok	:read	"20"
+2	:invoke	:read	nil
+2	:ok	:read	"20"
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 766, :time 38781960349, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k0"}, :op' {:index 766, :time 38781960349, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k0"}, :problems [":type should be :info"]}
+0	:invoke	:write	26
+0	:ok	:write	26
+1	:invoke	:write	23
+1	:ok	:write	23
+2	:invoke	:read	nil
+2	:ok	:read	"26"
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 774, :time 39091296177, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :op' {:index 774, :time 39091296177, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :problems [":type should be :info"]}
+0	:invoke	:write	52
+0	:ok	:write	52
+1	:invoke	:write	52
+1	:ok	:write	52
+2	:invoke	:read	nil
+2	:ok	:read	"20"
+:nemesis	:invoke	:write	96
+:nemesis	:info	:write	96	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 782, :time 39584934549, :type :invoke, :process :nemesis, :f :write, :value 96, :key "k1"}, :op' {:index 782, :time 39584934549, :type :invoke, :process :nemesis, :f :write, :value 96, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"52"
+1	:invoke	:write	49
+1	:ok	:write	49
+2	:invoke	:read	nil
+2	:ok	:read	"52"
+:nemesis	:invoke	:write	49
+:nemesis	:info	:write	49	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 790, :time 39983391443, :type :invoke, :process :nemesis, :f :write, :value 49, :key "k0"}, :op' {:index 790, :time 39983391443, :type :invoke, :process :nemesis, :f :write, :value 49, :key "k0"}, :problems [":type should be :info"]}
+0	:invoke	:write	43
+0	:ok	:write	43
+1	:invoke	:read	nil
+1	:ok	:read	"43"
+2	:invoke	:write	57
+2	:ok	:write	57
+:nemesis	:invoke	:write	82
+:nemesis	:info	:write	82	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 798, :time 40294209766, :type :invoke, :process :nemesis, :f :write, :value 82, :key "k0"}, :op' {:index 798, :time 40294209766, :type :invoke, :process :nemesis, :f :write, :value 82, :key "k0"}, :problems [":type should be :info"]}
+0	:invoke	:write	28
+0	:ok	:write	28
+1	:invoke	:write	12
+1	:ok	:write	12
+2	:invoke	:write	1
+2	:ok	:write	1
+:nemesis	:invoke	:write	21
+:nemesis	:info	:write	21	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 806, :time 40669796160, :type :invoke, :process :nemesis, :f :write, :value 21, :key "k1"}, :op' {:index 806, :time 40669796160, :type :invoke, :process :nemesis, :f :write, :value 21, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:write	39
+0	:ok	:write	39
+1	:invoke	:write	58
+1	:ok	:write	58
+2	:invoke	:write	26
+2	:ok	:write	26
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 814, :time 41067768168, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k0"}, :op' {:index 814, :time 41067768168, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k0"}, :problems [":type should be :info"]}
+0	:invoke	:write	41
+0	:ok	:write	41
+1	:invoke	:read	nil
+1	:ok	:read	"41"
+2	:invoke	:write	79
+2	:ok	:write	79
+:nemesis	:invoke	:write	83
+:nemesis	:info	:write	83	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 822, :time 41387223681, :type :invoke, :process :nemesis, :f :write, :value 83, :key "k1"}, :op' {:index 822, :time 41387223681, :type :invoke, :process :nemesis, :f :write, :value 83, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:write	17
+0	:ok	:write	17
+1	:invoke	:write	33
+1	:ok	:write	33
+2	:invoke	:read	nil
+2	:ok	:read	"79"
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 830, :time 41730699457, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :op' {:index 830, :time 41730699457, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"79"
+1	:invoke	:write	14
+1	:ok	:write	14
+2	:invoke	:write	41
+2	:ok	:write	41
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 838, :time 41969541302, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :op' {:index 838, :time 41969541302, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"79"
+1	:invoke	:write	55
+1	:ok	:write	55
+2	:invoke	:write	92
+2	:ok	:write	92
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 846, :time 42617042764, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k0"}, :op' {:index 846, :time 42617042764, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k0"}, :problems [":type should be :info"]}
+0	:invoke	:write	69
+0	:ok	:write	69
+1	:invoke	:read	nil
+1	:ok	:read	"55"
+2	:invoke	:write	19
+2	:ok	:write	19
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 854, :time 42936083712, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :op' {:index 854, :time 42936083712, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"69"
+1	:invoke	:write	71
+1	:ok	:write	71
+2	:invoke	:write	96
+:nemesis	:invoke	:write	90
+2	:ok	:write	96
+:nemesis	:info	:write	90	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 861, :time 43210071563, :type :invoke, :process :nemesis, :f :write, :value 90, :key "k1"}, :op' {:index 861, :time 43210071563, :type :invoke, :process :nemesis, :f :write, :value 90, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"96"
+1	:invoke	:write	90
+1	:ok	:write	90
+2	:invoke	:write	6
+2	:ok	:write	6
+:nemesis	:invoke	:write	90
+:nemesis	:info	:write	90	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 870, :time 43811354621, :type :invoke, :process :nemesis, :f :write, :value 90, :key "k0"}, :op' {:index 870, :time 43811354621, :type :invoke, :process :nemesis, :f :write, :value 90, :key "k0"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"69"
+1	:invoke	:read	nil
+1	:ok	:read	"6"
+2	:invoke	:write	76
+2	:ok	:write	76
+:nemesis	:invoke	:write	25
+:nemesis	:info	:write	25	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 878, :time 44128756504, :type :invoke, :process :nemesis, :f :write, :value 25, :key "k0"}, :op' {:index 878, :time 44128756504, :type :invoke, :process :nemesis, :f :write, :value 25, :key "k0"}, :problems [":type should be :info"]}
+0	:invoke	:write	26
+0	:ok	:write	26
+1	:invoke	:read	nil
+1	:ok	:read	"26"
+2	:invoke	:write	93
+2	:ok	:write	93
+:nemesis	:invoke	:write	92
+:nemesis	:info	:write	92	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 886, :time 44501499173, :type :invoke, :process :nemesis, :f :write, :value 92, :key "k2"}, :op' {:index 886, :time 44501499173, :type :invoke, :process :nemesis, :f :write, :value 92, :key "k2"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"96"
+1	:invoke	:write	54
+1	:ok	:write	54
+2	:invoke	:write	46
+2	:ok	:write	46
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 894, :time 44860270950, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k0"}, :op' {:index 894, :time 44860270950, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k0"}, :problems [":type should be :info"]}
+0	:invoke	:write	40
+0	:ok	:write	40
+1	:invoke	:write	92
+1	:ok	:write	92
+2	:invoke	:write	47
+2	:ok	:write	47
+:nemesis	:invoke	:write	76
+:nemesis	:info	:write	76	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 902, :time 45440300443, :type :invoke, :process :nemesis, :f :write, :value 76, :key "k2"}, :op' {:index 902, :time 45440300443, :type :invoke, :process :nemesis, :f :write, :value 76, :key "k2"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"47"
+1	:invoke	:read	nil
+1	:ok	:read	"96"
+2	:invoke	:write	31
+2	:ok	:write	31
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 910, :time 45889791287, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :op' {:index 910, :time 45889791287, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :problems [":type should be :info"]}
+0	:invoke	:write	65
+0	:ok	:write	65
+1	:invoke	:write	43
+1	:ok	:write	43
+2	:invoke	:write	98
+2	:ok	:write	98
+:nemesis	:invoke	:write	57
+:nemesis	:info	:write	57	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 918, :time 46459433119, :type :invoke, :process :nemesis, :f :write, :value 57, :key "k0"}, :op' {:index 918, :time 46459433119, :type :invoke, :process :nemesis, :f :write, :value 57, :key "k0"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"47"
+1	:invoke	:write	55
+1	:ok	:write	55
+2	:invoke	:read	nil
+2	:ok	:read	"47"
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 926, :time 46659929246, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :op' {:index 926, :time 46659929246, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"46"
+1	:invoke	:read	nil
+1	:ok	:read	"46"
+2	:invoke	:write	47
+2	:ok	:write	47
+:nemesis	:invoke	:write	16
+:nemesis	:info	:write	16	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 934, :time 47121491537, :type :invoke, :process :nemesis, :f :write, :value 16, :key "k0"}, :op' {:index 934, :time 47121491537, :type :invoke, :process :nemesis, :f :write, :value 16, :key "k0"}, :problems [":type should be :info"]}
+0	:invoke	:write	72
+0	:ok	:write	72
+1	:invoke	:write	67
+1	:ok	:write	67
+2	:invoke	:write	35
+2	:ok	:write	35
+:nemesis	:invoke	:write	23
+:nemesis	:info	:write	23	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 942, :time 47434345818, :type :invoke, :process :nemesis, :f :write, :value 23, :key "k0"}, :op' {:index 942, :time 47434345818, :type :invoke, :process :nemesis, :f :write, :value 23, :key "k0"}, :problems [":type should be :info"]}
+0	:invoke	:write	79
+0	:ok	:write	79
+1	:invoke	:write	86
+1	:ok	:write	86
+2	:invoke	:read	nil
+2	:ok	:read	"35"
+:nemesis	:invoke	:write	19
+:nemesis	:info	:write	19	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 950, :time 47877010125, :type :invoke, :process :nemesis, :f :write, :value 19, :key "k2"}, :op' {:index 950, :time 47877010125, :type :invoke, :process :nemesis, :f :write, :value 19, :key "k2"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"35"
+1	:invoke	:read	nil
+1	:ok	:read	"67"
+2	:invoke	:write	55
+2	:ok	:write	55
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 958, :time 48381634030, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k0"}, :op' {:index 958, :time 48381634030, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k0"}, :problems [":type should be :info"]}
+0	:invoke	:write	99
+0	:ok	:write	99
+1	:invoke	:read	nil
+1	:ok	:read	"99"
+2	:invoke	:write	38
+2	:ok	:write	38
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 966, :time 48945436294, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :op' {:index 966, :time 48945436294, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"86"
+1	:invoke	:write	42
+1	:ok	:write	42
+2	:invoke	:write	40
+2	:ok	:write	40
+:nemesis	:invoke	:write	66
+:nemesis	:info	:write	66	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 974, :time 49293151421, :type :invoke, :process :nemesis, :f :write, :value 66, :key "k2"}, :op' {:index 974, :time 49293151421, :type :invoke, :process :nemesis, :f :write, :value 66, :key "k2"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"86"
+1	:invoke	:read	nil
+1	:ok	:read	"42"
+2	:invoke	:read	nil
+2	:ok	:read	"86"
+:nemesis	:invoke	:write	21
+:nemesis	:info	:write	21	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 982, :time 49647850927, :type :invoke, :process :nemesis, :f :write, :value 21, :key "k2"}, :op' {:index 982, :time 49647850927, :type :invoke, :process :nemesis, :f :write, :value 21, :key "k2"}, :problems [":type should be :info"]}
+0	:invoke	:write	89
+0	:ok	:write	89
+1	:invoke	:read	nil
+1	:ok	:read	"89"
+2	:invoke	:write	59
+2	:ok	:write	59
+:nemesis	:invoke	:write	17
+:nemesis	:info	:write	17	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 990, :time 50122792656, :type :invoke, :process :nemesis, :f :write, :value 17, :key "k1"}, :op' {:index 990, :time 50122792656, :type :invoke, :process :nemesis, :f :write, :value 17, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"59"
+1	:invoke	:read	nil
+1	:ok	:read	"40"
+2	:invoke	:read	nil
+2	:ok	:read	"59"
+:nemesis	:invoke	:write	27
+:nemesis	:info	:write	27	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 998, :time 50667483977, :type :invoke, :process :nemesis, :f :write, :value 27, :key "k0"}, :op' {:index 998, :time 50667483977, :type :invoke, :process :nemesis, :f :write, :value 27, :key "k0"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"59"
+1	:invoke	:read	nil
+1	:ok	:read	"59"
+2	:invoke	:write	51
+2	:ok	:write	51
+:nemesis	:invoke	:write	60
+:nemesis	:info	:write	60	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 1006, :time 51220927090, :type :invoke, :process :nemesis, :f :write, :value 60, :key "k1"}, :op' {:index 1006, :time 51220927090, :type :invoke, :process :nemesis, :f :write, :value 60, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:write	37
+0	:ok	:write	37
+1	:invoke	:write	19
+1	:ok	:write	19
+2	:invoke	:write	97
+2	:ok	:write	97
+:nemesis	:invoke	:write	78
+:nemesis	:info	:write	78	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 1014, :time 51711986812, :type :invoke, :process :nemesis, :f :write, :value 78, :key "k2"}, :op' {:index 1014, :time 51711986812, :type :invoke, :process :nemesis, :f :write, :value 78, :key "k2"}, :problems [":type should be :info"]}
+0	:invoke	:write	9
+0	:ok	:write	9
+1	:invoke	:read	nil
+1	:ok	:read	"97"
+2	:invoke	:write	82
+2	:ok	:write	82
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 1022, :time 52091321420, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :op' {:index 1022, :time 52091321420, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:write	83
+0	:ok	:write	83
+1	:invoke	:write	89
+1	:ok	:write	89
+2	:invoke	:write	6
+2	:ok	:write	6
+:nemesis	:invoke	:write	48
+:nemesis	:info	:write	48	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 1030, :time 52626674618, :type :invoke, :process :nemesis, :f :write, :value 48, :key "k0"}, :op' {:index 1030, :time 52626674618, :type :invoke, :process :nemesis, :f :write, :value 48, :key "k0"}, :problems [":type should be :info"]}
+0	:invoke	:write	79
+0	:ok	:write	79
+1	:invoke	:write	54
+1	:ok	:write	54
+2	:invoke	:read	nil
+2	:ok	:read	"54"
+:nemesis	:invoke	:write	6
+:nemesis	:info	:write	6	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 1038, :time 53115591998, :type :invoke, :process :nemesis, :f :write, :value 6, :key "k2"}, :op' {:index 1038, :time 53115591998, :type :invoke, :process :nemesis, :f :write, :value 6, :key "k2"}, :problems [":type should be :info"]}
+0	:invoke	:write	76
+0	:ok	:write	76
+1	:invoke	:write	36
+1	:ok	:write	36
+2	:invoke	:read	nil
+2	:ok	:read	"6"
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 1046, :time 53647303342, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k0"}, :op' {:index 1046, :time 53647303342, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k0"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"6"
+1	:invoke	:read	nil
+1	:ok	:read	"36"
+2	:invoke	:write	48
+2	:ok	:write	48
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 1054, :time 54330054016, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :op' {:index 1054, :time 54330054016, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:write	88
+0	:ok	:write	88
+1	:invoke	:read	nil
+1	:ok	:read	"79"
+2	:invoke	:read	nil
+2	:ok	:read	"79"
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 1062, :time 54741243183, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k0"}, :op' {:index 1062, :time 54741243183, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k0"}, :problems [":type should be :info"]}
+0	:invoke	:write	90
+0	:ok	:write	90
+1	:invoke	:read	nil
+1	:ok	:read	"90"
+2	:invoke	:read	nil
+2	:ok	:read	"90"
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 1070, :time 55286964072, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k0"}, :op' {:index 1070, :time 55286964072, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k0"}, :problems [":type should be :info"]}
+0	:invoke	:write	85
+0	:ok	:write	85
+1	:invoke	:read	nil
+1	:ok	:read	"85"
+2	:invoke	:write	27
+2	:ok	:write	27
+:nemesis	:invoke	:write	73
+:nemesis	:info	:write	73	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 1078, :time 55427766294, :type :invoke, :process :nemesis, :f :write, :value 73, :key "k1"}, :op' {:index 1078, :time 55427766294, :type :invoke, :process :nemesis, :f :write, :value 73, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"27"
+1	:invoke	:write	1
+1	:ok	:write	1
+2	:invoke	:read	nil
+2	:ok	:read	"88"
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 1086, :time 55932373885, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k0"}, :op' {:index 1086, :time 55932373885, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k0"}, :problems [":type should be :info"]}
+0	:invoke	:write	4
+0	:ok	:write	4
+1	:invoke	:read	nil
+1	:ok	:read	"88"
+2	:invoke	:read	nil
+2	:ok	:read	"27"
+:nemesis	:invoke	:write	24
+:nemesis	:info	:write	24	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 1094, :time 56422018374, :type :invoke, :process :nemesis, :f :write, :value 24, :key "k2"}, :op' {:index 1094, :time 56422018374, :type :invoke, :process :nemesis, :f :write, :value 24, :key "k2"}, :problems [":type should be :info"]}
+0	:invoke	:write	24
+0	:ok	:write	24
+1	:invoke	:write	4
+1	:ok	:write	4
+2	:invoke	:write	15
+2	:ok	:write	15
+:nemesis	:invoke	:write	14
+:nemesis	:info	:write	14	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 1102, :time 56734808840, :type :invoke, :process :nemesis, :f :write, :value 14, :key "k1"}, :op' {:index 1102, :time 56734808840, :type :invoke, :process :nemesis, :f :write, :value 14, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"15"
+1	:invoke	:write	95
+1	:ok	:write	95
+2	:invoke	:read	nil
+2	:ok	:read	"4"
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 1110, :time 57018218888, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :op' {:index 1110, :time 57018218888, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:write	26
+0	:ok	:write	26
+1	:invoke	:write	71
+1	:ok	:write	71
+2	:invoke	:read	nil
+2	:ok	:read	"4"
+:nemesis	:invoke	:write	30
+:nemesis	:info	:write	30	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 1118, :time 57561497353, :type :invoke, :process :nemesis, :f :write, :value 30, :key "k1"}, :op' {:index 1118, :time 57561497353, :type :invoke, :process :nemesis, :f :write, :value 30, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:write	12
+0	:ok	:write	12
+1	:invoke	:write	23
+1	:ok	:write	23
+2	:invoke	:write	28
+2	:ok	:write	28
+:nemesis	:invoke	:write	85
+:nemesis	:info	:write	85	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 1126, :time 57847792295, :type :invoke, :process :nemesis, :f :write, :value 85, :key "k1"}, :op' {:index 1126, :time 57847792295, :type :invoke, :process :nemesis, :f :write, :value 85, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"4"
+1	:invoke	:read	nil
+1	:ok	:read	"28"
+2	:invoke	:write	49
+2	:ok	:write	49
+:nemesis	:invoke	:write	60
+:nemesis	:info	:write	60	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 1134, :time 57940905113, :type :invoke, :process :nemesis, :f :write, :value 60, :key "k2"}, :op' {:index 1134, :time 57940905113, :type :invoke, :process :nemesis, :f :write, :value 60, :key "k2"}, :problems [":type should be :info"]}
+0	:invoke	:write	64
+0	:ok	:write	64
+1	:invoke	:read	nil
+1	:ok	:read	"49"
+2	:invoke	:read	nil
+2	:ok	:read	"49"
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 1142, :time 58377235223, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :op' {:index 1142, :time 58377235223, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"49"
+1	:invoke	:write	49
+1	:ok	:write	49
+2	:invoke	:write	79
+2	:ok	:write	79
+:nemesis	:invoke	:write	62
+:nemesis	:info	:write	62	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 1150, :time 58741941366, :type :invoke, :process :nemesis, :f :write, :value 62, :key "k1"}, :op' {:index 1150, :time 58741941366, :type :invoke, :process :nemesis, :f :write, :value 62, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:write	51
+0	:ok	:write	51
+1	:invoke	:write	71
+1	:ok	:write	71
+2	:invoke	:write	22
+2	:ok	:write	22
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 1158, :time 59358719653, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :op' {:index 1158, :time 59358719653, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k1"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"51"
+1	:invoke	:write	7
+1	:ok	:write	7
+2	:invoke	:write	29
+2	:ok	:write	29
+:nemesis	:invoke	:read	nil
+:nemesis	:info	:read	nil	indeterminate: throw+: {:type :jepsen.nemesis/invalid-completion, :op {:index 1166, :time 59835054736, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :op' {:index 1166, :time 59835054736, :type :invoke, :process :nemesis, :f :read, :value nil, :key "k2"}, :problems [":type should be :info"]}
+0	:invoke	:read	nil
+0	:ok	:read	"29"
+1	:invoke	:write	91
+1	:ok	:write	91
+2	:invoke	:read	nil
+2	:ok	:read	"7"

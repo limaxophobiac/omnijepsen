@@ -1,0 +1,1031 @@
+2026-03-15 14:15:27 Jepsen starting  /usr/bin/env SERVER_CONFIG_FILE=/opt/omnipaxos/server.toml CLUSTER_CONFIG_FILE=/opt/omnipaxos/cluster.toml RUST_LOG=debug /opt/omnipaxos/server
+[2026-03-15T14:15:27Z INFO  server::network] New connection to node 1
+[2026-03-15T14:15:27Z INFO  server::network] New connection to node 2
+[2026-03-15T14:15:33Z INFO  server::network] New connection from 127.0.0.1:58284
+[2026-03-15T14:15:33Z INFO  server::network] Identified connection from client 1
+[2026-03-15T14:15:34Z DEBUG server::server] Received start message from peer 1
+[2026-03-15T14:15:34Z DEBUG server::server] Sending start message to client 1
+[2026-03-15T14:15:34Z DEBUG server::server] Decided 1
+[2026-03-15T14:15:34Z DEBUG server::server] Decided 3
+[2026-03-15T14:15:34Z DEBUG server::server] Decided 4
+[2026-03-15T14:15:34Z DEBUG server::server] Decided 5
+[2026-03-15T14:15:34Z DEBUG server::server] Decided 6
+[2026-03-15T14:15:34Z DEBUG server::server] Decided 7
+[2026-03-15T14:15:34Z DEBUG server::server] Decided 8
+[2026-03-15T14:15:34Z DEBUG server::server] Decided 9
+[2026-03-15T14:15:34Z DEBUG server::server] Decided 10
+[2026-03-15T14:15:34Z DEBUG server::server] Decided 11
+[2026-03-15T14:15:34Z DEBUG server::server] Decided 12
+[2026-03-15T14:15:34Z DEBUG server::server] Decided 13
+[2026-03-15T14:15:34Z DEBUG server::server] Decided 14
+[2026-03-15T14:15:35Z DEBUG server::server] Decided 15
+[2026-03-15T14:15:35Z DEBUG server::server] Decided 16
+[2026-03-15T14:15:35Z DEBUG server::server] Decided 17
+[2026-03-15T14:15:35Z DEBUG server::server] Decided 18
+[2026-03-15T14:15:35Z DEBUG server::server] Decided 19
+[2026-03-15T14:15:35Z DEBUG server::server] Decided 20
+[2026-03-15T14:15:35Z DEBUG server::server] Decided 21
+[2026-03-15T14:15:35Z DEBUG server::server] Decided 22
+[2026-03-15T14:15:35Z DEBUG server::server] Decided 23
+[2026-03-15T14:15:35Z DEBUG server::server] Decided 24
+[2026-03-15T14:15:36Z DEBUG server::server] Decided 25
+[2026-03-15T14:15:36Z DEBUG server::server] Decided 26
+[2026-03-15T14:15:36Z DEBUG server::server] Decided 27
+[2026-03-15T14:15:36Z DEBUG server::server] Decided 28
+[2026-03-15T14:15:36Z DEBUG server::server] Decided 29
+[2026-03-15T14:15:36Z DEBUG server::server] Decided 30
+[2026-03-15T14:15:36Z DEBUG server::server] Decided 31
+[2026-03-15T14:15:36Z DEBUG server::server] Decided 32
+[2026-03-15T14:15:36Z DEBUG server::server] Decided 33
+[2026-03-15T14:15:36Z DEBUG server::server] Decided 34
+[2026-03-15T14:15:36Z DEBUG server::server] Decided 35
+[2026-03-15T14:15:37Z DEBUG server::server] Decided 36
+[2026-03-15T14:15:37Z DEBUG server::server] Decided 37
+[2026-03-15T14:15:37Z DEBUG server::server] Decided 38
+[2026-03-15T14:15:37Z DEBUG server::server] Decided 39
+[2026-03-15T14:15:37Z DEBUG server::server] Decided 40
+[2026-03-15T14:15:37Z DEBUG server::server] Decided 41
+[2026-03-15T14:15:37Z DEBUG server::server] Decided 42
+[2026-03-15T14:15:37Z DEBUG server::server] Decided 43
+[2026-03-15T14:15:37Z DEBUG server::server] Decided 44
+[2026-03-15T14:15:37Z DEBUG server::server] Decided 45
+[2026-03-15T14:15:38Z DEBUG server::server] Decided 46
+[2026-03-15T14:15:38Z DEBUG server::server] Decided 47
+[2026-03-15T14:15:38Z DEBUG server::server] Decided 48
+[2026-03-15T14:15:38Z DEBUG server::server] Decided 49
+[2026-03-15T14:15:38Z DEBUG server::server] Decided 50
+[2026-03-15T14:15:38Z DEBUG server::server] Decided 51
+[2026-03-15T14:15:38Z DEBUG server::server] Decided 52
+[2026-03-15T14:15:38Z DEBUG server::server] Decided 53
+[2026-03-15T14:15:38Z DEBUG server::server] Decided 54
+[2026-03-15T14:15:38Z DEBUG server::server] Decided 55
+[2026-03-15T14:15:38Z DEBUG server::server] Decided 56
+[2026-03-15T14:15:39Z DEBUG server::server] Decided 57
+[2026-03-15T14:15:39Z DEBUG server::server] Decided 58
+[2026-03-15T14:15:39Z DEBUG server::server] Decided 59
+[2026-03-15T14:15:39Z DEBUG server::server] Decided 60
+[2026-03-15T14:15:39Z DEBUG server::server] Decided 61
+[2026-03-15T14:15:39Z DEBUG server::server] Decided 62
+[2026-03-15T14:15:39Z DEBUG server::server] Decided 63
+[2026-03-15T14:15:39Z DEBUG server::server] Decided 64
+[2026-03-15T14:15:39Z DEBUG server::server] Decided 65
+[2026-03-15T14:15:39Z DEBUG server::server] Decided 66
+[2026-03-15T14:15:39Z DEBUG server::server] Decided 67
+[2026-03-15T14:15:39Z DEBUG server::server] Decided 68
+[2026-03-15T14:15:39Z DEBUG server::server] Decided 69
+[2026-03-15T14:15:39Z DEBUG server::server] Decided 70
+[2026-03-15T14:15:39Z DEBUG server::server] Decided 71
+[2026-03-15T14:15:40Z DEBUG server::server] Decided 72
+[2026-03-15T14:15:40Z DEBUG server::server] Decided 73
+[2026-03-15T14:15:40Z DEBUG server::server] Decided 74
+[2026-03-15T14:15:40Z DEBUG server::server] Decided 75
+[2026-03-15T14:15:40Z DEBUG server::server] Decided 76
+[2026-03-15T14:15:40Z DEBUG server::server] Decided 77
+[2026-03-15T14:15:40Z DEBUG server::server] Decided 78
+[2026-03-15T14:15:40Z DEBUG server::server] Decided 79
+[2026-03-15T14:15:40Z DEBUG server::server] Decided 80
+[2026-03-15T14:15:41Z DEBUG server::server] Decided 81
+[2026-03-15T14:15:41Z DEBUG server::server] Decided 82
+[2026-03-15T14:15:41Z DEBUG server::server] Decided 83
+[2026-03-15T14:15:41Z DEBUG server::server] Decided 84
+[2026-03-15T14:15:41Z DEBUG server::server] Decided 85
+[2026-03-15T14:15:41Z DEBUG server::server] Decided 86
+[2026-03-15T14:15:41Z DEBUG server::server] Decided 87
+[2026-03-15T14:15:41Z DEBUG server::server] Decided 88
+[2026-03-15T14:15:41Z DEBUG server::server] Decided 89
+[2026-03-15T14:15:42Z DEBUG server::server] Decided 90
+[2026-03-15T14:15:42Z DEBUG server::server] Decided 91
+[2026-03-15T14:15:42Z DEBUG server::server] Decided 92
+[2026-03-15T14:15:42Z DEBUG server::server] Decided 93
+[2026-03-15T14:15:42Z DEBUG server::server] Decided 94
+[2026-03-15T14:15:42Z DEBUG server::server] Decided 95
+[2026-03-15T14:15:43Z DEBUG server::server] Decided 96
+[2026-03-15T14:15:43Z DEBUG server::server] Decided 97
+[2026-03-15T14:15:43Z DEBUG server::server] Decided 98
+[2026-03-15T14:15:43Z DEBUG server::server] Decided 99
+[2026-03-15T14:15:43Z DEBUG server::server] Decided 100
+[2026-03-15T14:15:43Z DEBUG server::server] Decided 101
+[2026-03-15T14:15:43Z DEBUG server::server] Decided 102
+[2026-03-15T14:15:43Z DEBUG server::server] Decided 103
+[2026-03-15T14:15:43Z DEBUG server::server] Decided 104
+[2026-03-15T14:15:43Z DEBUG server::server] Decided 105
+[2026-03-15T14:15:43Z DEBUG server::server] Decided 106
+[2026-03-15T14:15:43Z DEBUG server::server] Decided 107
+[2026-03-15T14:15:43Z DEBUG server::server] Decided 108
+[2026-03-15T14:15:44Z DEBUG server::server] Decided 109
+[2026-03-15T14:15:44Z DEBUG server::server] Decided 110
+[2026-03-15T14:15:44Z DEBUG server::server] Decided 111
+[2026-03-15T14:15:44Z DEBUG server::server] Decided 112
+[2026-03-15T14:15:44Z DEBUG server::server] Decided 113
+[2026-03-15T14:15:44Z DEBUG server::server] Decided 114
+[2026-03-15T14:15:44Z DEBUG server::server] Decided 115
+[2026-03-15T14:15:44Z DEBUG server::server] Decided 116
+[2026-03-15T14:15:45Z DEBUG server::server] Decided 117
+[2026-03-15T14:15:45Z DEBUG server::server] Decided 118
+[2026-03-15T14:15:45Z DEBUG server::server] Decided 119
+[2026-03-15T14:15:45Z DEBUG server::server] Decided 120
+[2026-03-15T14:15:45Z DEBUG server::server] Decided 121
+[2026-03-15T14:15:45Z DEBUG server::server] Decided 122
+[2026-03-15T14:15:45Z DEBUG server::server] Decided 123
+[2026-03-15T14:15:45Z DEBUG server::server] Decided 124
+[2026-03-15T14:15:45Z DEBUG server::server] Decided 125
+[2026-03-15T14:15:45Z DEBUG server::server] Decided 126
+[2026-03-15T14:15:45Z DEBUG server::server] Decided 127
+[2026-03-15T14:15:45Z DEBUG server::server] Decided 128
+[2026-03-15T14:15:45Z DEBUG server::server] Decided 129
+[2026-03-15T14:15:45Z DEBUG server::server] Decided 130
+[2026-03-15T14:15:45Z DEBUG server::server] Decided 131
+[2026-03-15T14:15:45Z DEBUG server::server] Decided 132
+[2026-03-15T14:15:46Z DEBUG server::server] Decided 133
+[2026-03-15T14:15:46Z DEBUG server::server] Decided 134
+[2026-03-15T14:15:46Z DEBUG server::server] Decided 135
+[2026-03-15T14:15:46Z DEBUG server::server] Decided 136
+[2026-03-15T14:15:46Z DEBUG server::server] Decided 137
+[2026-03-15T14:15:46Z DEBUG server::server] Decided 138
+[2026-03-15T14:15:46Z DEBUG server::server] Decided 139
+[2026-03-15T14:15:46Z DEBUG server::server] Decided 140
+[2026-03-15T14:15:46Z DEBUG server::server] Decided 141
+[2026-03-15T14:15:47Z DEBUG server::server] Decided 142
+[2026-03-15T14:15:47Z DEBUG server::server] Decided 143
+[2026-03-15T14:15:47Z DEBUG server::server] Decided 144
+[2026-03-15T14:15:47Z DEBUG server::server] Decided 145
+[2026-03-15T14:15:47Z DEBUG server::server] Decided 146
+[2026-03-15T14:15:47Z DEBUG server::server] Decided 147
+[2026-03-15T14:15:47Z DEBUG server::server] Decided 148
+[2026-03-15T14:15:47Z DEBUG server::server] Decided 149
+[2026-03-15T14:15:47Z DEBUG server::server] Decided 150
+[2026-03-15T14:15:48Z DEBUG server::server] Decided 151
+[2026-03-15T14:15:48Z DEBUG server::server] Decided 152
+[2026-03-15T14:15:48Z DEBUG server::server] Decided 153
+[2026-03-15T14:15:48Z DEBUG server::server] Decided 154
+[2026-03-15T14:15:48Z DEBUG server::server] Decided 155
+[2026-03-15T14:15:48Z DEBUG server::server] Decided 156
+[2026-03-15T14:15:48Z DEBUG server::server] Decided 157
+[2026-03-15T14:15:48Z DEBUG server::server] Decided 158
+[2026-03-15T14:15:49Z DEBUG server::server] Decided 159
+[2026-03-15T14:15:49Z DEBUG server::server] Decided 160
+[2026-03-15T14:15:49Z DEBUG server::server] Decided 161
+[2026-03-15T14:15:49Z DEBUG server::server] Decided 162
+[2026-03-15T14:15:49Z DEBUG server::server] Decided 163
+[2026-03-15T14:15:49Z DEBUG server::server] Decided 164
+[2026-03-15T14:15:49Z DEBUG server::server] Decided 165
+[2026-03-15T14:15:49Z DEBUG server::server] Decided 166
+[2026-03-15T14:15:49Z DEBUG server::server] Decided 167
+[2026-03-15T14:15:49Z DEBUG server::server] Decided 168
+[2026-03-15T14:15:50Z DEBUG server::server] Decided 169
+[2026-03-15T14:15:50Z DEBUG server::server] Decided 170
+[2026-03-15T14:15:50Z DEBUG server::server] Decided 171
+[2026-03-15T14:15:50Z DEBUG server::server] Decided 172
+[2026-03-15T14:15:50Z DEBUG server::server] Decided 173
+[2026-03-15T14:15:50Z DEBUG server::server] Decided 174
+[2026-03-15T14:15:50Z DEBUG server::server] Decided 175
+[2026-03-15T14:15:50Z DEBUG server::server] Decided 176
+[2026-03-15T14:15:50Z DEBUG server::server] Decided 177
+[2026-03-15T14:15:51Z DEBUG server::server] Decided 178
+[2026-03-15T14:15:51Z DEBUG server::server] Decided 179
+[2026-03-15T14:15:51Z DEBUG server::server] Decided 180
+[2026-03-15T14:15:51Z DEBUG server::server] Decided 181
+[2026-03-15T14:15:51Z DEBUG server::server] Decided 182
+[2026-03-15T14:15:51Z DEBUG server::server] Decided 183
+[2026-03-15T14:15:51Z DEBUG server::server] Decided 184
+[2026-03-15T14:15:51Z DEBUG server::server] Decided 185
+[2026-03-15T14:15:52Z DEBUG server::server] Decided 186
+[2026-03-15T14:15:52Z DEBUG server::server] Decided 187
+[2026-03-15T14:15:52Z DEBUG server::server] Decided 188
+[2026-03-15T14:15:52Z DEBUG server::server] Decided 189
+[2026-03-15T14:15:52Z DEBUG server::server] Decided 190
+[2026-03-15T14:15:52Z DEBUG server::server] Decided 191
+[2026-03-15T14:15:52Z DEBUG server::server] Decided 192
+[2026-03-15T14:15:52Z DEBUG server::server] Decided 193
+[2026-03-15T14:15:52Z DEBUG server::server] Decided 194
+[2026-03-15T14:15:52Z DEBUG server::server] Decided 195
+[2026-03-15T14:15:53Z DEBUG server::server] Decided 196
+[2026-03-15T14:15:53Z DEBUG server::server] Decided 197
+[2026-03-15T14:15:53Z DEBUG server::server] Decided 198
+[2026-03-15T14:15:53Z DEBUG server::server] Decided 199
+[2026-03-15T14:15:53Z DEBUG server::server] Decided 200
+[2026-03-15T14:15:53Z DEBUG server::server] Decided 201
+[2026-03-15T14:15:53Z DEBUG server::server] Decided 202
+[2026-03-15T14:15:53Z DEBUG server::server] Decided 203
+[2026-03-15T14:15:53Z DEBUG server::server] Decided 204
+[2026-03-15T14:15:54Z DEBUG server::server] Decided 205
+[2026-03-15T14:15:54Z DEBUG server::server] Decided 206
+[2026-03-15T14:15:54Z DEBUG server::server] Decided 207
+[2026-03-15T14:15:54Z DEBUG server::server] Decided 208
+[2026-03-15T14:15:54Z DEBUG server::server] Decided 209
+[2026-03-15T14:15:54Z DEBUG server::server] Decided 210
+[2026-03-15T14:15:54Z DEBUG server::server] Decided 211
+[2026-03-15T14:15:54Z DEBUG server::server] Decided 212
+[2026-03-15T14:15:55Z DEBUG server::server] Decided 213
+[2026-03-15T14:15:55Z DEBUG server::server] Decided 214
+[2026-03-15T14:15:55Z DEBUG server::server] Decided 215
+[2026-03-15T14:15:55Z DEBUG server::server] Decided 216
+[2026-03-15T14:15:55Z DEBUG server::server] Decided 217
+[2026-03-15T14:15:55Z DEBUG server::server] Decided 218
+[2026-03-15T14:15:55Z DEBUG server::server] Decided 219
+[2026-03-15T14:15:55Z DEBUG server::server] Decided 220
+[2026-03-15T14:15:55Z DEBUG server::server] Decided 221
+[2026-03-15T14:15:55Z DEBUG server::server] Decided 222
+[2026-03-15T14:15:56Z DEBUG server::server] Decided 223
+[2026-03-15T14:15:56Z DEBUG server::server] Decided 224
+[2026-03-15T14:15:56Z DEBUG server::server] Decided 225
+[2026-03-15T14:15:56Z DEBUG server::server] Decided 226
+[2026-03-15T14:15:56Z DEBUG server::server] Decided 227
+[2026-03-15T14:15:56Z DEBUG server::server] Decided 228
+[2026-03-15T14:15:56Z DEBUG server::server] Decided 229
+[2026-03-15T14:15:56Z DEBUG server::server] Decided 230
+[2026-03-15T14:15:56Z DEBUG server::server] Decided 231
+[2026-03-15T14:15:57Z DEBUG server::server] Decided 232
+[2026-03-15T14:15:57Z DEBUG server::server] Decided 233
+[2026-03-15T14:15:57Z DEBUG server::server] Decided 234
+[2026-03-15T14:15:57Z DEBUG server::server] Decided 235
+[2026-03-15T14:15:57Z DEBUG server::server] Decided 236
+[2026-03-15T14:15:57Z DEBUG server::server] Decided 237
+[2026-03-15T14:15:57Z DEBUG server::server] Decided 238
+[2026-03-15T14:15:57Z DEBUG server::server] Decided 239
+[2026-03-15T14:15:57Z DEBUG server::server] Decided 240
+[2026-03-15T14:15:57Z DEBUG server::server] Decided 241
+[2026-03-15T14:15:58Z DEBUG server::server] Decided 242
+[2026-03-15T14:15:58Z DEBUG server::server] Decided 243
+[2026-03-15T14:15:58Z DEBUG server::server] Decided 244
+[2026-03-15T14:15:58Z DEBUG server::server] Decided 245
+[2026-03-15T14:15:58Z DEBUG server::server] Decided 246
+[2026-03-15T14:15:58Z DEBUG server::server] Decided 247
+[2026-03-15T14:15:58Z DEBUG server::server] Decided 248
+[2026-03-15T14:15:58Z DEBUG server::server] Decided 249
+[2026-03-15T14:15:58Z DEBUG server::server] Decided 250
+[2026-03-15T14:15:58Z DEBUG server::server] Decided 251
+[2026-03-15T14:15:58Z DEBUG server::server] Decided 252
+[2026-03-15T14:15:58Z DEBUG server::server] Decided 253
+[2026-03-15T14:15:59Z DEBUG server::server] Decided 254
+[2026-03-15T14:15:59Z DEBUG server::server] Decided 255
+[2026-03-15T14:15:59Z DEBUG server::server] Decided 256
+[2026-03-15T14:15:59Z DEBUG server::server] Decided 257
+[2026-03-15T14:15:59Z DEBUG server::server] Decided 258
+[2026-03-15T14:15:59Z DEBUG server::server] Decided 259
+[2026-03-15T14:15:59Z DEBUG server::server] Decided 260
+[2026-03-15T14:15:59Z DEBUG server::server] Decided 261
+[2026-03-15T14:15:59Z DEBUG server::server] Decided 262
+[2026-03-15T14:15:59Z DEBUG server::server] Decided 263
+[2026-03-15T14:15:59Z DEBUG server::server] Decided 264
+[2026-03-15T14:15:59Z DEBUG server::server] Decided 265
+[2026-03-15T14:16:00Z DEBUG server::server] Decided 266
+[2026-03-15T14:16:00Z DEBUG server::server] Decided 267
+[2026-03-15T14:16:00Z DEBUG server::server] Decided 268
+[2026-03-15T14:16:00Z DEBUG server::server] Decided 269
+[2026-03-15T14:16:00Z DEBUG server::server] Decided 270
+[2026-03-15T14:16:00Z DEBUG server::server] Decided 271
+[2026-03-15T14:16:00Z DEBUG server::server] Decided 272
+[2026-03-15T14:16:00Z DEBUG server::server] Decided 273
+[2026-03-15T14:16:00Z DEBUG server::server] Decided 274
+[2026-03-15T14:16:00Z DEBUG server::server] Decided 275
+[2026-03-15T14:16:01Z DEBUG server::server] Decided 276
+[2026-03-15T14:16:01Z DEBUG server::server] Decided 277
+[2026-03-15T14:16:01Z DEBUG server::server] Decided 278
+[2026-03-15T14:16:01Z DEBUG server::server] Decided 279
+[2026-03-15T14:16:01Z DEBUG server::server] Decided 280
+[2026-03-15T14:16:01Z DEBUG server::server] Decided 281
+[2026-03-15T14:16:01Z DEBUG server::server] Decided 282
+[2026-03-15T14:16:01Z DEBUG server::server] Decided 283
+[2026-03-15T14:16:02Z DEBUG server::server] Decided 284
+[2026-03-15T14:16:02Z DEBUG server::server] Decided 285
+[2026-03-15T14:16:02Z DEBUG server::server] Decided 286
+[2026-03-15T14:16:02Z DEBUG server::server] Decided 287
+[2026-03-15T14:16:02Z DEBUG server::server] Decided 288
+[2026-03-15T14:16:02Z DEBUG server::server] Decided 289
+[2026-03-15T14:16:02Z DEBUG server::server] Decided 290
+[2026-03-15T14:16:02Z DEBUG server::server] Decided 291
+[2026-03-15T14:16:03Z DEBUG server::server] Decided 292
+[2026-03-15T14:16:03Z DEBUG server::server] Decided 293
+[2026-03-15T14:16:03Z DEBUG server::server] Decided 294
+[2026-03-15T14:16:03Z DEBUG server::server] Decided 295
+[2026-03-15T14:16:04Z DEBUG server::server] Decided 296
+[2026-03-15T14:16:04Z DEBUG server::server] Decided 297
+[2026-03-15T14:16:04Z DEBUG server::server] Decided 298
+[2026-03-15T14:16:04Z DEBUG server::server] Decided 299
+[2026-03-15T14:16:04Z DEBUG server::server] Decided 300
+[2026-03-15T14:16:04Z DEBUG server::server] Decided 301
+[2026-03-15T14:16:05Z DEBUG server::server] Decided 302
+[2026-03-15T14:16:05Z DEBUG server::server] Decided 303
+[2026-03-15T14:16:05Z DEBUG server::server] Decided 304
+[2026-03-15T14:16:05Z DEBUG server::server] Decided 305
+[2026-03-15T14:16:06Z DEBUG server::server] Decided 306
+[2026-03-15T14:16:06Z DEBUG server::server] Decided 307
+[2026-03-15T14:16:06Z DEBUG server::server] Decided 308
+[2026-03-15T14:16:06Z DEBUG server::server] Decided 309
+[2026-03-15T14:16:06Z DEBUG server::server] Decided 310
+[2026-03-15T14:16:06Z DEBUG server::server] Decided 311
+[2026-03-15T14:16:07Z DEBUG server::server] Decided 312
+[2026-03-15T14:16:07Z DEBUG server::server] Decided 313
+[2026-03-15T14:16:07Z DEBUG server::server] Decided 314
+[2026-03-15T14:16:07Z DEBUG server::server] Decided 315
+[2026-03-15T14:16:07Z DEBUG server::server] Decided 316
+[2026-03-15T14:16:08Z DEBUG server::server] Decided 317
+[2026-03-15T14:16:08Z DEBUG server::server] Decided 318
+[2026-03-15T14:16:08Z DEBUG server::server] Decided 319
+[2026-03-15T14:16:08Z DEBUG server::server] Decided 320
+[2026-03-15T14:16:08Z DEBUG server::server] Decided 321
+[2026-03-15T14:16:08Z DEBUG server::server] Decided 322
+[2026-03-15T14:16:09Z DEBUG server::server] Decided 323
+[2026-03-15T14:16:09Z DEBUG server::server] Decided 324
+[2026-03-15T14:16:09Z DEBUG server::server] Decided 325
+[2026-03-15T14:16:10Z DEBUG server::server] Decided 326
+[2026-03-15T14:16:10Z ERROR server::network] Couldn't send message to node 1: Connection reset by peer (os error 104)
+[2026-03-15T14:16:10Z INFO  server::network] Connection to node 1 closed
+[2026-03-15T14:16:10Z DEBUG server::server] Decided 327
+[2026-03-15T14:16:10Z WARN  server::network] Couldn't send msg to peer 1: channel closed
+[2026-03-15T14:16:10Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:10Z DEBUG server::server] Decided 328
+[2026-03-15T14:16:10Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:10Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:10Z DEBUG server::server] Decided 329
+[2026-03-15T14:16:10Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:10Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:10Z DEBUG server::server] Decided 330
+[2026-03-15T14:16:10Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:10Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:10Z DEBUG server::server] Decided 331
+[2026-03-15T14:16:10Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:11Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:11Z DEBUG server::server] Decided 332
+[2026-03-15T14:16:11Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:11Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:11Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:11Z DEBUG server::server] Decided 333
+[2026-03-15T14:16:11Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:11Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:11Z DEBUG server::server] Decided 334
+[2026-03-15T14:16:11Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:11Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:11Z DEBUG server::server] Decided 335
+[2026-03-15T14:16:11Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:12Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:12Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:12Z DEBUG server::server] Decided 336
+[2026-03-15T14:16:12Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:12Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:12Z DEBUG server::server] Decided 337
+[2026-03-15T14:16:12Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:12Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:12Z DEBUG server::server] Decided 338
+[2026-03-15T14:16:12Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:12Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:12Z DEBUG server::server] Decided 339
+[2026-03-15T14:16:12Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:12Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:12Z DEBUG server::server] Decided 340
+[2026-03-15T14:16:12Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:12Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:12Z DEBUG server::server] Decided 341
+[2026-03-15T14:16:12Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:12Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:12Z DEBUG server::server] Decided 342
+[2026-03-15T14:16:12Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:13Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:13Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:13Z DEBUG server::server] Decided 343
+[2026-03-15T14:16:13Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:13Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:13Z DEBUG server::server] Decided 344
+[2026-03-15T14:16:13Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:13Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:13Z DEBUG server::server] Decided 345
+[2026-03-15T14:16:13Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:13Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:13Z DEBUG server::server] Decided 346
+[2026-03-15T14:16:13Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:14Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:14Z DEBUG server::server] Decided 347
+[2026-03-15T14:16:14Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:14Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:14Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:14Z DEBUG server::server] Decided 348
+[2026-03-15T14:16:14Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:14Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:14Z DEBUG server::server] Decided 349
+[2026-03-15T14:16:14Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:14Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:14Z DEBUG server::server] Decided 350
+[2026-03-15T14:16:14Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:14Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:14Z DEBUG server::server] Decided 351
+[2026-03-15T14:16:14Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:14Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:14Z DEBUG server::server] Decided 352
+[2026-03-15T14:16:14Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:15Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:15Z DEBUG server::server] Decided 353
+[2026-03-15T14:16:15Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:15Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:15Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:15Z DEBUG server::server] Decided 354
+[2026-03-15T14:16:15Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:15Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:15Z DEBUG server::server] Decided 355
+[2026-03-15T14:16:15Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:15Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:15Z DEBUG server::server] Decided 356
+[2026-03-15T14:16:15Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:15Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:15Z DEBUG server::server] Decided 357
+[2026-03-15T14:16:15Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:15Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:15Z DEBUG server::server] Decided 358
+[2026-03-15T14:16:15Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:16Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:16Z DEBUG server::server] Decided 359
+[2026-03-15T14:16:16Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:16Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:16Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:16Z DEBUG server::server] Decided 360
+[2026-03-15T14:16:16Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:16Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:16Z DEBUG server::server] Decided 361
+[2026-03-15T14:16:16Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:16Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:16Z DEBUG server::server] Decided 362
+[2026-03-15T14:16:16Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:16Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:16Z DEBUG server::server] Decided 363
+[2026-03-15T14:16:16Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:17Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:17Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:17Z DEBUG server::server] Decided 364
+[2026-03-15T14:16:17Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:17Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:17Z DEBUG server::server] Decided 365
+[2026-03-15T14:16:17Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:17Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:17Z DEBUG server::server] Decided 366
+[2026-03-15T14:16:17Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:17Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:17Z DEBUG server::server] Decided 367
+[2026-03-15T14:16:17Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:18Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:18Z DEBUG server::server] Decided 368
+[2026-03-15T14:16:18Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:18Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:18Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:18Z DEBUG server::server] Decided 369
+[2026-03-15T14:16:18Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:18Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:18Z DEBUG server::server] Decided 370
+[2026-03-15T14:16:18Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:18Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:18Z DEBUG server::server] Decided 371
+[2026-03-15T14:16:18Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:18Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:18Z DEBUG server::server] Decided 372
+[2026-03-15T14:16:18Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:19Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:19Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:19Z DEBUG server::server] Decided 373
+[2026-03-15T14:16:19Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:19Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:19Z DEBUG server::server] Decided 374
+[2026-03-15T14:16:19Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:19Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:19Z DEBUG server::server] Decided 375
+[2026-03-15T14:16:19Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:19Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:19Z DEBUG server::server] Decided 376
+[2026-03-15T14:16:19Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:19Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:19Z DEBUG server::server] Decided 377
+[2026-03-15T14:16:19Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:20Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:20Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:20Z DEBUG server::server] Decided 378
+[2026-03-15T14:16:20Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:20Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:20Z DEBUG server::server] Decided 379
+[2026-03-15T14:16:20Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:20Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:20Z DEBUG server::server] Decided 380
+[2026-03-15T14:16:20Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:20Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:20Z DEBUG server::server] Decided 381
+[2026-03-15T14:16:20Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:20Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:20Z DEBUG server::server] Decided 382
+[2026-03-15T14:16:20Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:21Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:21Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:21Z DEBUG server::server] Decided 383
+[2026-03-15T14:16:21Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:21Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:21Z DEBUG server::server] Decided 384
+[2026-03-15T14:16:21Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:21Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:21Z DEBUG server::server] Decided 385
+[2026-03-15T14:16:21Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:21Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:21Z DEBUG server::server] Decided 386
+[2026-03-15T14:16:21Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:21Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:21Z DEBUG server::server] Decided 387
+[2026-03-15T14:16:21Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:21Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:21Z DEBUG server::server] Decided 388
+[2026-03-15T14:16:21Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:21Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:21Z DEBUG server::server] Decided 389
+[2026-03-15T14:16:21Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:21Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:21Z DEBUG server::server] Decided 390
+[2026-03-15T14:16:21Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:21Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:21Z DEBUG server::server] Decided 391
+[2026-03-15T14:16:21Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:21Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:21Z DEBUG server::server] Decided 392
+[2026-03-15T14:16:21Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:21Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:21Z DEBUG server::server] Decided 393
+[2026-03-15T14:16:21Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:21Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:21Z DEBUG server::server] Decided 394
+[2026-03-15T14:16:21Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:22Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:22Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:22Z DEBUG server::server] Decided 395
+[2026-03-15T14:16:22Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:22Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:22Z DEBUG server::server] Decided 396
+[2026-03-15T14:16:22Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:22Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:22Z DEBUG server::server] Decided 397
+[2026-03-15T14:16:22Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:22Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:22Z DEBUG server::server] Decided 398
+[2026-03-15T14:16:22Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:22Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:22Z DEBUG server::server] Decided 399
+[2026-03-15T14:16:22Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:22Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:22Z DEBUG server::server] Decided 400
+[2026-03-15T14:16:22Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:22Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:22Z DEBUG server::server] Decided 401
+[2026-03-15T14:16:22Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:22Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:22Z DEBUG server::server] Decided 402
+[2026-03-15T14:16:22Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:22Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:22Z DEBUG server::server] Decided 403
+[2026-03-15T14:16:22Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:23Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:23Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:23Z DEBUG server::server] Decided 404
+[2026-03-15T14:16:23Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:23Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:23Z DEBUG server::server] Decided 405
+[2026-03-15T14:16:23Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:23Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:23Z DEBUG server::server] Decided 406
+[2026-03-15T14:16:23Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:23Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:23Z DEBUG server::server] Decided 407
+[2026-03-15T14:16:23Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:23Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:23Z DEBUG server::server] Decided 408
+[2026-03-15T14:16:23Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:23Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:23Z DEBUG server::server] Decided 409
+[2026-03-15T14:16:23Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:23Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:23Z DEBUG server::server] Decided 410
+[2026-03-15T14:16:23Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:23Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:23Z DEBUG server::server] Decided 411
+[2026-03-15T14:16:23Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:23Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:23Z DEBUG server::server] Decided 412
+[2026-03-15T14:16:23Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:23Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:23Z DEBUG server::server] Decided 413
+[2026-03-15T14:16:23Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:24Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:24Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:24Z DEBUG server::server] Decided 414
+[2026-03-15T14:16:24Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:24Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:24Z DEBUG server::server] Decided 415
+[2026-03-15T14:16:24Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:24Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:24Z DEBUG server::server] Decided 416
+[2026-03-15T14:16:24Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:24Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:24Z DEBUG server::server] Decided 417
+[2026-03-15T14:16:24Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:24Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:24Z DEBUG server::server] Decided 418
+[2026-03-15T14:16:24Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:24Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:24Z DEBUG server::server] Decided 419
+[2026-03-15T14:16:24Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:24Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:24Z DEBUG server::server] Decided 420
+[2026-03-15T14:16:24Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:24Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:24Z DEBUG server::server] Decided 421
+[2026-03-15T14:16:24Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:25Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:25Z DEBUG server::server] Decided 422
+[2026-03-15T14:16:25Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:25Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:25Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:25Z DEBUG server::server] Decided 423
+[2026-03-15T14:16:25Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:25Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:25Z DEBUG server::server] Decided 424
+[2026-03-15T14:16:25Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:25Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:25Z DEBUG server::server] Decided 425
+[2026-03-15T14:16:25Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:25Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:25Z DEBUG server::server] Decided 426
+[2026-03-15T14:16:25Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:25Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:25Z DEBUG server::server] Decided 427
+[2026-03-15T14:16:25Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:25Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:25Z DEBUG server::server] Decided 428
+[2026-03-15T14:16:25Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:25Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:25Z DEBUG server::server] Decided 429
+[2026-03-15T14:16:25Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:25Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:25Z DEBUG server::server] Decided 430
+[2026-03-15T14:16:25Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:25Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:25Z DEBUG server::server] Decided 431
+[2026-03-15T14:16:25Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:25Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:25Z DEBUG server::server] Decided 432
+[2026-03-15T14:16:25Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:25Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:25Z DEBUG server::server] Decided 433
+[2026-03-15T14:16:25Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:25Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:25Z DEBUG server::server] Decided 434
+[2026-03-15T14:16:25Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:25Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:25Z DEBUG server::server] Decided 435
+[2026-03-15T14:16:25Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:26Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:26Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:26Z DEBUG server::server] Decided 436
+[2026-03-15T14:16:26Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:26Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:26Z DEBUG server::server] Decided 437
+[2026-03-15T14:16:26Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:26Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:26Z DEBUG server::server] Decided 438
+[2026-03-15T14:16:26Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:26Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:26Z DEBUG server::server] Decided 439
+[2026-03-15T14:16:26Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:26Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:26Z DEBUG server::server] Decided 440
+[2026-03-15T14:16:26Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:26Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:26Z DEBUG server::server] Decided 441
+[2026-03-15T14:16:26Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:26Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:26Z DEBUG server::server] Decided 442
+[2026-03-15T14:16:26Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:26Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:26Z DEBUG server::server] Decided 443
+[2026-03-15T14:16:26Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:26Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:26Z DEBUG server::server] Decided 444
+[2026-03-15T14:16:26Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:26Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:26Z DEBUG server::server] Decided 445
+[2026-03-15T14:16:26Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:26Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:26Z DEBUG server::server] Decided 446
+[2026-03-15T14:16:26Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:27Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:27Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:27Z DEBUG server::server] Decided 447
+[2026-03-15T14:16:27Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:27Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:27Z DEBUG server::server] Decided 448
+[2026-03-15T14:16:27Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:27Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:27Z DEBUG server::server] Decided 449
+[2026-03-15T14:16:27Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:27Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:27Z DEBUG server::server] Decided 450
+[2026-03-15T14:16:27Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:27Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:27Z DEBUG server::server] Decided 451
+[2026-03-15T14:16:27Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:27Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:27Z DEBUG server::server] Decided 452
+[2026-03-15T14:16:27Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:27Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:27Z DEBUG server::server] Decided 453
+[2026-03-15T14:16:27Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:27Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:27Z DEBUG server::server] Decided 454
+[2026-03-15T14:16:27Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:27Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:27Z DEBUG server::server] Decided 455
+[2026-03-15T14:16:27Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:27Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:27Z DEBUG server::server] Decided 456
+[2026-03-15T14:16:27Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:27Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:27Z DEBUG server::server] Decided 457
+[2026-03-15T14:16:27Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:27Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:27Z DEBUG server::server] Decided 458
+[2026-03-15T14:16:27Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:27Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:27Z DEBUG server::server] Decided 459
+[2026-03-15T14:16:27Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:28Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:28Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:28Z DEBUG server::server] Decided 460
+[2026-03-15T14:16:28Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:28Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:28Z DEBUG server::server] Decided 461
+[2026-03-15T14:16:28Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:28Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:28Z DEBUG server::server] Decided 462
+[2026-03-15T14:16:28Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:28Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:28Z DEBUG server::server] Decided 463
+[2026-03-15T14:16:28Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:28Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:28Z DEBUG server::server] Decided 464
+[2026-03-15T14:16:28Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:28Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:28Z DEBUG server::server] Decided 465
+[2026-03-15T14:16:28Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:28Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:28Z DEBUG server::server] Decided 466
+[2026-03-15T14:16:28Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:28Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:28Z DEBUG server::server] Decided 467
+[2026-03-15T14:16:28Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:28Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:28Z DEBUG server::server] Decided 468
+[2026-03-15T14:16:28Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:29Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:29Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:29Z DEBUG server::server] Decided 469
+[2026-03-15T14:16:29Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:29Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:29Z DEBUG server::server] Decided 470
+[2026-03-15T14:16:29Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:29Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:29Z DEBUG server::server] Decided 471
+[2026-03-15T14:16:29Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:29Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:29Z DEBUG server::server] Decided 472
+[2026-03-15T14:16:29Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:29Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:29Z DEBUG server::server] Decided 473
+[2026-03-15T14:16:29Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:29Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:29Z DEBUG server::server] Decided 474
+[2026-03-15T14:16:29Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:29Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:29Z DEBUG server::server] Decided 475
+[2026-03-15T14:16:29Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:29Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:29Z DEBUG server::server] Decided 476
+[2026-03-15T14:16:29Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:29Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:29Z DEBUG server::server] Decided 477
+[2026-03-15T14:16:29Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:30Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:30Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:30Z DEBUG server::server] Decided 478
+[2026-03-15T14:16:30Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:30Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:30Z DEBUG server::server] Decided 479
+[2026-03-15T14:16:30Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:30Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:30Z DEBUG server::server] Decided 480
+[2026-03-15T14:16:30Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:30Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:30Z DEBUG server::server] Decided 481
+[2026-03-15T14:16:30Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:30Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:30Z DEBUG server::server] Decided 482
+[2026-03-15T14:16:30Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:30Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:30Z DEBUG server::server] Decided 483
+[2026-03-15T14:16:30Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:30Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:30Z DEBUG server::server] Decided 484
+[2026-03-15T14:16:30Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:30Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:30Z DEBUG server::server] Decided 485
+[2026-03-15T14:16:30Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:30Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:30Z DEBUG server::server] Decided 486
+[2026-03-15T14:16:30Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:30Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:30Z DEBUG server::server] Decided 487
+[2026-03-15T14:16:30Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:30Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:30Z DEBUG server::server] Decided 488
+[2026-03-15T14:16:30Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:31Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:31Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:31Z DEBUG server::server] Decided 489
+[2026-03-15T14:16:31Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:31Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:31Z DEBUG server::server] Decided 490
+[2026-03-15T14:16:31Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:31Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:31Z DEBUG server::server] Decided 491
+[2026-03-15T14:16:31Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:31Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:31Z DEBUG server::server] Decided 492
+[2026-03-15T14:16:31Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:31Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:31Z DEBUG server::server] Decided 493
+[2026-03-15T14:16:31Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:31Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:31Z DEBUG server::server] Decided 494
+[2026-03-15T14:16:31Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:31Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:31Z DEBUG server::server] Decided 495
+[2026-03-15T14:16:31Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:31Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:31Z DEBUG server::server] Decided 496
+[2026-03-15T14:16:31Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:31Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:31Z DEBUG server::server] Decided 497
+[2026-03-15T14:16:31Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:31Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:31Z DEBUG server::server] Decided 498
+[2026-03-15T14:16:31Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:32Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:32Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:32Z DEBUG server::server] Decided 499
+[2026-03-15T14:16:32Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:32Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:32Z DEBUG server::server] Decided 500
+[2026-03-15T14:16:32Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:32Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:32Z DEBUG server::server] Decided 501
+[2026-03-15T14:16:32Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:32Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:32Z DEBUG server::server] Decided 502
+[2026-03-15T14:16:32Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:32Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:32Z DEBUG server::server] Decided 503
+[2026-03-15T14:16:32Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:32Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:32Z DEBUG server::server] Decided 504
+[2026-03-15T14:16:32Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:32Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:32Z DEBUG server::server] Decided 505
+[2026-03-15T14:16:32Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:32Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:32Z DEBUG server::server] Decided 506
+[2026-03-15T14:16:32Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:32Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:32Z DEBUG server::server] Decided 507
+[2026-03-15T14:16:32Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:33Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:33Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:33Z DEBUG server::server] Decided 508
+[2026-03-15T14:16:33Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:33Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:33Z DEBUG server::server] Decided 509
+[2026-03-15T14:16:33Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:33Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:33Z DEBUG server::server] Decided 510
+[2026-03-15T14:16:33Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:33Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:33Z DEBUG server::server] Decided 511
+[2026-03-15T14:16:33Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:33Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:33Z DEBUG server::server] Decided 512
+[2026-03-15T14:16:33Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:33Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:33Z DEBUG server::server] Decided 513
+[2026-03-15T14:16:33Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:33Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:33Z DEBUG server::server] Decided 514
+[2026-03-15T14:16:33Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:34Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:34Z DEBUG server::server] Decided 515
+[2026-03-15T14:16:34Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:34Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:34Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:34Z DEBUG server::server] Decided 516
+[2026-03-15T14:16:34Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:34Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:34Z DEBUG server::server] Decided 517
+[2026-03-15T14:16:34Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:34Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:34Z DEBUG server::server] Decided 518
+[2026-03-15T14:16:34Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:34Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:34Z DEBUG server::server] Decided 519
+[2026-03-15T14:16:34Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:34Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:34Z DEBUG server::server] Decided 520
+[2026-03-15T14:16:34Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:34Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:34Z DEBUG server::server] Decided 521
+[2026-03-15T14:16:34Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:35Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:35Z DEBUG server::server] Decided 522
+[2026-03-15T14:16:35Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:35Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:35Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:35Z DEBUG server::server] Decided 523
+[2026-03-15T14:16:35Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:35Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:35Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:35Z DEBUG server::server] Decided 525
+[2026-03-15T14:16:35Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:35Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:35Z DEBUG server::server] Decided 526
+[2026-03-15T14:16:35Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:35Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:35Z DEBUG server::server] Decided 527
+[2026-03-15T14:16:35Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:35Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:35Z DEBUG server::server] Decided 528
+[2026-03-15T14:16:35Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:35Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:36Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:37Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:38Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:39Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:40Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:40Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:41Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:42Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:43Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:44Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:45Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:45Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:46Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:47Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:48Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:49Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:50Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:50Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:51Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:52Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:53Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:54Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:55Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:56Z WARN  server::network] Not connected to node 1
+[2026-03-15T14:16:57Z WARN  server::network] Not connected to node 1
+2026-03-15 14:17:09 Jepsen starting  /usr/bin/env SERVER_CONFIG_FILE=/opt/omnipaxos/server.toml CLUSTER_CONFIG_FILE=/opt/omnipaxos/cluster.toml RUST_LOG=debug /opt/omnipaxos/server
+[2026-03-15T14:17:09Z INFO  server::network] New connection to node 1
+[2026-03-15T14:17:09Z ERROR server::network] Establishing connection to node 2 failed: Connection refused (os error 111)
+[2026-03-15T14:17:10Z ERROR server::network] Establishing connection to node 2 failed: Connection refused (os error 111)
+[2026-03-15T14:17:11Z ERROR server::network] Establishing connection to node 2 failed: Connection refused (os error 111)
+[2026-03-15T14:17:12Z ERROR server::network] Establishing connection to node 2 failed: Connection refused (os error 111)
+[2026-03-15T14:17:12Z INFO  server::network] New connection from 127.0.0.1:58556
+[2026-03-15T14:17:12Z INFO  server::network] Identified connection from client 1
+[2026-03-15T14:17:13Z ERROR server::network] Establishing connection to node 2 failed: Connection refused (os error 111)
+[2026-03-15T14:17:14Z ERROR server::network] Establishing connection to node 2 failed: Connection refused (os error 111)
+[2026-03-15T14:17:15Z ERROR server::network] Establishing connection to node 2 failed: Connection refused (os error 111)
+[2026-03-15T14:17:16Z ERROR server::network] Establishing connection to node 2 failed: Connection refused (os error 111)
+[2026-03-15T14:17:17Z ERROR server::network] Establishing connection to node 2 failed: Connection refused (os error 111)
+[2026-03-15T14:17:18Z ERROR server::network] Establishing connection to node 2 failed: Connection refused (os error 111)
+[2026-03-15T14:17:19Z ERROR server::network] Establishing connection to node 2 failed: Connection refused (os error 111)
+[2026-03-15T14:17:20Z ERROR server::network] Establishing connection to node 2 failed: Connection refused (os error 111)
+[2026-03-15T14:17:21Z ERROR server::network] Establishing connection to node 2 failed: Connection refused (os error 111)
+[2026-03-15T14:17:22Z ERROR server::network] Establishing connection to node 2 failed: Connection refused (os error 111)
+[2026-03-15T14:17:23Z ERROR server::network] Establishing connection to node 2 failed: Connection refused (os error 111)
+[2026-03-15T14:17:24Z ERROR server::network] Establishing connection to node 2 failed: Connection refused (os error 111)
+[2026-03-15T14:17:25Z ERROR server::network] Establishing connection to node 2 failed: Connection refused (os error 111)
+[2026-03-15T14:17:26Z ERROR server::network] Establishing connection to node 2 failed: Connection refused (os error 111)
+[2026-03-15T14:17:27Z ERROR server::network] Establishing connection to node 2 failed: Connection refused (os error 111)
+[2026-03-15T14:17:28Z ERROR server::network] Establishing connection to node 2 failed: Connection refused (os error 111)
+[2026-03-15T14:17:29Z ERROR server::network] Establishing connection to node 2 failed: Connection refused (os error 111)
+[2026-03-15T14:17:30Z ERROR server::network] Establishing connection to node 2 failed: Connection refused (os error 111)
+[2026-03-15T14:17:31Z ERROR server::network] Establishing connection to node 2 failed: Connection refused (os error 111)
+[2026-03-15T14:17:32Z ERROR server::network] Establishing connection to node 2 failed: Connection refused (os error 111)
+[2026-03-15T14:17:33Z ERROR server::network] Establishing connection to node 2 failed: Connection refused (os error 111)
+[2026-03-15T14:17:34Z ERROR server::network] Establishing connection to node 2 failed: Connection refused (os error 111)
+[2026-03-15T14:17:35Z ERROR server::network] Establishing connection to node 2 failed: Connection refused (os error 111)
+[2026-03-15T14:17:36Z ERROR server::network] Establishing connection to node 2 failed: Connection refused (os error 111)
+[2026-03-15T14:17:37Z ERROR server::network] Establishing connection to node 2 failed: Connection refused (os error 111)
+[2026-03-15T14:17:38Z ERROR server::network] Establishing connection to node 2 failed: Connection refused (os error 111)
+[2026-03-15T14:17:39Z ERROR server::network] Establishing connection to node 2 failed: Connection refused (os error 111)
+[2026-03-15T14:17:40Z ERROR server::network] Establishing connection to node 2 failed: Connection refused (os error 111)
+[2026-03-15T14:17:41Z ERROR server::network] Establishing connection to node 2 failed: Connection refused (os error 111)
+[2026-03-15T14:17:42Z ERROR server::network] Establishing connection to node 2 failed: Connection refused (os error 111)
+[2026-03-15T14:17:43Z ERROR server::network] Establishing connection to node 2 failed: Connection refused (os error 111)
+[2026-03-15T14:17:44Z ERROR server::network] Establishing connection to node 2 failed: Connection refused (os error 111)
+[2026-03-15T14:17:45Z ERROR server::network] Establishing connection to node 2 failed: Connection refused (os error 111)
+[2026-03-15T14:17:46Z ERROR server::network] Establishing connection to node 2 failed: Connection refused (os error 111)
+[2026-03-15T14:17:47Z ERROR server::network] Establishing connection to node 2 failed: Connection refused (os error 111)

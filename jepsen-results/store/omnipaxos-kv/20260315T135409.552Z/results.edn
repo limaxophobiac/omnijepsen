@@ -1,0 +1,6 @@
+{:linearizable {:valid? true,
+                :model #knossos.model.Register{:value 34},
+                :final-paths (),
+                :configs ()},
+ :timeline {:valid? true},
+ :valid? true}

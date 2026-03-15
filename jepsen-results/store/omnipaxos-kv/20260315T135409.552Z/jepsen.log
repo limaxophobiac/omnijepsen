@@ -1,0 +1,2265 @@
+2026-03-15 13:54:09,612{GMT}	INFO	[jepsen test runner] jepsen.core: Running test:
+{:remote
+ #jepsen.control.retry.Remote{:remote #jepsen.control.scp.Remote{:cmd-remote #jepsen.control.sshj.SSHJRemote{:concurrency-limit 6,
+                                                                                                             :conn-spec nil,
+                                                                                                             :client nil,
+                                                                                                             :semaphore nil},
+                                                                 :conn-spec nil},
+                              :conn nil}
+ :concurrency 3
+ :db
+ #object[jepsen.omnipaxos.db$omnipaxos_db$reify__2754
+         "0x4ba56bbe"
+         "jepsen.omnipaxos.db$omnipaxos_db$reify__2754@4ba56bbe"]
+ :name "omnipaxos-kv"
+ :start-time
+ #object[org.joda.time.DateTime "0x5b1ebbe" "2026-03-15T13:54:09.552Z"]
+ :net
+ #object[jepsen.net$reify__13706
+         "0x3b802baa"
+         "jepsen.net$reify__13706@3b802baa"]
+ :client #jepsen.omnipaxos.client.OmniPaxosClient{:node nil, :url nil}
+ :barrier
+ #object[java.util.concurrent.CyclicBarrier
+         "0x109941fa"
+         "java.util.concurrent.CyclicBarrier@109941fa"]
+ :checker
+ #jepsen.checker.Compose{:checkers {:linearizable #jepsen.checker.Linearizable{:algorithm nil,
+                                                                               :model #knossos.model.Register{:value nil}},
+                                    :timeline #object[jepsen.checker.timeline$html$reify__266
+                                                      "0x27103726"
+                                                      "jepsen.checker.timeline$html$reify__266@27103726"]}}
+ :nemesis
+ (jepsen.nemesis.MapCompose
+  {:nemeses {{:start-partition :start, :stop-partition :stop} #unprintable "jepsen.nemesis$partitioner$reify__13869@2df6d461",
+             #{:crash-node :recover-node} #unprintable "jepsen.omnipaxos.nemesis$crash_nemesis$reify__2773@1791670e"}})
+ :nodes ["n1" "n2" "n3"]
+ :generator
+ #object[jepsen.util.Forgettable
+         "0x2541b4d3"
+         ((jepsen.generator.Synchronize
+           {:gen (jepsen.generator.TimeLimit
+                  {:limit 120000000000,
+                   :cutoff nil,
+                   :gen (jepsen.generator.Any
+                         {:gens [(jepsen.generator.OnThreads
+                                  {:f #{:nemesis},
+                                   :context-filter #object[jepsen.generator.context$make_thread_filter$lazy_filter__4844
+                                                           "0x7d0bbc49"
+                                                           "jepsen.generator.context$make_thread_filter$lazy_filter__4844@7d0bbc49"],
+                                   :gen (jepsen.generator.Cycle
+                                         {:remaining -1,
+                                          :original-gen [{:type :sleep,
+                                                          :value 10}
+                                                         {:type :info,
+                                                          :f :start-partition}
+                                                         {:type :sleep,
+                                                          :value 15}
+                                                         {:type :info,
+                                                          :f :stop-partition}
+                                                         {:type :sleep,
+                                                          :value 5}
+                                                         {:type :info,
+                                                          :f :crash-node}
+                                                         {:type :sleep,
+                                                          :value 10}
+                                                         {:type :info,
+                                                          :f :recover-node}
+                                                         ...],
+                                          :gen [{:type :sleep, :value 10}
+                                                {:type :info,
+                                                 :f :start-partition}
+                                                {:type :sleep, :value 15}
+                                                {:type :info,
+                                                 :f :stop-partition}
+                                                {:type :sleep, :value 5}
+                                                {:type :info, :f :crash-node}
+                                                {:type :sleep, :value 10}
+                                                {:type :info, :f :recover-node}
+                                                ...]})})
+                                 (jepsen.generator.OnThreads
+                                  {:f #jepsen.generator.context.AllBut{:element :nemesis},
+                                   :context-filter #object[jepsen.generator.context$make_thread_filter$lazy_filter__4844
+                                                           "0x26c24e5"
+                                                           "jepsen.generator.context$make_thread_filter$lazy_filter__4844@26c24e5"],
+                                   :gen (jepsen.generator.OnThreads
+                                         {:f #jepsen.generator.context.AllBut{:element :nemesis},
+                                          :context-filter #object[jepsen.generator.context$make_thread_filter$lazy_filter__4844
+                                                                  "0x29509774"
+                                                                  "jepsen.generator.context$make_thread_filter$lazy_filter__4844@29509774"],
+                                          :gen (jepsen.generator.Stagger
+                                                {:dt 200000000,
+                                                 :next-time nil,
+                                                 :gen (jepsen.generator.Mix
+                                                       {:i 1,
+                                                        :gens [#object[jepsen.omnipaxos.core$r
+                                                                       "0x9198fe3"
+                                                                       "jepsen.omnipaxos.core$r@9198fe3"]
+                                                               #object[jepsen.omnipaxos.core$w
+                                                                       "0x6cc9f35d"
+                                                                       "jepsen.omnipaxos.core$w@6cc9f35d"]]})})})})]})})})
+          (jepsen.generator.Synchronize
+           {:gen (jepsen.generator.OnThreads
+                  {:f #{:nemesis},
+                   :context-filter #object[jepsen.generator.context$make_thread_filter$lazy_filter__4844
+                                           "0xf61b92d"
+                                           "jepsen.generator.context$make_thread_filter$lazy_filter__4844@f61b92d"],
+                   :gen {:type :info, :f :stop-partition}})})
+          (jepsen.generator.Synchronize
+           {:gen {:type :log,
+                  :value "Test complete, waiting before final check"}})
+          (jepsen.generator.Synchronize {:gen {:type :sleep, :value 5}}))]
+ :os
+ #object[jepsen.os$reify__14116 "0x22277482" "jepsen.os$reify__14116@22277482"]}
+
+2026-03-15 13:54:10,741{GMT}	INFO	[real-pmap 1] net.schmizz.sshj.SSHClient: Could not load keys from /root/.ssh/id_dsa due to: /root/.ssh/id_dsa (No such file or directory)
+2026-03-15 13:54:10,741{GMT}	INFO	[real-pmap 2] net.schmizz.sshj.SSHClient: Could not load keys from /root/.ssh/id_dsa due to: /root/.ssh/id_dsa (No such file or directory)
+2026-03-15 13:54:10,741{GMT}	INFO	[real-pmap 0] net.schmizz.sshj.SSHClient: Could not load keys from /root/.ssh/id_dsa due to: /root/.ssh/id_dsa (No such file or directory)
+2026-03-15 13:54:10,741{GMT}	INFO	[real-pmap 1] net.schmizz.sshj.SSHClient: Could not load keys from /root/.ssh/id_ed25519 due to: /root/.ssh/id_ed25519 (No such file or directory)
+2026-03-15 13:54:10,741{GMT}	INFO	[real-pmap 0] net.schmizz.sshj.SSHClient: Could not load keys from /root/.ssh/id_ed25519 due to: /root/.ssh/id_ed25519 (No such file or directory)
+2026-03-15 13:54:10,741{GMT}	INFO	[real-pmap 2] net.schmizz.sshj.SSHClient: Could not load keys from /root/.ssh/id_ed25519 due to: /root/.ssh/id_ed25519 (No such file or directory)
+2026-03-15 13:54:10,741{GMT}	INFO	[real-pmap 1] net.schmizz.sshj.SSHClient: Could not load keys from /root/.ssh/id_ecdsa due to: /root/.ssh/id_ecdsa (No such file or directory)
+2026-03-15 13:54:10,741{GMT}	INFO	[real-pmap 0] net.schmizz.sshj.SSHClient: Could not load keys from /root/.ssh/id_ecdsa due to: /root/.ssh/id_ecdsa (No such file or directory)
+2026-03-15 13:54:10,741{GMT}	INFO	[real-pmap 2] net.schmizz.sshj.SSHClient: Could not load keys from /root/.ssh/id_ecdsa due to: /root/.ssh/id_ecdsa (No such file or directory)
+2026-03-15 13:54:10,769{GMT}	INFO	[jepsen test runner] jepsen.db: Tearing down DB
+2026-03-15 13:54:10,770{GMT}	INFO	[jepsen node n3] jepsen.omnipaxos.db: n3 tearing down OmniPaxos
+2026-03-15 13:54:10,770{GMT}	INFO	[jepsen node n1] jepsen.omnipaxos.db: n1 tearing down OmniPaxos
+2026-03-15 13:54:10,770{GMT}	INFO	[jepsen node n2] jepsen.omnipaxos.db: n2 tearing down OmniPaxos
+2026-03-15 13:54:10,770{GMT}	INFO	[jepsen node n1] jepsen.control.util: Stopping /opt/omnipaxos/api-shim with signal :-9
+2026-03-15 13:54:10,770{GMT}	INFO	[jepsen node n3] jepsen.control.util: Stopping /opt/omnipaxos/api-shim with signal :-9
+2026-03-15 13:54:10,770{GMT}	INFO	[jepsen node n2] jepsen.control.util: Stopping /opt/omnipaxos/api-shim with signal :-9
+2026-03-15 13:54:10,910{GMT}	INFO	[jepsen node n1] jepsen.control.util: Stopping /opt/omnipaxos/server with signal :-9
+2026-03-15 13:54:10,912{GMT}	INFO	[jepsen node n2] jepsen.control.util: Stopping /opt/omnipaxos/server with signal :-9
+2026-03-15 13:54:10,913{GMT}	INFO	[jepsen node n3] jepsen.control.util: Stopping /opt/omnipaxos/server with signal :-9
+2026-03-15 13:54:11,044{GMT}	INFO	[jepsen test runner] jepsen.db: Setting up DB
+2026-03-15 13:54:11,045{GMT}	INFO	[jepsen node n2] jepsen.omnipaxos.db: n2 setting up OmniPaxos
+2026-03-15 13:54:11,045{GMT}	INFO	[jepsen node n3] jepsen.omnipaxos.db: n3 setting up OmniPaxos
+2026-03-15 13:54:11,045{GMT}	INFO	[jepsen node n1] jepsen.omnipaxos.db: n1 setting up OmniPaxos
+2026-03-15 13:54:12,449{GMT}	INFO	[jepsen node n2] jepsen.control.util: Starting env
+2026-03-15 13:54:12,450{GMT}	INFO	[jepsen node n1] jepsen.control.util: Starting env
+2026-03-15 13:54:12,452{GMT}	INFO	[jepsen node n3] jepsen.control.util: Starting env
+2026-03-15 13:54:17,496{GMT}	INFO	[jepsen node n2] jepsen.control.util: Starting env
+2026-03-15 13:54:17,497{GMT}	INFO	[jepsen node n1] jepsen.control.util: Starting env
+2026-03-15 13:54:17,499{GMT}	INFO	[jepsen node n3] jepsen.control.util: Starting env
+2026-03-15 13:54:17,590{GMT}	INFO	[jepsen node n2] jepsen.omnipaxos.db: n2 api-shim healthy
+2026-03-15 13:54:17,590{GMT}	INFO	[jepsen node n1] jepsen.omnipaxos.db: n1 api-shim healthy
+2026-03-15 13:54:17,591{GMT}	INFO	[jepsen node n3] jepsen.omnipaxos.db: n3 api-shim healthy
+2026-03-15 13:54:17,592{GMT}	INFO	[jepsen test runner] jepsen.core: Relative time begins now
+2026-03-15 13:54:17,698{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	10
+2026-03-15 13:54:17,819{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	58
+2026-03-15 13:54:18,005{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:invoke	:read	nil
+2026-03-15 13:54:18,547{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	10
+2026-03-15 13:54:18,547{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	58
+2026-03-15 13:54:18,548{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:ok	:read	58
+2026-03-15 13:54:18,548{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	3
+2026-03-15 13:54:18,549{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	3
+2026-03-15 13:54:18,637{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:invoke	:write	4
+2026-03-15 13:54:18,639{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:ok	:write	4
+2026-03-15 13:54:18,799{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:18,801{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	4
+2026-03-15 13:54:18,983{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	30
+2026-03-15 13:54:18,984{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	30
+2026-03-15 13:54:19,001{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:19,002{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	30
+2026-03-15 13:54:19,010{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:invoke	:read	nil
+2026-03-15 13:54:19,011{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:ok	:read	30
+2026-03-15 13:54:19,182{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	73
+2026-03-15 13:54:19,184{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	73
+2026-03-15 13:54:19,318{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:19,320{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	73
+2026-03-15 13:54:19,377{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:19,379{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	73
+2026-03-15 13:54:19,426{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:invoke	:read	nil
+2026-03-15 13:54:19,427{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:ok	:read	73
+2026-03-15 13:54:19,479{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	6
+2026-03-15 13:54:19,481{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	6
+2026-03-15 13:54:19,520{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:19,521{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	6
+2026-03-15 13:54:19,614{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	5
+2026-03-15 13:54:19,615{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	5
+2026-03-15 13:54:19,786{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:invoke	:write	86
+2026-03-15 13:54:19,787{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:ok	:write	86
+2026-03-15 13:54:19,819{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	37
+2026-03-15 13:54:19,820{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	37
+2026-03-15 13:54:19,870{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	46
+2026-03-15 13:54:19,871{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	46
+2026-03-15 13:54:20,059{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:20,060{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	46
+2026-03-15 13:54:20,109{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:invoke	:write	64
+2026-03-15 13:54:20,111{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:ok	:write	64
+2026-03-15 13:54:20,144{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:20,146{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	64
+2026-03-15 13:54:20,240{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	95
+2026-03-15 13:54:20,242{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	95
+2026-03-15 13:54:20,334{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:20,335{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	95
+2026-03-15 13:54:20,467{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:invoke	:write	91
+2026-03-15 13:54:20,468{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:ok	:write	91
+2026-03-15 13:54:20,659{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	74
+2026-03-15 13:54:20,661{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	74
+2026-03-15 13:54:20,681{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:20,682{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	74
+2026-03-15 13:54:20,779{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:20,781{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	74
+2026-03-15 13:54:20,873{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:invoke	:read	nil
+2026-03-15 13:54:20,874{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:ok	:read	74
+2026-03-15 13:54:20,940{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:20,942{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	74
+2026-03-15 13:54:21,015{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:21,016{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	74
+2026-03-15 13:54:21,102{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	17
+2026-03-15 13:54:21,104{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	17
+2026-03-15 13:54:21,268{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:invoke	:write	27
+2026-03-15 13:54:21,270{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:ok	:write	27
+2026-03-15 13:54:21,310{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:21,311{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	27
+2026-03-15 13:54:21,361{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	79
+2026-03-15 13:54:21,363{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	79
+2026-03-15 13:54:21,419{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	44
+2026-03-15 13:54:21,420{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	44
+2026-03-15 13:54:21,576{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:invoke	:read	nil
+2026-03-15 13:54:21,577{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:ok	:read	44
+2026-03-15 13:54:21,676{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	6
+2026-03-15 13:54:21,677{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	6
+2026-03-15 13:54:21,749{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:21,750{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	6
+2026-03-15 13:54:21,797{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:21,798{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	6
+2026-03-15 13:54:21,862{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:invoke	:write	1
+2026-03-15 13:54:21,863{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:ok	:write	1
+2026-03-15 13:54:21,898{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	36
+2026-03-15 13:54:21,899{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	36
+2026-03-15 13:54:22,067{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	6
+2026-03-15 13:54:22,068{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	6
+2026-03-15 13:54:22,212{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:22,214{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	6
+2026-03-15 13:54:22,353{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:invoke	:write	24
+2026-03-15 13:54:22,355{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:ok	:write	24
+2026-03-15 13:54:22,364{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:22,365{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	24
+2026-03-15 13:54:22,548{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:22,549{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	24
+2026-03-15 13:54:22,578{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	88
+2026-03-15 13:54:22,579{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	88
+2026-03-15 13:54:22,643{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:invoke	:read	nil
+2026-03-15 13:54:22,644{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:ok	:read	88
+2026-03-15 13:54:22,658{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	17
+2026-03-15 13:54:22,659{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	17
+2026-03-15 13:54:22,726{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:22,728{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	17
+2026-03-15 13:54:22,801{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:22,803{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	17
+2026-03-15 13:54:22,995{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:invoke	:write	17
+2026-03-15 13:54:22,996{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:ok	:write	17
+2026-03-15 13:54:23,175{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:23,177{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	17
+2026-03-15 13:54:23,299{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	13
+2026-03-15 13:54:23,301{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	13
+2026-03-15 13:54:23,393{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:23,394{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	13
+2026-03-15 13:54:23,452{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:invoke	:write	55
+2026-03-15 13:54:23,453{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:ok	:write	55
+2026-03-15 13:54:23,574{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:23,575{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	55
+2026-03-15 13:54:23,593{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	68
+2026-03-15 13:54:23,594{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	68
+2026-03-15 13:54:23,736{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	6
+2026-03-15 13:54:23,738{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	6
+2026-03-15 13:54:23,800{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:invoke	:read	nil
+2026-03-15 13:54:23,801{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:ok	:read	6
+2026-03-15 13:54:23,869{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:23,870{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	6
+2026-03-15 13:54:23,895{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:23,897{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	6
+2026-03-15 13:54:24,066{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:24,068{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	6
+2026-03-15 13:54:24,091{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:invoke	:read	nil
+2026-03-15 13:54:24,092{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:ok	:read	6
+2026-03-15 13:54:24,167{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	33
+2026-03-15 13:54:24,168{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	33
+2026-03-15 13:54:24,262{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:24,264{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	33
+2026-03-15 13:54:24,327{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:24,328{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	33
+2026-03-15 13:54:24,388{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:invoke	:read	nil
+2026-03-15 13:54:24,389{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:ok	:read	33
+2026-03-15 13:54:24,492{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:24,493{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	33
+2026-03-15 13:54:24,667{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	79
+2026-03-15 13:54:24,668{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	79
+2026-03-15 13:54:24,815{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:24,816{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	79
+2026-03-15 13:54:24,848{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:invoke	:read	nil
+2026-03-15 13:54:24,849{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:ok	:read	79
+2026-03-15 13:54:25,001{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	84
+2026-03-15 13:54:25,002{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	84
+2026-03-15 13:54:25,150{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	25
+2026-03-15 13:54:25,151{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	25
+2026-03-15 13:54:25,218{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	31
+2026-03-15 13:54:25,219{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	31
+2026-03-15 13:54:25,378{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:invoke	:write	69
+2026-03-15 13:54:25,380{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:ok	:write	69
+2026-03-15 13:54:25,481{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:25,483{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	69
+2026-03-15 13:54:25,512{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:25,514{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	69
+2026-03-15 13:54:25,690{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:25,691{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	69
+2026-03-15 13:54:25,887{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:invoke	:write	40
+2026-03-15 13:54:25,888{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:ok	:write	40
+2026-03-15 13:54:25,957{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:25,958{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	40
+2026-03-15 13:54:25,988{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:25,990{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	40
+2026-03-15 13:54:26,149{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	85
+2026-03-15 13:54:26,151{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	85
+2026-03-15 13:54:26,340{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:invoke	:write	74
+2026-03-15 13:54:26,342{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:ok	:write	74
+2026-03-15 13:54:26,461{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	63
+2026-03-15 13:54:26,462{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	63
+2026-03-15 13:54:26,618{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:26,619{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	63
+2026-03-15 13:54:26,809{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:26,810{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	63
+2026-03-15 13:54:26,835{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:invoke	:write	84
+2026-03-15 13:54:26,836{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:ok	:write	84
+2026-03-15 13:54:26,993{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	43
+2026-03-15 13:54:26,994{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	43
+2026-03-15 13:54:27,185{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	80
+2026-03-15 13:54:27,187{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	80
+2026-03-15 13:54:27,265{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	36
+2026-03-15 13:54:27,266{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	36
+2026-03-15 13:54:27,421{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:invoke	:write	0
+2026-03-15 13:54:27,422{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:ok	:write	0
+2026-03-15 13:54:27,448{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:27,449{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	0
+2026-03-15 13:54:27,553{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:27,554{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	0
+2026-03-15 13:54:27,698{GMT}	INFO	[jepsen worker nemesis] jepsen.util: :nemesis	:info	:start-partition	nil
+2026-03-15 13:54:27,709{GMT}	INFO	[jepsen worker nemesis] jepsen.util: :nemesis	:info	:start-partition	[:isolated {"n2" #{"n1" "n3"}, "n1" #{"n2"}, "n3" #{"n2"}}]
+2026-03-15 13:54:27,717{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:27,718{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	0
+2026-03-15 13:54:27,758{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:27,760{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	0
+2026-03-15 13:54:27,832{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:27,834{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	0
+2026-03-15 13:54:27,880{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:invoke	:write	63
+2026-03-15 13:54:27,948{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	43
+2026-03-15 13:54:27,949{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	43
+2026-03-15 13:54:28,035{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:28,036{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	43
+2026-03-15 13:54:28,082{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:28,083{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	43
+2026-03-15 13:54:28,156{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	15
+2026-03-15 13:54:28,156{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	15
+2026-03-15 13:54:28,276{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	78
+2026-03-15 13:54:28,277{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	78
+2026-03-15 13:54:28,301{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	47
+2026-03-15 13:54:28,302{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	47
+2026-03-15 13:54:28,405{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:28,406{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	47
+2026-03-15 13:54:28,419{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	38
+2026-03-15 13:54:28,420{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	38
+2026-03-15 13:54:28,476{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:28,477{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	38
+2026-03-15 13:54:28,610{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	70
+2026-03-15 13:54:28,611{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	70
+2026-03-15 13:54:28,710{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:28,711{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	70
+2026-03-15 13:54:28,851{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	80
+2026-03-15 13:54:28,852{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	80
+2026-03-15 13:54:28,941{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	69
+2026-03-15 13:54:28,942{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	69
+2026-03-15 13:54:28,957{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	48
+2026-03-15 13:54:28,958{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	48
+2026-03-15 13:54:29,151{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	42
+2026-03-15 13:54:29,153{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	42
+2026-03-15 13:54:29,176{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	87
+2026-03-15 13:54:29,177{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	87
+2026-03-15 13:54:29,242{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:29,243{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	87
+2026-03-15 13:54:29,441{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	11
+2026-03-15 13:54:29,443{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	11
+2026-03-15 13:54:29,612{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	10
+2026-03-15 13:54:29,613{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	10
+2026-03-15 13:54:29,761{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:29,762{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	10
+2026-03-15 13:54:29,904{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	75
+2026-03-15 13:54:29,905{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	75
+2026-03-15 13:54:29,971{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:29,972{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	75
+2026-03-15 13:54:30,077{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:30,078{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	75
+2026-03-15 13:54:30,101{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:30,102{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	75
+2026-03-15 13:54:30,152{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:30,153{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	75
+2026-03-15 13:54:30,166{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	99
+2026-03-15 13:54:30,167{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	99
+2026-03-15 13:54:30,348{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:30,350{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	99
+2026-03-15 13:54:30,413{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	99
+2026-03-15 13:54:30,415{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	99
+2026-03-15 13:54:30,445{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:30,447{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	99
+2026-03-15 13:54:30,577{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	55
+2026-03-15 13:54:30,579{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	55
+2026-03-15 13:54:30,772{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:30,773{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	55
+2026-03-15 13:54:30,790{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	47
+2026-03-15 13:54:30,791{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	47
+2026-03-15 13:54:30,870{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:30,871{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	47
+2026-03-15 13:54:31,015{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	66
+2026-03-15 13:54:31,016{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	66
+2026-03-15 13:54:31,048{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	95
+2026-03-15 13:54:31,049{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	95
+2026-03-15 13:54:31,156{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:31,158{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	95
+2026-03-15 13:54:31,331{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:31,332{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	95
+2026-03-15 13:54:31,398{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:31,400{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	95
+2026-03-15 13:54:31,510{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:31,512{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	95
+2026-03-15 13:54:31,559{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:31,560{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	95
+2026-03-15 13:54:31,622{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	24
+2026-03-15 13:54:31,623{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	24
+2026-03-15 13:54:31,720{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:31,722{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	24
+2026-03-15 13:54:31,753{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	3
+2026-03-15 13:54:31,755{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	3
+2026-03-15 13:54:31,911{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	24
+2026-03-15 13:54:31,911{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	24
+2026-03-15 13:54:32,065{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:32,066{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	24
+2026-03-15 13:54:32,154{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:32,155{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	24
+2026-03-15 13:54:32,308{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:32,309{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	24
+2026-03-15 13:54:32,311{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	69
+2026-03-15 13:54:32,312{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	69
+2026-03-15 13:54:32,369{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	97
+2026-03-15 13:54:32,370{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	97
+2026-03-15 13:54:32,473{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	34
+2026-03-15 13:54:32,475{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	34
+2026-03-15 13:54:32,513{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:32,514{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	34
+2026-03-15 13:54:32,607{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	25
+2026-03-15 13:54:32,608{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	25
+2026-03-15 13:54:32,709{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:32,710{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	25
+2026-03-15 13:54:32,884{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	39
+2026-03-15 13:54:32,885{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	39
+2026-03-15 13:54:32,886{GMT}	INFO	[jepsen worker 1] jepsen.util: 1	:info	:write	63	:timeout
+2026-03-15 13:54:33,019{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:33,020{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	39
+2026-03-15 13:54:33,130{GMT}	INFO	[jepsen worker 1] jepsen.util: 4	:invoke	:write	58
+2026-03-15 13:54:33,189{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:33,190{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	39
+2026-03-15 13:54:33,269{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:33,270{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	39
+2026-03-15 13:54:33,342{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:33,343{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	39
+2026-03-15 13:54:33,402{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:33,403{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	39
+2026-03-15 13:54:33,582{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:33,583{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	39
+2026-03-15 13:54:33,678{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	10
+2026-03-15 13:54:33,679{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	10
+2026-03-15 13:54:33,746{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	93
+2026-03-15 13:54:33,747{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	93
+2026-03-15 13:54:33,748{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	85
+2026-03-15 13:54:33,749{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	85
+2026-03-15 13:54:33,767{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	44
+2026-03-15 13:54:33,768{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	44
+2026-03-15 13:54:33,804{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:33,805{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	44
+2026-03-15 13:54:33,831{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	10
+2026-03-15 13:54:33,832{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	10
+2026-03-15 13:54:33,995{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:33,995{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	10
+2026-03-15 13:54:34,171{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:34,172{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	10
+2026-03-15 13:54:34,271{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	34
+2026-03-15 13:54:34,272{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	34
+2026-03-15 13:54:34,275{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	63
+2026-03-15 13:54:34,276{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	63
+2026-03-15 13:54:34,378{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	74
+2026-03-15 13:54:34,379{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	74
+2026-03-15 13:54:34,529{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	97
+2026-03-15 13:54:34,530{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	97
+2026-03-15 13:54:34,693{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	50
+2026-03-15 13:54:34,694{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	50
+2026-03-15 13:54:34,771{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	1
+2026-03-15 13:54:34,772{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	1
+2026-03-15 13:54:34,801{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:34,802{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	1
+2026-03-15 13:54:34,928{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:34,929{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	1
+2026-03-15 13:54:34,959{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:34,960{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	1
+2026-03-15 13:54:35,078{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	82
+2026-03-15 13:54:35,079{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	82
+2026-03-15 13:54:35,255{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:35,256{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	82
+2026-03-15 13:54:35,326{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	85
+2026-03-15 13:54:35,327{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	85
+2026-03-15 13:54:35,394{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	44
+2026-03-15 13:54:35,395{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	44
+2026-03-15 13:54:35,506{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	96
+2026-03-15 13:54:35,507{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	96
+2026-03-15 13:54:35,624{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	32
+2026-03-15 13:54:35,626{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	32
+2026-03-15 13:54:35,740{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:35,741{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	32
+2026-03-15 13:54:35,807{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:35,808{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	32
+2026-03-15 13:54:35,916{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:35,917{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	32
+2026-03-15 13:54:36,040{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:36,040{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	32
+2026-03-15 13:54:36,112{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	82
+2026-03-15 13:54:36,113{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	82
+2026-03-15 13:54:36,243{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	86
+2026-03-15 13:54:36,244{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	86
+2026-03-15 13:54:36,423{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	79
+2026-03-15 13:54:36,424{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	79
+2026-03-15 13:54:36,471{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:36,472{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	79
+2026-03-15 13:54:36,615{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	8
+2026-03-15 13:54:36,617{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	8
+2026-03-15 13:54:36,675{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:36,676{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	8
+2026-03-15 13:54:36,798{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:36,799{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	8
+2026-03-15 13:54:36,927{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:36,928{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	8
+2026-03-15 13:54:37,001{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	20
+2026-03-15 13:54:37,002{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	20
+2026-03-15 13:54:37,140{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:37,142{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	20
+2026-03-15 13:54:37,206{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:37,207{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	20
+2026-03-15 13:54:37,257{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	70
+2026-03-15 13:54:37,258{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	70
+2026-03-15 13:54:37,322{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	11
+2026-03-15 13:54:37,323{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	11
+2026-03-15 13:54:37,407{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	15
+2026-03-15 13:54:37,408{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	15
+2026-03-15 13:54:37,526{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	45
+2026-03-15 13:54:37,527{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	45
+2026-03-15 13:54:37,572{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:37,573{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	45
+2026-03-15 13:54:37,590{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:37,591{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	45
+2026-03-15 13:54:37,666{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	65
+2026-03-15 13:54:37,667{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	65
+2026-03-15 13:54:37,668{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	99
+2026-03-15 13:54:37,669{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	99
+2026-03-15 13:54:37,762{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	3
+2026-03-15 13:54:37,763{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	3
+2026-03-15 13:54:37,897{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	72
+2026-03-15 13:54:37,898{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	72
+2026-03-15 13:54:38,082{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	31
+2026-03-15 13:54:38,083{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	31
+2026-03-15 13:54:38,100{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	52
+2026-03-15 13:54:38,101{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	52
+2026-03-15 13:54:38,109{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	95
+2026-03-15 13:54:38,110{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	95
+2026-03-15 13:54:38,136{GMT}	INFO	[jepsen worker 1] jepsen.util: 4	:info	:write	58	:timeout
+2026-03-15 13:54:38,176{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:38,177{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	95
+2026-03-15 13:54:38,253{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:38,254{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	95
+2026-03-15 13:54:38,282{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:38,283{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	95
+2026-03-15 13:54:38,295{GMT}	INFO	[jepsen worker 1] jepsen.util: 7	:invoke	:write	75
+2026-03-15 13:54:38,444{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:38,445{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	95
+2026-03-15 13:54:38,530{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:38,531{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	95
+2026-03-15 13:54:38,727{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:38,729{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	95
+2026-03-15 13:54:38,832{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:38,833{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	95
+2026-03-15 13:54:38,985{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	75
+2026-03-15 13:54:38,987{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	75
+2026-03-15 13:54:39,074{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	84
+2026-03-15 13:54:39,076{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	84
+2026-03-15 13:54:39,252{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:39,254{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	84
+2026-03-15 13:54:39,279{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:39,279{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	84
+2026-03-15 13:54:39,442{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	80
+2026-03-15 13:54:39,444{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	80
+2026-03-15 13:54:39,464{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:39,465{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	80
+2026-03-15 13:54:39,541{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:39,542{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	80
+2026-03-15 13:54:39,720{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	98
+2026-03-15 13:54:39,721{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	98
+2026-03-15 13:54:39,873{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:39,874{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	98
+2026-03-15 13:54:40,023{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:40,025{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	98
+2026-03-15 13:54:40,167{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	95
+2026-03-15 13:54:40,168{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	95
+2026-03-15 13:54:40,272{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	24
+2026-03-15 13:54:40,273{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	24
+2026-03-15 13:54:40,395{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:40,396{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	24
+2026-03-15 13:54:40,442{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	60
+2026-03-15 13:54:40,443{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	60
+2026-03-15 13:54:40,559{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	89
+2026-03-15 13:54:40,560{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	89
+2026-03-15 13:54:40,746{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	75
+2026-03-15 13:54:40,748{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	75
+2026-03-15 13:54:40,865{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:40,867{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	75
+2026-03-15 13:54:41,038{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:41,040{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	75
+2026-03-15 13:54:41,172{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	25
+2026-03-15 13:54:41,173{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	25
+2026-03-15 13:54:41,177{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	76
+2026-03-15 13:54:41,178{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	76
+2026-03-15 13:54:41,353{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:41,354{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	76
+2026-03-15 13:54:41,516{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:41,517{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	76
+2026-03-15 13:54:41,586{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	31
+2026-03-15 13:54:41,588{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	31
+2026-03-15 13:54:41,758{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:41,760{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	31
+2026-03-15 13:54:41,822{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:41,823{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	31
+2026-03-15 13:54:42,022{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:42,023{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	31
+2026-03-15 13:54:42,138{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	12
+2026-03-15 13:54:42,139{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	12
+2026-03-15 13:54:42,333{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:42,334{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	12
+2026-03-15 13:54:42,473{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	24
+2026-03-15 13:54:42,474{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	24
+2026-03-15 13:54:42,650{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	1
+2026-03-15 13:54:42,651{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	1
+2026-03-15 13:54:42,693{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:42,695{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	1
+2026-03-15 13:54:42,709{GMT}	INFO	[jepsen worker nemesis] jepsen.util: :nemesis	:info	:stop-partition	nil
+2026-03-15 13:54:42,768{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	43
+2026-03-15 13:54:42,770{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	43
+2026-03-15 13:54:42,784{GMT}	INFO	[jepsen worker nemesis] jepsen.util: :nemesis	:info	:stop-partition	:network-healed
+2026-03-15 13:54:42,844{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	11
+2026-03-15 13:54:42,846{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	11
+2026-03-15 13:54:42,947{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:42,948{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	11
+2026-03-15 13:54:43,138{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:43,139{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	11
+2026-03-15 13:54:43,258{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:43,260{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	11
+2026-03-15 13:54:43,301{GMT}	INFO	[jepsen worker 1] jepsen.util: 7	:info	:write	75	:timeout
+2026-03-15 13:54:43,409{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:43,410{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	11
+2026-03-15 13:54:43,446{GMT}	INFO	[jepsen worker 1] jepsen.util: 10	:invoke	:write	7
+2026-03-15 13:54:43,536{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	98
+2026-03-15 13:54:43,538{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	98
+2026-03-15 13:54:43,600{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:43,602{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	98
+2026-03-15 13:54:43,697{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:43,698{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	98
+2026-03-15 13:54:43,830{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:43,832{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	98
+2026-03-15 13:54:43,863{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	84
+2026-03-15 13:54:43,863{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	84
+2026-03-15 13:54:43,881{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	46
+2026-03-15 13:54:43,882{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	46
+2026-03-15 13:54:43,901{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	29
+2026-03-15 13:54:43,902{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	29
+2026-03-15 13:54:43,925{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	89
+2026-03-15 13:54:43,926{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	89
+2026-03-15 13:54:43,991{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:43,992{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	89
+2026-03-15 13:54:44,164{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:44,166{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	89
+2026-03-15 13:54:44,363{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:44,364{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	89
+2026-03-15 13:54:44,401{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:44,402{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	89
+2026-03-15 13:54:44,542{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	19
+2026-03-15 13:54:44,543{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	19
+2026-03-15 13:54:44,545{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:44,546{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	19
+2026-03-15 13:54:44,576{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:44,577{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	19
+2026-03-15 13:54:44,658{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	98
+2026-03-15 13:54:44,659{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	98
+2026-03-15 13:54:44,851{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:44,852{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	98
+2026-03-15 13:54:44,966{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	76
+2026-03-15 13:54:44,967{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	76
+2026-03-15 13:54:45,122{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:45,123{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	76
+2026-03-15 13:54:45,157{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	25
+2026-03-15 13:54:45,158{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	25
+2026-03-15 13:54:45,208{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	62
+2026-03-15 13:54:45,210{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	62
+2026-03-15 13:54:45,350{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	58
+2026-03-15 13:54:45,351{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	58
+2026-03-15 13:54:45,506{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	14
+2026-03-15 13:54:45,508{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	14
+2026-03-15 13:54:45,526{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:45,528{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	14
+2026-03-15 13:54:45,644{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	79
+2026-03-15 13:54:45,645{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	79
+2026-03-15 13:54:45,793{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	14
+2026-03-15 13:54:45,795{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	14
+2026-03-15 13:54:45,808{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:45,809{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	14
+2026-03-15 13:54:45,814{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:45,815{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	14
+2026-03-15 13:54:45,903{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	7
+2026-03-15 13:54:45,904{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	7
+2026-03-15 13:54:46,049{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	54
+2026-03-15 13:54:46,050{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	54
+2026-03-15 13:54:46,218{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:46,220{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	54
+2026-03-15 13:54:46,337{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:46,339{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	54
+2026-03-15 13:54:46,372{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	19
+2026-03-15 13:54:46,373{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	19
+2026-03-15 13:54:46,464{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	54
+2026-03-15 13:54:46,466{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	54
+2026-03-15 13:54:46,621{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:46,622{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	54
+2026-03-15 13:54:46,736{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	11
+2026-03-15 13:54:46,737{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	11
+2026-03-15 13:54:46,811{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:46,812{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	11
+2026-03-15 13:54:46,986{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:46,988{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	11
+2026-03-15 13:54:47,089{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	16
+2026-03-15 13:54:47,090{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	16
+2026-03-15 13:54:47,130{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:47,131{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	16
+2026-03-15 13:54:47,255{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	7
+2026-03-15 13:54:47,257{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	7
+2026-03-15 13:54:47,354{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	39
+2026-03-15 13:54:47,355{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	39
+2026-03-15 13:54:47,403{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	52
+2026-03-15 13:54:47,404{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:write	52
+2026-03-15 13:54:47,498{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	19
+2026-03-15 13:54:47,500{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	19
+2026-03-15 13:54:47,528{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:47,529{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	19
+2026-03-15 13:54:47,598{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:47,599{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	19
+2026-03-15 13:54:47,747{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:47,748{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	19
+2026-03-15 13:54:47,784{GMT}	INFO	[jepsen worker nemesis] jepsen.util: :nemesis	:info	:crash-node	nil
+2026-03-15 13:54:47,785{GMT}	INFO	[jepsen worker nemesis] jepsen.omnipaxos.nemesis: nemesis crashing node n1
+2026-03-15 13:54:47,785{GMT}	INFO	[jepsen node n1] jepsen.control.util: Stopping /opt/omnipaxos/api-shim with signal :-9
+2026-03-15 13:54:47,814{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	43
+2026-03-15 13:54:47,815{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	43
+2026-03-15 13:54:47,954{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:47,955{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:54:48,062{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	2
+2026-03-15 13:54:48,063{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	2	:connection-refused
+2026-03-15 13:54:48,258{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:48,260{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	43
+2026-03-15 13:54:48,433{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:48,434{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	43
+2026-03-15 13:54:48,453{GMT}	INFO	[jepsen worker 1] jepsen.util: 10	:info	:write	7	:timeout
+2026-03-15 13:54:48,624{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	67
+2026-03-15 13:54:48,625{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	67	:connection-refused
+2026-03-15 13:54:48,744{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	94
+2026-03-15 13:54:48,744{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	94	:connection-refused
+2026-03-15 13:54:48,750{GMT}	INFO	[jepsen worker 1] jepsen.util: 13	:invoke	:read	nil
+2026-03-15 13:54:48,760{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:48,761{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	43
+2026-03-15 13:54:48,796{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	26
+2026-03-15 13:54:48,797{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	26	:connection-refused
+2026-03-15 13:54:48,880{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:48,881{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:54:49,043{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	0
+2026-03-15 13:54:49,044{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	0
+2026-03-15 13:54:49,185{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:49,187{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	0
+2026-03-15 13:54:49,270{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:49,271{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:54:49,353{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	85
+2026-03-15 13:54:49,354{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	85	:connection-refused
+2026-03-15 13:54:49,462{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:49,463{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	0
+2026-03-15 13:54:49,493{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:49,494{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	0
+2026-03-15 13:54:49,510{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	37
+2026-03-15 13:54:49,511{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	37	:connection-refused
+2026-03-15 13:54:49,606{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:49,607{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:54:49,668{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	31
+2026-03-15 13:54:49,669{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:write	31
+2026-03-15 13:54:49,831{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:read	nil
+2026-03-15 13:54:49,833{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:ok	:read	31
+2026-03-15 13:54:49,833{GMT}	INFO	[jepsen node n1] jepsen.control.util: Stopping /opt/omnipaxos/server with signal :-9
+2026-03-15 13:54:49,973{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	4
+2026-03-15 13:54:49,974{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	4	:connection-refused
+2026-03-15 13:54:50,167{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:50,168{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:54:50,293{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:invoke	:write	90
+2026-03-15 13:54:50,458{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:50,459{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:54:50,549{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:50,550{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:54:50,726{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:50,726{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:54:50,890{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	40
+2026-03-15 13:54:50,890{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	40	:connection-refused
+2026-03-15 13:54:51,014{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:51,015{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:54:51,093{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	57
+2026-03-15 13:54:51,094{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	57	:connection-refused
+2026-03-15 13:54:51,143{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	91
+2026-03-15 13:54:51,144{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	91	:connection-refused
+2026-03-15 13:54:51,191{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:51,191{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:54:51,196{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	79
+2026-03-15 13:54:51,196{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	79	:connection-refused
+2026-03-15 13:54:51,232{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	46
+2026-03-15 13:54:51,233{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	46	:connection-refused
+2026-03-15 13:54:51,420{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:51,421{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:54:51,498{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:51,498{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:54:51,574{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	96
+2026-03-15 13:54:51,575{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	96	:connection-refused
+2026-03-15 13:54:51,644{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	15
+2026-03-15 13:54:51,645{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	15	:connection-refused
+2026-03-15 13:54:51,719{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	71
+2026-03-15 13:54:51,720{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	71	:connection-refused
+2026-03-15 13:54:51,867{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:51,868{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:54:51,921{GMT}	INFO	[jepsen worker nemesis] jepsen.util: :nemesis	:info	:crash-node	"n1"
+2026-03-15 13:54:51,994{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	73
+2026-03-15 13:54:51,995{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	73	:connection-refused
+2026-03-15 13:54:52,047{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:52,048{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:54:52,187{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:52,188{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:54:52,231{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	27
+2026-03-15 13:54:52,232{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	27	:connection-refused
+2026-03-15 13:54:52,365{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	33
+2026-03-15 13:54:52,365{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	33	:connection-refused
+2026-03-15 13:54:52,404{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	83
+2026-03-15 13:54:52,405{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	83	:connection-refused
+2026-03-15 13:54:52,554{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:52,555{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:54:52,664{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:52,665{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:54:52,709{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	38
+2026-03-15 13:54:52,709{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	38	:connection-refused
+2026-03-15 13:54:52,788{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	8
+2026-03-15 13:54:52,789{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	8	:connection-refused
+2026-03-15 13:54:52,870{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:52,871{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:54:52,911{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:52,912{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:54:53,110{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	51
+2026-03-15 13:54:53,111{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	51	:connection-refused
+2026-03-15 13:54:53,212{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:53,213{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:54:53,243{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	72
+2026-03-15 13:54:53,244{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	72	:connection-refused
+2026-03-15 13:54:53,326{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:53,326{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:54:53,380{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	90
+2026-03-15 13:54:53,381{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	90	:connection-refused
+2026-03-15 13:54:53,477{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:53,477{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:54:53,656{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	95
+2026-03-15 13:54:53,657{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	95	:connection-refused
+2026-03-15 13:54:53,756{GMT}	INFO	[jepsen worker 1] jepsen.util: 13	:info	:read	nil	:timeout
+2026-03-15 13:54:53,849{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:53,849{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:54:53,863{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	55
+2026-03-15 13:54:53,864{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	55	:connection-refused
+2026-03-15 13:54:53,979{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	85
+2026-03-15 13:54:53,980{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	85	:connection-refused
+2026-03-15 13:54:54,071{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:54:54,117{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:54,118{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:54:54,238{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	82
+2026-03-15 13:54:54,238{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	82	:connection-refused
+2026-03-15 13:54:54,279{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	19
+2026-03-15 13:54:54,280{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	19	:connection-refused
+2026-03-15 13:54:54,309{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	40
+2026-03-15 13:54:54,310{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	40	:connection-refused
+2026-03-15 13:54:54,467{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	60
+2026-03-15 13:54:54,468{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	60	:connection-refused
+2026-03-15 13:54:54,477{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:54,478{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:54:54,620{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	43
+2026-03-15 13:54:54,621{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	43	:connection-refused
+2026-03-15 13:54:54,711{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:54,711{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:54:54,863{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:54,863{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:54:54,927{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	84
+2026-03-15 13:54:54,927{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	84	:connection-refused
+2026-03-15 13:54:55,017{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:55,018{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:54:55,199{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:55,200{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:54:55,299{GMT}	INFO	[jepsen worker 2] jepsen.util: 2	:info	:write	90	:timeout
+2026-03-15 13:54:55,383{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:read	nil
+2026-03-15 13:54:55,435{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:55,435{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:54:55,603{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	9
+2026-03-15 13:54:55,603{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	9	:connection-refused
+2026-03-15 13:54:55,604{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:55,604{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:54:55,687{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	37
+2026-03-15 13:54:55,688{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	37	:connection-refused
+2026-03-15 13:54:55,877{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:55,877{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:54:56,023{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:56,024{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:54:56,109{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	42
+2026-03-15 13:54:56,110{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	42	:connection-refused
+2026-03-15 13:54:56,201{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	38
+2026-03-15 13:54:56,202{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	38	:connection-refused
+2026-03-15 13:54:56,235{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:read	7
+2026-03-15 13:54:56,235{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	7
+2026-03-15 13:54:56,317{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:56,317{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:54:56,493{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:56,494{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:54:56,495{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	39
+2026-03-15 13:54:56,496{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	39
+2026-03-15 13:54:56,521{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:write	84
+2026-03-15 13:54:56,526{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:write	84
+2026-03-15 13:54:56,675{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:56,675{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:54:56,759{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	34
+2026-03-15 13:54:56,760{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	34	:connection-refused
+2026-03-15 13:54:56,922{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:54:56,922{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	84
+2026-03-15 13:54:56,930{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:read	nil
+2026-03-15 13:54:56,931{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:read	84
+2026-03-15 13:54:57,070{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:57,070{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:54:57,198{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	54
+2026-03-15 13:54:57,199{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	54	:connection-refused
+2026-03-15 13:54:57,386{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:54:57,387{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	84
+2026-03-15 13:54:57,584{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:write	20
+2026-03-15 13:54:57,585{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:write	20
+2026-03-15 13:54:57,711{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:57,712{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:54:57,736{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:57,736{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:54:57,759{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	26
+2026-03-15 13:54:57,760{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	26
+2026-03-15 13:54:57,761{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:read	nil
+2026-03-15 13:54:57,762{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:read	26
+2026-03-15 13:54:57,932{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:57,933{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:54:58,110{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	25
+2026-03-15 13:54:58,111{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	25	:connection-refused
+2026-03-15 13:54:58,147{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:54:58,148{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	26
+2026-03-15 13:54:58,172{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:read	nil
+2026-03-15 13:54:58,173{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:read	26
+2026-03-15 13:54:58,323{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	86
+2026-03-15 13:54:58,323{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	86	:connection-refused
+2026-03-15 13:54:58,395{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:58,396{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:54:58,501{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:54:58,502{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	26
+2026-03-15 13:54:58,510{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:read	nil
+2026-03-15 13:54:58,511{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:read	26
+2026-03-15 13:54:58,643{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	99
+2026-03-15 13:54:58,643{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	99	:connection-refused
+2026-03-15 13:54:58,673{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:58,674{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:54:58,753{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	92
+2026-03-15 13:54:58,754{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	92
+2026-03-15 13:54:58,938{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:write	1
+2026-03-15 13:54:58,939{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:write	1
+2026-03-15 13:54:58,951{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:58,951{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:54:58,977{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	87
+2026-03-15 13:54:58,977{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	87	:connection-refused
+2026-03-15 13:54:59,149{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:54:59,150{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	1
+2026-03-15 13:54:59,256{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:read	nil
+2026-03-15 13:54:59,257{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:read	1
+2026-03-15 13:54:59,272{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	40
+2026-03-15 13:54:59,272{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	40	:connection-refused
+2026-03-15 13:54:59,345{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	98
+2026-03-15 13:54:59,346{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	98	:connection-refused
+2026-03-15 13:54:59,436{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	26
+2026-03-15 13:54:59,437{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	26
+2026-03-15 13:54:59,505{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:read	nil
+2026-03-15 13:54:59,506{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:read	26
+2026-03-15 13:54:59,666{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	45
+2026-03-15 13:54:59,666{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	45	:connection-refused
+2026-03-15 13:54:59,830{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:54:59,831{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:54:59,959{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	95
+2026-03-15 13:54:59,960{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	95
+2026-03-15 13:55:00,033{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:write	17
+2026-03-15 13:55:00,033{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:write	17
+2026-03-15 13:55:00,194{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:55:00,195{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:00,217{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:55:00,217{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:00,390{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:00,391{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	17
+2026-03-15 13:55:00,568{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:read	nil
+2026-03-15 13:55:00,569{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:read	17
+2026-03-15 13:55:00,662{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	89
+2026-03-15 13:55:00,662{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	89	:connection-refused
+2026-03-15 13:55:00,833{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:55:00,833{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:00,938{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:00,939{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	17
+2026-03-15 13:55:01,136{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:read	nil
+2026-03-15 13:55:01,138{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:read	17
+2026-03-15 13:55:01,160{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:55:01,161{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:01,269{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:55:01,269{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:01,282{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	52
+2026-03-15 13:55:01,283{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	52
+2026-03-15 13:55:01,360{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:read	nil
+2026-03-15 13:55:01,361{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:read	52
+2026-03-15 13:55:01,547{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:55:01,552{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:01,554{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:55:01,555{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:01,640{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	66
+2026-03-15 13:55:01,641{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	66
+2026-03-15 13:55:01,738{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:read	nil
+2026-03-15 13:55:01,739{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:read	66
+2026-03-15 13:55:01,813{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:55:01,813{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:01,850{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:55:01,850{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:01,921{GMT}	INFO	[jepsen worker nemesis] jepsen.util: :nemesis	:info	:recover-node	nil
+2026-03-15 13:55:01,921{GMT}	INFO	[jepsen worker nemesis] jepsen.omnipaxos.nemesis: nemesis recovering node n1
+2026-03-15 13:55:01,921{GMT}	INFO	[jepsen node n1] jepsen.control.util: Starting env
+2026-03-15 13:55:02,039{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:read	nil
+2026-03-15 13:55:02,040{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:read	66
+2026-03-15 13:55:02,232{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	42
+2026-03-15 13:55:02,233{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	42	:connection-refused
+2026-03-15 13:55:02,258{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:55:02,259{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:02,436{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	27
+2026-03-15 13:55:02,437{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	27
+2026-03-15 13:55:02,468{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:read	nil
+2026-03-15 13:55:02,469{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:read	27
+2026-03-15 13:55:02,547{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:55:02,548{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:02,708{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	99
+2026-03-15 13:55:02,709{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	99	:connection-refused
+2026-03-15 13:55:02,744{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	11
+2026-03-15 13:55:02,745{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	11
+2026-03-15 13:55:02,799{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:read	nil
+2026-03-15 13:55:02,800{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:read	11
+2026-03-15 13:55:02,960{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:55:02,960{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:03,000{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:55:03,001{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:03,055{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:03,056{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	11
+2026-03-15 13:55:03,103{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:read	nil
+2026-03-15 13:55:03,104{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:read	11
+2026-03-15 13:55:03,256{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:55:03,257{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:03,323{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	7
+2026-03-15 13:55:03,324{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	7	:connection-refused
+2026-03-15 13:55:03,350{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	78
+2026-03-15 13:55:03,352{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	78
+2026-03-15 13:55:03,438{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:write	34
+2026-03-15 13:55:03,439{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:write	34
+2026-03-15 13:55:03,636{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	96
+2026-03-15 13:55:03,637{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	96	:connection-refused
+2026-03-15 13:55:03,660{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	53
+2026-03-15 13:55:03,660{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	53	:connection-refused
+2026-03-15 13:55:03,705{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:03,706{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	34
+2026-03-15 13:55:03,798{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:read	nil
+2026-03-15 13:55:03,799{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:read	34
+2026-03-15 13:55:03,828{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:55:03,829{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:03,887{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	76
+2026-03-15 13:55:03,888{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	76	:connection-refused
+2026-03-15 13:55:04,035{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	98
+2026-03-15 13:55:04,035{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	98
+2026-03-15 13:55:04,112{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:write	21
+2026-03-15 13:55:04,113{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:write	21
+2026-03-15 13:55:04,138{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	53
+2026-03-15 13:55:04,138{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	53	:connection-refused
+2026-03-15 13:55:04,198{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:55:04,198{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:04,201{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:04,202{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	21
+2026-03-15 13:55:04,352{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:read	nil
+2026-03-15 13:55:04,353{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:read	21
+2026-03-15 13:55:04,417{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:55:04,418{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:04,506{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	26
+2026-03-15 13:55:04,507{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:write	26	:connection-refused
+2026-03-15 13:55:04,575{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	66
+2026-03-15 13:55:04,576{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	66
+2026-03-15 13:55:04,677{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:read	nil
+2026-03-15 13:55:04,678{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:read	66
+2026-03-15 13:55:04,736{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:55:04,737{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:04,842{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:55:04,842{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:04,940{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	9
+2026-03-15 13:55:04,941{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	9
+2026-03-15 13:55:04,968{GMT}	INFO	[jepsen node n1] jepsen.control.util: Starting env
+2026-03-15 13:55:05,001{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:write	60
+2026-03-15 13:55:05,002{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:write	60
+2026-03-15 13:55:05,011{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2026-03-15 13:55:05,012{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:05,062{GMT}	INFO	[jepsen node n1] jepsen.omnipaxos.db: n1 api-shim healthy
+2026-03-15 13:55:05,062{GMT}	INFO	[jepsen worker nemesis] jepsen.util: :nemesis	:info	:recover-node	"n1"
+2026-03-15 13:55:05,087{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:05,088{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	60
+2026-03-15 13:55:05,212{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:write	20
+2026-03-15 13:55:05,214{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:write	20
+2026-03-15 13:55:05,237{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:write	74
+2026-03-15 13:55:05,371{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:05,372{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	20
+2026-03-15 13:55:05,523{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	36
+2026-03-15 13:55:05,524{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	36
+2026-03-15 13:55:05,537{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:read	nil
+2026-03-15 13:55:05,538{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:read	36
+2026-03-15 13:55:05,701{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:05,701{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	36
+2026-03-15 13:55:05,885{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	69
+2026-03-15 13:55:05,886{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	69
+2026-03-15 13:55:06,050{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:06,051{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	69
+2026-03-15 13:55:06,216{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:write	64
+2026-03-15 13:55:06,220{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:06,220{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:write	64
+2026-03-15 13:55:06,221{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	64
+2026-03-15 13:55:06,308{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	2
+2026-03-15 13:55:06,309{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	2
+2026-03-15 13:55:06,421{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:06,422{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	2
+2026-03-15 13:55:06,592{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:write	11
+2026-03-15 13:55:06,592{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:write	11
+2026-03-15 13:55:06,720{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:06,721{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	11
+2026-03-15 13:55:06,858{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:06,859{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	11
+2026-03-15 13:55:07,038{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:07,039{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	11
+2026-03-15 13:55:07,169{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:write	74
+2026-03-15 13:55:07,170{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:write	74
+2026-03-15 13:55:07,273{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:07,274{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	74
+2026-03-15 13:55:07,470{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	13
+2026-03-15 13:55:07,471{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	13
+2026-03-15 13:55:07,646{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	49
+2026-03-15 13:55:07,647{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	49
+2026-03-15 13:55:07,775{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:read	nil
+2026-03-15 13:55:07,776{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:read	49
+2026-03-15 13:55:07,897{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:07,898{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	49
+2026-03-15 13:55:08,041{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	62
+2026-03-15 13:55:08,042{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	62
+2026-03-15 13:55:08,220{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	96
+2026-03-15 13:55:08,221{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:read	nil
+2026-03-15 13:55:08,223{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	96
+2026-03-15 13:55:08,223{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:read	96
+2026-03-15 13:55:08,339{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:08,341{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	96
+2026-03-15 13:55:08,482{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	62
+2026-03-15 13:55:08,483{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	62
+2026-03-15 13:55:08,612{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:08,613{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	62
+2026-03-15 13:55:08,701{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:write	82
+2026-03-15 13:55:08,702{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:write	82
+2026-03-15 13:55:08,820{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:08,821{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	82
+2026-03-15 13:55:08,864{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	27
+2026-03-15 13:55:08,865{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	27
+2026-03-15 13:55:09,057{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	69
+2026-03-15 13:55:09,058{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	69
+2026-03-15 13:55:09,147{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:read	nil
+2026-03-15 13:55:09,148{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:read	69
+2026-03-15 13:55:09,186{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	65
+2026-03-15 13:55:09,187{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	65
+2026-03-15 13:55:09,229{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:09,229{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	65
+2026-03-15 13:55:09,300{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	75
+2026-03-15 13:55:09,302{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	75
+2026-03-15 13:55:09,350{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:write	84
+2026-03-15 13:55:09,351{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:write	84
+2026-03-15 13:55:09,376{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:09,377{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	84
+2026-03-15 13:55:09,469{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:09,470{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	84
+2026-03-15 13:55:09,663{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	65
+2026-03-15 13:55:09,664{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	65
+2026-03-15 13:55:09,757{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:write	43
+2026-03-15 13:55:09,758{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:write	43
+2026-03-15 13:55:09,941{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:09,942{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	43
+2026-03-15 13:55:10,023{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	75
+2026-03-15 13:55:10,024{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	75
+2026-03-15 13:55:10,201{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:write	7
+2026-03-15 13:55:10,202{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:write	7
+2026-03-15 13:55:10,240{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:info	:write	74	:timeout
+2026-03-15 13:55:10,378{GMT}	INFO	[jepsen worker 0] jepsen.util: 3	:invoke	:read	nil
+2026-03-15 13:55:10,396{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:10,397{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	7
+2026-03-15 13:55:10,592{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:10,593{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	7
+2026-03-15 13:55:10,624{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:read	nil
+2026-03-15 13:55:10,625{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:read	7
+2026-03-15 13:55:10,811{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	64
+2026-03-15 13:55:10,811{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	64
+2026-03-15 13:55:10,835{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:10,836{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	64
+2026-03-15 13:55:11,035{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:11,035{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	64
+2026-03-15 13:55:11,080{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:read	nil
+2026-03-15 13:55:11,081{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:read	64
+2026-03-15 13:55:11,167{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	30
+2026-03-15 13:55:11,168{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	30
+2026-03-15 13:55:11,349{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	82
+2026-03-15 13:55:11,350{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	82
+2026-03-15 13:55:11,402{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:11,403{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	82
+2026-03-15 13:55:11,451{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:write	16
+2026-03-15 13:55:11,452{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:write	16
+2026-03-15 13:55:11,497{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	34
+2026-03-15 13:55:11,498{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	34
+2026-03-15 13:55:11,676{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:11,677{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	34
+2026-03-15 13:55:11,757{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:11,758{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	34
+2026-03-15 13:55:11,940{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:write	82
+2026-03-15 13:55:11,941{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:write	82
+2026-03-15 13:55:12,069{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	48
+2026-03-15 13:55:12,070{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	48
+2026-03-15 13:55:12,151{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	17
+2026-03-15 13:55:12,152{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	17
+2026-03-15 13:55:12,344{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	59
+2026-03-15 13:55:12,346{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	59
+2026-03-15 13:55:12,536{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:read	nil
+2026-03-15 13:55:12,537{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:read	59
+2026-03-15 13:55:12,642{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:12,643{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	59
+2026-03-15 13:55:12,779{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:12,780{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	59
+2026-03-15 13:55:12,893{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	30
+2026-03-15 13:55:12,893{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	30
+2026-03-15 13:55:13,033{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:write	59
+2026-03-15 13:55:13,034{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:write	59
+2026-03-15 13:55:13,056{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:13,057{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	59
+2026-03-15 13:55:13,196{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	53
+2026-03-15 13:55:13,197{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	53
+2026-03-15 13:55:13,385{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	42
+2026-03-15 13:55:13,387{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	42
+2026-03-15 13:55:13,575{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:read	nil
+2026-03-15 13:55:13,576{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:read	42
+2026-03-15 13:55:13,719{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:13,720{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	42
+2026-03-15 13:55:13,745{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	98
+2026-03-15 13:55:13,745{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	98
+2026-03-15 13:55:13,814{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	77
+2026-03-15 13:55:13,815{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	77
+2026-03-15 13:55:13,936{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:write	11
+2026-03-15 13:55:13,937{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:write	11
+2026-03-15 13:55:14,058{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	41
+2026-03-15 13:55:14,059{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	41
+2026-03-15 13:55:14,081{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:14,082{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	41
+2026-03-15 13:55:14,172{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	15
+2026-03-15 13:55:14,173{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	15
+2026-03-15 13:55:14,174{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:read	nil
+2026-03-15 13:55:14,175{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:read	15
+2026-03-15 13:55:14,362{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	23
+2026-03-15 13:55:14,364{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	23
+2026-03-15 13:55:14,526{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	66
+2026-03-15 13:55:14,528{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	66
+2026-03-15 13:55:14,657{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:14,658{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	66
+2026-03-15 13:55:14,729{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:read	nil
+2026-03-15 13:55:14,730{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:read	66
+2026-03-15 13:55:14,918{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:14,919{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	66
+2026-03-15 13:55:15,034{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:15,035{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	66
+2026-03-15 13:55:15,097{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:15,098{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	66
+2026-03-15 13:55:15,195{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:read	nil
+2026-03-15 13:55:15,196{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:read	66
+2026-03-15 13:55:15,293{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:15,294{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	66
+2026-03-15 13:55:15,383{GMT}	INFO	[jepsen worker 0] jepsen.util: 3	:info	:read	nil	:timeout
+2026-03-15 13:55:15,406{GMT}	INFO	[jepsen worker 0] jepsen.util: 6	:invoke	:read	nil
+2026-03-15 13:55:15,506{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:15,507{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	66
+2026-03-15 13:55:15,700{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:read	nil
+2026-03-15 13:55:15,702{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:read	66
+2026-03-15 13:55:15,751{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	22
+2026-03-15 13:55:15,752{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	22
+2026-03-15 13:55:15,890{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:15,891{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	22
+2026-03-15 13:55:15,907{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:15,908{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	22
+2026-03-15 13:55:15,909{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:read	nil
+2026-03-15 13:55:15,910{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:read	22
+2026-03-15 13:55:15,967{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:15,968{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	22
+2026-03-15 13:55:16,056{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	6
+2026-03-15 13:55:16,058{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	6
+2026-03-15 13:55:16,227{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:16,228{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	6
+2026-03-15 13:55:16,385{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:write	83
+2026-03-15 13:55:16,386{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:write	83
+2026-03-15 13:55:16,430{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:16,431{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	83
+2026-03-15 13:55:16,540{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	19
+2026-03-15 13:55:16,541{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	19
+2026-03-15 13:55:16,573{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:16,574{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	19
+2026-03-15 13:55:16,684{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:read	nil
+2026-03-15 13:55:16,686{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:read	19
+2026-03-15 13:55:16,746{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	24
+2026-03-15 13:55:16,747{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	24
+2026-03-15 13:55:16,868{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	4
+2026-03-15 13:55:16,869{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	4
+2026-03-15 13:55:16,964{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	41
+2026-03-15 13:55:16,965{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	41
+2026-03-15 13:55:16,987{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:write	42
+2026-03-15 13:55:16,988{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:write	42
+2026-03-15 13:55:17,180{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:17,181{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	42
+2026-03-15 13:55:17,368{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:17,369{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	42
+2026-03-15 13:55:17,391{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:17,393{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	42
+2026-03-15 13:55:17,421{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:write	20
+2026-03-15 13:55:17,422{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:write	20
+2026-03-15 13:55:17,453{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:17,454{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	20
+2026-03-15 13:55:17,580{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:17,582{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	20
+2026-03-15 13:55:17,662{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:17,663{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	20
+2026-03-15 13:55:17,721{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:write	36
+2026-03-15 13:55:17,722{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:write	36
+2026-03-15 13:55:17,868{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:17,869{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	36
+2026-03-15 13:55:17,942{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:17,943{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	36
+2026-03-15 13:55:18,042{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:18,043{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	36
+2026-03-15 13:55:18,204{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:read	nil
+2026-03-15 13:55:18,205{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:read	36
+2026-03-15 13:55:18,335{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:18,337{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	36
+2026-03-15 13:55:18,452{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:18,453{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:write	32
+2026-03-15 13:55:18,453{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	36
+2026-03-15 13:55:18,454{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:write	32
+2026-03-15 13:55:18,519{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:write	43
+2026-03-15 13:55:18,520{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:write	43
+2026-03-15 13:55:18,708{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	7
+2026-03-15 13:55:18,709{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	7
+2026-03-15 13:55:18,781{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	88
+2026-03-15 13:55:18,782{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	88
+2026-03-15 13:55:18,798{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	60
+2026-03-15 13:55:18,799{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	60
+2026-03-15 13:55:18,994{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:write	35
+2026-03-15 13:55:18,995{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:write	35
+2026-03-15 13:55:19,045{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	78
+2026-03-15 13:55:19,046{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	78
+2026-03-15 13:55:19,152{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	50
+2026-03-15 13:55:19,153{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	50
+2026-03-15 13:55:19,299{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	38
+2026-03-15 13:55:19,300{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	38
+2026-03-15 13:55:19,313{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:read	nil
+2026-03-15 13:55:19,314{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:read	38
+2026-03-15 13:55:19,421{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:19,423{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	38
+2026-03-15 13:55:19,425{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	8
+2026-03-15 13:55:19,425{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	8
+2026-03-15 13:55:19,461{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:read	nil
+2026-03-15 13:55:19,462{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:read	8
+2026-03-15 13:55:19,576{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:write	31
+2026-03-15 13:55:19,577{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:write	31
+2026-03-15 13:55:19,717{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	67
+2026-03-15 13:55:19,718{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	67
+2026-03-15 13:55:19,821{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	89
+2026-03-15 13:55:19,822{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	89
+2026-03-15 13:55:19,903{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	65
+2026-03-15 13:55:19,904{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	65
+2026-03-15 13:55:19,996{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:write	59
+2026-03-15 13:55:19,997{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:ok	:write	59
+2026-03-15 13:55:20,032{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	9
+2026-03-15 13:55:20,033{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:ok	:write	9
+2026-03-15 13:55:20,062{GMT}	INFO	[jepsen worker nemesis] jepsen.util: :nemesis	:info	:start-partition	nil
+2026-03-15 13:55:20,070{GMT}	INFO	[jepsen worker nemesis] jepsen.util: :nemesis	:info	:start-partition	[:isolated {"n3" #{"n2" "n1"}, "n2" #{"n3"}, "n1" #{"n3"}}]
+2026-03-15 13:55:20,169{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:invoke	:read	nil
+2026-03-15 13:55:20,368{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:invoke	:write	1
+2026-03-15 13:55:20,413{GMT}	INFO	[jepsen worker 0] jepsen.util: 6	:info	:read	nil	:timeout
+2026-03-15 13:55:20,413{GMT}	INFO	[jepsen worker 0] jepsen.util: 9	:invoke	:write	6
+2026-03-15 13:55:25,175{GMT}	INFO	[jepsen worker 2] jepsen.util: 5	:info	:read	nil	:timeout
+2026-03-15 13:55:25,175{GMT}	INFO	[jepsen worker 2] jepsen.util: 8	:invoke	:write	96
+2026-03-15 13:55:25,374{GMT}	INFO	[jepsen worker 1] jepsen.util: 16	:info	:write	1	:timeout
+2026-03-15 13:55:25,374{GMT}	INFO	[jepsen worker 1] jepsen.util: 19	:invoke	:read	nil
+2026-03-15 13:55:25,418{GMT}	INFO	[jepsen worker 0] jepsen.util: 9	:info	:write	6	:timeout
+2026-03-15 13:55:25,560{GMT}	INFO	[jepsen worker 0] jepsen.util: 12	:invoke	:write	2
+2026-03-15 13:55:30,181{GMT}	INFO	[jepsen worker 2] jepsen.util: 8	:info	:write	96	:timeout
+2026-03-15 13:55:30,181{GMT}	INFO	[jepsen worker 2] jepsen.util: 11	:invoke	:read	nil
+2026-03-15 13:55:30,379{GMT}	INFO	[jepsen worker 1] jepsen.util: 19	:info	:read	nil	:timeout
+2026-03-15 13:55:30,379{GMT}	INFO	[jepsen worker 1] jepsen.util: 22	:invoke	:read	nil
+2026-03-15 13:55:30,566{GMT}	INFO	[jepsen worker 0] jepsen.util: 12	:info	:write	2	:timeout
+2026-03-15 13:55:30,566{GMT}	INFO	[jepsen worker 0] jepsen.util: 15	:invoke	:read	nil
+2026-03-15 13:55:35,070{GMT}	INFO	[jepsen worker nemesis] jepsen.util: :nemesis	:info	:stop-partition	nil
+2026-03-15 13:55:35,142{GMT}	INFO	[jepsen worker nemesis] jepsen.util: :nemesis	:info	:stop-partition	:network-healed
+2026-03-15 13:55:35,187{GMT}	INFO	[jepsen worker 2] jepsen.util: 11	:info	:read	nil	:timeout
+2026-03-15 13:55:35,187{GMT}	INFO	[jepsen worker 2] jepsen.util: 14	:invoke	:write	42
+2026-03-15 13:55:35,385{GMT}	INFO	[jepsen worker 1] jepsen.util: 22	:info	:read	nil	:timeout
+2026-03-15 13:55:35,385{GMT}	INFO	[jepsen worker 1] jepsen.util: 25	:invoke	:write	60
+2026-03-15 13:55:35,570{GMT}	INFO	[jepsen worker 0] jepsen.util: 15	:info	:read	nil	:timeout
+2026-03-15 13:55:35,570{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:40,142{GMT}	INFO	[jepsen worker nemesis] jepsen.util: :nemesis	:info	:crash-node	nil
+2026-03-15 13:55:40,142{GMT}	INFO	[jepsen worker nemesis] jepsen.omnipaxos.nemesis: nemesis crashing node n1
+2026-03-15 13:55:40,142{GMT}	INFO	[jepsen node n1] jepsen.control.util: Stopping /opt/omnipaxos/api-shim with signal :-9
+2026-03-15 13:55:40,146{GMT}	INFO	[jepsen worker 0] org.apache.http.impl.execchain.RetryExec: I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {}->http://n1:7000: The target server failed to respond
+2026-03-15 13:55:40,146{GMT}	INFO	[jepsen worker 0] org.apache.http.impl.execchain.RetryExec: Retrying request to {}->http://n1:7000
+2026-03-15 13:55:40,147{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:40,147{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	85
+2026-03-15 13:55:40,147{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	85	:connection-refused
+2026-03-15 13:55:40,193{GMT}	INFO	[jepsen worker 2] jepsen.util: 14	:info	:write	42	:timeout
+2026-03-15 13:55:40,262{GMT}	INFO	[jepsen worker 2] jepsen.util: 17	:invoke	:write	76
+2026-03-15 13:55:40,288{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	4
+2026-03-15 13:55:40,289{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	4	:connection-refused
+2026-03-15 13:55:40,391{GMT}	INFO	[jepsen worker 1] jepsen.util: 25	:info	:write	60	:timeout
+2026-03-15 13:55:40,464{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:40,464{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:40,512{GMT}	INFO	[jepsen worker 1] jepsen.util: 28	:invoke	:read	nil
+2026-03-15 13:55:40,528{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	19
+2026-03-15 13:55:40,529{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	19	:connection-refused
+2026-03-15 13:55:40,641{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:40,641{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:40,793{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	16
+2026-03-15 13:55:40,793{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	16	:connection-refused
+2026-03-15 13:55:40,873{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	24
+2026-03-15 13:55:40,873{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	24	:connection-refused
+2026-03-15 13:55:40,920{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:40,920{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:41,089{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:41,090{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:41,192{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	60
+2026-03-15 13:55:41,193{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	60	:connection-refused
+2026-03-15 13:55:41,299{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	75
+2026-03-15 13:55:41,299{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	75	:connection-refused
+2026-03-15 13:55:41,371{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	26
+2026-03-15 13:55:41,372{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	26	:connection-refused
+2026-03-15 13:55:41,426{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	89
+2026-03-15 13:55:41,426{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	89	:connection-refused
+2026-03-15 13:55:41,550{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	93
+2026-03-15 13:55:41,551{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	93	:connection-refused
+2026-03-15 13:55:41,629{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	93
+2026-03-15 13:55:41,629{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	93	:connection-refused
+2026-03-15 13:55:41,748{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:41,748{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:41,857{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:41,858{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:42,043{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:42,044{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:42,154{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	42
+2026-03-15 13:55:42,155{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	42	:connection-refused
+2026-03-15 13:55:42,189{GMT}	INFO	[jepsen node n1] jepsen.control.util: Stopping /opt/omnipaxos/server with signal :-9
+2026-03-15 13:55:42,281{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:42,282{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:42,394{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:42,395{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:42,416{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:42,417{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:42,540{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	78
+2026-03-15 13:55:42,541{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	78	:connection-refused
+2026-03-15 13:55:42,610{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	24
+2026-03-15 13:55:42,610{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	24	:connection-refused
+2026-03-15 13:55:42,652{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	1
+2026-03-15 13:55:42,653{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	1	:connection-refused
+2026-03-15 13:55:42,702{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:42,703{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:42,712{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:42,712{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:42,808{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:42,809{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:42,918{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	77
+2026-03-15 13:55:42,918{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	77	:connection-refused
+2026-03-15 13:55:43,094{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	65
+2026-03-15 13:55:43,095{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	65	:connection-refused
+2026-03-15 13:55:43,253{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:43,254{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:43,443{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	64
+2026-03-15 13:55:43,444{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	64	:connection-refused
+2026-03-15 13:55:43,459{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	39
+2026-03-15 13:55:43,459{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	39	:connection-refused
+2026-03-15 13:55:43,631{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	93
+2026-03-15 13:55:43,632{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	93	:connection-refused
+2026-03-15 13:55:43,752{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	43
+2026-03-15 13:55:43,752{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	43	:connection-refused
+2026-03-15 13:55:43,878{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:43,879{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:44,063{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:44,064{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:44,199{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	4
+2026-03-15 13:55:44,200{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	4	:connection-refused
+2026-03-15 13:55:44,268{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	35
+2026-03-15 13:55:44,269{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	35	:connection-refused
+2026-03-15 13:55:44,277{GMT}	INFO	[jepsen worker nemesis] jepsen.util: :nemesis	:info	:crash-node	"n1"
+2026-03-15 13:55:44,452{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	32
+2026-03-15 13:55:44,453{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	32	:connection-refused
+2026-03-15 13:55:44,603{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:44,604{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:44,802{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	8
+2026-03-15 13:55:44,803{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	8	:connection-refused
+2026-03-15 13:55:44,933{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	13
+2026-03-15 13:55:44,934{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	13	:connection-refused
+2026-03-15 13:55:45,088{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	96
+2026-03-15 13:55:45,089{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	96	:connection-refused
+2026-03-15 13:55:45,188{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:45,189{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:45,207{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	34
+2026-03-15 13:55:45,208{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	34	:connection-refused
+2026-03-15 13:55:45,267{GMT}	INFO	[jepsen worker 2] jepsen.util: 17	:info	:write	76	:timeout
+2026-03-15 13:55:45,348{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:write	79
+2026-03-15 13:55:45,470{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:45,471{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:45,518{GMT}	INFO	[jepsen worker 1] jepsen.util: 28	:info	:read	nil	:timeout
+2026-03-15 13:55:45,611{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	45
+2026-03-15 13:55:45,612{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	45	:connection-refused
+2026-03-15 13:55:45,673{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	96
+2026-03-15 13:55:45,688{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:45,689{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:45,774{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	71
+2026-03-15 13:55:45,774{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	71	:connection-refused
+2026-03-15 13:55:45,915{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:45,915{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:45,981{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:45,981{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:46,179{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:46,180{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:46,317{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:46,318{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:46,467{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:46,468{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:46,635{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	59
+2026-03-15 13:55:46,635{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	59	:connection-refused
+2026-03-15 13:55:46,773{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:46,774{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:46,805{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:46,806{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:46,950{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	43
+2026-03-15 13:55:46,951{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	43	:connection-refused
+2026-03-15 13:55:47,137{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:47,137{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:47,176{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	51
+2026-03-15 13:55:47,177{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	51	:connection-refused
+2026-03-15 13:55:47,277{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	57
+2026-03-15 13:55:47,277{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	57	:connection-refused
+2026-03-15 13:55:47,367{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	35
+2026-03-15 13:55:47,368{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	35	:connection-refused
+2026-03-15 13:55:47,531{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:47,532{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:47,549{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	96
+2026-03-15 13:55:47,550{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	96	:connection-refused
+2026-03-15 13:55:47,583{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	78
+2026-03-15 13:55:47,583{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	78	:connection-refused
+2026-03-15 13:55:47,685{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	39
+2026-03-15 13:55:47,686{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	39	:connection-refused
+2026-03-15 13:55:47,728{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	30
+2026-03-15 13:55:47,729{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	30	:connection-refused
+2026-03-15 13:55:47,834{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	8
+2026-03-15 13:55:47,834{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	8	:connection-refused
+2026-03-15 13:55:47,850{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	71
+2026-03-15 13:55:47,851{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	71	:connection-refused
+2026-03-15 13:55:47,923{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:47,923{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:48,086{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:48,086{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:48,207{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	73
+2026-03-15 13:55:48,207{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	73	:connection-refused
+2026-03-15 13:55:48,256{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	55
+2026-03-15 13:55:48,256{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	55	:connection-refused
+2026-03-15 13:55:48,271{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	50
+2026-03-15 13:55:48,272{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	50	:connection-refused
+2026-03-15 13:55:48,386{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:48,386{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:48,548{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	59
+2026-03-15 13:55:48,548{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	59	:connection-refused
+2026-03-15 13:55:48,689{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	77
+2026-03-15 13:55:48,689{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	77	:connection-refused
+2026-03-15 13:55:48,888{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:48,888{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:48,971{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	96
+2026-03-15 13:55:48,971{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:write	79
+2026-03-15 13:55:49,041{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	97
+2026-03-15 13:55:49,042{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	97
+2026-03-15 13:55:49,089{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:read	nil
+2026-03-15 13:55:49,090{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:read	97
+2026-03-15 13:55:49,215{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:49,215{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:49,297{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:49,298{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:49,483{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:55:49,484{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	97
+2026-03-15 13:55:49,643{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:read	nil
+2026-03-15 13:55:49,644{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:read	97
+2026-03-15 13:55:49,775{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	50
+2026-03-15 13:55:49,776{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	50	:connection-refused
+2026-03-15 13:55:49,905{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:49,905{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:50,066{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	98
+2026-03-15 13:55:50,067{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	98
+2026-03-15 13:55:50,140{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:write	22
+2026-03-15 13:55:50,141{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:write	22
+2026-03-15 13:55:50,304{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:50,304{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:50,462{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	53
+2026-03-15 13:55:50,463{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	53	:connection-refused
+2026-03-15 13:55:50,474{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:55:50,475{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	22
+2026-03-15 13:55:50,568{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:write	8
+2026-03-15 13:55:50,569{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:write	8
+2026-03-15 13:55:50,661{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	79
+2026-03-15 13:55:50,661{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	79	:connection-refused
+2026-03-15 13:55:50,733{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:50,733{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:50,767{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:55:50,768{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	8
+2026-03-15 13:55:50,818{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:write	44
+2026-03-15 13:55:50,819{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:write	44
+2026-03-15 13:55:50,915{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:50,916{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:51,029{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:51,030{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:51,108{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:55:51,109{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	44
+2026-03-15 13:55:51,246{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:read	nil
+2026-03-15 13:55:51,247{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:read	44
+2026-03-15 13:55:51,271{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:51,271{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:51,403{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:51,404{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:51,540{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	3
+2026-03-15 13:55:51,542{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	3
+2026-03-15 13:55:51,731{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:write	15
+2026-03-15 13:55:51,732{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:write	15
+2026-03-15 13:55:51,894{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	58
+2026-03-15 13:55:51,895{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	58	:connection-refused
+2026-03-15 13:55:52,051{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:52,051{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:52,194{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	3
+2026-03-15 13:55:52,195{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	3
+2026-03-15 13:55:52,276{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:write	1
+2026-03-15 13:55:52,277{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:write	1
+2026-03-15 13:55:52,458{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	39
+2026-03-15 13:55:52,459{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	39	:connection-refused
+2026-03-15 13:55:52,629{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	71
+2026-03-15 13:55:52,630{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	71	:connection-refused
+2026-03-15 13:55:52,716{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	1
+2026-03-15 13:55:52,717{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	1
+2026-03-15 13:55:52,732{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:read	nil
+2026-03-15 13:55:52,733{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:read	1
+2026-03-15 13:55:52,913{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:52,914{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:53,065{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	82
+2026-03-15 13:55:53,066{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	82	:connection-refused
+2026-03-15 13:55:53,111{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	21
+2026-03-15 13:55:53,112{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	21
+2026-03-15 13:55:53,203{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:read	nil
+2026-03-15 13:55:53,204{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:read	21
+2026-03-15 13:55:53,318{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	90
+2026-03-15 13:55:53,319{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	90	:connection-refused
+2026-03-15 13:55:53,383{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	93
+2026-03-15 13:55:53,383{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	93	:connection-refused
+2026-03-15 13:55:53,393{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:55:53,394{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	21
+2026-03-15 13:55:53,447{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:read	nil
+2026-03-15 13:55:53,448{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:read	21
+2026-03-15 13:55:53,614{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:53,615{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:53,765{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	89
+2026-03-15 13:55:53,766{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	89	:connection-refused
+2026-03-15 13:55:53,884{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:55:53,886{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	21
+2026-03-15 13:55:53,891{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:read	nil
+2026-03-15 13:55:53,892{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:read	21
+2026-03-15 13:55:53,931{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:53,932{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:53,991{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	89
+2026-03-15 13:55:53,992{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	89	:connection-refused
+2026-03-15 13:55:54,017{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	43
+2026-03-15 13:55:54,018{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	43
+2026-03-15 13:55:54,199{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:write	32
+2026-03-15 13:55:54,200{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:write	32
+2026-03-15 13:55:54,277{GMT}	INFO	[jepsen worker nemesis] jepsen.util: :nemesis	:info	:recover-node	nil
+2026-03-15 13:55:54,277{GMT}	INFO	[jepsen worker nemesis] jepsen.omnipaxos.nemesis: nemesis recovering node n1
+2026-03-15 13:55:54,277{GMT}	INFO	[jepsen node n1] jepsen.control.util: Starting env
+2026-03-15 13:55:54,335{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:54,335{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:54,373{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:55:54,374{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	32
+2026-03-15 13:55:54,510{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:write	99
+2026-03-15 13:55:54,511{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:write	99
+2026-03-15 13:55:54,545{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:54,546{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:54,579{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:54,580{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:54,609{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:55:54,610{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	99
+2026-03-15 13:55:54,721{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:write	64
+2026-03-15 13:55:54,722{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:write	64
+2026-03-15 13:55:54,794{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:54,795{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:54,874{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	42
+2026-03-15 13:55:54,874{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	42	:connection-refused
+2026-03-15 13:55:54,924{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:55:54,925{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	64
+2026-03-15 13:55:54,959{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:read	nil
+2026-03-15 13:55:54,960{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:read	64
+2026-03-15 13:55:54,961{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:54,962{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:55,062{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	42
+2026-03-15 13:55:55,063{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	42	:connection-refused
+2026-03-15 13:55:55,091{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	50
+2026-03-15 13:55:55,092{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	50
+2026-03-15 13:55:55,255{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:read	nil
+2026-03-15 13:55:55,256{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:read	50
+2026-03-15 13:55:55,267{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	77
+2026-03-15 13:55:55,267{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	77	:connection-refused
+2026-03-15 13:55:55,422{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:55,423{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:55,439{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:55:55,440{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	50
+2026-03-15 13:55:55,612{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:read	nil
+2026-03-15 13:55:55,613{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:read	50
+2026-03-15 13:55:55,641{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	99
+2026-03-15 13:55:55,642{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	99	:connection-refused
+2026-03-15 13:55:55,716{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:55,717{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:55,746{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	28
+2026-03-15 13:55:55,747{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	28
+2026-03-15 13:55:55,850{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:read	nil
+2026-03-15 13:55:55,851{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:read	28
+2026-03-15 13:55:56,038{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:56,039{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:56,066{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:56,066{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:56,093{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	22
+2026-03-15 13:55:56,094{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	22
+2026-03-15 13:55:56,204{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:write	3
+2026-03-15 13:55:56,205{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:write	3
+2026-03-15 13:55:56,272{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:56,273{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:56,291{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	22
+2026-03-15 13:55:56,292{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	22	:connection-refused
+2026-03-15 13:55:56,385{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	59
+2026-03-15 13:55:56,386{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	59
+2026-03-15 13:55:56,571{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:read	nil
+2026-03-15 13:55:56,572{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:read	59
+2026-03-15 13:55:56,755{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	37
+2026-03-15 13:55:56,756{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	37	:connection-refused
+2026-03-15 13:55:56,766{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:56,766{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:56,880{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	44
+2026-03-15 13:55:56,881{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	44
+2026-03-15 13:55:56,895{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:write	98
+2026-03-15 13:55:56,896{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:write	98
+2026-03-15 13:55:56,906{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:write	75
+2026-03-15 13:55:56,906{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:write	75	:connection-refused
+2026-03-15 13:55:57,014{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:57,015{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:57,152{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	14
+2026-03-15 13:55:57,153{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	14
+2026-03-15 13:55:57,232{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:read	nil
+2026-03-15 13:55:57,233{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:read	14
+2026-03-15 13:55:57,233{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:57,233{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:57,250{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:57,250{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:fail	:read	nil	:connection-refused
+2026-03-15 13:55:57,324{GMT}	INFO	[jepsen node n1] jepsen.control.util: Starting env
+2026-03-15 13:55:57,413{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:55:57,414{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	14
+2026-03-15 13:55:57,420{GMT}	INFO	[jepsen node n1] jepsen.omnipaxos.db: n1 api-shim healthy
+2026-03-15 13:55:57,420{GMT}	INFO	[jepsen worker nemesis] jepsen.util: :nemesis	:info	:recover-node	"n1"
+2026-03-15 13:55:57,584{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:read	nil
+2026-03-15 13:55:57,658{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:55:57,660{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	14
+2026-03-15 13:55:57,754{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:55:57,755{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	14
+2026-03-15 13:55:57,899{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:read	nil
+2026-03-15 13:55:57,900{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:read	14
+2026-03-15 13:55:58,054{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:55:58,055{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	14
+2026-03-15 13:55:58,167{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	83
+2026-03-15 13:55:58,168{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	83
+2026-03-15 13:55:58,250{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	5
+2026-03-15 13:55:58,250{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	5
+2026-03-15 13:55:58,346{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:write	71
+2026-03-15 13:55:58,347{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:write	71
+2026-03-15 13:55:58,498{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:55:58,499{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	71
+2026-03-15 13:55:58,533{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:55:58,533{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	71
+2026-03-15 13:55:58,642{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	55
+2026-03-15 13:55:58,643{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	55
+2026-03-15 13:55:58,718{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:write	2
+2026-03-15 13:55:58,719{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:write	2
+2026-03-15 13:55:58,723{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	90
+2026-03-15 13:55:58,724{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	90
+2026-03-15 13:55:58,860{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	4
+2026-03-15 13:55:58,860{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	4
+2026-03-15 13:55:58,985{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	51
+2026-03-15 13:55:58,985{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	51
+2026-03-15 13:55:59,167{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:write	2
+2026-03-15 13:55:59,167{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:write	2
+2026-03-15 13:55:59,231{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:55:59,232{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	2
+2026-03-15 13:55:59,306{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	1
+2026-03-15 13:55:59,306{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	1
+2026-03-15 13:55:59,376{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	55
+2026-03-15 13:55:59,376{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	55
+2026-03-15 13:55:59,448{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:read	nil
+2026-03-15 13:55:59,449{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:read	55
+2026-03-15 13:55:59,609{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	76
+2026-03-15 13:55:59,610{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	76
+2026-03-15 13:55:59,658{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	45
+2026-03-15 13:55:59,659{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	45
+2026-03-15 13:55:59,720{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:55:59,721{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	45
+2026-03-15 13:55:59,772{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:write	46
+2026-03-15 13:55:59,772{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:write	46
+2026-03-15 13:55:59,912{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:55:59,913{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	46
+2026-03-15 13:56:00,034{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:00,035{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	46
+2026-03-15 13:56:00,206{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:00,207{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	46
+2026-03-15 13:56:00,219{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:write	47
+2026-03-15 13:56:00,220{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:write	47
+2026-03-15 13:56:00,277{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	35
+2026-03-15 13:56:00,278{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	35
+2026-03-15 13:56:00,281{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:00,282{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	35
+2026-03-15 13:56:00,334{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	95
+2026-03-15 13:56:00,334{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	95
+2026-03-15 13:56:00,473{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:write	45
+2026-03-15 13:56:00,474{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:write	45
+2026-03-15 13:56:00,508{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	11
+2026-03-15 13:56:00,509{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	11
+2026-03-15 13:56:00,662{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	54
+2026-03-15 13:56:00,663{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	54
+2026-03-15 13:56:00,719{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	5
+2026-03-15 13:56:00,720{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	5
+2026-03-15 13:56:00,783{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:read	nil
+2026-03-15 13:56:00,784{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:read	5
+2026-03-15 13:56:00,892{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	84
+2026-03-15 13:56:00,893{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	84
+2026-03-15 13:56:00,985{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	74
+2026-03-15 13:56:00,985{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	74
+2026-03-15 13:56:01,150{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	58
+2026-03-15 13:56:01,151{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	58
+2026-03-15 13:56:01,208{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:read	nil
+2026-03-15 13:56:01,209{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:read	58
+2026-03-15 13:56:01,379{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	92
+2026-03-15 13:56:01,379{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	92
+2026-03-15 13:56:01,429{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:01,430{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	92
+2026-03-15 13:56:01,576{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:01,577{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	92
+2026-03-15 13:56:01,715{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:write	69
+2026-03-15 13:56:01,716{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:write	69
+2026-03-15 13:56:01,752{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	82
+2026-03-15 13:56:01,753{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	82
+2026-03-15 13:56:01,890{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	8
+2026-03-15 13:56:01,891{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	8
+2026-03-15 13:56:02,045{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:02,045{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	8
+2026-03-15 13:56:02,118{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:write	57
+2026-03-15 13:56:02,119{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:write	57
+2026-03-15 13:56:02,217{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:02,218{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	57
+2026-03-15 13:56:02,367{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	55
+2026-03-15 13:56:02,367{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	55
+2026-03-15 13:56:02,484{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:read	nil
+2026-03-15 13:56:02,485{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:read	55
+2026-03-15 13:56:02,489{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:02,490{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	55
+2026-03-15 13:56:02,588{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:info	:read	nil	:timeout
+2026-03-15 13:56:02,678{GMT}	INFO	[jepsen worker 0] jepsen.util: 21	:invoke	:write	6
+2026-03-15 13:56:02,695{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:02,696{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	55
+2026-03-15 13:56:02,732{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:read	nil
+2026-03-15 13:56:02,732{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:read	55
+2026-03-15 13:56:02,838{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	76
+2026-03-15 13:56:02,839{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	76
+2026-03-15 13:56:02,877{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:02,878{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	76
+2026-03-15 13:56:02,901{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:02,902{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	76
+2026-03-15 13:56:02,912{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:write	24
+2026-03-15 13:56:02,912{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:write	24
+2026-03-15 13:56:03,079{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	22
+2026-03-15 13:56:03,079{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	22
+2026-03-15 13:56:03,181{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:03,182{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	22
+2026-03-15 13:56:03,322{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	33
+2026-03-15 13:56:03,322{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	33
+2026-03-15 13:56:03,430{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:read	nil
+2026-03-15 13:56:03,431{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:read	33
+2026-03-15 13:56:03,491{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:03,491{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	33
+2026-03-15 13:56:03,506{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:03,507{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	33
+2026-03-15 13:56:03,516{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	27
+2026-03-15 13:56:03,517{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	27
+2026-03-15 13:56:03,632{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:read	nil
+2026-03-15 13:56:03,633{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:read	27
+2026-03-15 13:56:03,687{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:03,688{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	27
+2026-03-15 13:56:03,760{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:03,760{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	27
+2026-03-15 13:56:03,853{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	93
+2026-03-15 13:56:03,853{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	93
+2026-03-15 13:56:03,880{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:read	nil
+2026-03-15 13:56:03,881{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:read	93
+2026-03-15 13:56:03,935{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	36
+2026-03-15 13:56:03,936{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	36
+2026-03-15 13:56:03,986{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:03,986{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	36
+2026-03-15 13:56:04,076{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	26
+2026-03-15 13:56:04,076{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	26
+2026-03-15 13:56:04,080{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:read	nil
+2026-03-15 13:56:04,081{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:read	26
+2026-03-15 13:56:04,156{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	22
+2026-03-15 13:56:04,157{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	22
+2026-03-15 13:56:04,269{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:04,269{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	22
+2026-03-15 13:56:04,422{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:04,423{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	22
+2026-03-15 13:56:04,469{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:write	35
+2026-03-15 13:56:04,470{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:write	35
+2026-03-15 13:56:04,654{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	12
+2026-03-15 13:56:04,655{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	12
+2026-03-15 13:56:04,801{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	19
+2026-03-15 13:56:04,802{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	19
+2026-03-15 13:56:04,999{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:05,000{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	19
+2026-03-15 13:56:05,021{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:read	nil
+2026-03-15 13:56:05,022{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:read	19
+2026-03-15 13:56:05,029{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	30
+2026-03-15 13:56:05,030{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	30
+2026-03-15 13:56:05,100{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:05,101{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	30
+2026-03-15 13:56:05,176{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	15
+2026-03-15 13:56:05,177{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	15
+2026-03-15 13:56:05,315{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:write	65
+2026-03-15 13:56:05,316{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:write	65
+2026-03-15 13:56:05,465{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	38
+2026-03-15 13:56:05,466{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	38
+2026-03-15 13:56:05,611{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	27
+2026-03-15 13:56:05,612{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	27
+2026-03-15 13:56:05,620{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	12
+2026-03-15 13:56:05,621{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	12
+2026-03-15 13:56:05,786{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:write	6
+2026-03-15 13:56:05,787{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:write	6
+2026-03-15 13:56:05,926{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	46
+2026-03-15 13:56:05,927{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	46
+2026-03-15 13:56:06,025{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	57
+2026-03-15 13:56:06,026{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	57
+2026-03-15 13:56:06,067{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	83
+2026-03-15 13:56:06,068{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	83
+2026-03-15 13:56:06,093{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:read	nil
+2026-03-15 13:56:06,093{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:read	83
+2026-03-15 13:56:06,238{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:06,239{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	83
+2026-03-15 13:56:06,402{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	86
+2026-03-15 13:56:06,403{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	86
+2026-03-15 13:56:06,562{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:06,563{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	86
+2026-03-15 13:56:06,760{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:write	77
+2026-03-15 13:56:06,761{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:write	77
+2026-03-15 13:56:06,828{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	82
+2026-03-15 13:56:06,829{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	82
+2026-03-15 13:56:07,005{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	88
+2026-03-15 13:56:07,005{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	88
+2026-03-15 13:56:07,048{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:07,048{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	88
+2026-03-15 13:56:07,210{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:read	nil
+2026-03-15 13:56:07,211{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:read	88
+2026-03-15 13:56:07,238{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:07,239{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	88
+2026-03-15 13:56:07,389{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:07,390{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	88
+2026-03-15 13:56:07,587{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	60
+2026-03-15 13:56:07,588{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	60
+2026-03-15 13:56:07,600{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:write	57
+2026-03-15 13:56:07,601{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:write	57
+2026-03-15 13:56:07,684{GMT}	INFO	[jepsen worker 0] jepsen.util: 21	:info	:write	6	:timeout
+2026-03-15 13:56:07,735{GMT}	INFO	[jepsen worker 0] jepsen.util: 24	:invoke	:read	nil
+2026-03-15 13:56:07,887{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	28
+2026-03-15 13:56:07,888{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	28
+2026-03-15 13:56:07,978{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:07,979{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	28
+2026-03-15 13:56:08,099{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:read	nil
+2026-03-15 13:56:08,100{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:read	28
+2026-03-15 13:56:08,172{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	22
+2026-03-15 13:56:08,173{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	22
+2026-03-15 13:56:08,371{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	75
+2026-03-15 13:56:08,372{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	75
+2026-03-15 13:56:08,508{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	11
+2026-03-15 13:56:08,509{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	11
+2026-03-15 13:56:08,673{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:read	nil
+2026-03-15 13:56:08,673{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:08,674{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:read	11
+2026-03-15 13:56:08,674{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	11
+2026-03-15 13:56:08,837{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:08,838{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	11
+2026-03-15 13:56:08,873{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	38
+2026-03-15 13:56:08,873{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	38
+2026-03-15 13:56:09,037{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:read	nil
+2026-03-15 13:56:09,038{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:read	38
+2026-03-15 13:56:09,101{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	73
+2026-03-15 13:56:09,102{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	73
+2026-03-15 13:56:09,143{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	87
+2026-03-15 13:56:09,143{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	87
+2026-03-15 13:56:09,191{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	27
+2026-03-15 13:56:09,192{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	27
+2026-03-15 13:56:09,260{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:write	99
+2026-03-15 13:56:09,260{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:write	99
+2026-03-15 13:56:09,303{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:09,303{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	99
+2026-03-15 13:56:09,495{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	35
+2026-03-15 13:56:09,496{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	35
+2026-03-15 13:56:09,539{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:09,540{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	35
+2026-03-15 13:56:09,634{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:write	94
+2026-03-15 13:56:09,635{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:write	94
+2026-03-15 13:56:09,727{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	31
+2026-03-15 13:56:09,728{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	31
+2026-03-15 13:56:09,850{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	68
+2026-03-15 13:56:09,851{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	68
+2026-03-15 13:56:10,021{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:10,021{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	68
+2026-03-15 13:56:10,159{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:write	53
+2026-03-15 13:56:10,160{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:write	53
+2026-03-15 13:56:10,313{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	27
+2026-03-15 13:56:10,314{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	27
+2026-03-15 13:56:10,427{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	43
+2026-03-15 13:56:10,428{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	43
+2026-03-15 13:56:10,482{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	72
+2026-03-15 13:56:10,483{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	72
+2026-03-15 13:56:10,659{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:write	40
+2026-03-15 13:56:10,659{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:write	40
+2026-03-15 13:56:10,672{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:10,673{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	40
+2026-03-15 13:56:10,744{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	53
+2026-03-15 13:56:10,745{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	53
+2026-03-15 13:56:10,865{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:10,866{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	53
+2026-03-15 13:56:10,877{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:read	nil
+2026-03-15 13:56:10,877{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:read	53
+2026-03-15 13:56:10,918{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:10,918{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	53
+2026-03-15 13:56:11,032{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:11,033{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	53
+2026-03-15 13:56:11,155{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:11,156{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	53
+2026-03-15 13:56:11,257{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:read	nil
+2026-03-15 13:56:11,258{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:read	53
+2026-03-15 13:56:11,290{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	73
+2026-03-15 13:56:11,291{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	73
+2026-03-15 13:56:11,478{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	20
+2026-03-15 13:56:11,478{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	20
+2026-03-15 13:56:11,659{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:11,659{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	20
+2026-03-15 13:56:11,749{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:write	10
+2026-03-15 13:56:11,750{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:write	10
+2026-03-15 13:56:11,902{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:11,902{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	10
+2026-03-15 13:56:11,912{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	64
+2026-03-15 13:56:11,913{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	64
+2026-03-15 13:56:12,011{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	3
+2026-03-15 13:56:12,011{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	3
+2026-03-15 13:56:12,027{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:read	nil
+2026-03-15 13:56:12,028{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:read	3
+2026-03-15 13:56:12,052{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	75
+2026-03-15 13:56:12,052{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	75
+2026-03-15 13:56:12,198{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	53
+2026-03-15 13:56:12,199{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	53
+2026-03-15 13:56:12,353{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	53
+2026-03-15 13:56:12,353{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	53
+2026-03-15 13:56:12,420{GMT}	INFO	[jepsen worker nemesis] jepsen.util: :nemesis	:info	:start-partition	nil
+2026-03-15 13:56:12,428{GMT}	INFO	[jepsen worker nemesis] jepsen.util: :nemesis	:info	:start-partition	[:isolated {"n1" #{"n2" "n3"}, "n2" #{"n1"}, "n3" #{"n1"}}]
+2026-03-15 13:56:12,517{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:12,518{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	53
+2026-03-15 13:56:12,563{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	86
+2026-03-15 13:56:12,564{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	86
+2026-03-15 13:56:12,661{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:write	23
+2026-03-15 13:56:12,661{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:write	23
+2026-03-15 13:56:12,740{GMT}	INFO	[jepsen worker 0] jepsen.util: 24	:info	:read	nil	:timeout
+2026-03-15 13:56:12,854{GMT}	INFO	[jepsen worker 0] jepsen.util: 27	:invoke	:read	nil
+2026-03-15 13:56:12,862{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:12,863{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	23
+2026-03-15 13:56:12,897{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	72
+2026-03-15 13:56:12,898{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	72
+2026-03-15 13:56:13,005{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:read	nil
+2026-03-15 13:56:13,006{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:read	72
+2026-03-15 13:56:13,198{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	43
+2026-03-15 13:56:13,199{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	43
+2026-03-15 13:56:13,224{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:13,224{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	43
+2026-03-15 13:56:13,328{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:13,329{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	43
+2026-03-15 13:56:13,331{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:read	nil
+2026-03-15 13:56:13,332{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:read	43
+2026-03-15 13:56:13,420{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:13,421{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	43
+2026-03-15 13:56:13,572{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:13,572{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	43
+2026-03-15 13:56:13,719{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	68
+2026-03-15 13:56:13,720{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	68
+2026-03-15 13:56:13,887{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:read	nil
+2026-03-15 13:56:13,888{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:read	68
+2026-03-15 13:56:13,900{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	45
+2026-03-15 13:56:13,901{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	45
+2026-03-15 13:56:13,937{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	22
+2026-03-15 13:56:13,938{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	22
+2026-03-15 13:56:14,002{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:14,003{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	22
+2026-03-15 13:56:14,022{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:read	nil
+2026-03-15 13:56:14,022{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:read	22
+2026-03-15 13:56:14,213{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	23
+2026-03-15 13:56:14,213{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	23
+2026-03-15 13:56:14,246{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	49
+2026-03-15 13:56:14,247{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	49
+2026-03-15 13:56:14,404{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	71
+2026-03-15 13:56:14,405{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	71
+2026-03-15 13:56:14,421{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:write	22
+2026-03-15 13:56:14,421{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:write	22
+2026-03-15 13:56:14,438{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	20
+2026-03-15 13:56:14,439{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	20
+2026-03-15 13:56:14,495{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:14,495{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	20
+2026-03-15 13:56:14,603{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	15
+2026-03-15 13:56:14,604{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	15
+2026-03-15 13:56:14,762{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:write	73
+2026-03-15 13:56:14,763{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:write	73
+2026-03-15 13:56:14,796{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	55
+2026-03-15 13:56:14,797{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	55
+2026-03-15 13:56:14,870{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:14,870{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	55
+2026-03-15 13:56:15,016{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:15,017{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	55
+2026-03-15 13:56:15,100{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:write	88
+2026-03-15 13:56:15,100{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:write	88
+2026-03-15 13:56:15,248{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:15,249{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	88
+2026-03-15 13:56:15,282{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	10
+2026-03-15 13:56:15,282{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	10
+2026-03-15 13:56:15,337{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:15,338{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	10
+2026-03-15 13:56:15,500{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:write	13
+2026-03-15 13:56:15,501{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:write	13
+2026-03-15 13:56:15,571{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	45
+2026-03-15 13:56:15,571{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	45
+2026-03-15 13:56:15,697{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:15,698{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	45
+2026-03-15 13:56:15,835{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	90
+2026-03-15 13:56:15,836{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	90
+2026-03-15 13:56:16,032{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:write	0
+2026-03-15 13:56:16,032{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:write	0
+2026-03-15 13:56:16,127{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:16,128{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	0
+2026-03-15 13:56:16,188{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	47
+2026-03-15 13:56:16,188{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	47
+2026-03-15 13:56:16,354{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:16,355{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	47
+2026-03-15 13:56:16,486{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:write	79
+2026-03-15 13:56:16,487{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:write	79
+2026-03-15 13:56:16,526{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	64
+2026-03-15 13:56:16,526{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	64
+2026-03-15 13:56:16,590{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:16,591{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	64
+2026-03-15 13:56:16,623{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:16,623{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	64
+2026-03-15 13:56:16,702{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:read	nil
+2026-03-15 13:56:16,703{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:read	64
+2026-03-15 13:56:16,715{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:16,716{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	64
+2026-03-15 13:56:16,848{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:16,849{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	64
+2026-03-15 13:56:16,940{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	7
+2026-03-15 13:56:16,941{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	7
+2026-03-15 13:56:17,019{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:write	90
+2026-03-15 13:56:17,020{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:write	90
+2026-03-15 13:56:17,108{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	95
+2026-03-15 13:56:17,109{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	95
+2026-03-15 13:56:17,172{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	83
+2026-03-15 13:56:17,172{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	83
+2026-03-15 13:56:17,230{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	15
+2026-03-15 13:56:17,230{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	15
+2026-03-15 13:56:17,237{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:invoke	:write	97
+2026-03-15 13:56:17,237{GMT}	INFO	[jepsen worker 2] jepsen.util: 20	:ok	:write	97
+2026-03-15 13:56:17,392{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:write	34
+2026-03-15 13:56:17,393{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:write	34
+2026-03-15 13:56:17,461{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:17,462{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	34
+2026-03-15 13:56:17,578{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:invoke	:read	nil
+2026-03-15 13:56:17,578{GMT}	INFO	[jepsen worker 1] jepsen.util: 31	:ok	:read	34
+2026-03-15 13:56:17,859{GMT}	INFO	[jepsen worker 0] jepsen.util: 27	:info	:read	nil	:timeout
+2026-03-15 13:56:27,428{GMT}	INFO	[jepsen worker nemesis] jepsen.util: :nemesis	:info	:stop-partition	nil
+2026-03-15 13:56:27,505{GMT}	INFO	[jepsen worker nemesis] jepsen.util: :nemesis	:info	:stop-partition	:network-healed
+2026-03-15 13:56:27,505{GMT}	INFO	[jepsen worker nemesis] jepsen.generator.interpreter: Test complete, waiting before final check
+2026-03-15 13:56:32,574{GMT}	INFO	[jepsen test runner] jepsen.core: Run complete, writing
+2026-03-15 13:56:32,621{GMT}	INFO	[jepsen test runner] jepsen.core: Snarfing log files
+2026-03-15 13:56:32,626{GMT}	INFO	[jepsen node n1] jepsen.core: downloading /opt/omnipaxos/server.log to server.log
+2026-03-15 13:56:32,626{GMT}	INFO	[jepsen node n2] jepsen.core: downloading /opt/omnipaxos/server.log to server.log
+2026-03-15 13:56:32,626{GMT}	INFO	[jepsen node n3] jepsen.core: downloading /opt/omnipaxos/server.log to server.log
+2026-03-15 13:56:32,839{GMT}	INFO	[jepsen node n3] jepsen.core: downloading /opt/omnipaxos/shim.log to shim.log
+2026-03-15 13:56:32,840{GMT}	INFO	[jepsen node n2] jepsen.core: downloading /opt/omnipaxos/shim.log to shim.log
+2026-03-15 13:56:32,840{GMT}	INFO	[jepsen node n1] jepsen.core: downloading /opt/omnipaxos/shim.log to shim.log
+2026-03-15 13:56:33,055{GMT}	INFO	[jepsen node n2] jepsen.omnipaxos.db: n2 tearing down OmniPaxos
+2026-03-15 13:56:33,055{GMT}	INFO	[jepsen node n3] jepsen.omnipaxos.db: n3 tearing down OmniPaxos
+2026-03-15 13:56:33,055{GMT}	INFO	[jepsen node n1] jepsen.omnipaxos.db: n1 tearing down OmniPaxos
+2026-03-15 13:56:33,055{GMT}	INFO	[jepsen node n2] jepsen.control.util: Stopping /opt/omnipaxos/api-shim with signal :-9
+2026-03-15 13:56:33,055{GMT}	INFO	[jepsen node n3] jepsen.control.util: Stopping /opt/omnipaxos/api-shim with signal :-9
+2026-03-15 13:56:33,055{GMT}	INFO	[jepsen node n1] jepsen.control.util: Stopping /opt/omnipaxos/api-shim with signal :-9
+2026-03-15 13:56:35,102{GMT}	INFO	[jepsen node n1] jepsen.control.util: Stopping /opt/omnipaxos/server with signal :-9
+2026-03-15 13:56:35,102{GMT}	INFO	[jepsen node n2] jepsen.control.util: Stopping /opt/omnipaxos/server with signal :-9
+2026-03-15 13:56:35,102{GMT}	INFO	[jepsen node n3] jepsen.control.util: Stopping /opt/omnipaxos/server with signal :-9
+2026-03-15 13:56:37,233{GMT}	INFO	[jepsen test runner] jepsen.core: Analyzing...
+2026-03-15 13:56:37,266{GMT}	INFO	[clojure-agent-send-off-pool-4] knossos.model.memo: More than 1024 reachable models; not memoizing models for this search
+2026-03-15 13:56:37,319{GMT}	INFO	[Thread-14] knossos.model.memo: More than 1024 reachable models; not memoizing models for this search
+2026-03-15 13:56:37,329{GMT}	INFO	[jepsen test runner] jepsen.core: Analysis complete
+2026-03-15 13:56:37,331{GMT}	INFO	[jepsen results] jepsen.store: Wrote /root/jepsen-omnipaxos/store/omnipaxos-kv/20260315T135409.552Z/results.edn
+2026-03-15 13:56:37,344{GMT}	INFO	[jepsen test runner] jepsen.core: {:linearizable {:valid? true,
+                :model #knossos.model.Register{:value 34},
+                :final-paths (),
+                :configs ()},
+ :timeline {:valid? true},
+ :valid? true}
+
+
+Everything looks good! ヽ(‘ー`)ノ
