@@ -1,0 +1,7 @@
+2026-03-15 10:34:39 Jepsen starting  /usr/bin/env SERVER_CONFIG_FILE=/opt/omnipaxos/server.toml CLUSTER_CONFIG_FILE=/opt/omnipaxos/cluster.toml RUST_LOG=info /opt/omnipaxos/server
+[2026-03-15T10:34:39Z ERROR server::network] Establishing connection to node 2 failed: Connection refused (os error 111)
+[2026-03-15T10:34:39Z ERROR server::network] Establishing connection to node 1 failed: Connection refused (os error 111)
+[2026-03-15T10:34:40Z INFO  server::network] New connection to node 2
+[2026-03-15T10:34:40Z INFO  server::network] New connection to node 1
+[2026-03-15T10:34:44Z INFO  server::network] New connection from 127.0.0.1:46144
+[2026-03-15T10:34:44Z INFO  server::network] Identified connection from client 1

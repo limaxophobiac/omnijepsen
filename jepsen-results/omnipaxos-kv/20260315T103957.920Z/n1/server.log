@@ -1,0 +1,9 @@
+2026-03-15 10:40:00 Jepsen starting  /usr/bin/env SERVER_CONFIG_FILE=/opt/omnipaxos/server.toml CLUSTER_CONFIG_FILE=/opt/omnipaxos/cluster.toml RUST_LOG=info /opt/omnipaxos/server
+[2026-03-15T10:40:00Z INFO  server::network] New connection from 172.18.0.5:39058
+[2026-03-15T10:40:00Z INFO  server::network] New connection from 172.18.0.4:47078
+[2026-03-15T10:40:00Z INFO  server::network] Identified connection from node 3
+[2026-03-15T10:40:00Z INFO  server::network] Identified connection from node 2
+[2026-03-15T10:40:05Z INFO  server::network] New connection from 127.0.0.1:48192
+[2026-03-15T10:40:05Z INFO  server::network] Identified connection from client 1
+[2026-03-15T10:40:05Z INFO  server::server] 1: Attempting to take leadership
+[2026-03-15T10:40:06Z INFO  server::server] 1: Leader fully initialized
